@@ -1,0 +1,10 @@
+{
+  "name": "@cct/vivid-react",
+  "version": "0.1.0",
+  "description": "Vivid wrapped for easy React usage",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

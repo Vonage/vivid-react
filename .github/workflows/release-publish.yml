@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ARTIFACTORY_AUTH_TOKEN: ${{ secrets.ARTIFACTORY_AUTH_TOKEN }}
+      ARTIFACTORY_SECRET: ${{ secrets.ARTIFACTORY_SECRET }}
+      ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER }}
+      ARTIFACTORY_NPM_TOKEN: ${{ secrets.ARTIFACTORY_NPM_TOKEN }}
 
     steps:
       - name: Checkout
@@ -41,5 +44,5 @@ jobs:
          # git update-index --skip-worktree .npmrc
          # yarn lerna publish from-package --registry https://npm.pkg.github.com --no-git-tag-version --no-push --yes
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CI_AT }}
 

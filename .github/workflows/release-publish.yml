@@ -1,0 +1,45 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Release Vivid React (GitHub)
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACTORY_AUTH_TOKEN: ${{ secrets.ARTIFACTORY_AUTH_TOKEN }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.CI_AT }}
+
+      - name: Setup NodeJS 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Install dependencies
+        run: |
+          npm install -g yarn
+          yarn install
+      # Build and publish
+      - name: Build components
+        run: yarn compile
+
+      - name: Publish components
+        run: |
+         # echo registry=https://npm.pkg.github.com/ > .npmrc
+         # echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
+         # git update-index --skip-worktree .npmrc
+         # yarn lerna publish from-package --registry https://npm.pkg.github.com --no-git-tag-version --no-push --yes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

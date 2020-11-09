@@ -1,5 +1,5 @@
 const { join } = require('path'),
-    { access, F_OK, readFileSync, readdirSync, rmSync, createWriteStream } = require('fs'),
+    { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs'),
     mkdirp = require('mkdirp'),
     os = require('os'),
     { spawnSync } = require('child_process'),
@@ -21,7 +21,7 @@ const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1
 const getYarnCommand = () => os.platform() === 'win32' ? 'yarn.cmd' : 'yarn'
 const cleanupDir = p => {
     console.info(`Clearing folder: ${p}`)
-    rmSync(p, { recursive: true, force: true })
+    rmdirSync(p, { recursive: true })
     mkdirp.sync(p)
 }
 const getFirstFolderNameFromPath = path => readdirSync(path, {withFileTypes: true}).find(x => x.isDirectory()).name

@@ -1,0 +1,20 @@
+<% banner %>
+/*
+Code in this file were generated using following JSON:
+<% descriptor-json %>
+*/
+import React, { ReactNode } from 'react';
+import wrapper from '@vonage/vivid-react-wrapper';
+
+interface Props {
+  children?: ReactNode,
+<% props %>
+}
+
+const WrappedComponent = wrapper('<% tag %>',  {
+    events: [<% events %>],
+    attributes: [<% attributes %>],
+    properties: [<% properties %>]
+});
+
+export const <% component-class-name %> = (props: Props): JSX.Element => <WrappedComponent {...props}>{props.children}</WrappedComponent>

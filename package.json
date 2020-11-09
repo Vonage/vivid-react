@@ -4,7 +4,41 @@
   "description": "Vivid wrapped for easy React usage",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "generator": "node bin/cli.js",
+    "generator:ts": "node bin/cli.js --language=ts",
+    "generator:all:js": "node bin/cli.js --all=true",
+    "generator:all:ts": "node bin/cli.js --all=true --language=ts",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "bin": {
+    "vwg": "./bin/cli.js",
+    "vivid-wrapper-generator": "./bin/cli.js"
+  },
+  "keywords": [
+    "Vivid",
+    "React",
+    "Custom Element",
+    "Wrapper",
+    "Utility",
+    "Generator",
+    "CLI"
+  ],
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "@babel/core": "^7.10.4",
+    "babel-jest": "^26.6.1",
+    "jest": "^26.6.1"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@octokit/core": "^3.1.2",
+    "@vonage/vwc-button": "0.13.0",
+    "@vonage/vwc-icon": "0.13.0",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "extract-zip": "2.0.1",
+    "mkdirp": "1.0.4",
+    "web-component-analyzer": "^1.1.6"
   }
 }

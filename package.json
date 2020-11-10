@@ -1,10 +1,27 @@
 {
   "name": "@cct/vivid-react",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Vivid wrapped for easy React usage",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
+  "scripts": {
+    "generateWrappers": "node node_modules/@vonage/vivid-react-wrapper/bin/cli --output=dist"
+  },
+  "dependencies": {
+    "@vonage/vivid-react-wrapper": "https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",
+    "prop-types": "^15.7.2"
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
-  }
+    "fs-extra": "^9.0.1",
+    "standard": "^16.0.1",
+    "@vonage/vwc-checkbox": "^0.15.0",
+    "@vonage/vwc-slider": "^0.15.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
+  },
+  "files": [
+    "dist/**.js"
+  ]
 }

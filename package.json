@@ -1,12 +1,12 @@
 {
   "name": "@cct/vivid-react",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "generateWrappers": "node node_modules/@vonage/vivid-react-wrapper/bin/cli --output=dist",
-    "version": ""
+    "postversion": "git push --tags"
   },
   "dependencies": {
     "@vonage/vivid-react-wrapper": "https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",

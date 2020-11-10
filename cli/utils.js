@@ -18,6 +18,8 @@ const snake2Camel = input => deCapitalize(input.split('_').map(x => capitalize(x
 const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(eventName)))}`
 const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
+const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
+const getVividPackageName = componentPath => /(@vonage\/vwc-.*?)\//.exec(componentPath.replace(/\\/g, '/'))[1]
 const getYarnCommand = () => os.platform() === 'win32' ? 'yarn.cmd' : 'yarn'
 const cleanupDir = p => {
     console.info(`Clearing folder: ${p}`)
@@ -39,7 +41,6 @@ const filePath = (fileName) => join(process.cwd(), fileName)
 const getParsedJson = (jsonFilePath) => JSON.parse(readFileSync(jsonFilePath, { encoding: 'utf8' }))
 
 const getVividPackageNames = ({ dependencies, devDependencies }) => {
-    const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
     const unique = (stringArray) => Array.from(new Set(stringArray))
     const packages = [
         ...Object.keys(dependencies),
@@ -122,6 +123,7 @@ module.exports = {
     getInputArgument,
     isFileExists,
     getParsedJson,
+    getVividPackageName,
     getVividPackageNames,
     getVividLatestRelease,
     getCustomElementTagsDefinitionsList

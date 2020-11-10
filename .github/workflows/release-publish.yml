@@ -26,8 +26,8 @@ jobs:
           token: ${{ secrets.CI_AT }}
 
       - name: Set Release Version
-          id: vars
-          run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        id: vars
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
 
       - name: Setup NodeJS 12
         uses: actions/setup-node@v1

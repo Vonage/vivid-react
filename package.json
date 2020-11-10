@@ -1,6 +1,6 @@
 {
   "name": "@cct/vivid-react",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",
@@ -12,10 +12,10 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "fs-extra": "^9.0.1",
-    "standard": "^16.0.1",
     "@vonage/vwc-checkbox": "^0.15.0",
-    "@vonage/vwc-slider": "^0.15.0"
+    "@vonage/vwc-slider": "^0.15.0",
+    "fs-extra": "^9.0.1",
+    "standard": "^16.0.1"
   },
   "peerDependencies": {
     "react": ">=16.8",

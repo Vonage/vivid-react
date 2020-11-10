@@ -1,8 +1,15 @@
-const { cleanupDir, kebab2Camel, capitalize, toCommaSeparatedList, toJsonObjectsList, event2EventDescriptor, getVividPackageName } = require('./utils')
+const { cleanupDir, 
+    kebab2Camel, 
+    capitalize, 
+    toCommaSeparatedList, 
+    toJsonObjectsList, 
+    event2EventDescriptor, 
+    filePath,
+    getVividPackageName } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { writeFileSync } = require('fs')
 const { join } = require('path')
-const { OutputLanguage } = require('./consts')
+const { OutputLanguage, tempFolder } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const renderComponent = tag => language => componentName => {
@@ -50,6 +57,9 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => (t
             .replace(TemplateToken.EXPORTS, exports.join(',\n'))
             .replace(TemplateToken.IMPORTS, imports.join('\n'))
     )
+
+    cleanupDir(filePath(tempFolder))
+
     console.info(`${imports.length} wrappers generated at ${outputDir}`)
 }
 

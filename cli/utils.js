@@ -72,7 +72,6 @@ const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackag
     )
     if (child.status === 0) {
         const output = getParsedJson(analyzerOutput)
-        cleanupDir(filePath(config.tempFolder))
         return resolve(output.tags)
     }
 })
@@ -127,6 +126,7 @@ const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid
 module.exports = {
     toCommaSeparatedList,
     toJsonObjectsList,
+    filePath,
     cleanupDir,
     capitalize,
     kebab2Camel,

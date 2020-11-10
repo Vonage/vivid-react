@@ -1,4 +1,4 @@
-const { join } = require('path'),
+const { join, parse } = require('path'),
     { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs'),
     mkdirp = require('mkdirp'),
     os = require('os'),
@@ -19,7 +19,19 @@ const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(even
 const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
-const getVividPackageName = componentPath => /(@vonage\/vwc-.*?)\//.exec(componentPath.replace(/\\/g, '/'))[1]
+const getVividPackageName = componentPath => {
+    const { dir } = parse(componentPath)
+    if (dir.indexOf('node_modules') >= 0 ) {
+        return /(@vonage\/vwc-.*?)\//.exec(componentPath.replace(/\\/g, '/'))[1]
+    }
+    const pathParts = dir.split('\\').join('/').split('/')
+    if (pathParts.length > 0 && pathParts[pathParts.length - 1] == 'src') {
+        pathParts.pop()
+    }    
+    const packageJson = filePath(join(tempFolder, ...pathParts, 'package.json'))
+    const pkg = getParsedJson(packageJson)
+    return pkg.name
+}
 const getYarnCommand = () => os.platform() === 'win32' ? 'yarn.cmd' : 'yarn'
 const cleanupDir = p => {
     console.info(`Clearing folder: ${p}`)

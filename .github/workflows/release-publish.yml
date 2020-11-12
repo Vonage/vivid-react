@@ -32,8 +32,8 @@ jobs:
           token: ${{ secrets.CI_AT }}
 
       - name: Set Release Version
-        id: vars
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+        id: get_version
+        uses: battila7/get-version-action@v2
 
       - name: Setup NodeJS 12
         uses: actions/setup-node@v1
@@ -58,4 +58,4 @@ jobs:
          yarn publish --new-version ${RELEASE_VERSION}
         env:
           GITHUB_TOKEN: ${{ secrets.CI_AT }}
-          RELEASE_VERSION: ${{ steps.vars.outputs.tag }}
+          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}

@@ -9,7 +9,7 @@
     "postversion": "git push --follow-tags"
   },
   "dependencies": {
-    "@vonage/vivid-react-wrapper": "git+https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",
+    "@vonage/vivid-react-wrapper": "git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {

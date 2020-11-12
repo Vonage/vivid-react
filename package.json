@@ -1,6 +1,6 @@
 {
   "name": "@cct/vivid-react",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",

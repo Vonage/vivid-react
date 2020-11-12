@@ -1,25 +1,28 @@
-const { OutputLanguage, CLIArgument, WCAConfigAll } = require('../cli/consts')
-const { generateWrappers } = require('../cli/generator')
+const { OutputLanguage, CLIArgument, WCAConfigAll } = require('../src/consts')
+const { generateWrappers } = require('../src/generator')
 const {
   isFileExists,
   getParsedJson,
   getVividPackageNames,
   getInputArgument,
   getVividLatestRelease,
-  getCustomElementTagsDefinitionsList } = require('../cli/utils')
+  getCustomElementTagsDefinitionsList
+} = require('../src/utils')
 
-getInputArgument(CLIArgument.All) ?
-  getVividLatestRelease().then(
-    getCustomElementTagsDefinitionsList(WCAConfigAll)
-  ).then(generateWrappers(
-    getInputArgument(CLIArgument.Output, './src/generated'),
-    getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
-  ))
+const OutputDirectory = './dist'
+
+getInputArgument(CLIArgument.All)
+  ? getVividLatestRelease()
+    .then(getCustomElementTagsDefinitionsList(WCAConfigAll))
+    .then(generateWrappers(
+      getInputArgument(CLIArgument.Output, OutputDirectory),
+      getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
+    ))
   : isFileExists('package.json')
     .then(getParsedJson)
     .then(getVividPackageNames)
     .then(getCustomElementTagsDefinitionsList())
     .then(generateWrappers(
-      getInputArgument(CLIArgument.Output, './src/generated'),
+      getInputArgument(CLIArgument.Output, OutputDirectory),
       getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
     ))

@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "generateWrappers": "node node_modules/@vonage/vivid-react-wrapper/bin/cli --output=dist",
-    "postversion": "git push --tags"
+    "postversion": "git push --follow-tags"
   },
   "dependencies": {
     "@vonage/vivid-react-wrapper": "https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",

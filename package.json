@@ -1,5 +1,5 @@
 {
-  "name": "@cct/vivid-react",
+  "name": "@vonage/vivid-react",
   "version": "0.1.0",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",

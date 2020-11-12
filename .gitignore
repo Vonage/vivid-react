@@ -1,6 +1,7 @@
-/node_modules/
+node_modules/
 /.idea/
 /vivid-react.iml
 src/generated
 temp
 *.g.*
+dist/

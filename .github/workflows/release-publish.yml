@@ -19,11 +19,21 @@ jobs:
       ARTIFACTORY_NPM_TOKEN: ${{ secrets.ARTIFACTORY_NPM_TOKEN }}
 
     steps:
+      - name: Install GitHub SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY_GITHUB }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
       - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
           token: ${{ secrets.CI_AT }}
+
+      - name: Set Release Version
+        id: get_version
+        uses: battila7/get-version-action@v2
 
       - name: Setup NodeJS 12
         uses: actions/setup-node@v1
@@ -34,16 +44,19 @@ jobs:
         run: |
           npm install -g yarn
           yarn install
-      # Build and publish
-      - name: Build components
-        run: yarn compile
-
-      - name: Publish components
-        run: |
-         # echo registry=https://npm.pkg.github.com/ > .npmrc
-         # echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
-         # git update-index --skip-worktree .npmrc
-         # yarn lerna publish from-package --registry https://npm.pkg.github.com --no-git-tag-version --no-push --yes
         env:
           GITHUB_TOKEN: ${{ secrets.CI_AT }}
 
+      # Build and publish
+      - name: Build components
+        run: yarn generateWrappers
+
+      - name: Publish components
+        run: |
+          echo registry=https://npm.pkg.github.com/ > .npmrc
+          echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
+          git update-index --skip-worktree .npmrc
+          yarn publish --new-version ${RELEASE_VERSION}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}

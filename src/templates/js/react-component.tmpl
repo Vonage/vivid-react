@@ -1,0 +1,22 @@
+<% banner %>
+/*
+Code in this file were generated using following JSON:
+<% descriptor-json %>
+*/
+import PropTypes from 'prop-types'
+import wrapper from '@vonage/vivid-react-wrapper'
+<% imports %>
+
+export const <% component-class-name %> = wrapper('<% tag %>',  {
+    events: [<% events %>],
+    attributes: [<% attributes %>],
+    properties: [<% properties %>]
+});
+
+<% component-class-name %>.propTypes = {
+<% prop-types %>
+}
+
+<% component-class-name %>.defaultProps = {
+<% default-props %>
+}

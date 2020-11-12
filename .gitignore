@@ -1,4 +1,7 @@
 node_modules/
 /.idea/
 /vivid-react.iml
+temp
+*.g.*
 dist/
+/yarn-error.log

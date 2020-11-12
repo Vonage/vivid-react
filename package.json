@@ -5,18 +5,40 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "generateWrappers": "node node_modules/@vonage/vivid-react-wrapper/bin/cli --output=dist",
+    "generateWrappers": "node bin/cli.js",
+    "generateWrappers:ts": "node bin/cli.js --language=ts",
+    "generateWrappers:all:js": "node bin/cli.js --all=true",
+    "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "postversion": "git push --follow-tags"
   },
+  "keywords": [
+    "Vivid",
+    "React",
+    "Custom Element",
+    "Wrapper",
+    "Utility",
+    "Generator",
+    "CLI"
+  ],
   "dependencies": {
     "@vonage/vivid-react-wrapper": "git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@octokit/core": "^3.1.2",
     "@vonage/vwc-checkbox": "^0.15.0",
     "@vonage/vwc-slider": "^0.15.0",
-    "fs-extra": "^9.0.1",
-    "standard": "^16.0.1"
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "babel-jest": "^26.6.1",
+    "extract-zip": "2.0.1",
+    "jest": "^26.6.1",
+    "mkdirp": "1.0.4",
+    "standard": "^16.0.1",
+    "web-component-analyzer": "^1.1.6"
   },
   "peerDependencies": {
     "react": ">=16.8",

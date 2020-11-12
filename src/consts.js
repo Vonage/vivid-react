@@ -26,20 +26,20 @@ const WCAConfigAll = {
 }
 
 const CLIArgument = {
-    Output: 'output', // output folder
-    Language: 'language', // language js,ts
-    All: 'all' // ignore local package.json and produce wrappers for *all* Vivid components
+  Output: 'output', // output folder
+  Language: 'language', // language js,ts
+  All: 'all' // ignore local package.json and produce wrappers for *all* Vivid components
 }
 
 const OutputLanguage = {
-    JavaScript: 'js',
-    TypeScript: 'ts'
+  JavaScript: 'js',
+  TypeScript: 'ts'
 }
 
 module.exports = {
-    OutputLanguage,
-    WCAConfig,
-    WCAConfigAll,
-    CLIArgument,
-    tempFolder
+  OutputLanguage,
+  WCAConfig,
+  WCAConfigAll,
+  CLIArgument,
+  tempFolder
 }

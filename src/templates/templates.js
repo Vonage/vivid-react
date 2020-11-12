@@ -4,18 +4,18 @@
 const { readFileSync } = require('fs')
 
 const TemplateToken = {
-    BANNER: '<% banner %>',
-    IMPORTS: '<% imports %>',
-    EXPORTS: '<% exports %>',
-    TAG: '<% tag %>',
-    COMPONENT_CLASS_NAME: '<% component-class-name %>',
-    PROP_TYPES: '<% prop-types %>',
-    PROPS: '<% props %>',
-    DEFAULT_PROPS: '<% default-props %>',    
-    PROPERTIES: '<% properties %>',
-    ATTRIBUTES: '<% attributes %>',
-    EVENTS: '<% events %>',
-    TAG_DESCRIPTOR_JSON: '<% descriptor-json %>'
+  BANNER: '<% banner %>',
+  IMPORTS: '<% imports %>',
+  EXPORTS: '<% exports %>',
+  TAG: '<% tag %>',
+  COMPONENT_CLASS_NAME: '<% component-class-name %>',
+  PROP_TYPES: '<% prop-types %>',
+  PROPS: '<% props %>',
+  DEFAULT_PROPS: '<% default-props %>',
+  PROPERTIES: '<% properties %>',
+  ATTRIBUTES: '<% attributes %>',
+  EVENTS: '<% events %>',
+  TAG_DESCRIPTOR_JSON: '<% descriptor-json %>'
 }
 
 const GENERATED_CODE_BANNER = `/*
@@ -23,11 +23,11 @@ const GENERATED_CODE_BANNER = `/*
 */`
 const templatesFolder = `${__dirname}`
 const getTemplate = (template, language) =>
-    readFileSync(`${templatesFolder}/${language}/${template}.tmpl`, { encoding: 'utf8' })
-        .replace(TemplateToken.BANNER, GENERATED_CODE_BANNER)
+  readFileSync(`${templatesFolder}/${language}/${template}.tmpl`, { encoding: 'utf8' })
+    .replace(TemplateToken.BANNER, GENERATED_CODE_BANNER)
 
 module.exports = {
-    getTemplate,
-    TemplateToken,
-    GENERATED_CODE_BANNER
+  getTemplate,
+  TemplateToken,
+  GENERATED_CODE_BANNER
 }

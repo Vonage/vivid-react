@@ -52,10 +52,10 @@ jobs:
 
       - name: Publish components
         run: |
-         echo registry=https://npm.pkg.github.com/ > .npmrc
-         echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
+         echo registry=https://npm.pkg.github.com/Vonage > .npmrc
+         echo //npm.pkg.github.com/Vonage:_authToken=${GITHUB_TOKEN} >> .npmrc
          git update-index --skip-worktree .npmrc
          yarn publish --new-version ${RELEASE_VERSION}
         env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}

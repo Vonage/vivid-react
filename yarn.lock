@@ -416,9 +416,9 @@
   dependencies:
     "@types/node" "*"
 
-"@vonage/vivid-react-wrapper@https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator":
+"@vonage/vivid-react-wrapper@git+https://github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator":
   version "1.0.5"
-  resolved "https://github.com/Vonage/vivid-react-wrapper.git#d732f66f08a376dd270d9086f1d81da1e2c8cacd"
+  resolved "git+https://github.com/Vonage/vivid-react-wrapper.git#d732f66f08a376dd270d9086f1d81da1e2c8cacd"
   dependencies:
     "@babel/plugin-transform-runtime" "^7.12.1"
     "@octokit/core" "^3.1.2"

@@ -19,6 +19,12 @@ jobs:
       ARTIFACTORY_NPM_TOKEN: ${{ secrets.ARTIFACTORY_NPM_TOKEN }}
 
     steps:
+      - name: Install GitHub SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY_GITHUB }}
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+
       - name: Checkout
         uses: actions/checkout@v2
         with:

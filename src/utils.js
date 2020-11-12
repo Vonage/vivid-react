@@ -1,7 +1,6 @@
 const { join, parse } = require('path')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
 const mkdirp = require('mkdirp')
-const { ensureDir } = require('fs-extra')
 const os = require('os')
 const { spawnSync } = require('child_process')
 const { WCAConfig, tempFolder } = require('./consts')

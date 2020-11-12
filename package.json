@@ -22,9 +22,6 @@
     "react": ">=16.8",
     "react-dom": ">=16.8"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/Vonage"
-  },
   "files": [
     "dist/**.js"
   ]

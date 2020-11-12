@@ -7,7 +7,8 @@ const { WCAConfig, tempFolder } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 
-const stripQuotes = input => input.replace(/\'/g, '')
+const stripQuotes = input => input.replace(/'/g, '')
+const unique = stringArray => Array.from(new Set(stringArray))
 const getGithubToken = () => process.env.GITHUB_ACCESS_TOKEN || process.env.GITHUB_TOKEN
 const toJsonObjectsList = collection => (collection || []).map(JSON.stringify).join(',')
 const toCommaSeparatedList = collection => (collection || []).map(x => `'${stripQuotes(x.name)}'`).join(',')
@@ -25,7 +26,7 @@ const getVividPackageName = componentPath => {
     return /(@vonage\/vwc-.*?)\//.exec(componentPath.replace(/\\/g, '/'))[1]
   }
   const pathParts = dir.split('\\').join('/').split('/')
-  if (pathParts.length > 0 && pathParts[pathParts.length - 1] == 'src') {
+  if (pathParts.length > 0 && pathParts[pathParts.length - 1] === 'src') {
     pathParts.pop()
   }
   const packageJson = filePath(join(tempFolder, ...pathParts, 'package.json'))
@@ -45,7 +46,7 @@ const isFileExists = (fileName) => new Promise(
     filePath(fileName),
     F_OK,
     error => error
-      ? reject(false)
+      ? reject(error)
       : resolve(fileName)
   ))
 const filePath = (fileName) => join(process.cwd(), fileName)
@@ -53,7 +54,6 @@ const filePath = (fileName) => join(process.cwd(), fileName)
 const getParsedJson = (jsonFilePath) => JSON.parse(readFileSync(jsonFilePath, { encoding: 'utf8' }))
 
 const getVividPackageNames = ({ dependencies, devDependencies }) => {
-  const unique = (stringArray) => Array.from(new Set(stringArray))
   const packages = [
     ...Object.keys(dependencies),
     ...Object.keys(devDependencies)
@@ -72,7 +72,8 @@ const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackag
   )
   if (child.status === 0) {
     const output = getParsedJson(analyzerOutput)
-    return resolve(output.tags)
+    const uniqueTags = unique(output.tags.map(x => x.name)).map(x => output.tags.find(y => y.name === x))
+    return resolve(uniqueTags)
   }
 })
 
@@ -90,9 +91,9 @@ const getInputArgument = (argumentName, defaultValue = null) => {
 const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid.zip' }) => {
   const outFolder = filePath(config.tempFolder)
   cleanupDir(outFolder)
-  console.log(`Fetching latest Vivid release artifact...`)
+  console.log('Fetching latest Vivid release artifact...')
   if (!getGithubToken()) {
-    console.warn(`It seems GITHUB_ACCESS_TOKEN or GITHUB_TOKEN environment variable is not defined.`)
+    console.warn('It seems GITHUB_ACCESS_TOKEN or GITHUB_TOKEN environment variable is not defined.')
     return
   }
   const octokit = new Octokit({ auth: getGithubToken() })

@@ -5,8 +5,8 @@ const { event2PropName } = require('./utils')
 const getProperties = tag =>
   (tag.properties || [])
     .filter(prop => prop.type) // only props having certain type
-    .filter(prop => /\'.*?\'/.test(prop.name)
-      || /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
+    .filter(prop => /'.*?'/.test(prop.name) ||
+      /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
 
 const getEvents = tag => (tag.events || []).map(x => event2PropName(x.name))
 
@@ -37,12 +37,19 @@ const getPropTypes = tag => {
   const isBoolean = type => /(true|false)/.test(type)
   const isNumber = type => /(integer)/.test(type) || type === 'number | null'
   const isString = type => type === 'string | undefined' || type === 'string | null'
-  const isTypeSet = type => /(\".*?\" \|)/.test(type)
+  const isTypeSet = type => /(".*?" \|)/.test(type)
   const getSetTypeOptions = setType => setType.split('|').map(x => x.trim())
   const mapTypeToPropType = type => ['boolean', 'string', 'number', 'array'].indexOf(type) >= 0
     ? (type === 'boolean' ? 'bool' : type)
-    : isTypeSet(type) ? `oneOf([${getSetTypeOptions(type).join(',')}])`
-      : isString(type) ? 'string' : isNumber(type) ? 'number' : isBoolean(type) ? 'bool' : `any /* ${type} */`
+    : isTypeSet(type)
+      ? `oneOf([${getSetTypeOptions(type).join(',')}])`
+      : isString(type)
+        ? 'string'
+        : isNumber(type)
+          ? 'number'
+          : isBoolean(type)
+            ? 'bool'
+            : `any /* ${type} */`
   const propertiesPropTypes = properties.map(x =>
     `  ${x.name}: PropTypes.${mapTypeToPropType(x.type.toLowerCase())}${x.default ? `/* default: ${x.default} */` : ''}`)
 

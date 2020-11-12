@@ -38,6 +38,8 @@ jobs:
         run: |
           npm install -g yarn
           yarn install
+        env:
+          GITHUB_TOKEN: ${{ secrets.CI_AT }}
       # Build and publish
       - name: Build components
         run: yarn generateWrappers

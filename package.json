@@ -8,7 +8,7 @@
     "generateWrappers": "node bin/cli.js",
     "generateWrappers:ts": "node bin/cli.js --language=ts",
     "generateWrappers:all:js": "node bin/cli.js --all=true",
-    "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts",
+    "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
     "test": "jest",
     "test:watch": "jest --watch",
     "postversion": "git push --follow-tags"
@@ -30,6 +30,7 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@octokit/core": "^3.1.2",
+    "@vonage/vwc-button": "^0.15.0",
     "@vonage/vwc-checkbox": "^0.15.0",
     "@vonage/vwc-slider": "^0.15.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
@@ -38,7 +39,8 @@
     "jest": "^26.6.1",
     "mkdirp": "1.0.4",
     "standard": "^16.0.1",
-    "web-component-analyzer": "^1.1.6"
+    "web-component-analyzer": "^1.1.6",
+    "typescript": "4.0.5"
   },
   "peerDependencies": {
     "react": ">=16.8",

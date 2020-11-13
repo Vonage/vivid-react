@@ -604,6 +604,17 @@
     lit-html "^1.1.2"
     tslib "^1.10.0"
 
+"@material/mwc-button@^0.19.1":
+  version "0.19.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/@material/mwc-button/-/mwc-button-0.19.1.tgz#96520d55c265e9c672ecb97b5547a5315cd4ee0d"
+  integrity sha1-llINVcJl6cZy7Ll7VUelMVzU7g0=
+  dependencies:
+    "@material/mwc-icon" "^0.19.1"
+    "@material/mwc-ripple" "^0.19.1"
+    lit-element "^2.3.0"
+    lit-html "^1.1.2"
+    tslib "^1.10.0"
+
 "@material/mwc-checkbox@^0.19.1":
   version "0.19.1"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/@material/mwc-checkbox/-/mwc-checkbox-0.19.1.tgz#c8196b6582b42f8bd3a5b99a4fdef2470d905f32"
@@ -619,6 +630,14 @@
   version "0.18.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/@material/mwc-icon/-/mwc-icon-0.18.0.tgz#7164aaac89616241bb924a5a9db668f8c54e04bd"
   integrity sha1-cWSqrIlhYkG7kkpanbZo+MVOBL0=
+  dependencies:
+    lit-element "^2.3.0"
+    tslib "^1.10.0"
+
+"@material/mwc-icon@^0.19.1":
+  version "0.19.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/@material/mwc-icon/-/mwc-icon-0.19.1.tgz#4dddf27a9f24262b02ea9cddc39800fec8b42920"
+  integrity sha1-Td3yep8kJisC6pzdw5gA/si0KSA=
   dependencies:
     lit-element "^2.3.0"
     tslib "^1.10.0"
@@ -974,6 +993,15 @@
     "@vonage/vvd-scheme" "^0.15.0"
     tslib "^2.0.3"
 
+"@vonage/vvd-core@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-core/0.15.1/ae06f4e72d247dbce7ac242bd5e6e62db1b415de247aa55f8e81b7df843b8930#d861d5bc293561ba2cafa13189387a43ecc3bd75"
+  integrity sha1-2GHVvCk1Ybosr6ExiTh6Q+zDvXU=
+  dependencies:
+    "@vonage/vvd-fonts" "^0.15.1"
+    "@vonage/vvd-scheme" "^0.15.1"
+    tslib "^2.0.3"
+
 "@vonage/vvd-fonts@^0.13.0":
   version "0.13.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-fonts/0.13.0/c43e8fd2b91f595df57869b037792a79832b4d9d387f64e1c5c896089657f339#6283caaa94815720ee736eecc72eb0a03a1ca286"
@@ -988,12 +1016,26 @@
   dependencies:
     tslib "^2.0.3"
 
+"@vonage/vvd-fonts@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-fonts/0.15.1/02f924df47239fc524b165acc4df28a26bc8a89017b642809c01536853542ca6#7faa9a8374bb5203c4d85a5c55ea21513bf0401f"
+  integrity sha1-f6qag3S7UgPE2FpcVeohUTvwQB8=
+  dependencies:
+    tslib "^2.0.3"
+
 "@vonage/vvd-foundation@^0.13.0":
   version "0.13.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-foundation/0.13.0/534cd15712b11b2632dcaf32b861406b9525bdc5c564e9b973eafeb5192e57e5#63f6b69167467eab9543bb4fa5b933970b4e3eff"
   integrity sha1-Y/a2kWdGfquVQ7tPpbkzlwtOPv8=
   dependencies:
     tslib "^2.0.2"
+
+"@vonage/vvd-foundation@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-foundation/0.15.1/964772cba650af77f1bd5c1498b3b335427c713c84285f594fd9553ec0ab6a4c#188ea4e676c96289525ccb8d64885ffc26aec9bd"
+  integrity sha1-GI6k5nbJYolSXMuNZIhf/Cauyb0=
+  dependencies:
+    tslib "^2.0.3"
 
 "@vonage/vvd-scheme@^0.13.0":
   version "0.13.0"
@@ -1006,6 +1048,13 @@
   version "0.15.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-scheme/0.15.0/7f88cd994a81418a7c4b03ae7ae8c227cc2d5c432da5b07cdc40fb3f4b1e2167#74ff13d5cb8c316379173da8b12f15dc23dcf8f5"
   integrity sha1-dP8T1cuMMWN5Fz2osS8V3CPc+PU=
+  dependencies:
+    tslib "^2.0.3"
+
+"@vonage/vvd-scheme@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-scheme/0.15.1/737f30abc0f2ecb13aecc22be531cb5c39090af03993f24df6f5c404bd3f7a8d#c7e61af15ee16b746ce83bcc5026ad488ef0c724"
+  integrity sha1-x+Ya8V7ha3Rs6DvMUCatSI7wxyQ=
   dependencies:
     tslib "^2.0.3"
 
@@ -1023,6 +1072,13 @@
   dependencies:
     tslib "^2.0.3"
 
+"@vonage/vvd-style-coupling@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-style-coupling/0.15.1/e7b125fc30c6735a1a3bccf2f66e87bf4fc2af2ba7d9cec8542b57b212e2c64d#bf4ed9c2320104a6bac496464f056d0df103e292"
+  integrity sha1-v07ZwjIBBKa6xJZGTwVtDfED4pI=
+  dependencies:
+    tslib "^2.0.3"
+
 "@vonage/vwc-button@0.13.0":
   version "0.13.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-button/0.13.0/1ba272e6cc87d67a5c51972eba256e94596b5f29b716e2ca059a49c8faa240b6#61e5aeaa9f41b081db94597ab72bcdbdd6db7aa2"
@@ -1035,6 +1091,19 @@
     "@vonage/vwc-icon" "^0.13.0"
     lit-element "^2.4.0"
     tslib "^2.0.2"
+
+"@vonage/vwc-button@^0.15.0":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-button/0.15.1/d042b76b112de913186afb3fde107f866382c6d499641effc9bc61f55551d1f1#b469379bb1e58a692582a308f81e059ab9e0e2da"
+  integrity sha1-tGk3m7HlimklgqMI+B4Fmrng4to=
+  dependencies:
+    "@material/mwc-button" "^0.19.1"
+    "@vonage/vvd-core" "^0.15.1"
+    "@vonage/vvd-foundation" "^0.15.1"
+    "@vonage/vvd-style-coupling" "^0.15.1"
+    "@vonage/vwc-icon" "^0.15.1"
+    lit-element "^2.4.0"
+    tslib "^2.0.3"
 
 "@vonage/vwc-checkbox@^0.15.0":
   version "0.15.0"
@@ -1056,6 +1125,16 @@
     kefir "^3.8.7"
     lit-element "^2.4.0"
     tslib "^2.0.2"
+
+"@vonage/vwc-icon@^0.15.1":
+  version "0.15.1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-icon/0.15.1/d5cb0fee22550c93ccf1d1d17ff3db5554fca453b6b5fdf83274961c10af6cfa#7e4af00b3d536ecca531f7a9ccc180d637b9370d"
+  integrity sha1-fkrwCz1TbsylMfepzMGA1je5Nw0=
+  dependencies:
+    "@vonage/vvd-core" "^0.15.1"
+    kefir "^3.8.7"
+    lit-element "^2.4.0"
+    tslib "^2.0.3"
 
 "@vonage/vwc-slider@^0.15.0":
   version "0.15.0"
@@ -5297,6 +5376,11 @@ typedarray-to-buffer@^3.1.5:
   integrity sha1-qX7nqf9CaRufeD/xvFES/j/KkIA=
   dependencies:
     is-typedarray "^1.0.0"
+
+typescript@4.0.5:
+  version "4.0.5"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
+  integrity sha1-rp3d/RBp8ctb6z7zshcN18EzI4k=
 
 typescript@^3.8.3:
   version "3.9.7"

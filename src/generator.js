@@ -1,22 +1,25 @@
 const {
-  cleanupDir,
+  prepareDir,
   kebab2Camel,
   capitalize,
   toCommaSeparatedList,
   toJsonObjectsList,
   event2EventDescriptor,
   filePath,
+  renderJsDoc,
+  getInputArgument,
   getVividPackageName
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { writeFileSync } = require('fs')
 const { join } = require('path')
-const { OutputLanguage, tempFolder } = require('./consts')
+const { OutputLanguage, tempFolder, CLIArgument } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const renderComponent = tag => language => componentName => {
   const flatEventsList = (tag.events || []).map(x => (typeof x === 'string' ? x : x.name))
   const result = getTemplate('react-component', language)
+    .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getVividPackageName(tag.path)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(flatEventsList.map(event2EventDescriptor)))
     .replace(TemplateToken.PROPERTIES, toCommaSeparatedList(tag.properties))
@@ -32,7 +35,7 @@ const renderComponent = tag => language => componentName => {
 }
 
 const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => (tags) => {
-  cleanupDir(outputDir)
+  prepareDir(outputDir, true)
   const imports = []
   const exports = []
 
@@ -60,7 +63,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => (t
       .replace(TemplateToken.IMPORTS, imports.join('\n'))
   )
 
-  cleanupDir(filePath(tempFolder))
+  prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
 
   console.info(`${imports.length} wrappers generated at ${outputDir}`)
 }

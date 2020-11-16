@@ -3,19 +3,20 @@
 Code in this file were generated using following JSON:
 <% descriptor-json %>
 */
-import React, { ReactNode } from 'react'
+import React, { ReactNode, ForwardRefExoticComponent } from 'react'
 import wrapper from '@vonage/vivid-react-wrapper'
 <% imports %>
-
-interface Props {
-  children?: ReactNode,
-<% props %>
-}
 
 const WrappedComponent = wrapper('<% tag %>',  {
     events: [<% events %>],
     attributes: [<% attributes %>],
     properties: [<% properties %>]
-});
+}) as ForwardRefExoticComponent<any>;
 
-export const <% component-class-name %> = (props: Props): JSX.Element => <WrappedComponent {...props}>{props.children}</WrappedComponent>
+<% jsdoc.class %>
+export const <% component-class-name %> = (props:
+{
+  children?: ReactNode,
+<% props %>
+}
+): JSX.Element => <WrappedComponent {...props}>{props.children}</WrappedComponent>

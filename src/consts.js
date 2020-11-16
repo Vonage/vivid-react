@@ -1,5 +1,7 @@
 const tempFolder = 'temp'
 
+const VividRepo = 'Vonage/vivid'
+
 const WCAConfig = {
   tempFolder,
   tempFileName: 'analyzerOutput.json',
@@ -28,6 +30,7 @@ const WCAConfigAll = {
 const CLIArgument = {
   Output: 'output', // output folder
   Language: 'language', // language js,ts
+  CleanTemp: 'clean', // clean up temp folder after CLI run
   All: 'all' // ignore local package.json and produce wrappers for *all* Vivid components
 }
 
@@ -41,5 +44,6 @@ module.exports = {
   WCAConfig,
   WCAConfigAll,
   CLIArgument,
-  tempFolder
+  tempFolder,
+  VividRepo
 }

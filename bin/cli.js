@@ -13,11 +13,11 @@ const OutputDirectory = './dist'
 
 getInputArgument(CLIArgument.All)
   ? getVividLatestRelease()
-    .then(getCustomElementTagsDefinitionsList(WCAConfigAll))
-    .then(generateWrappers(
-      getInputArgument(CLIArgument.Output, OutputDirectory),
-      getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
-    ))
+      .then(getCustomElementTagsDefinitionsList(WCAConfigAll))
+      .then(generateWrappers(
+        getInputArgument(CLIArgument.Output, OutputDirectory),
+        getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
+      ))
   : isFileExists('package.json')
     .then(getParsedJson)
     .then(getVividPackageNames)

@@ -1,7 +1,7 @@
 const { EOL } = require('os')
 const packageJson = require('../package.json')
 
-const { outputFile } = require('fs-extra')
+const { outputFile, outputJson } = require('fs-extra')
 
 const {
   prepareDir,
@@ -51,7 +51,7 @@ const saveIndex = (outputDir, language, components) => {
 }
 
 const saveComponent = async (outputDir, language, content) => {
-  const indexOutputFileName = join(process.cwd(), outputDir, `index.${language}`)
+  const indexOutputFileName = join(outputDir, `index.${language}`)
 
   await outputFile(
     indexOutputFileName,
@@ -74,15 +74,17 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
 
     await saveComponent(componentOutputDir, language, componentContent)
 
-    console.log({ tag })
-
+    const packageName = `@vonage/${tag.name}`
     const packageJsonContent = {
-      name: `@vonage/vivid-react-${componentName.toLowerCase()}`,
+      name: `@vonage/vivid-react-${tag.name}`,
       version: packageJson.version,
       main: `index.${language}`,
       license: 'MIT',
-      dependencies: {}
+      dependencies: {
+        [packageName]: packageJson.dependencies[packageName]
+      }
     }
+    await outputJson(join(componentOutputDir, 'packages.json'), packageJsonContent, { spaces: 2 })
   }
 
   saveIndex(outputDir, language, components)

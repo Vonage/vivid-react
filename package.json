@@ -11,6 +11,7 @@
     "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
     "test": "jest",
     "test:watch": "jest --watch",
+    "preversion": "node scripts/updateDocs.js && git add -A docs",
     "postversion": "git push --follow-tags"
   },
   "keywords": [
@@ -36,7 +37,9 @@
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-jest": "^26.6.1",
     "extract-zip": "2.0.1",
+    "fs-extra": "^9.0.1",
     "jest": "^26.6.1",
+    "lodash": "^4.17.20",
     "mkdirp": "1.0.4",
     "standard": "^16.0.1",
     "web-component-analyzer": "^1.1.6",
@@ -47,6 +50,7 @@
     "react-dom": ">=16.8"
   },
   "files": [
+    "docs/**.md",
     "dist/**.js"
   ]
 }

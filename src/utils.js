@@ -1,4 +1,5 @@
 const { join, parse } = require('path')
+const { flowRight, replace, startCase } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
 const mkdirp = require('mkdirp')
 const os = require('os')
@@ -134,6 +135,12 @@ const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid
   }
 }
 
+const getComponentNameFromPackage = flowRight(
+  replace(' ', ''),
+  startCase,
+  replace('@vonage/', '')
+)
+
 module.exports = {
   toCommaSeparatedList,
   toJsonObjectsList,
@@ -144,8 +151,10 @@ module.exports = {
   kebab2Camel,
   event2PropName,
   event2EventDescriptor,
+  getComponentNameFromPackage,
   getInputArgument,
   isFileExists,
+  isVividPackageName,
   getProperties,
   getParsedJson,
   getVividPackageName,

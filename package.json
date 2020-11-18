@@ -9,9 +9,10 @@
     "generateWrappers:ts": "node bin/cli.js --language=ts",
     "generateWrappers:all:js": "node bin/cli.js --all=true",
     "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
+    "postgenerateWrappers": "cp package.json dist && cp README.md dist && cp SUPPORTED_COMPONENTS.md dist",
     "test": "jest",
     "test:watch": "jest --watch",
-    "preversion": "node scripts/updateDocs.js && git add -A docs",
+    "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
     "postversion": "git push --follow-tags"
   },
   "keywords": [
@@ -72,9 +73,5 @@
   "peerDependencies": {
     "react": ">=16.8",
     "react-dom": ">=16.8"
-  },
-  "files": [
-    "docs/**.md",
-    "dist/**.js"
-  ]
+  }
 }

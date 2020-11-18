@@ -2,7 +2,7 @@
 The goal of this package is to provide a better developer experience when using `Vivid` inside of `React` applications. We still use regular `Vivid` web components, so be sure to target a recent browser.
 
 ## Supported components
-[Here's the list](docs/SUPPORTED_COMPONENTS.md) of `Vivid` components that have already been wrapped. If the one you're looking for is missing, just [add a new one](#adding-a-component), so every one can access them. 
+[Here's the list](SUPPORTED_COMPONENTS.md) of `Vivid` components that have already been wrapped. If the one you're looking for is missing, just [add a new one](#adding-a-component), so every one can access them. 
 
 # Usage
 

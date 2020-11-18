@@ -1,3 +1,8 @@
+const { EOL } = require('os')
+const packageJson = require('../package.json')
+
+const { outputFile } = require('fs-extra')
+
 const {
   prepareDir,
   kebab2Camel,
@@ -34,38 +39,57 @@ const renderComponent = tag => language => componentName => {
   return result
 }
 
-const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => (tags) => {
-  prepareDir(outputDir, true)
-  const imports = []
-  const exports = []
+const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
-  for (const tag of tags) {
-    const camelizedName = kebab2Camel(tag.name)
-    const componentName = capitalize(camelizedName)
-    const componentFileExt = `.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
-    const componentFileName = `${camelizedName}.g`
-    const componentOutputFileName = join(process.cwd(), outputDir, `${componentFileName}${componentFileExt}`)
-    imports.push(`import { ${componentName} } from './${componentFileName}'`)
-    exports.push(`  ${componentName}`)
-    console.info(`Processing ${componentName}...`)
-
-    writeFileSync(
-      componentOutputFileName,
-      renderComponent(tag)(language)(componentName)
-    )
-  }
-
+const saveIndex = (outputDir, language, components) => {
   const indexOutputFileName = join(process.cwd(), outputDir, `index.${language}`)
   writeFileSync(
     indexOutputFileName,
     getTemplate('index', language)
-      .replace(TemplateToken.EXPORTS, exports.join(',\n'))
-      .replace(TemplateToken.IMPORTS, imports.join('\n'))
+      .replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
   )
+}
+
+const saveComponent = async (outputDir, language, content) => {
+  const indexOutputFileName = join(process.cwd(), outputDir, `index.${language}`)
+
+  await outputFile(
+    indexOutputFileName,
+    content
+  )
+}
+
+const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
+  prepareDir(outputDir, true)
+  const components = []
+
+  for (const tag of tags) {
+    const camelizedName = kebab2Camel(tag.name)
+    const componentName = capitalize(camelizedName)
+    components.push(componentName)
+    console.info(`Processing ${componentName}...`)
+
+    const componentOutputDir = join(process.cwd(), outputDir, componentName)
+    const componentContent = renderComponent(tag)(language)(componentName)
+
+    await saveComponent(componentOutputDir, language, componentContent)
+
+    console.log({ tag })
+
+    const packageJsonContent = {
+      name: `@vonage/vivid-react-${componentName.toLowerCase()}`,
+      version: packageJson.version,
+      main: `index.${language}`,
+      license: 'MIT',
+      dependencies: {}
+    }
+  }
+
+  saveIndex(outputDir, language, components)
 
   prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
 
-  console.info(`${imports.length} wrappers generated at ${outputDir}`)
+  console.info(`${components.length} wrappers generated at ${outputDir}`)
 }
 
 module.exports = {

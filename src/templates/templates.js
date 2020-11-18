@@ -15,6 +15,7 @@ const TemplateToken = {
   PROPERTIES: '<% properties %>',
   ATTRIBUTES: '<% attributes %>',
   EVENTS: '<% events %>',
+  CLASS_JSDOC: '<% jsdoc.class %>',
   TAG_DESCRIPTOR_JSON: '<% descriptor-json %>'
 }
 

@@ -4,10 +4,13 @@ const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } 
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, tempFolder } = require('./consts')
+const { WCAConfig, tempFolder, VividRepo } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 
+const renderPropertyJsDoc = property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''}`
+const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsDoc).join('\n')
+const renderJsDoc = tag => `/** ${tag.description || ''} \n${renderTagPropertiesJsDoc(tag)}\n*/`
 const stripQuotes = input => input.replace(/'/g, '')
 const unique = stringArray => Array.from(new Set(stringArray))
 const getGithubToken = () => process.env.GITHUB_ACCESS_TOKEN || process.env.GITHUB_TOKEN
@@ -34,13 +37,20 @@ const getVividPackageName = componentPath => {
   const pkg = getParsedJson(packageJson)
   return pkg.name
 }
-const getYarnCommand = () => os.platform() === 'win32' ? 'yarn.cmd' : 'yarn'
-const cleanupDir = p => {
-  console.info(`Clearing folder: ${p}`)
-  rmdirSync(p, { recursive: true })
+const getYarnCommand = () => `yarn${os.platform() === 'win32' ? '.cmd' : ''}`
+const prepareDir = (p, clean = true) => {
+  if (clean) {
+    console.info(`Clearing folder: ${p}`)
+    rmdirSync(p, { recursive: true })
+  }
   mkdirp.sync(p)
 }
 const getFirstFolderNameFromPath = path => readdirSync(path, { withFileTypes: true }).find(x => x.isDirectory()).name
+const getProperties = tag =>
+  (tag.properties || [])
+    .filter(prop => prop.type) // only props having certain type
+    .filter(prop => /'.*?'/.test(prop.name) ||
+      /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
 
 const isFileExists = (fileName) => new Promise(
   (resolve, reject) => access(
@@ -91,14 +101,14 @@ const getInputArgument = (argumentName, defaultValue = null) => {
 
 const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid.zip' }) => {
   const outFolder = filePath(config.tempFolder)
-  cleanupDir(outFolder)
+  prepareDir(outFolder, false)
   console.log('Fetching latest Vivid release artifact...')
   if (!getGithubToken()) {
     console.warn('It seems GITHUB_ACCESS_TOKEN or GITHUB_TOKEN environment variable is not defined.')
     return
   }
   const octokit = new Octokit({ auth: getGithubToken() })
-  const result = await octokit.request('GET /repos/Vonage/vivid/zipball')
+  const result = await octokit.request(`GET /repos/${VividRepo}/zipball`)
   if (result.status === 200) {
     const filename = getFileNameFromDispositionHeader(result.headers['content-disposition'])
     console.info(`Got zipball ${filename}`)
@@ -135,7 +145,8 @@ module.exports = {
   toCommaSeparatedList,
   toJsonObjectsList,
   filePath,
-  cleanupDir,
+  prepareDir,
+  renderJsDoc,
   capitalize,
   kebab2Camel,
   event2PropName,
@@ -144,6 +155,7 @@ module.exports = {
   getInputArgument,
   isFileExists,
   isVividPackageName,
+  getProperties,
   getParsedJson,
   getVividPackageName,
   getVividPackageNames,

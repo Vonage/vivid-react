@@ -1,14 +1,11 @@
-const { event2PropName } = require('./utils')
+const { event2PropName, getProperties } = require('./utils')
 
 // Common
 
-const getProperties = tag =>
-  (tag.properties || [])
-    .filter(prop => prop.type) // only props having certain type
-    .filter(prop => /'.*?'/.test(prop.name) ||
-      /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
-
 const getEvents = tag => (tag.events || []).map(x => event2PropName(x.name))
+const isTypeSet = type => /(".*?" \|)/.test(type)
+const isBoolean = type => /(true|false)/.test(type)
+const isNumber = type => /(integer)/.test(type) || type === 'number | null'
 
 // TypeScript
 
@@ -16,7 +13,26 @@ const getProps = tag => {
   const eventsProps = getEvents(tag).map(x => `  ${x}?: (event: Event) => void`)
 
   const properties = getProperties(tag)
-  const props = properties.map(x => `  ${x.name}?: ${x.type}`)
+  const mapType = type => ([
+    'boolean',
+    'Boolean',
+    'string',
+    'string | null',
+    'string | undefined',
+    'string | number',
+    'number',
+    'unknown'].indexOf(type) >= 0 ||
+  isTypeSet(type))
+    ? type
+    : isBoolean(type)
+      ? 'boolean'
+      : isNumber(type)
+        ? 'number'
+        : (type === 'array')
+            ? 'any[]'
+            : `any /* ${type} */`
+  const props = properties.map(x => `  ${x.name}?: ${mapType(x.type)}`)
+
   return [
     ...eventsProps,
     ...props
@@ -34,10 +50,7 @@ const getPropTypes = tag => {
   const eventsPropTypes = getEvents(tag).map(x => `  ${x}: PropTypes.func`)
 
   const properties = getProperties(tag)
-  const isBoolean = type => /(true|false)/.test(type)
-  const isNumber = type => /(integer)/.test(type) || type === 'number | null'
   const isString = type => type === 'string | undefined' || type === 'string | null'
-  const isTypeSet = type => /(".*?" \|)/.test(type)
   const getSetTypeOptions = setType => setType.split('|').map(x => x.trim())
   const mapTypeToPropType = type => ['boolean', 'string', 'number', 'array'].indexOf(type) >= 0
     ? (type === 'boolean' ? 'bool' : type)

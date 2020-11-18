@@ -53,6 +53,7 @@ jobs:
 
       - name: Publish components
         run: |
+          cd dist
           echo registry=https://npm.pkg.github.com/ > .npmrc
           echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
           git update-index --skip-worktree .npmrc

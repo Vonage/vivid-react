@@ -14,9 +14,11 @@ const WrappedComponent = wrapper('<% tag %>',  {
 }) as ForwardRefExoticComponent<any>;
 
 <% jsdoc.class %>
-export const <% component-class-name %> = (props:
+const <% component-class-name %> = (props:
 {
   children?: ReactNode,
 <% props %>
 }
 ): JSX.Element => <WrappedComponent {...props}>{props.children}</WrappedComponent>
+
+export default <% component-class-name %>

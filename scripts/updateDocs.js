@@ -36,4 +36,4 @@ const updateSupportedComponents = async (target) => {
   await outputFile(target, packageList.join(os.EOL))
 }
 
-updateSupportedComponents('docs/SUPPORTED_COMPONENTS.md')
+updateSupportedComponents('SUPPORTED_COMPONENTS.md')

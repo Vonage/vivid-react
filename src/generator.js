@@ -41,25 +41,17 @@ const renderComponent = tag => language => componentName => {
 
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
-const saveIndex = (outputDir, language, components) => {
-  const indexOutputFileName = join(process.cwd(), outputDir, `index.${language}`)
-  writeFileSync(
-    indexOutputFileName,
-    getTemplate('index', language)
-      .replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
-  )
-}
-
-const saveComponent = async (outputDir, language, content) => {
-  const indexOutputFileName = join(outputDir, `index.${language}`)
-
-  await outputFile(
-    indexOutputFileName,
-    content
-  )
-}
-
 const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
+  const saveIndex = (outputDir, content) => {
+    const indexOutputFileName = join(outputDir, `index.${language}`)
+    return outputFile(
+      indexOutputFileName,
+      content
+    )
+  }
+  const getIndexContent = (components) =>
+    getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
+
   prepareDir(outputDir, true)
   const components = []
 
@@ -72,7 +64,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const componentContent = renderComponent(tag)(language)(componentName)
 
-    await saveComponent(componentOutputDir, language, componentContent)
+    await saveIndex(componentOutputDir, componentContent)
 
     const packageName = `@vonage/${tag.name}`
     const packageJsonContent = {
@@ -87,7 +79,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
     await outputJson(join(componentOutputDir, 'packages.json'), packageJsonContent, { spaces: 2 })
   }
 
-  saveIndex(outputDir, language, components)
+  await saveIndex(outputDir, getIndexContent(components))
 
   prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
 

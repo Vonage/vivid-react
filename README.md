@@ -36,15 +36,16 @@ This package is an ES module, so you might need to add some configuration to you
 # Development
 
 ## Adding a component 
-The process is rather simple, you just need to:
-* clone this repo and create a new branch
+Follow the steps:
+* clone this repo
+* create a branch
 * add the missing vivid component as a `dependency` in `package.json`
 * create a new PR and get it merged to `master`
 * [publish](#publishing-a-new-version) new version
 * install the new package in your application
 
 ## Publishing a new version
-When you want to release the latest changes, checkout the latest `master` branch and simply run:
+When you want to release the latest changes, checkout the latest `master` branch and run:
 
 ```
 $ yarn version --new-version {minor|major|patch}

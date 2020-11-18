@@ -1,3 +1,8 @@
+const { EOL } = require('os')
+const packageJson = require('../package.json')
+
+const { outputFile, outputJson } = require('fs-extra')
+
 const {
   prepareDir,
   kebab2Camel,
@@ -34,38 +39,51 @@ const renderComponent = tag => language => componentName => {
   return result
 }
 
-const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => (tags) => {
+const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
+
+const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
+  const saveIndex = (outputDir, content) => {
+    const indexOutputFileName = join(outputDir, `index.${language}`)
+    return outputFile(
+      indexOutputFileName,
+      content
+    )
+  }
+  const getIndexContent = (components) =>
+    getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
+
   prepareDir(outputDir, true)
-  const imports = []
-  const exports = []
+  const components = []
 
   for (const tag of tags) {
     const camelizedName = kebab2Camel(tag.name)
     const componentName = capitalize(camelizedName)
-    const componentFileExt = `.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
-    const componentFileName = `${camelizedName}.g`
-    const componentOutputFileName = join(process.cwd(), outputDir, `${componentFileName}${componentFileExt}`)
-    imports.push(`import { ${componentName} } from './${componentFileName}'`)
-    exports.push(`  ${componentName}`)
+    components.push(componentName)
     console.info(`Processing ${componentName}...`)
 
-    writeFileSync(
-      componentOutputFileName,
-      renderComponent(tag)(language)(componentName)
-    )
+    const componentOutputDir = join(process.cwd(), outputDir, componentName)
+    const componentContent = renderComponent(tag)(language)(componentName)
+
+    await saveIndex(componentOutputDir, componentContent)
+
+    const packageName = `@vonage/${tag.name}`
+    const packageJsonContent = {
+      name: `@vonage/vivid-react-${tag.name}`,
+      version: packageJson.version,
+      main: `index.${language}`,
+      license: 'MIT',
+      dependencies: {
+        [packageName]: packageJson.dependencies[packageName]
+      }
+    }
+    await outputJson(join(componentOutputDir, 'packages.json'), packageJsonContent, { spaces: 2 })
   }
 
-  const indexOutputFileName = join(process.cwd(), outputDir, `index.${language}`)
-  writeFileSync(
-    indexOutputFileName,
-    getTemplate('index', language)
-      .replace(TemplateToken.EXPORTS, exports.join(',\n'))
-      .replace(TemplateToken.IMPORTS, imports.join('\n'))
-  )
+  await saveIndex(outputDir, getIndexContent(components))
 
   prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
 
-  console.info(`${imports.length} wrappers generated at ${outputDir}`)
+  console.info(`${components.length} wrappers generated at ${outputDir}`)
 }
 
 module.exports = {

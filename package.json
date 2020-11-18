@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",
@@ -9,8 +9,10 @@
     "generateWrappers:ts": "node bin/cli.js --language=ts",
     "generateWrappers:all:js": "node bin/cli.js --all=true",
     "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
+    "postgenerateWrappers": "cp package.json dist && cp README.md dist && cp SUPPORTED_COMPONENTS.md dist",
     "test": "jest",
     "test:watch": "jest --watch",
+    "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
     "postversion": "git push --follow-tags"
   },
   "keywords": [
@@ -24,29 +26,52 @@
   ],
   "dependencies": {
     "@vonage/vivid-react-wrapper": "git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#CY-831-wrappers-generator",
+    "@vonage/vwc-audio": "^0.15.3",
+    "@vonage/vwc-badge": "^0.15.3",
+    "@vonage/vwc-button": "^0.15.3",
+    "@vonage/vwc-carousel": "^0.15.3",
+    "@vonage/vwc-checkbox": "^0.15.3",
+    "@vonage/vwc-circular-progress": "^0.15.3",
+    "@vonage/vwc-drawer": "^0.15.3",
+    "@vonage/vwc-fab": "^0.15.3",
+    "@vonage/vwc-file-picker": "^0.15.3",
+    "@vonage/vwc-formfield": "^0.15.3",
+    "@vonage/vwc-icon": "^0.15.3",
+    "@vonage/vwc-keypad": "^0.15.3",
+    "@vonage/vwc-linear-progress": "^0.15.3",
+    "@vonage/vwc-list": "^0.15.3",
+    "@vonage/vwc-media-controller": "^0.15.3",
+    "@vonage/vwc-menu": "^0.15.3",
+    "@vonage/vwc-notched-outline": "^0.15.3",
+    "@vonage/vwc-radio": "^0.15.3",
+    "@vonage/vwc-relative-time": "^0.15.3",
+    "@vonage/vwc-scheme-select": "^0.15.3",
+    "@vonage/vwc-select": "^0.15.3",
+    "@vonage/vwc-slider": "^0.15.3",
+    "@vonage/vwc-switch": "^0.15.3",
+    "@vonage/vwc-textarea": "^0.15.3",
+    "@vonage/vwc-textfield": "^0.15.3",
+    "@vonage/vwc-top-app-bar": "^0.15.3",
+    "@vonage/vwc-top-app-bar-fixed": "^0.15.3",
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@octokit/core": "^3.1.2",
-    "@vonage/vwc-button": "^0.15.0",
-    "@vonage/vwc-checkbox": "^0.15.0",
-    "@vonage/vwc-slider": "^0.15.0",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-jest": "^26.6.1",
     "extract-zip": "2.0.1",
+    "fs-extra": "^9.0.1",
     "jest": "^26.6.1",
+    "lodash": "^4.17.20",
     "mkdirp": "1.0.4",
     "standard": "^16.0.1",
-    "web-component-analyzer": "^1.1.6",
-    "typescript": "4.0.5"
+    "typescript": "4.0.5",
+    "web-component-analyzer": "^1.1.6"
   },
   "peerDependencies": {
     "react": ">=16.8",
     "react-dom": ">=16.8"
-  },
-  "files": [
-    "dist/**.js"
-  ]
+  }
 }

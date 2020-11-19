@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",

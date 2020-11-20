@@ -4,7 +4,7 @@ const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } 
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, tempFolder, VividRepo } = require('./consts')
+const { WCAConfig, tempFolder, VividRepo, PACKAGE_JSON } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 
@@ -33,7 +33,7 @@ const getVividPackageName = componentPath => {
   if (pathParts.length > 0 && pathParts[pathParts.length - 1] === 'src') {
     pathParts.pop()
   }
-  const packageJson = filePath(join(tempFolder, ...pathParts, 'package.json'))
+  const packageJson = filePath(join(tempFolder, ...pathParts, PACKAGE_JSON))
   const pkg = getParsedJson(packageJson)
   return pkg.name
 }
@@ -70,7 +70,7 @@ const getVividPackageNames = ({ dependencies, devDependencies }) => {
     ...Object.keys(devDependencies)
   ]
   const result = unique(packages).filter(isVividPackageName)
-  console.log(`Vivid packages detected from package.json: \n${result.map(x => `  - ${x}`).join('\n')}`)
+  console.log(`Vivid packages detected from ${PACKAGE_JSON}: \n${result.map(x => `  - ${x}`).join('\n')}`)
   return result
 }
 

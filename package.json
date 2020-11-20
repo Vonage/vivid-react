@@ -4,12 +4,13 @@
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",
+  "private":"true",
   "scripts": {
     "generateWrappers": "node bin/cli.js",
     "generateWrappers:ts": "node bin/cli.js --language=ts",
     "generateWrappers:all:js": "node bin/cli.js --all=true",
     "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
-    "postgenerateWrappers": "cp package.json dist && cp README.md dist && cp SUPPORTED_COMPONENTS.md dist",
+    "postgenerateWrappers": "node scripts/copyToDist.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
@@ -67,7 +68,7 @@
     "lodash": "^4.17.20",
     "mkdirp": "1.0.4",
     "standard": "^16.0.1",
-    "typescript": "4.0.5",
+    "typescript": "4.1.2",
     "web-component-analyzer": "^1.1.6"
   },
   "peerDependencies": {

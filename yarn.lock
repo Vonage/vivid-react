@@ -6018,10 +6018,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@4.0.5:
-  version "4.0.5"
-  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
-  integrity sha1-rp3d/RBp8ctb6z7zshcN18EzI4k=
+typescript@4.1.2:
+  version "4.1.2"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/typescript/-/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9"
+  integrity sha1-Y2nvIlFv5eEDBKrlpcSGLbVTgOk=
 
 typescript@^3.8.3:
   version "3.9.7"

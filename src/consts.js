@@ -1,4 +1,5 @@
 const tempFolder = 'temp'
+const PACKAGE_JSON = 'package.json'
 
 const VividRepo = 'Vonage/vivid'
 
@@ -40,6 +41,7 @@ const OutputLanguage = {
 }
 
 module.exports = {
+  PACKAGE_JSON,
   OutputLanguage,
   WCAConfig,
   WCAConfigAll,

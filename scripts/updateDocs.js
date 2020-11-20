@@ -8,7 +8,7 @@ const { dependencies, devDependencies } = require('../package.json')
 const generateSupportedComponents = () => {
   const allDeps = Object.entries({
     ...devDependencies,
-    ...dependencies,
+    ...dependencies
   })
 
   const reducePackagesToVividComponentsList = (acc, [name, version]) => {

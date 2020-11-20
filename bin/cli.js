@@ -1,4 +1,4 @@
-const { OutputLanguage, CLIArgument, WCAConfigAll } = require('../src/consts')
+const { OutputLanguage, CLIArgument, WCAConfigAll, PACKAGE_JSON } = require('../src/consts')
 const { generateWrappers } = require('../src/generator')
 const {
   isFileExists,
@@ -18,7 +18,7 @@ getInputArgument(CLIArgument.All)
         getInputArgument(CLIArgument.Output, OutputDirectory),
         getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)
       ))
-  : isFileExists('package.json')
+  : isFileExists(PACKAGE_JSON)
     .then(getParsedJson)
     .then(getVividPackageNames)
     .then(getCustomElementTagsDefinitionsList())

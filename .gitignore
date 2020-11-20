@@ -4,4 +4,5 @@ node_modules/
 temp
 *.g.*
 dist/
+dist.ts/
 /yarn-error.log

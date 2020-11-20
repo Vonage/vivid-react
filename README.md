@@ -31,7 +31,9 @@ import { VwcCheckbox, VwcSlider } from '@vonage/vivid-react'
 ```
 
 ## Bundling
-This package is an ES module, so you might need to add some configuration to your bundling process. 
+This package is an ES module, so you might need to add some configuration to your bundling process.
+
+See [here](https://confluence.vonage.com/display/CYCLOPS/Vivid+adoption) if you need help with setting up *IE11* bundle process.
 
 # Development
 

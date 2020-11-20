@@ -4,7 +4,7 @@ const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } 
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, tempFolder, VividRepo, PACKAGE_JSON } = require('./consts')
+const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 
@@ -24,6 +24,7 @@ const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(even
 const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
+const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
 const getVividPackageName = componentPath => {
   const { dir } = parse(componentPath)
   if (dir.indexOf('node_modules') >= 0) {
@@ -33,7 +34,7 @@ const getVividPackageName = componentPath => {
   if (pathParts.length > 0 && pathParts[pathParts.length - 1] === 'src') {
     pathParts.pop()
   }
-  const packageJson = filePath(join(tempFolder, ...pathParts, PACKAGE_JSON))
+  const packageJson = filePath(join(FileName.tempFolder, ...pathParts, FileName.packageJson))
   const pkg = getParsedJson(packageJson)
   return pkg.name
 }
@@ -70,7 +71,7 @@ const getVividPackageNames = ({ dependencies, devDependencies }) => {
     ...Object.keys(devDependencies)
   ]
   const result = unique(packages).filter(isVividPackageName)
-  console.log(`Vivid packages detected from ${PACKAGE_JSON}: \n${result.map(x => `  - ${x}`).join('\n')}`)
+  console.log(`Vivid packages detected from ${FileName.packageJson}: \n${result.map(x => `  - ${x}`).join('\n')}`)
   return result
 }
 
@@ -99,7 +100,7 @@ const getInputArgument = (argumentName, defaultValue = null) => {
   return targetArgument ? targetArgument.value : defaultValue
 }
 
-const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid.zip' }) => {
+const getVividLatestRelease = async (config = { tempFolder: FileName.tempFolder, tempFileName: FileName.tempVividZipball }) => {
   const outFolder = filePath(config.tempFolder)
   prepareDir(outFolder, false)
   console.log('Fetching latest Vivid release artifact...')
@@ -155,6 +156,7 @@ module.exports = {
   getInputArgument,
   isFileExists,
   isVividPackageName,
+  getIndexFileName,
   getProperties,
   getParsedJson,
   getVividPackageName,

@@ -1,11 +1,18 @@
-const tempFolder = 'temp'
-const PACKAGE_JSON = 'package.json'
+const FileName = {
+  packageJson: 'package.json',
+  tempFolder: 'temp',
+  tempFileName: 'analyzerOutput.json',
+  tempVividZipball: 'vivid.zip',
+  defaultOutputDirectory: 'dist',
+  readme: 'README.md',
+  supportedComponents: 'SUPPORTED_COMPONENTS.md'
+}
 
 const VividRepo = 'Vonage/vivid'
 
 const WCAConfig = {
-  tempFolder,
-  tempFileName: 'analyzerOutput.json',
+  tempFolder: FileName.tempFolder,
+  tempFileName: FileName.tempFileName,
   nodeArgumentsFactory: (packageNames, analyzerOutputFile) => [
     './node_modules/web-component-analyzer/cli.js',
     'analyze',
@@ -17,8 +24,8 @@ const WCAConfig = {
 }
 
 const WCAConfigAll = {
-  tempFolder,
-  tempFileName: 'analyzerOutput.json',
+  tempFolder: FileName.tempFolder,
+  tempFileName: FileName.tempFileName,
   nodeArgumentsFactory: (targetFolder, analyzerOutputFile) => [
     './node_modules/web-component-analyzer/cli.js',
     'analyze',
@@ -41,11 +48,10 @@ const OutputLanguage = {
 }
 
 module.exports = {
-  PACKAGE_JSON,
+  FileName,
   OutputLanguage,
   WCAConfig,
   WCAConfigAll,
   CLIArgument,
-  tempFolder,
   VividRepo
 }

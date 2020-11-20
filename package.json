@@ -10,7 +10,7 @@
     "generateWrappers:ts": "node bin/cli.js --language=ts",
     "generateWrappers:all:js": "node bin/cli.js --all=true",
     "generateWrappers:all:ts": "node bin/cli.js --all=true --language=ts --clean=false",
-    "postgenerateWrappers": "node scripts/copyToDist.js",
+    "postgenerateWrappers": "node scripts/copyToOutput.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",

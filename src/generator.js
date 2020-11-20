@@ -12,12 +12,13 @@ const {
   event2EventDescriptor,
   filePath,
   renderJsDoc,
+  getIndexFileName,
   getInputArgument,
   getVividPackageName
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
-const { OutputLanguage, tempFolder, CLIArgument, PACKAGE_JSON } = require('./consts')
+const { OutputLanguage, CLIArgument, FileName } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const renderComponent = tag => language => componentName => {
@@ -41,7 +42,7 @@ const renderComponent = tag => language => componentName => {
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
 const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
-  const indexFileName = `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
+  const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)
     return outputFile(
@@ -77,12 +78,12 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
         [packageName]: packageJson.dependencies[packageName]
       }
     }
-    await outputJson(join(componentOutputDir, PACKAGE_JSON), packageJsonContent, { spaces: 2 })
+    await outputJson(join(componentOutputDir, FileName.packageJson), packageJsonContent, { spaces: 2 })
   }
 
   await saveIndex(outputDir, getIndexContent(components))
 
-  prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
+  prepareDir(filePath(FileName.tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
 
   console.info(`${components.length} wrappers generated at ${outputDir}`)
 }

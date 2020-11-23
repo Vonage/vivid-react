@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "Vivid wrapped for easy React usage",
   "main": "dist/index.js",
   "license": "MIT",
@@ -25,7 +25,7 @@
     "CLI"
   ],
   "dependencies": {
-    "@vonage/vivid-react-wrapper": "git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#CY-841_generator-to-vivid-react-repo",
+    "@vonage/vivid-react-wrapper": "1.0.5",
     "@vonage/vwc-audio": "^0.15.3",
     "@vonage/vwc-badge": "^0.15.3",
     "@vonage/vwc-button": "^0.15.3",

@@ -1373,9 +1373,10 @@
   dependencies:
     "@types/node" "*"
 
-"@vonage/vivid-react-wrapper@git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#CY-841_generator-to-vivid-react-repo":
+"@vonage/vivid-react-wrapper@^1.0.5":
   version "1.0.5"
-  resolved "git+ssh://git@github.com/Vonage/vivid-react-wrapper.git#a9bd464863333b14dd419afde0b8719db6893ed1"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vivid-react-wrapper/1.0.5/6fabff08244e3ba1fd769f664de770ccdea44487d5b6102814ddd0d54bf44313#d068e56e08835cb81c22cb1c8d86d5a876b61970"
+  integrity sha1-0GjlbgiDXLgcIsscjYbVqHa2GXA=
   dependencies:
     "@babel/plugin-transform-runtime" "^7.12.1"
     enzyme "^3.11.0"

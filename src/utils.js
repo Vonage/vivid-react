@@ -1,6 +1,7 @@
 const { join, parse } = require('path')
 const { flowRight, replace, startCase } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
+const { copyFileSync } = require('fs-extra')
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
@@ -89,6 +90,31 @@ const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackag
   }
 })
 
+const compileTypescript = (rootDir) => async (outDir) =>
+  spawnSync(
+    'node',
+    [
+      './node_modules/typescript/lib/tsc.js',
+      '--project',
+      filePath('tsconfig.json'),
+      '--rootDir',
+      rootDir,
+      '--outDir',
+      outDir
+    ]
+  )
+
+
+const copyStaticAssets = (outputDir) => (assets) => {
+  const cp = file => {
+    const source = filePath(file)
+    const dest = filePath(join(outputDir, file))
+    copyFileSync(source, dest)
+    console.info(`Copy static asset ${source} => ${dest}`)
+  }
+  assets.split(',').map(assetFileName => cp(assetFileName))
+}
+
 const getInputArgument = (argumentName, defaultValue = null) => {
   const argumentObjects = process.argv
     .filter(argument => argument.indexOf('=') >= 0)
@@ -145,6 +171,7 @@ const getComponentNameFromPackage = flowRight(
 module.exports = {
   toCommaSeparatedList,
   toJsonObjectsList,
+  compileTypescript,
   filePath,
   prepareDir,
   renderJsDoc,
@@ -156,6 +183,7 @@ module.exports = {
   getInputArgument,
   isFileExists,
   isVividPackageName,
+  copyStaticAssets,
   getIndexFileName,
   getProperties,
   getParsedJson,

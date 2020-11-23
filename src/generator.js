@@ -4,6 +4,7 @@ const packageJson = require('../package.json')
 const { outputFile, outputJson } = require('fs-extra')
 
 const {
+  compileTypescript,
   prepareDir,
   kebab2Camel,
   capitalize,
@@ -13,13 +14,18 @@ const {
   filePath,
   renderJsDoc,
   getIndexFileName,
-  getInputArgument,
   getVividPackageName
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
-const { OutputLanguage, CLIArgument, FileName } = require('./consts')
+const { OutputLanguage, FileName } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
+
+const generateTypings = outputDir => async tags => {
+  const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
+  await generateWrappers(distTs, OutputLanguage.TypeScript, false)(tags)
+  await compileTypescript(distTs)(outputDir)
+}
 
 const renderComponent = tag => language => componentName => {
   const flatEventsList = (tag.events || []).map(x => (typeof x === 'string' ? x : x.name))
@@ -41,7 +47,7 @@ const renderComponent = tag => language => componentName => {
 
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
-const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
+const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true) => async (tags) => {
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)
@@ -72,6 +78,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
       name: `@vonage/vivid-react-${tag.name}`,
       version: packageJson.version,
       main: indexFileName,
+      types: 'index.d.ts',
       private: true,
       license: 'MIT',
       dependencies: {
@@ -83,7 +90,11 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
 
   await saveIndex(outputDir, getIndexContent(components))
 
-  prepareDir(filePath(FileName.tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
+  if (language === OutputLanguage.JavaScript) {
+    await generateTypings(outputDir)(tags)
+  }
+
+  prepareDir(filePath(FileName.tempFolder), cleanTemp)
 
   console.info(`${components.length} wrappers generated at ${outputDir}`)
 }

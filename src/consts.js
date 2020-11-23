@@ -2,11 +2,18 @@ const FileName = {
   packageJson: 'package.json',
   tempFolder: 'temp',
   tempFileName: 'analyzerOutput.json',
+  tempTsFolder: 'ts',
   tempVividZipball: 'vivid.zip',
   defaultOutputDirectory: 'dist',
   readme: 'README.md',
   supportedComponents: 'SUPPORTED_COMPONENTS.md'
 }
+
+const Assets = [
+  FileName.packageJson,
+  FileName.readme,
+  FileName.supportedComponents
+].join(',')
 
 const VividRepo = 'Vonage/vivid'
 
@@ -36,6 +43,7 @@ const WCAConfigAll = {
 }
 
 const CLIArgument = {
+  Assets: 'assets', // static assets to be copied to output folder
   Output: 'output', // output folder
   Language: 'language', // language js,ts
   CleanTemp: 'clean', // clean up temp folder after CLI run
@@ -49,6 +57,7 @@ const OutputLanguage = {
 
 module.exports = {
   FileName,
+  Assets,
   OutputLanguage,
   WCAConfig,
   WCAConfigAll,

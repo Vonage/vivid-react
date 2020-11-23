@@ -23,7 +23,7 @@ const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const generateTypings = outputDir => async tags => {
   const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
-  await generateWrappers(distTs, OutputLanguage.TypeScript, false)(tags)
+  await generateWrappers(distTs, OutputLanguage.TypeScript, false, false)(tags)
   await compileTypescript(distTs)(outputDir)
 }
 
@@ -47,7 +47,7 @@ const renderComponent = tag => language => componentName => {
 
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
-const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true) => async (tags) => {
+const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (tags) => {
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)
@@ -59,14 +59,16 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   const getIndexContent = (components) =>
     getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
 
-  prepareDir(outputDir, true)
+  prepareDir(outputDir, true, verbose)
   const components = []
 
   for (const tag of tags) {
     const camelizedName = kebab2Camel(tag.name)
     const componentName = capitalize(camelizedName)
     components.push(componentName)
-    console.info(`Processing ${componentName}...`)
+    if (verbose) {
+      console.info(`Processing ${componentName}...`)
+    }
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const componentContent = renderComponent(tag)(language)(componentName)
@@ -94,9 +96,11 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     await generateTypings(outputDir)(tags)
   }
 
-  prepareDir(filePath(FileName.tempFolder), cleanTemp)
+  prepareDir(filePath(FileName.tempFolder), cleanTemp, verbose)
 
-  console.info(`${components.length} wrappers generated at ${outputDir}`)
+  if (verbose) {
+    console.info(`${components.length} wrappers generated at ${outputDir}`)
+  }
 }
 
 module.exports = {

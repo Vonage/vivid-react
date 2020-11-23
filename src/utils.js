@@ -40,9 +40,11 @@ const getVividPackageName = componentPath => {
   return pkg.name
 }
 const getYarnCommand = () => `yarn${os.platform() === 'win32' ? '.cmd' : ''}`
-const prepareDir = (p, clean = true) => {
+const prepareDir = (p, clean = true, verbose = true) => {
   if (clean) {
-    console.info(`Clearing folder: ${p}`)
+    if (verbose) {
+      console.info(`Clearing folder: ${p}`)
+    }
     rmdirSync(p, { recursive: true })
   }
   mkdirp.sync(p)
@@ -103,7 +105,6 @@ const compileTypescript = (rootDir) => async (outDir) =>
       outDir
     ]
   )
-
 
 const copyStaticAssets = (outputDir) => (assets) => {
   const cp = file => {

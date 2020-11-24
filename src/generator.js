@@ -4,6 +4,7 @@ const packageJson = require('../package.json')
 const { outputFile, outputJson } = require('fs-extra')
 
 const {
+  compileTypescript,
   prepareDir,
   kebab2Camel,
   capitalize,
@@ -12,14 +13,19 @@ const {
   event2EventDescriptor,
   filePath,
   renderJsDoc,
-  getInputArgument,
+  getIndexFileName,
   getVividPackageName
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
-const { writeFileSync } = require('fs')
 const { join } = require('path')
-const { OutputLanguage, tempFolder, CLIArgument } = require('./consts')
+const { OutputLanguage, FileName } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
+
+const generateTypings = outputDir => async tags => {
+  const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
+  await generateWrappers(distTs, OutputLanguage.TypeScript, false, false)(tags)
+  await compileTypescript(distTs)(outputDir)
+}
 
 const renderComponent = tag => language => componentName => {
   const flatEventsList = (tag.events || []).map(x => (typeof x === 'string' ? x : x.name))
@@ -41,9 +47,10 @@ const renderComponent = tag => language => componentName => {
 
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
 
-const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => async (tags) => {
+const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (tags) => {
+  const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
-    const indexOutputFileName = join(outputDir, `index.${language}`)
+    const indexOutputFileName = join(outputDir, indexFileName)
     return outputFile(
       indexOutputFileName,
       content
@@ -52,38 +59,48 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript) => as
   const getIndexContent = (components) =>
     getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
 
-  prepareDir(outputDir, true)
+  prepareDir(outputDir, true, verbose)
   const components = []
 
   for (const tag of tags) {
     const camelizedName = kebab2Camel(tag.name)
     const componentName = capitalize(camelizedName)
     components.push(componentName)
-    console.info(`Processing ${componentName}...`)
+    if (verbose) {
+      console.info(`Processing ${componentName}...`)
+    }
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const componentContent = renderComponent(tag)(language)(componentName)
 
     await saveIndex(componentOutputDir, componentContent)
 
-    const packageName = `@vonage/${tag.name}`
+    const packageName = getVividPackageName(tag.path)
     const packageJsonContent = {
       name: `@vonage/vivid-react-${tag.name}`,
       version: packageJson.version,
-      main: `index.${language}`,
+      main: indexFileName,
+      types: 'index.d.ts',
+      private: true,
       license: 'MIT',
       dependencies: {
         [packageName]: packageJson.dependencies[packageName]
       }
     }
-    await outputJson(join(componentOutputDir, 'packages.json'), packageJsonContent, { spaces: 2 })
+    await outputJson(join(componentOutputDir, FileName.packageJson), packageJsonContent, { spaces: 2 })
   }
 
   await saveIndex(outputDir, getIndexContent(components))
 
-  prepareDir(filePath(tempFolder), getInputArgument(CLIArgument.CleanTemp, true) !== 'false')
+  if (language === OutputLanguage.JavaScript) {
+    await generateTypings(outputDir)(tags)
+  }
 
-  console.info(`${components.length} wrappers generated at ${outputDir}`)
+  prepareDir(filePath(FileName.tempFolder), cleanTemp, verbose)
+
+  if (verbose) {
+    console.info(`${components.length} wrappers generated at ${outputDir}`)
+  }
 }
 
 module.exports = {

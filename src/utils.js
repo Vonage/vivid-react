@@ -1,10 +1,11 @@
 const { join, parse } = require('path')
 const { flowRight, replace, startCase } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
+const { copyFileSync } = require('fs-extra')
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, tempFolder, VividRepo } = require('./consts')
+const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 
@@ -24,6 +25,7 @@ const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(even
 const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
+const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
 const getVividPackageName = componentPath => {
   const { dir } = parse(componentPath)
   if (dir.indexOf('node_modules') >= 0) {
@@ -33,14 +35,16 @@ const getVividPackageName = componentPath => {
   if (pathParts.length > 0 && pathParts[pathParts.length - 1] === 'src') {
     pathParts.pop()
   }
-  const packageJson = filePath(join(tempFolder, ...pathParts, 'package.json'))
+  const packageJson = filePath(join(FileName.tempFolder, ...pathParts, FileName.packageJson))
   const pkg = getParsedJson(packageJson)
   return pkg.name
 }
 const getYarnCommand = () => `yarn${os.platform() === 'win32' ? '.cmd' : ''}`
-const prepareDir = (p, clean = true) => {
+const prepareDir = (p, clean = true, verbose = true) => {
   if (clean) {
-    console.info(`Clearing folder: ${p}`)
+    if (verbose) {
+      console.info(`Clearing folder: ${p}`)
+    }
     rmdirSync(p, { recursive: true })
   }
   mkdirp.sync(p)
@@ -70,7 +74,7 @@ const getVividPackageNames = ({ dependencies, devDependencies }) => {
     ...Object.keys(devDependencies)
   ]
   const result = unique(packages).filter(isVividPackageName)
-  console.log(`Vivid packages detected from package.json: \n${result.map(x => `  - ${x}`).join('\n')}`)
+  console.log(`Vivid packages detected from ${FileName.packageJson}: \n${result.map(x => `  - ${x}`).join('\n')}`)
   return result
 }
 
@@ -88,6 +92,30 @@ const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackag
   }
 })
 
+const compileTypescript = (rootDir) => async (outDir) =>
+  spawnSync(
+    'node',
+    [
+      './node_modules/typescript/lib/tsc.js',
+      '--project',
+      filePath('tsconfig.json'),
+      '--rootDir',
+      rootDir,
+      '--outDir',
+      outDir
+    ]
+  )
+
+const copyStaticAssets = (outputDir, assets) => () => {
+  const cp = file => {
+    const source = filePath(file)
+    const dest = filePath(join(outputDir, file))
+    copyFileSync(source, dest)
+    console.info(`Copy static asset ${source} => ${dest}`)
+  }
+  assets.split(',').map(assetFileName => cp(assetFileName))
+}
+
 const getInputArgument = (argumentName, defaultValue = null) => {
   const argumentObjects = process.argv
     .filter(argument => argument.indexOf('=') >= 0)
@@ -99,7 +127,7 @@ const getInputArgument = (argumentName, defaultValue = null) => {
   return targetArgument ? targetArgument.value : defaultValue
 }
 
-const getVividLatestRelease = async (config = { tempFolder, tempFileName: 'vivid.zip' }) => {
+const getVividLatestRelease = async (config = { tempFolder: FileName.tempFolder, tempFileName: FileName.tempVividZipball }) => {
   const outFolder = filePath(config.tempFolder)
   prepareDir(outFolder, false)
   console.log('Fetching latest Vivid release artifact...')
@@ -144,6 +172,7 @@ const getComponentNameFromPackage = flowRight(
 module.exports = {
   toCommaSeparatedList,
   toJsonObjectsList,
+  compileTypescript,
   filePath,
   prepareDir,
   renderJsDoc,
@@ -155,6 +184,8 @@ module.exports = {
   getInputArgument,
   isFileExists,
   isVividPackageName,
+  copyStaticAssets,
+  getIndexFileName,
   getProperties,
   getParsedJson,
   getVividPackageName,

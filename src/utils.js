@@ -106,7 +106,7 @@ const compileTypescript = (rootDir) => async (outDir) =>
     ]
   )
 
-const copyStaticAssets = (outputDir) => (assets) => {
+const copyStaticAssets = (outputDir, assets) => () => {
   const cp = file => {
     const source = filePath(file)
     const dest = filePath(join(outputDir, file))

@@ -1344,6 +1344,19 @@
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/prettier/2.1.5/426365683a151af0c4d413b1b5effa353e6da944565506a13c74bc5b9ec2a8b4#b6ab3bba29e16b821d84e09ecfaded462b816b00"
   integrity sha1-tqs7uinha4IdhOCez63tRiuBawA=
 
+"@types/prop-types@*":
+  version "15.7.3"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/prop-types/15.7.3/8096fa84338826f077134a5097bb095d970780e21f245c429bd45f67c9cad9d3#1f0d2dbb93b3a1fdef1a05fbb2c2d64e17458ad5"
+  integrity sha1-Hw0tu5Ozof3vGgX7ssLWThdFitU=
+
+"@types/react@16.9.49":
+  version "16.9.49"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/react/16.9.49/34e57e3d4e5dfebdc97cc42da3802b58d75e523c01c7cf9d25b0264316c2d8fc#09db021cf8089aba0cdb12a49f8021a69cce4872"
+  integrity sha1-CdsCHPgImroM2xKkn4AhppzOSHI=
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
 "@types/resize-observer-browser@^0.1.3":
   version "0.1.4"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/resize-observer-browser/0.1.4/0c24dccdc3163c0adf858dc4fc0eedad5363c04a55265502f166f026b19d1a8c#84879a4d6d4aaefde53d4b29c91c0c4cbcffc26f"
@@ -2357,6 +2370,11 @@ cssstyle@^2.2.0:
   integrity sha1-/2ZaDdvcMYZLCWR/NBY0Q9kLCFI=
   dependencies:
     cssom "~0.3.6"
+
+csstype@^3.0.2:
+  version "3.0.5"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/csstype/-/csstype-3.0.5.tgz#7fdec6a28a67ae18647c51668a9ff95bb2fa7bb8"
+  integrity sha1-f97GoopnrhhkfFFmip/5W7L6e7g=
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -6019,10 +6037,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@4.0.5:
-  version "4.0.5"
-  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
-  integrity sha1-rp3d/RBp8ctb6z7zshcN18EzI4k=
+typescript@4.1.2:
+  version "4.1.2"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/typescript/-/typescript-4.1.2.tgz#6369ef22516fe5e10304aae5a5c4862db55380e9"
+  integrity sha1-Y2nvIlFv5eEDBKrlpcSGLbVTgOk=
 
 typescript@^3.8.3:
   version "3.9.7"

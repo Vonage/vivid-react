@@ -1,11 +1,10 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Vivid wrapped for easy React usage",
   "main": "index.js",
   "types": "index.d.ts",
   "license": "MIT",
-  "private": "true",
   "scripts": {
     "generateWrappers": "node bin/cli.js",
     "test": "jest",

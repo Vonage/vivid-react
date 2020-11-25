@@ -3,7 +3,8 @@ const { event2PropName, getProperties } = require('./utils')
 // Common
 
 const getEvents = tag => (tag.events || []).map(x => event2PropName(x.name))
-const isTypeSet = type => /".*"[ |]?/.test(type) && /".*"[ |]?/.exec(type)[0] === type
+const isTypeSet = type => /(".*?" \|)/.test(type)
+const isStringTypeSet = type => /".*"[ |]?/.test(type) && /".*"[ |]?/.exec(type)[0] === type
 const isBoolean = type => /(true|false)/.test(type)
 const isNumber = type => /(integer)/.test(type) || type === 'number | null'
 
@@ -54,7 +55,7 @@ const getPropTypes = tag => {
   const getSetTypeOptions = setType => setType.split('|').map(x => x.trim())
   const mapTypeToPropType = type => ['boolean', 'string', 'number', 'array'].indexOf(type) >= 0
     ? (type === 'boolean' ? 'bool' : type)
-    : isTypeSet(type)
+    : isStringTypeSet(type)
       ? `oneOf([${getSetTypeOptions(type).join(',')}])`
       : isString(type)
         ? 'string'

@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Vivid wrapped for easy React usage",
   "main": "index.js",
   "types": "index.d.ts",

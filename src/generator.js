@@ -56,8 +56,18 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
       content
     )
   }
+  const saveStory = (outputDir, componentName, content) => {
+    const indexOutputFileName = join(outputDir, `${componentName}.stories.jsx`)
+    return outputFile(
+      indexOutputFileName,
+      content
+    )
+  }
   const getIndexContent = (components) =>
     getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
+  const getStoriesContent = (componentName, tag) =>
+    getTemplate('stories', 'js')
+      .split(TemplateToken.COMPONENT_CLASS_NAME).join(componentName)
 
   prepareDir(outputDir, true, verbose)
   const components = []
@@ -71,9 +81,13 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     }
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
+    const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)
     const componentContent = renderComponent(tag)(language)(componentName)
 
     await saveIndex(componentOutputDir, componentContent)
+    await saveStory(storyOutputDir, componentName, getStoriesContent(componentName, tag))
+    console.log('tag.properties', tag.properties)
+    console.log('tag', tag.properties)
 
     const packageName = getVividPackageName(tag.path)
     const packageJsonContent = {

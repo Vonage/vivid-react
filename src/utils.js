@@ -107,7 +107,7 @@ const validateTags = tags => tempFolder => async vividVersion => {
   const tagKeysMap = await page.evaluate(
     () => Array.from(document.body.children)
       .reduce((tagKeysMap, element) => {
-        const keys = Object.keys(element).map(x => x.replace(/_/g, ''))
+        const keys = Object.getOwnPropertyNames(element).map(x => x.replace(/_/g, ''))
         tagKeysMap[element.tagName.toLowerCase()] = keys
         return tagKeysMap
       }, {})
@@ -116,7 +116,9 @@ const validateTags = tags => tempFolder => async vividVersion => {
 
   serveProcess.kill()
   return tags.map(tag => {
-    tag.properties = tag.properties.filter(property => tagKeysMap[tag.name].includes(property.name))
+    if (tag.properties) {
+      tag.properties = tag.properties.filter(property => tagKeysMap[tag.name].includes(property.name))
+    }
     return tag
   })
 }

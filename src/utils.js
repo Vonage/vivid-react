@@ -1,12 +1,14 @@
 const { join, parse } = require('path')
 const { flowRight, replace, startCase } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
-const { copyFileSync } = require('fs-extra')
+const { copyFileSync, outputFile } = require('fs-extra')
 const mkdirp = require('mkdirp')
 const os = require('os')
-const { spawnSync } = require('child_process')
+const { spawnSync, spawn } = require('child_process')
 const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
+const { getTemplate, TemplateToken } = require('./templates/templates')
 const { Octokit } = require('@octokit/core')
+const { chromium } = require('playwright')
 const extract = require('extract-zip')
 
 const renderPropertyJsDoc = property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''}`
@@ -24,6 +26,8 @@ const snake2Camel = input => deCapitalize(input.split('_').map(x => capitalize(x
 const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(eventName)))}`
 const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
+const getVividVersionFromFileName = input => /-v(\d*.\d*.\d*)-/.exec(input)[1]
+const normalizeVersion = version => version.replace(/[\^~]/g, '')
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
 const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
 const getVividPackageName = componentPath => {
@@ -69,17 +73,57 @@ const filePath = (fileName) => join(process.cwd(), fileName)
 const getParsedJson = (jsonFilePath) => JSON.parse(readFileSync(jsonFilePath, { encoding: 'utf8' }))
 
 const getVividPackageNames = ({ dependencies, devDependencies }) => {
-  const packages = [
-    ...Object.keys(dependencies),
-    ...Object.keys(devDependencies)
-  ]
-  const result = unique(packages).filter(isVividPackageName)
-  console.log(`Vivid packages detected from ${FileName.packageJson}: \n${result.map(x => `  - ${x}`).join('\n')}`)
-  return result
+  const deps = {
+    ...dependencies,
+    ...devDependencies
+  }
+  const packages = Object.keys(deps).filter(isVividPackageName)
+  const vividVersion = packages.length > 0 ? normalizeVersion(deps[packages[0]]) : null // TODO: fetch max version out of all packages
+  console.log(`Vivid packages detected from ${FileName.packageJson}: \n${packages.map(x => `  - ${x}`).join('\n')}`)
+  return {
+    vividPackageNames: packages,
+    vividVersion
+  }
 }
 
-const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackageNames) => new Promise((resolve) => {
+const validateTags = tags => tempFolder => async vividVersion => {
+  const indexHtmlFile = filePath(join(tempFolder, FileName.indexHtml))
+  outputFile(indexHtmlFile, getTemplate('index', 'html')
+    .replace(TemplateToken.VIVID_VERSION, vividVersion)
+    .replace(TemplateToken.TAG,
+      tags.map(tag => `        <${tag.name}></${tag.name}>`).join('\n')))
+  const serveProcess = spawn(
+    'node',
+    [
+      './node_modules/serve/bin/serve.js',
+      tempFolder
+    ]
+  )
+
+  const browser = await chromium.launch()
+  const context = await browser.newContext()
+  const page = await context.newPage()
+  await page.goto('http://localhost:5000')
+  const tagKeysMap = await page.evaluate(
+    () => Array.from(document.body.children)
+      .reduce((tagKeysMap, element) => {
+        const keys = Object.keys(element).map(x => x.replace(/_/g, ''))
+        tagKeysMap[element.tagName.toLowerCase()] = keys
+        return tagKeysMap
+      }, {})
+  )
+  await browser.close()
+
+  serveProcess.kill()
+  return tags.map(tag => {
+    tag.properties = tag.properties.filter(property => tagKeysMap[tag.name].includes(property.name))
+    return tag
+  })
+}
+
+const getCustomElementTagsDefinitionsList = (config = WCAConfig) => ({ vividPackageNames, vividVersion }) => new Promise((resolve) => {
   const analyzerOutput = filePath(join(config.tempFolder, config.tempFileName))
+  console.log(`Analyzing Vivid v${vividVersion} elements...`)
   const child = spawnSync(
     'node',
     config.nodeArgumentsFactory(vividPackageNames, analyzerOutput),
@@ -88,7 +132,7 @@ const getCustomElementTagsDefinitionsList = (config = WCAConfig) => (vividPackag
   if (child.status === 0) {
     const output = getParsedJson(analyzerOutput)
     const uniqueTags = unique(output.tags.map(x => x.name)).map(x => output.tags.find(y => y.name === x))
-    return resolve(uniqueTags)
+    validateTags(uniqueTags)(config.tempFolder)(vividVersion).then(tags => resolve(tags))
   }
 })
 
@@ -154,8 +198,10 @@ const getVividLatestRelease = async (config = { tempFolder: FileName.tempFolder,
         console.log(`Installing Vivid packages at: ${vividFolder}...`)
         const child = spawnSync(getYarnCommand(), [], { cwd: vividFolder, stdio: 'ignore' })
         if (child.status === 0) {
-          console.log('Analyzing Vivid elements...')
-          resolve(`${vividFolder}/**/components/**`)
+          resolve({
+            vividPackageNames: `${vividFolder}/**/components/**`,
+            vividVersion: getVividVersionFromFileName(filename)
+          })
         }
         resolve()
       })

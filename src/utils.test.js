@@ -15,11 +15,10 @@ it('getVividPackageNames', () => {
       '@vonage/vwc-nav': '0.3'
     }
   }
-  const expectedList = [
-    '@vonage/vwc-button',
-    '@vonage/vwc-icon',
-    '@vonage/vwc-dropdown'
-  ]
+  const expectedList = {
+    vividPackageNames: ['@vonage/vwc-button', '@vonage/vwc-icon', '@vonage/vwc-dropdown'],
+    vividVersion: '0.1'
+  }
   expect(getVividPackageNames(packageJson)).toStrictEqual(expectedList)
 })
 
@@ -27,6 +26,6 @@ it.each([
   ['digit-added', 'onDigitAdded'],
   ['userScrubRequest', 'onUserScrubRequest'],
   ['vvd_scheme_select', 'onVvdSchemeSelect']
-])(`event2PropName should convert "%s" to "%s"`, (input, expected) => {
+])('event2PropName should convert "%s" to "%s"', (input, expected) => {
   expect(event2PropName(input)).toStrictEqual(expected)
 })

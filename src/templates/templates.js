@@ -4,6 +4,7 @@
 const { readFileSync } = require('fs')
 
 const TemplateToken = {
+  VIVID_VERSION: '<% vivid.version %>',
   BANNER: '<% banner %>',
   IMPORTS: '<% imports %>',
   EXPORTS: '<% exports %>',

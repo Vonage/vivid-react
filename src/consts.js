@@ -5,6 +5,7 @@ const FileName = {
   tempTsFolder: 'ts',
   tempVividZipball: 'vivid.zip',
   defaultOutputDirectory: 'dist',
+  storyOutputDir: 'stories',
   readme: 'README.md',
   supportedComponents: 'SUPPORTED_COMPONENTS.md'
 }

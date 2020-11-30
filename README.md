@@ -58,4 +58,9 @@ $ yarn version --new-version {minor|major|patch}
 - `minor` - after adding support for a new component, or adding a new awesome feature
 - `major` - after breaking or major package changes
 
+## Storybook
+
+For test/development storybook is in game. Stories are generated automatically per component
+with no arguments/properties, fill them before using component.
+
 *This is the end*

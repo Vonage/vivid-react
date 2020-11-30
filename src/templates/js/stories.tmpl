@@ -1,5 +1,3 @@
-<% banner %>
-
 import React from 'react'
 import <% component-class-name %> from '../../../dist/<% component-class-name %>'
 
@@ -12,5 +10,15 @@ export const Default = () => {
 
 export default {
   title: '<% component-class-name %>',
-  decorators: []
+  argTypes: {
+      //
+      // Example values
+      // numberValue: { control: 'number', defaultValue: 123 },
+      // booleanValue: { control: 'boolean', defaultValue: true },
+      // objectValue: { control: 'object', defaultValue: {} },
+      // stringValue: { control: 'string', defaultValue: 'string' },
+      // colorValue: { control: 'color' },
+      // dateValue: { control: 'date' }
+      //
+    }
 }

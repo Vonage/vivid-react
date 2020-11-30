@@ -88,8 +88,6 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
 
     await saveIndex(componentOutputDir, componentContent)
     await saveStory(storyOutputDir, componentName, getStoriesContent(componentName, tag))
-    console.log('tag.properties', tag.properties)
-    console.log('tag', tag.properties)
 
     const packageName = getVividPackageName(tag.path)
     const packageJsonContent = {

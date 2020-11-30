@@ -1349,10 +1349,10 @@
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/prop-types/15.7.3/8096fa84338826f077134a5097bb095d970780e21f245c429bd45f67c9cad9d3#1f0d2dbb93b3a1fdef1a05fbb2c2d64e17458ad5"
   integrity sha1-Hw0tu5Ozof3vGgX7ssLWThdFitU=
 
-"@types/react@16.2.49":
-  version "17.0.0"
-  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/react/17.0.0/bc214374e8ced7929a06d22ef339bb2034a723e26913977f6356ec0c92b4d5e0#5af3eb7fad2807092f0046a1302b7823e27919b8"
-  integrity sha1-WvPrf60oBwkvAEahMCt4I+J5Gbg=
+"@types/react@16.9.49":
+  version "16.9.49"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@types/react/16.9.49/34e57e3d4e5dfebdc97cc42da3802b58d75e523c01c7cf9d25b0264316c2d8fc#09db021cf8089aba0cdb12a49f8021a69cce4872"
+  integrity sha1-CdsCHPgImroM2xKkn4AhppzOSHI=
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
@@ -6045,7 +6045,7 @@ standard-engine@^14.0.1:
     pkg-conf "^3.1.0"
     xdg-basedir "^4.0.0"
 
-standard@^16.2.1:
+standard@^16.0.1:
   version "16.0.3"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/standard/-/standard-16.0.3.tgz#a854c0dd2dea6b9f0b8d20c65260210bd0cee619"
   integrity sha1-qFTA3S3qa58LjSDGUmAhC9DO5hk=

@@ -56,7 +56,7 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@octokit/core": "^3.1.2",
-    "@types/react": "16.2.49",
+    "@types/react": "16.9.49",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-jest": "^26.6.1",
     "extract-zip": "2.0.1",
@@ -65,7 +65,7 @@
     "serve": "11.3.2",
     "lodash": "^4.17.20",
     "mkdirp": "1.0.4",
-    "standard": "^16.2.1",
+    "standard": "^16.0.1",
     "typescript": "4.1.2",
     "web-component-analyzer": "^1.1.6"
   },

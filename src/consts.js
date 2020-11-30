@@ -56,7 +56,16 @@ const OutputLanguage = {
   TypeScript: 'ts'
 }
 
+// TODO: this can be removed when JSDocs for each component will be updated in Vivid repository
+const ComponentsEventsMap = {
+  VwcCheckbox: ['change'],
+  VwcRadio: ['change'],
+  VwcSlider: ['change'],
+  VwcSwitch: ['change']
+}
+
 module.exports = {
+  ComponentsEventsMap,
   FileName,
   Assets,
   OutputLanguage,

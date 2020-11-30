@@ -5,4 +5,4 @@ temp
 *.g.*
 dist/
 /yarn-error.log
-/src/stories/
+/stories/

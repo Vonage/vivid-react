@@ -1,13 +1,13 @@
 const { join, parse } = require('path')
 const { flowRight, replace, startCase } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
-const { copyFileSync } = require('fs-extra')
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
 const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
+const { copy } = require('fs-extra')
 
 const renderPropertyJsDoc = property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''}`
 const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsDoc).join('\n')
@@ -110,7 +110,7 @@ const copyStaticAssets = (outputDir, assets) => () => {
   const cp = file => {
     const source = filePath(file)
     const dest = filePath(join(outputDir, file))
-    copyFileSync(source, dest)
+    copy(source, dest)
     console.info(`Copy static asset ${source} => ${dest}`)
   }
   assets.split(',').map(assetFileName => cp(assetFileName))

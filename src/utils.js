@@ -7,7 +7,7 @@ const { spawnSync } = require('child_process')
 const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
-const { copy } = require('fs-extra')
+const { copySync } = require('fs-extra')
 
 const renderPropertyJsDoc = property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''}`
 const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsDoc).join('\n')
@@ -110,7 +110,7 @@ const copyStaticAssets = (outputDir, assets) => () => {
   const cp = file => {
     const source = filePath(file)
     const dest = filePath(join(outputDir, file))
-    copy(source, dest)
+    copySync(source, dest)
     console.info(`Copy static asset ${source} => ${dest}`)
   }
   assets.split(',').map(assetFileName => cp(assetFileName))

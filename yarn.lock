@@ -3207,10 +3207,10 @@
   dependencies:
     "@types/node" "*"
 
-"@vonage/vivid-react-wrapper@^1.0.9":
-  version "1.0.9"
-  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vivid-react-wrapper/1.0.9/a7ae1da340558f5b5d338feb2c53335fc3218cf9ca75334e199e8da8ae31de3e#b61c1da0e1b0e9745596604a8fab303c7d4ebb78"
-  integrity sha1-thwdoOGw6XRVlmBKj6swPH1Ou3g=
+"@vonage/vivid-react-wrapper@^1.1.0":
+  version "1.1.0"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vivid-react-wrapper/1.1.0/3c1b89277a7e04c194d6c9b58fc820ab7e4bea28cac434ba2c45164a80fae4b8#f0ba5ecc331d7714adab927524df145a644c8746"
+  integrity sha1-8LpezDMddxStq5J1JN8UWmRMh0Y=
   dependencies:
     "@babel/plugin-transform-runtime" "^7.12.1"
     enzyme "^3.11.0"

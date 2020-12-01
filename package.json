@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "@storybook/addon-controls": "^6.1.6",
-    "@vonage/vivid-react-wrapper": "^1.0.9",
+    "@vonage/vivid-react-wrapper": "^1.1.0",
     "@vonage/vwc-audio": "^0.15.3",
     "@vonage/vwc-badge": "^0.15.3",
     "@vonage/vwc-button": "^0.15.3",

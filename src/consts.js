@@ -7,13 +7,15 @@ const FileName = {
   defaultOutputDirectory: 'dist',
   storyOutputDir: 'stories',
   readme: 'README.md',
-  supportedComponents: 'SUPPORTED_COMPONENTS.md'
+  supportedComponents: 'SUPPORTED_COMPONENTS.md',
+  testing: 'testing'
 }
 
 const Assets = [
   FileName.packageJson,
   FileName.readme,
-  FileName.supportedComponents
+  FileName.supportedComponents,
+  FileName.testing
 ].join(',')
 
 const VividRepo = 'Vonage/vivid'

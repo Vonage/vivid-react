@@ -35,6 +35,24 @@ This package is an ES module, so you might need to add some configuration to you
 
 See [here](https://confluence.vonage.com/display/CYCLOPS/Vivid+adoption) if you need help with setting up *IE11* bundle process.
 
+## Testing
+If you have problems rendering `vivid` when using Jest/Enzyme combo, you can add this to your `package.json` to replace all `Vivid` wrapped components with an empty React component.
+
+```
+package.json
+
+{
+  ...,
+  "jest": {
+    ...,
+    "moduleNameMapper": {
+      ...,
+      "@vonage/vivid-react/*": "@vonage/vivid-react/testing/component.mock.js"
+    }
+  }
+}
+```
+
 # Development
 
 ## Adding a component 

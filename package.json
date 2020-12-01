@@ -24,7 +24,8 @@
     "CLI"
   ],
   "dependencies": {
-    "@vonage/vivid-react-wrapper": "^1.0.9",
+    "@storybook/addon-controls": "^6.1.6",
+    "@vonage/vivid-react-wrapper": "^1.1.0",
     "@vonage/vwc-audio": "^0.15.3",
     "@vonage/vwc-badge": "^0.15.3",
     "@vonage/vwc-button": "^0.15.3",
@@ -58,6 +59,9 @@
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@octokit/core": "^3.1.2",
+    "@storybook/addon-essentials": "^6.1.6",
+    "@storybook/addons": "^6.1.6",
+    "@storybook/react": "^6.1.6",
     "@types/react": "16.9.49",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-jest": "^26.6.1",

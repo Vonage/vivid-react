@@ -1,5 +1,6 @@
 const { EOL } = require('os')
 const packageJson = require('../package.json')
+const { ComponentsEventsMap } = require('./consts')
 
 const { outputFile, outputJson } = require('fs-extra')
 
@@ -8,7 +9,6 @@ const {
   prepareDir,
   kebab2Camel,
   capitalize,
-  toCommaSeparatedList,
   toJsonObjectsList,
   event2EventDescriptor,
   filePath,
@@ -28,13 +28,15 @@ const generateTypings = outputDir => async tags => {
 }
 
 const renderComponent = tag => language => componentName => {
-  const flatEventsList = (tag.events || []).map(x => (typeof x === 'string' ? x : x.name))
+  const flatEventsList = ComponentsEventsMap[componentName] || []
+
   const result = getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getVividPackageName(tag.path)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(flatEventsList.map(event2EventDescriptor)))
-    .replace(TemplateToken.PROPERTIES, toCommaSeparatedList(tag.properties))
-    .replace(TemplateToken.ATTRIBUTES, toCommaSeparatedList(tag.attributes))
+    // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
+    .replace(TemplateToken.PROPERTIES, '')
+    .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, getPropTypes(tag).join(',\n'))
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
     .replace(TemplateToken.DEFAULT_PROPS, getDefaultProps(tag).join(',\n'))

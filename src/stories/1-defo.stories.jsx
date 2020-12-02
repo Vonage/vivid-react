@@ -39,8 +39,22 @@ export const Select = (args) => <VwcSelect {...args} >
 </VwcSelect>
 List.args = {}
 
+const itemnumber = 1234
+export const SelectWithNumber = (args) => <VwcSelect {...args} >
+  <VwcListItem>{itemnumber}</VwcListItem>
+  <VwcListItem>Item 2</VwcListItem>
+  <VwcListItem>Item 3</VwcListItem>
+</VwcSelect>
+SelectWithNumber.args = {}
+
 export const Badge = (args) => <VwcBadge {...args} >
   badge-text
+</VwcBadge>
+Badge.args = {}
+
+const number = 1234
+export const BadgeWithNumber = (args) => <VwcBadge {...args} >
+  {number}
 </VwcBadge>
 Badge.args = {}
 

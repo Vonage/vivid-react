@@ -43,6 +43,7 @@
     "@vonage/vwc-media-controller": "^0.16.2",
     "@vonage/vwc-menu": "^0.16.2",
     "@vonage/vwc-notched-outline": "^0.16.2",
+    "@vonage/vwc-note": "^0.16.2",
     "@vonage/vwc-radio": "^0.16.2",
     "@vonage/vwc-relative-time": "^0.16.2",
     "@vonage/vwc-scheme-select": "^0.16.2",

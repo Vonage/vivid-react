@@ -20,6 +20,7 @@ The wrapper supports following components generated from `vivid` packages
 | VwcMedia Controller | @vonage/vwc-media-controller | ^0.16.2 |
 | VwcMenu | @vonage/vwc-menu | ^0.16.2 |
 | VwcNotched Outline | @vonage/vwc-notched-outline | ^0.16.2 |
+| VwcNote | @vonage/vwc-note | ^0.16.2 |
 | VwcRadio | @vonage/vwc-radio | ^0.16.2 |
 | VwcRelative Time | @vonage/vwc-relative-time | ^0.16.2 |
 | VwcScheme Select | @vonage/vwc-scheme-select | ^0.16.2 |

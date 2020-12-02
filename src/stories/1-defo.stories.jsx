@@ -24,7 +24,13 @@ export const List = (args) => <VwcList {...args} >
   <VwcListItem>Item 2</VwcListItem>
   <VwcListItem>Item 3</VwcListItem>
 </VwcList>
-List.args = {}
+
+export const ListNative = (args) => <vwc-list {...args} >
+  <vwc-list-item>Item 1</vwc-list-item>
+  <vwc-list-item>Item 2</vwc-list-item>
+  <vwc-list-item>Item 3</vwc-list-item>
+</vwc-list>
+ListNative.args = {}
 
 export const Select = (args) => <VwcSelect {...args} >
   <VwcListItem>Item 1</VwcListItem>

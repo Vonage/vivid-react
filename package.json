@@ -12,7 +12,8 @@
     "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
     "postversion": "git push --follow-tags",
     "storybook": "start-storybook -p 6006",
-    "prestorybook": "yarn generateWrappers"
+    "prestorybook": "yarn generateWrappers",
+    "updateVividPackages": "node scripts/updateVividPackages.js"
   },
   "keywords": [
     "Vivid",

@@ -28,11 +28,15 @@ const generateTypings = outputDir => async tags => {
 }
 
 const renderComponent = tag => language => componentName => {
+  const pattern = /@vonage\/[\w-]*/
+  const [packageRoot = ''] = pattern.exec(tag.path) || []
+  const importPath = packageRoot.endsWith(tag.name) ? packageRoot : `${packageRoot}/${tag.name}`
+
   const flatEventsList = ComponentsEventsMap[componentName] || []
 
   const result = getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
-    .replace(TemplateToken.IMPORTS, `import '${getVividPackageName(tag.path)}'`)
+    .replace(TemplateToken.IMPORTS, `import '${importPath}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(flatEventsList.map(event2EventDescriptor)))
     // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
     .replace(TemplateToken.PROPERTIES, '')

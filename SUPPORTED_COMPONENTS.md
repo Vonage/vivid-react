@@ -29,5 +29,6 @@ The wrapper supports following components generated from `vivid` packages
 | VwcSwitch | @vonage/vwc-switch | ^0.16.2 |
 | VwcTextarea | @vonage/vwc-textarea | ^0.16.2 |
 | VwcTextfield | @vonage/vwc-textfield | ^0.16.2 |
+| VwcTheme Switch | @vonage/vwc-theme-switch | 0.16.1 |
 | VwcTop App Bar | @vonage/vwc-top-app-bar | ^0.16.2 |
 | VwcTop App Bar Fixed | @vonage/vwc-top-app-bar-fixed | ^0.16.2 |

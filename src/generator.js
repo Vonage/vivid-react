@@ -1,5 +1,6 @@
 const { EOL } = require('os')
 const packageJson = require('../package.json')
+const { getImportPathFromTag } = require('./helpers/generator')
 const { ComponentsEventsMap } = require('./consts')
 
 const { outputFile, outputJson } = require('fs-extra')
@@ -28,15 +29,10 @@ const generateTypings = outputDir => async tags => {
 }
 
 const renderComponent = tag => language => componentName => {
-  const pattern = /@vonage\/[\w-]*/
-  const [packageRoot = ''] = pattern.exec(tag.path) || []
-  const importPath = packageRoot.endsWith(tag.name) ? packageRoot : `${packageRoot}/${tag.name}`
-
   const flatEventsList = ComponentsEventsMap[componentName] || []
-
-  const result = getTemplate('react-component', language)
+  return getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
-    .replace(TemplateToken.IMPORTS, `import '${importPath}'`)
+    .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(flatEventsList.map(event2EventDescriptor)))
     // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
     .replace(TemplateToken.PROPERTIES, '')
@@ -47,8 +43,6 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(tag, null, ' '))
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentName)
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
-
-  return result
 }
 
 const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`

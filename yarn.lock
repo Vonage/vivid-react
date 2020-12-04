@@ -3291,7 +3291,7 @@
     react "^16.13.1"
     react-dom "^16.14.0"
 
-"@vonage/vvd-core@^0.16.1", "@vonage/vvd-core@^0.16.2":
+"@vonage/vvd-core@^0.16.2":
   version "0.16.2"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-core/0.16.2/d30fa0bc2fd02b476d93c63fc65a48a63b8e17cbfbf1e4ca9d579a91ee5049d3#60610d7b9c5d4aad9659d095b70ff7f4b8f387e9"
   integrity sha1-YGENe5xdSq2WWdCVtw/39Ljzh+k=
@@ -3314,7 +3314,7 @@
   dependencies:
     tslib "^2.0.3"
 
-"@vonage/vvd-scheme@^0.16.1", "@vonage/vvd-scheme@^0.16.2":
+"@vonage/vvd-scheme@^0.16.2":
   version "0.16.2"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-scheme/0.16.2/4dbef9803544d96ca226c84ca297158c68fd5825dcbdee6c52e2bb8adbb2bc0a#cdd8aec1ac63172ef48519e2549b9ce4d9644547"
   integrity sha1-zdiuwaxjFy70hRniVJuc5NlkRUc=
@@ -3585,7 +3585,7 @@
     lit-element "^2.4.0"
     tslib "^2.0.3"
 
-"@vonage/vwc-switch@^0.16.1", "@vonage/vwc-switch@^0.16.2":
+"@vonage/vwc-switch@^0.16.2":
   version "0.16.2"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-switch/0.16.2/98b17ade69482d1678653ba3c0070ef8b9db24662f5c92c2999b0fb4757f398e#0b7b9909073b409293d471299067e5fef171f324"
   integrity sha1-C3uZCQc7QJKT1HEpkGfl/vFx8yQ=
@@ -3625,14 +3625,14 @@
     lit-element "^2.4.0"
     tslib "^2.0.3"
 
-"@vonage/vwc-theme-switch@0.16.1":
-  version "0.16.1"
-  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-theme-switch/0.16.1/d45634c82d8dd5a3c2979db3af02c26ddb7b0c860f46a41d6a34b77869822bd2#c285a316780b487d77bd70f0a861102c0008dc7e"
-  integrity sha1-woWjFngLSH13vXDwqGEQLAAI3H4=
+"@vonage/vwc-theme-switch@^0.16.2":
+  version "0.16.2"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-theme-switch/0.16.2/2251e7ebccae16ca924eb7f29184a9dd9811fbe2c9d15f28f9640c4f3e3ebebe#8e5c9716205d7105a37983f8701d8059df351ca5"
+  integrity sha1-jlyXFiBdcQWjeYP4cB2AWd81HKU=
   dependencies:
-    "@vonage/vvd-core" "^0.16.1"
-    "@vonage/vvd-scheme" "^0.16.1"
-    "@vonage/vwc-switch" "^0.16.1"
+    "@vonage/vvd-core" "^0.16.2"
+    "@vonage/vvd-scheme" "^0.16.2"
+    "@vonage/vwc-switch" "^0.16.2"
     lit-element "^2.4.0"
     tslib "^2.0.3"
 

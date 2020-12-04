@@ -41,7 +41,7 @@ const updatePackageJson = async () => {
   spinner.info(`Found ${packagesToUpdate.length} packages to update`)
   let updated = 0
   for (const { name, version } of packagesToUpdate) {
-    const versionedPackage = `${name}@${version}`
+    const versionedPackage = `${name}@^${version}`
     spinner.start(`Updating '${versionedPackage}' from '${dependencies[name]}'`)
     try {
       await spawnPromise('yarn', ['add', versionedPackage], { encoding: 'utf8' })

@@ -53,7 +53,7 @@
     "@vonage/vwc-switch": "^0.16.2",
     "@vonage/vwc-textarea": "^0.16.2",
     "@vonage/vwc-textfield": "^0.16.2",
-    "@vonage/vwc-theme-switch": "0.16.1",
+    "@vonage/vwc-theme-switch": "^0.16.2",
     "@vonage/vwc-top-app-bar": "^0.16.2",
     "@vonage/vwc-top-app-bar-fixed": "^0.16.2",
     "prop-types": "^15.7.2"

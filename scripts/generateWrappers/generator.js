@@ -1,5 +1,5 @@
 const { EOL } = require('os')
-const packageJson = require('../package.json')
+const packageJson = require('../../package.json')
 const { ComponentsEventsMap } = require('./consts')
 
 const { outputFile, outputJson } = require('fs-extra')
@@ -107,8 +107,6 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     }
     await outputJson(join(componentOutputDir, FileName.packageJson), packageJsonContent, { spaces: 2 })
   }
-
-  await saveIndex(outputDir, getIndexContent(components))
 
   if (language === OutputLanguage.JavaScript) {
     await generateTypings(outputDir)(tags)

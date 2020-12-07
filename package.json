@@ -6,7 +6,8 @@
   "types": "index.d.ts",
   "license": "MIT",
   "scripts": {
-    "generateWrappers": "node bin/cli.js",
+    "build": "yarn generateWrappers && rollup -c",
+    "generateWrappers": "node scripts/cli.js",
     "test": "jest",
     "test:watch": "jest --watch",
     "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
@@ -27,6 +28,8 @@
   "dependencies": {
     "@storybook/addon-controls": "^6.1.6",
     "@vonage/vivid-react-wrapper": "^1.2.0",
+    "@vonage/vvd-context": "^0.16.2",
+    "@vonage/vvd-fonts": "^0.16.2",
     "@vonage/vwc-audio": "^0.16.2",
     "@vonage/vwc-badge": "^0.16.2",
     "@vonage/vwc-button": "^0.16.2",
@@ -61,8 +64,13 @@
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
     "@material-ui/core": "^4.11.1",
     "@octokit/core": "^3.1.2",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.0",
     "@storybook/addon-controls": "^6.1.6",
     "@storybook/addon-essentials": "^6.1.6",
     "@storybook/addons": "^6.1.6",
@@ -77,6 +85,8 @@
     "lodash": "^4.17.20",
     "mkdirp": "1.0.4",
     "ora": "^5.1.0",
+    "rollup": "^2.34.1",
+    "rollup-plugin-auto-external": "^2.0.0",
     "standard": "^16.0.1",
     "typescript": "4.1.2",
     "web-component-analyzer": "^1.1.6"

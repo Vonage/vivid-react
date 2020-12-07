@@ -1,5 +1,5 @@
-const { OutputLanguage, CLIArgument, WCAConfigAll, FileName, Assets } = require('../src/consts')
-const { generateWrappers } = require('../src/generator')
+const { OutputLanguage, CLIArgument, WCAConfigAll, FileName, Assets } = require('./generateWrappers/consts')
+const { generateWrappers } = require('./generateWrappers/generator')
 const {
   isFileExists,
   getParsedJson,
@@ -8,7 +8,7 @@ const {
   getVividLatestRelease,
   getCustomElementTagsDefinitionsList,
   copyStaticAssets
-} = require('../src/utils')
+} = require('./generateWrappers/utils')
 
 const outputDir = getInputArgument(CLIArgument.Output, FileName.defaultOutputDirectory)
 const language = getInputArgument(CLIArgument.Language, OutputLanguage.JavaScript)

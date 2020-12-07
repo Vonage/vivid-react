@@ -1,8 +1,8 @@
 const os = require('os')
-const { getComponentNameFromPackage } = require('../src/utils')
+const { getComponentNameFromPackage } = require('./generateWrappers/utils')
 const { outputFile } = require('fs-extra')
 
-const { isVividPackageName } = require('../src/utils')
+const { isVividPackageName } = require('./generateWrappers/utils')
 const { dependencies, devDependencies } = require('../package.json')
 
 const generateSupportedComponents = () => {

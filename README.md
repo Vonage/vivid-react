@@ -16,18 +16,32 @@ $ yarn add @vonage/vivid-react
 ```
 No need for importing `vivid` directly. The dependencies will be installed for you.
  
+## Font initialization
+There are 2 ways to initialize Vivid fonts. You can use initialization function or HOC.
+
+```
+Function
+
+...
+import initVivid from '@vonage/vivid-react'
+
+initVivid(callback)
+```
+
+```
+HOC
+
+...
+import withVivid from '@vonage/vivid-react'
+
+renderApp(withVivid(App)
+```
+ 
 ## Importing
 Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead. 
 ```
-// GOOD
 import VwcCheckbox from '@vonage/vivid-react/VwcCheckbox'
 import VwcSlider from '@vonage/vivid-react/VwcSlider'
-```
-
-Don't do this if you want tree-shaking to work properly, as this will load all of the `vivid` packages
-```
-// BAD
-import { VwcCheckbox, VwcSlider } from '@vonage/vivid-react'
 ```
 
 ## Bundling

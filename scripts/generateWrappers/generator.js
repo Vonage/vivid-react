@@ -1,9 +1,8 @@
-const { EOL } = require('os')
 const packageJson = require('../../package.json')
 const { getImportPathFromTag } = require('./helpers/generator')
 const { ComponentsEventsMap } = require('./consts')
 
-const { outputFile, outputJson } = require('fs-extra')
+const { pathExists, outputFile, outputJson } = require('fs-extra')
 
 const {
   compileTypescript,
@@ -45,8 +44,6 @@ const renderComponent = tag => language => componentName => {
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }
 
-const getExportLine = componentName => `export { default as ${componentName} } from './${componentName}'`
-
 const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (tags) => {
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
@@ -56,15 +53,17 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
       content
     )
   }
-  const saveStory = (outputDir, componentName, content) => {
+  const saveStory = async (outputDir, componentName, content) => {
     const indexOutputFileName = join(outputDir, `${componentName}.stories.jsx`)
-    return outputFile(
-      indexOutputFileName,
-      content
-    )
+    const exists = await pathExists(indexOutputFileName)
+    return exists
+      ? exists
+      : outputFile(
+        indexOutputFileName,
+        content
+      )
   }
-  const getIndexContent = (components) =>
-    getTemplate('index', language).replace(TemplateToken.EXPORTS, components.map(getExportLine).join(EOL))
+
   const getStoriesContent = (componentName, tag) =>
     getTemplate('stories', 'js')
       .split(TemplateToken.COMPONENT_CLASS_NAME).join(componentName)

@@ -22,7 +22,9 @@ const deCapitalize = input => input.replace(/(^|\s)[A-Z]/g, s => s.toLowerCase()
 const kebab2Camel = input => deCapitalize(input.split('-').map(x => capitalize(x)).join(''))
 const snake2Camel = input => deCapitalize(input.split('_').map(x => capitalize(x)).join(''))
 const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(eventName)))}`
-const event2EventDescriptor = eventName => ({ name: eventName, propName: event2PropName(eventName) })
+const event2EventDescriptor = event => typeof event === 'string'
+  ? ({ name: event, propName: event2PropName(event) })
+  : event
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
 const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`

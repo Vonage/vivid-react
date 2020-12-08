@@ -203,7 +203,7 @@ Follow the steps:
 When you want to release the latest changes, checkout the latest `master` branch and run:
 
 ```shell
-$ rn version --new-version {minor/major/patch}
+$ yarn version --new-version {minor/major/patch}
 ```
 
 ### Selecting new version number:

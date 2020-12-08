@@ -10,10 +10,11 @@
     "generateWrappers": "node scripts/cli.js",
     "test": "jest",
     "test:watch": "jest --watch",
-    "preversion": "node scripts/updateDocs.js && git add SUPPORTED_COMPONENTS.md",
+    "preversion": "yarn updateDocs && git add README.md",
     "postversion": "git push --follow-tags",
     "storybook": "start-storybook -p 6006",
     "prestorybook": "yarn generateWrappers",
+    "updateDocs": "node scripts/updateDocs.js",
     "updateVividPackages": "node scripts/updateVividPackages.js"
   },
   "keywords": [

@@ -50,7 +50,7 @@ To use this package, you need to have Artifactory setup for your project. See ho
 
 ## Installation
 Once you have Artifactory configured, just run:
-```
+```shell
 $ yarn add @vonage/vivid-react
 ```
 No need for importing `vivid` directly. The dependencies will be installed for you.
@@ -58,27 +58,36 @@ No need for importing `vivid` directly. The dependencies will be installed for y
 ## Font initialization
 There are 2 ways to initialize Vivid fonts. You can use initialization function or HOC.
 
-```
-Function
-
-...
+```javascript
+// Function
+import ReactDOM from 'react-dom'
 import { initVivid } from '@vonage/vivid-react'
 
-initVivid(callback)
+const renderApp = () => {
+  // do some more initialization before rendering the main App
+  ReactDOM.render(
+    <App />,
+    document.getElementById('react-root')
+  )
+}
+
+initVivid(renderApp)
 ```
 
-```
-HOC
-
-...
+```javascript
+// HOC
+import ReactDOM from 'react-dom'
 import { withVivid } from '@vonage/vivid-react'
 
-renderApp(withVivid(App))
+ReactDOM.render(
+  withVivid(App),
+  document.getElementById('react-root')
+)
 ```
  
 ## Importing
 Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead. 
-```
+```javascript
 import VwcCheckbox from '@vonage/vivid-react/VwcCheckbox'
 import VwcSlider from '@vonage/vivid-react/VwcSlider'
 ```
@@ -86,20 +95,93 @@ import VwcSlider from '@vonage/vivid-react/VwcSlider'
 ## Bundling
 This package is an ES module, so you might need to add some configuration to your bundling process.
 
-See [here](https://confluence.vonage.com/display/CYCLOPS/Vivid+adoption) if you need help with setting up *IE11* bundle process.
+### Getting it working in IE 11
+Making the `Vivid` web-components working in IE11 requires a few modifications to the application bundle process:
+
+* add new dependencies:
+```shell
+$ yarn add @webcomponents/webcomponentsjs core-js regenerator-runtime
+```
+
+* include the new dependencies before your application's code, e.g.:
+```javascript
+webpack.config = {
+  entry: [
+    'core-js/stable',
+    'regenerator-runtime/runtime',
+    '@webcomponents/webcomponentsjs/webcomponents-bundle',
+    '@webcomponents/webcomponentsjs/custom-elements-es5-adapter',
+    path.resolve(__dirname, 'src', 'index.js')
+  ]
+}
+```
+
+* update babel to transpile `Vivid` components, and their required packages:
+```javascript
+webpack.config = {
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules\/(?!(@vonage|@material|lit-element|lit-html|@webcomponents)\/).*/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            compact: true,
+            cacheDirectory: false
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+* have IE11 included in `.browserslistrc`, e.g.:
+```text
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Edge versions
+last 2 Safari versions
+IE 11
+```
+
+Following those steps should do the trick.
+
+### Styling in IE11
+IE11 doesn't support css variables, but you can use the `@webcomponents/shadycss` package to hack your way around this limitation.
+It's not perfect, but should get the job done. 
+The example updates one of the vars in the `vwc-slider` component.
+
+```javascript
+import React, { useEffect, useRef } from 'react'
+import VwcSlider from '@vonage/vivid-react/VwcSlider'
+import { styleSubtree } from '@webcomponents/shadycss'
+ 
+const Slider = (props) => {
+  const sliderRef = useRef(null)
+ 
+  useEffect(
+    () => {
+      styleSubtree(sliderRef.current, { '--mdc-theme-secondary' : 'black' })
+    },
+    [sliderRef.current]
+  )
+ 
+  return <VwcSlider ref={sliderRef} />
+}
+ 
+export default Slider
+```
+
 
 ## Testing
 If you have problems rendering `vivid` when using Jest/Enzyme combo, you can add this to your `package.json` to replace all `Vivid` wrapped components with an empty React component.
 
-```
-package.json
-
+```json
 {
-  ...,
   "jest": {
-    ...,
     "moduleNameMapper": {
-      ...,
       "@vonage/vivid-react/*": "@vonage/vivid-react/testing/component.mock.js"
     }
   }
@@ -120,7 +202,7 @@ Follow the steps:
 ## Publishing a new version
 When you want to release the latest changes, checkout the latest `master` branch and run:
 
-```
+```shell
 $ yarn version --new-version {minor/major/patch}
 ```
 

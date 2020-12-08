@@ -1,6 +1,6 @@
 const os = require('os')
 const { getComponentNameFromPackage } = require('./generateWrappers/utils')
-const { outputFile } = require('fs-extra')
+const { outputFile, readFile } = require('fs-extra')
 
 const { isVividPackageName } = require('./generateWrappers/utils')
 const { dependencies, devDependencies } = require('../package.json')
@@ -22,18 +22,21 @@ const generateSupportedComponents = () => {
   return allDeps.reduce(
     reducePackagesToVividComponentsList,
     [
-      '# Components list',
-      'The wrapper supports following components generated from `vivid` packages',
-      '',
       '| Component Name | Package Name | Package Version |',
       '|----------------|--------------|-----------------|'
     ]
   )
 }
 
-const updateSupportedComponents = async (target) => {
+const updateSupportedComponents = async (readmePath) => {
   const packageList = generateSupportedComponents()
-  await outputFile(target, packageList.join(os.EOL))
+  const readme = await readFile(readmePath, { encoding: 'utf8' })
+  await outputFile(
+    readmePath,
+    // this finds a table, might be a problem if we have more than one ;)
+    // need the extra empty string to have a new line before the next section
+    readme.replace(/((\|[^|\r\n]*)+\|(\r?\n|\r)?)+/gm, [...packageList, ''].join(os.EOL))
+  )
 }
 
-updateSupportedComponents('SUPPORTED_COMPONENTS.md')
+updateSupportedComponents('README.md')

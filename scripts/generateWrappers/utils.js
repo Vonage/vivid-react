@@ -164,7 +164,7 @@ const getVividLatestRelease = async (config = { tempFolder: FileName.tempFolder,
 }
 
 const getComponentNameFromPackage = flowRight(
-  replace(' ', ''),
+  replace(/\s/g, ''),
   startCase,
   replace('@vonage/', '')
 )

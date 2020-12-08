@@ -64,7 +64,8 @@ const ComponentsEventsMap = {
   VwcRadio: ['change'],
   VwcSlider: ['change'],
   VwcSwitch: ['change'],
-  VwcTab: [{ name: "MDCTab:interacted", propName: 'onInteracted'}]
+  VwcTab: [{ name: "MDCTab:interacted", propName: 'onInteracted' }],
+  VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 
 module.exports = {

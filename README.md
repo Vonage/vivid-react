@@ -41,7 +41,7 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcTopAppBar | @vonage/vwc-top-app-bar | ^0.17.0 |
 | VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | ^0.17.0 |
 
-If the one you're looking for is missing, just [add a new one](#adding-a-component), so every one can access them.
+If the one you're looking for is missing, just [add a new one](#adding-a-component), so everyone can access them.
 
 # Usage
 

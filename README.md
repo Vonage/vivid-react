@@ -1,18 +1,18 @@
 # @vonage/vivid-react
 
-Vivid-react is a script allowing you to generate vivid-react-wrapper configs for the newest version of Vivid components stored as a package with all necessary dependencies and available through Artifactory npm registry.
+Vivid-react is a script allowing you to generate `Vivid-React` components for the newest version of `Vivid` components stored as a package with all necessary dependencies and available through Artifactory npm registry.
 
 The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` applications. We still use regular `Vivid` web components, so be sure to target a recent browser. 
 
 Goals:
-* polyfill events like `change` which doesn’t work in the environment
-* mocks for testing inside jsdom
+* wrap adding handlers for events like `change` which natively doesn't work in the environment
+* mocks for Jest
 * typing support (prop-types or typescript)
-* Handy interface for initialisation (eg. fonts)
+* a handy interface for initialisation (eg. fonts)
 * getting advantages of JSX/TSX (eg. composed components*)
-* All components within one package**
-* Storybook acting as developer sandbox for presenting quick examples
-* One place for all vivid-related polyfills to use with React
+* all components within one package**
+* storybook acting as developer sandbox for presenting quick examples
+* one place for all future vivid-related code to use with React
 
 *may provide a cut off at props inherited from MWC source.
 

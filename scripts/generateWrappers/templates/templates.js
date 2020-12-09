@@ -16,7 +16,8 @@ const TemplateToken = {
   ATTRIBUTES: '<% attributes %>',
   EVENTS: '<% events %>',
   CLASS_JSDOC: '<% jsdoc.class %>',
-  TAG_DESCRIPTOR_JSON: '<% descriptor-json %>'
+  TAG_DESCRIPTOR_JSON: '<% descriptor-json %>',
+  COMPOUND_COMPONENTS: '<% compound-components %>'
 }
 
 const GENERATED_CODE_BANNER = `/*

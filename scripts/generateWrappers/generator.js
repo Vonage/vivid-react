@@ -18,7 +18,7 @@ const {
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
-const { OutputLanguage, FileName } = require('./consts')
+const { OutputLanguage, FileName, CompoundComponents } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const generateTypings = outputDir => async tags => {
@@ -40,6 +40,10 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
     .replace(TemplateToken.DEFAULT_PROPS, getDefaultProps(tag).join(',\n'))
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(tag, null, ' '))
+    .replace(TemplateToken.COMPOUND_COMPONENTS, CompoundComponents[componentName] ?
+      CompoundComponents[componentName].join('\n\n')
+      : ''
+    )
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentName)
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }

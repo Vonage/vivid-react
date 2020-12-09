@@ -29,18 +29,19 @@ export const LimitWidth = () => {
   const onActivatedTab = ({ detail: { index } }) => switchTab(index)
 
   return <React.Fragment>
-    <VwcTabBar
-      activeIndex={activeTab}
-      onActivated={onActivatedTab}
-      style={{display: 'inline-block'}}
-    >
-      <VwcTab
-        label='Tab 1'
-      />
-      <VwcTab
-        label='Tab 2'
-      />
-    </VwcTabBar>
+    <div style={{display: 'inline-block'}}>
+      <VwcTabBar
+        activeIndex={activeTab}
+        onActivated={onActivatedTab}
+      >
+        <VwcTab
+          label='Tab 1'
+        />
+        <VwcTab
+          label='Tab 2'
+        />
+      </VwcTabBar>
+    </div>
     {activeTab === 0 && <div>Tab 1 contents</div>}
     {activeTab === 1 && <div>Tab 2 contents</div>}
   </React.Fragment>

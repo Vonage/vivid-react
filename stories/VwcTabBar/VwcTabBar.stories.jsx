@@ -9,19 +9,19 @@ export const SwitchingContent = () => {
   const onActivatedTab = ({ detail: { index } }) => switchTab(index)
 
   return <React.Fragment>
-      <VwcTabBar
-        activeIndex={activeTab}
-        onActivated={onActivatedTab}
-      >
-        <VwcTab
-          label='Tab 1'
-        />
-        <VwcTab
-          label='Tab 2'
-        />
-      </VwcTabBar>
-  {activeTab === 0 && <div>Tab 1 contents</div>}
-  {activeTab === 1 && <div>Tab 2 contents</div>}
+    <VwcTabBar
+      activeIndex={activeTab}
+      onActivated={onActivatedTab}
+    >
+      <VwcTab
+        label='Tab 1'
+      />
+      <VwcTab
+        label='Tab 2'
+      />
+    </VwcTabBar>
+    {activeTab === 0 && <div>Tab 1 contents</div>}
+    {activeTab === 1 && <div>Tab 2 contents</div>}
   </React.Fragment>
 }
 export const LimitWidth = () => {
@@ -29,34 +29,34 @@ export const LimitWidth = () => {
   const onActivatedTab = ({ detail: { index } }) => switchTab(index)
 
   return <React.Fragment>
-      <VwcTabBar
-        activeIndex={activeTab}
-        onActivated={onActivatedTab}
-        style={{display: 'inline-block'}}
-      >
-        <VwcTab
-          label='Tab 1'
-        />
-        <VwcTab
-          label='Tab 2'
-        />
-      </VwcTabBar>
-  {activeTab === 0 && <div>Tab 1 contents</div>}
-  {activeTab === 1 && <div>Tab 2 contents</div>}
+    <VwcTabBar
+      activeIndex={activeTab}
+      onActivated={onActivatedTab}
+      style={{display: 'inline-block'}}
+    >
+      <VwcTab
+        label='Tab 1'
+      />
+      <VwcTab
+        label='Tab 2'
+      />
+    </VwcTabBar>
+    {activeTab === 0 && <div>Tab 1 contents</div>}
+    {activeTab === 1 && <div>Tab 2 contents</div>}
   </React.Fragment>
 }
 
 export default {
   title: 'VwcTabBar',
   argTypes: {
-      //
-      // Example values
-      // numberValue: { control: 'number', defaultValue: 123 },
-      // booleanValue: { control: 'boolean', defaultValue: true },
-      // objectValue: { control: 'object', defaultValue: {} },
-      // stringValue: { control: 'string', defaultValue: 'string' },
-      // colorValue: { control: 'color' },
-      // dateValue: { control: 'date' }
-      //
-    }
+    //
+    // Example values
+    // numberValue: { control: 'number', defaultValue: 123 },
+    // booleanValue: { control: 'boolean', defaultValue: true },
+    // objectValue: { control: 'object', defaultValue: {} },
+    // stringValue: { control: 'string', defaultValue: 'string' },
+    // colorValue: { control: 'color' },
+    // dateValue: { control: 'date' }
+    //
+  }
 }

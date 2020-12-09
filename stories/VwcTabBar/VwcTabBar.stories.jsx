@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import VwcTabBar from '../../dist/VwcTabBar'
 import VwcTab from '../../dist/VwcTab'
 
-export const Default = () => <VwcTabBar />
+export const Default = () => <VwcTabBar/>
 
 export const SwitchingContent = () => {
   const [activeTab, switchTab] = useState(0)
@@ -29,7 +29,7 @@ export const LimitWidth = () => {
   const onActivatedTab = ({ detail: { index } }) => switchTab(index)
 
   return <React.Fragment>
-    <div style={{display: 'inline-block'}}>
+    <div style={{ display: 'inline-block' }}>
       <VwcTabBar
         activeIndex={activeTab}
         onActivated={onActivatedTab}

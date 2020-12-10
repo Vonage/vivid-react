@@ -66,33 +66,25 @@ const ComponentsEventsMap = {
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 
-const compoundComponent = (compositeName, baseName, defaultProps) =>
-`const ${compositeName} = (props) => createElement(${baseName}, props)
-
-${compositeName}.defaultProps = ${JSON.stringify(defaultProps)}
-
-${baseName}.${compositeName} = ${compositeName}`
-
-const CompoundComponents = {
-  VwcButton: [
-    compoundComponent('CTA', 'VwcButton', {
+const CompoundComponentsMap = {
+  VwcButton: {
+    CTA: {
       connotation: 'cta',
       layout: 'filled'
-    }),
-    compoundComponent('Alert', 'VwcButton', {
+    },
+    Alert: {
       connotation: 'alert',
       layout: 'filled'
-    }),
-    compoundComponent('Outlined', 'VwcButton', {
-      layout: 'outlined',
-      shape: 'rounded'
-    }),
-  ]
+    },
+    Outlined: {
+      layout: 'outlined'
+    }
+  }
 }
 
 module.exports = {
   ComponentsEventsMap,
-  CompoundComponents,
+  CompoundComponentsMap,
   FileName,
   Assets,
   OutputLanguage,

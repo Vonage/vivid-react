@@ -1,6 +1,6 @@
 const packageJson = require('../../package.json')
 const { getImportPathFromTag } = require('./helpers/generator')
-const { ComponentsEventsMap } = require('./consts')
+const { ComponentsEventsMap, CompoundComponentsMap, OutputLanguage, FileName } = require('./consts')
 
 const { pathExists, outputFile, outputJson } = require('fs-extra')
 
@@ -14,11 +14,11 @@ const {
   filePath,
   renderJsDoc,
   getIndexFileName,
-  getVividPackageName
+  getVividPackageName,
+  compoundComponents
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
-const { OutputLanguage, FileName, CompoundComponents } = require('./consts')
 const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 
 const generateTypings = outputDir => async tags => {
@@ -26,6 +26,8 @@ const generateTypings = outputDir => async tags => {
   await generateWrappers(distTs, OutputLanguage.TypeScript, false, false)(tags)
   await compileTypescript(distTs)(outputDir)
 }
+
+const getCompoundComponents = compoundComponents(CompoundComponentsMap)
 
 const renderComponent = tag => language => componentName => {
   const flatEventsList = ComponentsEventsMap[componentName] || []
@@ -40,10 +42,9 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
     .replace(TemplateToken.DEFAULT_PROPS, getDefaultProps(tag).join(',\n'))
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(tag, null, ' '))
-    .replace(TemplateToken.COMPOUND_COMPONENTS, CompoundComponents[componentName] ?
-      CompoundComponents[componentName].join('\n\n')
-      : ''
-    )
+    .replace(TemplateToken.COMPOUND_COMPONENTS, getCompoundComponents(componentName))
+    .replace(TemplateToken.REACT_IMPORT, getCompoundComponents(componentName)
+      && `import { createElement } from 'react'`)
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentName)
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }

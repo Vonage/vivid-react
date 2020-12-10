@@ -171,6 +171,18 @@ const getComponentNameFromPackage = flowRight(
   replace('@vonage/', '')
 )
 
+const compoundComponent = (baseName) => ([compositeName, defaultProps]) =>
+  `const ${compositeName} = (props) => createElement(${baseName}, props)
+
+${compositeName}.defaultProps = ${JSON.stringify(defaultProps)}
+
+${baseName}.${compositeName} = ${compositeName}`
+
+const compoundComponents = (compoundComponentsMap) => (baseName) => Object
+  .entries(compoundComponentsMap[baseName] || {})
+  .map(compoundComponent(baseName))
+  .join('\n\n')
+
 module.exports = {
   toCommaSeparatedList,
   toJsonObjectsList,
@@ -193,5 +205,6 @@ module.exports = {
   getVividPackageName,
   getVividPackageNames,
   getVividLatestRelease,
-  getCustomElementTagsDefinitionsList
+  getCustomElementTagsDefinitionsList,
+  compoundComponents
 }

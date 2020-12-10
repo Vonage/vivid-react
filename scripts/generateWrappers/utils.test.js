@@ -1,4 +1,4 @@
-const { getVividPackageNames, event2PropName } = require('./utils')
+const { getVividPackageNames, event2PropName, compoundComponents } = require('./utils')
 
 it('getVividPackageNames', () => {
   const packageJson = {
@@ -29,4 +29,32 @@ it.each([
   ['vvd_scheme_select', 'onVvdSchemeSelect']
 ])(`event2PropName should convert "%s" to "%s"`, (input, expected) => {
   expect(event2PropName(input)).toStrictEqual(expected)
+})
+
+it('compound components', () => {
+  const config = {
+    VwcButton: {
+      CTA: {
+        connotation: 'cta',
+        layout: 'filled'
+      },
+      Alert: {
+        connotation: 'alert',
+        layout: 'filled'
+      }
+    }
+  }
+  const expected = `const CTA = (props) => createElement(VwcButton, props)
+
+CTA.defaultProps = {"connotation":"cta","layout":"filled"}
+
+VwcButton.CTA = CTA
+
+const Alert = (props) => createElement(VwcButton, props)
+
+Alert.defaultProps = {"connotation":"alert","layout":"filled"}
+
+VwcButton.Alert = Alert`
+
+  expect(compoundComponents(config)('VwcButton')).toBe(expected)
 })

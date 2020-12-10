@@ -267,4 +267,11 @@ $ yarn version --new-version {minor/major/patch}
 For test/development storybook is in game. Stories are generated automatically per component
 with no arguments/properties, fill them before using component.
 
+## Compound Components
+
+In the `scripts/generateWrappers/consts.js` you can define sets of compound components. All they do is filling default props. Simply they are accessible after a dot:
+```javascript
+<VwcButton.Alert />
+```
+
 *This is the end*

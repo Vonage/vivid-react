@@ -269,7 +269,7 @@ with no arguments/properties, fill them before using component.
 
 ## Compound Components
 
-In the `scripts/generateWrappers/consts.js` you can define sets of compound components. All they do is filling default props. Simply they are accessible after a dot:
+In the `scripts/generateWrappers/consts.js` you can define sets of compound components. All they do is filling default props. They are accessible after a dot:
 ```javascript
 <VwcButton.Alert />
 ```

@@ -15,7 +15,8 @@ const {
   renderJsDoc,
   getIndexFileName,
   getVividPackageName,
-  compoundComponents
+  prepareCompoundComponents,
+  compoundComponentTemplate
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
@@ -27,10 +28,10 @@ const generateTypings = outputDir => async tags => {
   await compileTypescript(distTs)(outputDir)
 }
 
-const getCompoundComponents = compoundComponents(CompoundComponentsMap)
-
 const renderComponent = tag => language => componentName => {
   const flatEventsList = ComponentsEventsMap[componentName] || []
+  const compoundsConfig = CompoundComponentsMap[componentName] || {}
+  const getCompoundComponents = prepareCompoundComponents(componentName, compoundComponentTemplate, compoundsConfig)
   return getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
@@ -42,8 +43,8 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
     .replace(TemplateToken.DEFAULT_PROPS, getDefaultProps(tag).join(',\n'))
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(tag, null, ' '))
-    .replace(TemplateToken.COMPOUND_COMPONENTS, getCompoundComponents(componentName))
-    .replace(TemplateToken.REACT_IMPORT, getCompoundComponents(componentName)
+    .replace(TemplateToken.COMPOUND_COMPONENTS, getCompoundComponents())
+    .replace(TemplateToken.REACT_IMPORT, getCompoundComponents()
       && `import { createElement } from 'react'`)
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentName)
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)

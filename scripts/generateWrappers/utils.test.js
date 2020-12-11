@@ -1,4 +1,6 @@
-const { getVividPackageNames, event2PropName, compoundComponents } = require('./utils')
+import { jest } from '@jest/globals'
+
+const { getVividPackageNames, event2PropName, prepareCompoundComponents } = require('./utils')
 
 it('getVividPackageNames', () => {
   const packageJson = {
@@ -32,29 +34,28 @@ it.each([
 })
 
 it('compound components', () => {
+  const template = jest.fn()
   const config = {
-    VwcButton: {
-      CTA: {
-        connotation: 'cta',
-        layout: 'filled'
-      },
-      Alert: {
-        connotation: 'alert',
-        layout: 'filled'
-      }
+    CTA: {
+      connotation: 'cta',
+      layout: 'filled'
+    },
+    Alert: {
+      connotation: 'alert',
+      layout: 'filled'
     }
   }
-  const expected = `const CTA = (props) => createElement(VwcButton, props)
 
-CTA.defaultProps = {"connotation":"cta","layout":"filled"}
+  prepareCompoundComponents('VwcButton', template, config)()
 
-VwcButton.CTA = CTA
-
-const Alert = (props) => createElement(VwcButton, props)
-
-Alert.defaultProps = {"connotation":"alert","layout":"filled"}
-
-VwcButton.Alert = Alert`
-
-  expect(compoundComponents(config)('VwcButton')).toBe(expected)
+  expect(template.mock.calls[0]).toEqual([
+    'VwcButton',
+    'CTA',
+    config.CTA
+  ])
+  expect(template.mock.calls[1]).toEqual([
+    'VwcButton',
+    'Alert',
+    config.Alert
+  ])
 })

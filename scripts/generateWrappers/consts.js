@@ -66,8 +66,25 @@ const ComponentsEventsMap = {
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 
+const CompoundComponentsMap = {
+  VwcButton: {
+    CTA: {
+      connotation: 'cta',
+      layout: 'filled'
+    },
+    Alert: {
+      connotation: 'alert',
+      layout: 'filled'
+    },
+    Outlined: {
+      layout: 'outlined'
+    }
+  }
+}
+
 module.exports = {
   ComponentsEventsMap,
+  CompoundComponentsMap,
   FileName,
   Assets,
   OutputLanguage,

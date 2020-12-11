@@ -1,4 +1,6 @@
-const { getVividPackageNames, event2PropName } = require('./utils')
+import { jest } from '@jest/globals'
+
+const { getVividPackageNames, event2PropName, prepareCompoundComponents } = require('./utils')
 
 it('getVividPackageNames', () => {
   const packageJson = {
@@ -29,4 +31,31 @@ it.each([
   ['vvd_scheme_select', 'onVvdSchemeSelect']
 ])(`event2PropName should convert "%s" to "%s"`, (input, expected) => {
   expect(event2PropName(input)).toStrictEqual(expected)
+})
+
+it('compound components', () => {
+  const template = jest.fn()
+  const config = {
+    CTA: {
+      connotation: 'cta',
+      layout: 'filled'
+    },
+    Alert: {
+      connotation: 'alert',
+      layout: 'filled'
+    }
+  }
+
+  prepareCompoundComponents('VwcButton', template, config)()
+
+  expect(template.mock.calls[0]).toEqual([
+    'VwcButton',
+    'CTA',
+    config.CTA
+  ])
+  expect(template.mock.calls[1]).toEqual([
+    'VwcButton',
+    'Alert',
+    config.Alert
+  ])
 })

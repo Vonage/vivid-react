@@ -35,7 +35,7 @@ const updateSupportedComponents = async (readmePath) => {
     readmePath,
     // this finds a table, might be a problem if we have more than one ;)
     // need the extra empty string to have a new line before the next section
-    readme.replace(/((\|[^|\r\n]*)+\|(\r?\n|\r)?)+/gm, [...packageList, ''].join(os.EOL))
+    readme.replace(/((\|[ -][^|\r\n]*)+\|(\r?\n|\r)?)+/gm, [...packageList, ''].join(os.EOL))
   )
 }
 

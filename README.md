@@ -25,39 +25,43 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 
 | Component Name | Package Name | Package Version |
 |----------------|--------------|-----------------|
-| VwcAudio | @vonage/vwc-audio | ^0.18.0 |
-| VwcBadge | @vonage/vwc-badge | ^0.18.0 |
-| VwcButton | @vonage/vwc-button | ^0.18.0 |
-| VwcCarousel | @vonage/vwc-carousel | ^0.18.0 |
-| VwcCheckbox | @vonage/vwc-checkbox | ^0.18.0 |
-| VwcCircularProgress | @vonage/vwc-circular-progress | ^0.18.0 |
-| VwcDrawer | @vonage/vwc-drawer | ^0.18.0 |
-| VwcFab | @vonage/vwc-fab | ^0.18.0 |
-| VwcFilePicker | @vonage/vwc-file-picker | ^0.18.0 |
-| VwcFormfield | @vonage/vwc-formfield | ^0.18.0 |
-| VwcIcon | @vonage/vwc-icon | ^0.18.0 |
-| VwcInline | @vonage/vwc-inline | ^0.18.0 |
-| VwcIconButton | @vonage/vwc-icon-button | ^0.18.0 |
-| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | ^0.18.0 |
-| VwcKeypad | @vonage/vwc-keypad | ^0.18.0 |
-| VwcLinearProgress | @vonage/vwc-linear-progress | ^0.18.0 |
-| VwcList | @vonage/vwc-list | ^0.18.0 |
-| VwcMediaController | @vonage/vwc-media-controller | ^0.18.0 |
-| VwcMenu | @vonage/vwc-menu | ^0.18.0 |
-| VwcNotchedOutline | @vonage/vwc-notched-outline | ^0.18.0 |
-| VwcNote | @vonage/vwc-note | ^0.18.0 |
-| VwcRadio | @vonage/vwc-radio | ^0.18.0 |
-| VwcRelativeTime | @vonage/vwc-relative-time | ^0.18.0 |
-| VwcSchemeSelect | @vonage/vwc-scheme-select | ^0.18.0 |
-| VwcSelect | @vonage/vwc-select | ^0.18.0 |
-| VwcSlider | @vonage/vwc-slider | ^0.18.0 |
-| VwcSwitch | @vonage/vwc-switch | ^0.18.0 |
-| VwcTabBar | @vonage/vwc-tab-bar | ^0.18.0 |
-| VwcTextarea | @vonage/vwc-textarea | ^0.18.0 |
-| VwcTextfield | @vonage/vwc-textfield | ^0.18.0 |
-| VwcThemeSwitch | @vonage/vwc-theme-switch | ^0.18.0 |
-| VwcTopAppBar | @vonage/vwc-top-app-bar | ^0.18.0 |
-| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | ^0.18.0 |
+| VwcAudio | @vonage/vwc-audio | ^1.1.1 |
+| VwcBadge | @vonage/vwc-badge | ^1.1.1 |
+| VwcButton | @vonage/vwc-button | ^1.1.1 |
+| VwcCarousel | @vonage/vwc-carousel | ^1.1.1 |
+| VwcCalendar | @vonage/vwc-calendar | ^1.1.1 |
+| VwcCheckbox | @vonage/vwc-checkbox | ^1.1.1 |
+| VwcCircularProgress | @vonage/vwc-circular-progress | ^1.1.1 |
+| VwcDialog | @vonage/vwc-dialog | ^1.1.1 |
+| VwcExpansionPanel | @vonage/vwc-expansion-panel | ^1.1.1 |
+| VwcDrawer | @vonage/vwc-drawer | ^1.1.1 |
+| VwcFab | @vonage/vwc-fab | ^1.1.1 |
+| VwcFilePicker | @vonage/vwc-file-picker | ^1.1.1 |
+| VwcFormfield | @vonage/vwc-formfield | ^1.1.1 |
+| VwcIcon | @vonage/vwc-icon | ^1.1.1 |
+| VwcHelperMessage | @vonage/vwc-helper-message | ^1.1.1 |
+| VwcIconButton | @vonage/vwc-icon-button | ^1.1.1 |
+| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | ^1.1.1 |
+| VwcInline | @vonage/vwc-inline | ^1.1.1 |
+| VwcKeypad | @vonage/vwc-keypad | ^1.1.1 |
+| VwcLinearProgress | @vonage/vwc-linear-progress | ^1.1.1 |
+| VwcList | @vonage/vwc-list | ^1.1.1 |
+| VwcMediaController | @vonage/vwc-media-controller | ^1.1.1 |
+| VwcMenu | @vonage/vwc-menu | ^1.1.1 |
+| VwcNotchedOutline | @vonage/vwc-notched-outline | ^1.1.1 |
+| VwcNote | @vonage/vwc-note | ^1.1.1 |
+| VwcRadio | @vonage/vwc-radio | ^1.1.1 |
+| VwcRelativeTime | @vonage/vwc-relative-time | ^1.1.1 |
+| VwcSchemeSelect | @vonage/vwc-scheme-select | ^1.1.1 |
+| VwcSelect | @vonage/vwc-select | ^1.1.1 |
+| VwcSlider | @vonage/vwc-slider | ^1.1.1 |
+| VwcSwitch | @vonage/vwc-switch | ^1.1.1 |
+| VwcTabBar | @vonage/vwc-tab-bar | ^1.1.1 |
+| VwcTextarea | @vonage/vwc-textarea | ^1.1.1 |
+| VwcTextfield | @vonage/vwc-textfield | ^1.1.1 |
+| VwcThemeSwitch | @vonage/vwc-theme-switch | ^1.1.1 |
+| VwcTopAppBar | @vonage/vwc-top-app-bar | ^1.1.1 |
+| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | ^1.1.1 |
 
 If the one you're looking for is missing, just [add a new one](#adding-a-component), so everyone can access them.
 

@@ -29,13 +29,12 @@ const generateTypings = outputDir => async tags => {
 }
 
 const renderComponent = tag => language => componentName => {
-  const flatEventsList = ComponentsEventsMap[componentName] || []
   const compoundsConfig = CompoundComponentsMap[componentName] || {}
   const getCompoundComponents = prepareCompoundComponents(componentName, compoundComponentTemplate, compoundsConfig)
   return getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
-    .replace(TemplateToken.EVENTS, toJsonObjectsList(flatEventsList.map(event2EventDescriptor)))
+    .replace(TemplateToken.EVENTS, toJsonObjectsList(tag.events.map(event2EventDescriptor)))
     // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
     .replace(TemplateToken.PROPERTIES, '')
     .replace(TemplateToken.ATTRIBUTES, '')
@@ -44,8 +43,8 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.DEFAULT_PROPS, getDefaultProps(tag).join(',\n'))
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(tag, null, ' '))
     .replace(TemplateToken.COMPOUND_COMPONENTS, getCompoundComponents())
-    .replace(TemplateToken.REACT_IMPORT, getCompoundComponents()
-      && `import { createElement } from 'react'`)
+    .replace(TemplateToken.REACT_IMPORT, getCompoundComponents() &&
+      'import { createElement } from \'react\'')
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentName)
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }
@@ -59,15 +58,14 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
       content
     )
   }
+
   const saveStory = async (outputDir, componentName, content) => {
     const indexOutputFileName = join(outputDir, `${componentName}.stories.jsx`)
     const exists = await pathExists(indexOutputFileName)
-    return exists
-      ? exists
-      : outputFile(
-        indexOutputFileName,
-        content
-      )
+    return exists || outputFile(
+      indexOutputFileName,
+      content
+    )
   }
 
   const getStoriesContent = (componentName, tag) =>
@@ -84,6 +82,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     if (verbose) {
       console.info(`Processing ${componentName}...`)
     }
+    tag.events = [...(tag.events || []), ...(ComponentsEventsMap[componentName] || [])]
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)

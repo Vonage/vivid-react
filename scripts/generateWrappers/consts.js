@@ -58,11 +58,16 @@ const OutputLanguage = {
 
 // TODO: this can be removed when JSDocs for each component will be updated in Vivid repository
 const ComponentsEventsMap = {
+  VwcButton: ['click'],
+  VwcIconButton: ['click'],
+  VwcDialog: ['opening', 'opened', 'closing', 'closed'],
+  VwcListExpansionPanel: ['closed', 'opened'],
+  VwcIconButtonToggle: [{ name: 'MDCIconButtonToggle:change', propName: 'onChange' }],
   VwcCheckbox: ['change'],
   VwcRadio: ['change'],
   VwcSlider: ['change'],
   VwcSwitch: ['change'],
-  VwcTab: [{ name: "MDCTab:interacted", propName: 'onInteracted' }],
+  VwcTab: [{ name: 'MDCTab:interacted', propName: 'onInteracted' }],
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 

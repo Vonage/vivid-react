@@ -2,7 +2,7 @@ const { event2PropName, getProperties } = require('./utils')
 
 // Common
 
-const getEvents = tag => (tag.events || []).map(x => event2PropName(x.name))
+const getEvents = tag => (tag.events || []).map(x => x.propName || event2PropName(x.name || x))
 const isTypeSet = type => /(".*?" \|)/.test(type)
 const isStringTypeSet = type => /".*"[ |]?/.test(type) && /".*"[ |]?/.exec(type)[0] === type
 const isBoolean = type => /(true|false)/.test(type)

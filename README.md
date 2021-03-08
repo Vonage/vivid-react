@@ -204,7 +204,7 @@ If you have problems rendering `vivid` when using Jest/Enzyme combo, you can add
 {
   "jest": {
     "moduleNameMapper": {
-      "@vonage/vivid-react/*": "@vonage/vivid-react/testing/component.mock.js"
+      "@vonage/vivid-react/Vwc*": "@vonage/vivid-react/testing/component.mock.js"
     }
   }
 }

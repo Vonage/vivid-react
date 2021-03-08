@@ -75,14 +75,17 @@ const CompoundComponentsMap = {
   VwcButton: {
     CTA: {
       connotation: 'cta',
+      type: 'button',
       layout: 'filled'
     },
     Alert: {
       connotation: 'alert',
+      type: 'button',
       layout: 'filled'
     },
     Outlined: {
-      layout: 'outlined'
+      layout: 'outlined',
+      type: 'button'
     }
   }
 }

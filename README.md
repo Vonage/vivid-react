@@ -207,7 +207,7 @@ It'll work also for _raw_ `vivid` components used in project, since js-dom doesn
 {
   "jest": {
     "moduleNameMapper": {
-      "@vonage/vwc-*": "@vonage/vivid-react/testing/component.mock.js"
+      "@vonage\/vwc": "@vonage/vivid-react/testing/component.mock.js"
     }
   }
 }

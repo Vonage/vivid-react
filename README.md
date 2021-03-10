@@ -201,12 +201,13 @@ export default Slider
 
 ## Testing
 If you have problems rendering `vivid` when using Jest/Enzyme combo, you can add this to your `package.json` to replace all `Vivid` wrapped components with an empty React component.
+It'll work also for _raw_ `vivid` components used in project, since js-dom doesn't support shadow DOM.
 
 ```json
 {
   "jest": {
     "moduleNameMapper": {
-      "@vonage/vivid-react/Vwc*": "@vonage/vivid-react/testing/component.mock.js"
+      "@vonage\/vwc": "@vonage/vivid-react/testing/component.mock.js"
     }
   }
 }

@@ -90,6 +90,26 @@ const CompoundComponentsMap = {
     Outlined: {
       layout: 'outlined',
       type: 'button'
+    },
+    Success: {
+      connotation: 'success',
+      type: 'button',
+      layout: 'filled'
+    },
+    Info: {
+      connotation: 'info',
+      type: 'button',
+      layout: 'filled'
+    },
+    Primary: {
+      connotation: 'primary',
+      type: 'button',
+      layout: 'filled'
+    },
+    Announcement: {
+      connotation: 'announcement',
+      type: 'button',
+      layout: 'filled'
     }
   }
 }

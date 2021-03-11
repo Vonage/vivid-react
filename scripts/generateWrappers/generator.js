@@ -90,7 +90,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     }
     tag.events = [...(tag.events || []), ...(ComponentsEventsMap[componentName] || [])]
     // Use only custom properties
-    tag.customProperties = [...(ComponentsPropertiesMap[componentName]) || []]
+    tag.customProperties = [...(ComponentsPropertiesMap[componentName] || [])]
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)

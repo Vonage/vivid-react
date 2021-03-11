@@ -1,6 +1,12 @@
 const packageJson = require('../../package.json')
 const { getImportPathFromTag } = require('./helpers/generator')
-const { ComponentsEventsMap, CompoundComponentsMap, OutputLanguage, FileName } = require('./consts')
+const {
+  ComponentsEventsMap,
+  ComponentsPropertiesMap,
+  CompoundComponentsMap,
+  OutputLanguage,
+  FileName
+} = require('./consts')
 
 const { pathExists, outputFile, outputJson } = require('fs-extra')
 
@@ -36,7 +42,7 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(tag.events.map(event2EventDescriptor)))
     // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
-    .replace(TemplateToken.PROPERTIES, '')
+    .replace(TemplateToken.PROPERTIES, toJsonObjectsList(tag.customProperties))
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, getPropTypes(tag).join(',\n'))
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
@@ -83,6 +89,8 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
       console.info(`Processing ${componentName}...`)
     }
     tag.events = [...(tag.events || []), ...(ComponentsEventsMap[componentName] || [])]
+    // Use only custom properties
+    tag.customProperties = [...(ComponentsPropertiesMap[componentName]) || []]
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)

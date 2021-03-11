@@ -71,6 +71,10 @@ const ComponentsEventsMap = {
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 
+const ComponentsPropertiesMap = {
+  VwcTextfield: ['validityTransform']
+}
+
 const CompoundComponentsMap = {
   VwcButton: {
     CTA: {
@@ -92,6 +96,7 @@ const CompoundComponentsMap = {
 
 module.exports = {
   ComponentsEventsMap,
+  ComponentsPropertiesMap,
   CompoundComponentsMap,
   FileName,
   Assets,

@@ -72,7 +72,7 @@ const ComponentsEventsMap = {
 }
 
 const ComponentsPropertiesMap = {
-  VwcTextfield: ['checkValidity', 'reportValidity', 'setCustomValidity', 'validityTransform']
+  VwcTextfield: ['validityTransform']
 }
 
 const CompoundComponentsMap = {

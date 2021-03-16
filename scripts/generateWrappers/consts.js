@@ -77,7 +77,7 @@ const ComponentsPropertiesMap = {
 
 const CompoundComponentsMap = {
   VwcButton: {
-    CTA: {
+    CallToAction: {
       connotation: 'cta',
       type: 'button',
       layout: 'filled'

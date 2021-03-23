@@ -1,4 +1,5 @@
 import { jest } from '@jest/globals'
+import { getUniqueEvents } from './utils'
 
 const { getVividPackageNames, event2PropName, prepareCompoundComponents } = require('./utils')
 
@@ -58,4 +59,13 @@ it('compound components', () => {
     'Alert',
     config.Alert
   ])
+})
+
+it('getUniqueEvents', () => {
+  const firstEvent = { name: 'non-unique', propName: 'replaced' }
+  const secondEvent = { name: 'non-unique', propName: 'targetPropName' }
+  const uniqueEvent = { name: 'unique', propName: 'onUnique' }
+  const events = [firstEvent, secondEvent, uniqueEvent]
+
+  expect(getUniqueEvents(events)).toEqual([uniqueEvent, secondEvent])
 })

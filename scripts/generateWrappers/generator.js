@@ -16,10 +16,10 @@ const {
   kebab2Camel,
   capitalize,
   toJsonObjectsList,
-  event2EventDescriptor,
   filePath,
   renderJsDoc,
   getIndexFileName,
+  getUniqueEvents,
   getVividPackageName,
   prepareCompoundComponents,
   compoundComponentTemplate
@@ -40,7 +40,7 @@ const renderComponent = tag => language => componentName => {
   return getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
-    .replace(TemplateToken.EVENTS, toJsonObjectsList(tag.events.map(event2EventDescriptor)))
+    .replace(TemplateToken.EVENTS, toJsonObjectsList(getUniqueEvents(tag.events)))
     // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
     .replace(TemplateToken.PROPERTIES, toJsonObjectsList(tag.customProperties))
     .replace(TemplateToken.ATTRIBUTES, '')

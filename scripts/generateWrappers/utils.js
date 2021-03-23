@@ -1,5 +1,5 @@
 const { join, parse } = require('path')
-const { flowRight, replace, startCase } = require('lodash/fp')
+const { flowRight, map, replace, reverse, startCase, uniqBy } = require('lodash/fp')
 const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
 const mkdirp = require('mkdirp')
 const os = require('os')
@@ -25,6 +25,12 @@ const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(even
 const event2EventDescriptor = event => typeof event === 'string'
   ? ({ name: event, propName: event2PropName(event) })
   : event
+const getUniqueEvents = flowRight(
+  uniqBy('name'),
+  // need to reverse to have custom events first, to allow overwriting of the ones grabbed from JSDocs
+  reverse,
+  map(event2EventDescriptor)
+)
 const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
 const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
@@ -196,6 +202,7 @@ module.exports = {
   event2EventDescriptor,
   getComponentNameFromPackage,
   getInputArgument,
+  getUniqueEvents,
   isFileExists,
   isVividPackageName,
   copyStaticAssets,

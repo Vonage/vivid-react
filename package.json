@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Vivid wrapped for easy React usage",
   "main": "index.js",
   "types": "index.d.ts",
@@ -38,9 +38,9 @@
     "@vonage/vwc-checkbox": "^2.3.0",
     "@vonage/vwc-chips": "^2.3.0",
     "@vonage/vwc-circular-progress": "^2.3.0",
+    "@vonage/vwc-data-grid": "^2.3.0",
     "@vonage/vwc-datepicker": "^2.3.0",
     "@vonage/vwc-dialog": "^2.3.0",
-    "@vonage/vwc-data-grid": "^2.3.0",
     "@vonage/vwc-drawer": "^2.3.0",
     "@vonage/vwc-expansion-panel": "^2.3.0",
     "@vonage/vwc-fab": "^2.3.0",

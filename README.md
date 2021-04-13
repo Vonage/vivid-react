@@ -33,9 +33,9 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcCheckbox | @vonage/vwc-checkbox | ^2.3.0 |
 | VwcChips | @vonage/vwc-chips | ^2.3.0 |
 | VwcCircularProgress | @vonage/vwc-circular-progress | ^2.3.0 |
+| VwcDataGrid | @vonage/vwc-data-grid | ^2.3.0 |
 | VwcDatepicker | @vonage/vwc-datepicker | ^2.3.0 |
 | VwcDialog | @vonage/vwc-dialog | ^2.3.0 |
-| VwcDataGrid | @vonage/vwc-data-grid | ^2.3.0 |
 | VwcDrawer | @vonage/vwc-drawer | ^2.3.0 |
 | VwcExpansionPanel | @vonage/vwc-expansion-panel | ^2.3.0 |
 | VwcFab | @vonage/vwc-fab | ^2.3.0 |

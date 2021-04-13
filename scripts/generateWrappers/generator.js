@@ -42,7 +42,7 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(getUniqueEvents(tag.events)))
     .replace(TemplateToken.PROPERTIES,
-      toJsonObjectsList(tag.properties?.map(({ name }) => name).filter(name =>
+      toJsonObjectsList((tag.properties || []).map(({ name }) => name).filter(name =>
         !(ComponentsReadOnlyPropertiesMap[componentName] || []).includes(name))))
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, getPropTypes(tag).join(',\n'))

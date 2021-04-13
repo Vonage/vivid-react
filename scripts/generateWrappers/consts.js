@@ -72,8 +72,29 @@ const ComponentsEventsMap = {
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
 
-const ComponentsPropertiesMap = {
-  VwcTextfield: ['validityTransform']
+const ComponentsReadOnlyPropertiesMap = {
+  VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
+  VWCListExpansionPanel: ['styles', 'headerNodes'],
+  VwcList: ['styles', 'items'],
+  VwcSwitch: ['styles', 'ripple'],
+  VwcTab: ['styles', 'active'],
+  VwcFab: ['styles', 'ripple'],
+  VwcTabBar: ['styles', 'active'],
+  VwcTextarea: ['styles', 'validity'],
+  VwcTextfield: ['styles', 'validity'],
+  VwcListItem: ['styles', 'ripple'],
+  VwcMenu: ['styles', 'slotElement'],
+  VwcRadio: ['styles', 'isRippleActive'],
+  VwcRadioListItem: ['styles', 'ripple'],
+  VwcSelect: ['styles', 'items'],
+  VwcCheckbox: ['styles', 'isRippleActive'],
+  VwcChipSet: ['styles', 'chips'],
+  VwcCheckListItem: ['styles', 'ripple'],
+  VwcButton: ['styles', 'buttonElement'],
+  VwcKeypad: ['styles', 'digitsDisplay'],
+  VwcIconButton: ['styles', 'buttonElement'],
+  VwcIconButtonToggle: ['styles', 'ripple'],
+  VwcDataGrid: ['styles', 'selectedItems']
 }
 
 const CompoundComponentsMap = {
@@ -117,7 +138,7 @@ const CompoundComponentsMap = {
 
 module.exports = {
   ComponentsEventsMap,
-  ComponentsPropertiesMap,
+  ComponentsReadOnlyPropertiesMap,
   CompoundComponentsMap,
   FileName,
   Assets,

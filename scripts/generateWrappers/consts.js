@@ -68,6 +68,7 @@ const ComponentsEventsMap = {
   VwcRadio: ['change'],
   VwcSlider: ['change'],
   VwcSwitch: ['change'],
+  VwcTextfield: ['input'],
   VwcTab: [{ name: 'MDCTab:interacted', propName: 'onInteracted' }],
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
 }
@@ -81,7 +82,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcFab: ['styles', 'ripple'],
   VwcTabBar: ['styles', 'active'],
   VwcTextarea: ['styles', 'validity'],
-  VwcTextfield: ['styles', 'validity'],
+  VwcTextfield: ['styles', 'validity', 'willValidate', 'selectionStart', 'selectionEnd', 'ripple'],
   VwcListItem: ['styles', 'ripple'],
   VwcMenu: ['styles', 'slotElement'],
   VwcRadio: ['styles', 'isRippleActive'],
@@ -90,7 +91,8 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcCheckbox: ['styles', 'isRippleActive'],
   VwcChipSet: ['styles', 'chips'],
   VwcCheckListItem: ['styles', 'ripple'],
-  VwcButton: ['styles', 'buttonElement'],
+  VwcDialog: ['styles'],
+  VwcButton: ['styles', 'buttonElement', 'ripple'],
   VwcKeypad: ['styles', 'digitsDisplay'],
   VwcIconButton: ['styles', 'buttonElement'],
   VwcIconButtonToggle: ['styles', 'ripple'],

@@ -76,7 +76,7 @@ const ComponentsEventsMap = {
 const ComponentsReadOnlyPropertiesMap = {
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
   VwcListExpansionPanel: ['styles', 'headerNodes'],
-  VwcList: ['styles', 'items'],
+  VwcList: ['styles', 'items', 'selected', 'index'],
   VwcListItem: ['styles', 'ripple', 'text'],
   VwcSwitch: ['styles', 'ripple'],
   VwcTab: ['styles', 'active', 'ripple', 'isRippleActive'],

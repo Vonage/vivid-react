@@ -75,16 +75,16 @@ const ComponentsEventsMap = {
 
 const ComponentsReadOnlyPropertiesMap = {
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
-  VWCListExpansionPanel: ['styles', 'headerNodes'],
+  VwcListExpansionPanel: ['styles', 'headerNodes'],
   VwcList: ['styles', 'items'],
+  VwcListItem: ['styles', 'ripple', 'text'],
   VwcSwitch: ['styles', 'ripple'],
-  VwcTab: ['styles', 'active'],
+  VwcTab: ['styles', 'active', 'ripple', 'isRippleActive'],
   VwcFab: ['styles', 'ripple'],
   VwcTabBar: ['styles', 'active'],
   VwcTextarea: ['styles', 'validity'],
   VwcTextfield: ['styles', 'validity', 'willValidate', 'selectionStart', 'selectionEnd', 'ripple'],
-  VwcListItem: ['styles', 'ripple'],
-  VwcMenu: ['styles', 'slotElement'],
+  VwcMenu: ['styles', 'slotElement', 'items'],
   VwcRadio: ['styles', 'isRippleActive'],
   VwcRadioListItem: ['styles', 'ripple'],
   VwcSelect: ['styles', 'items'],
@@ -94,9 +94,10 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcDialog: ['styles'],
   VwcButton: ['styles', 'buttonElement', 'ripple'],
   VwcKeypad: ['styles', 'digitsDisplay'],
-  VwcIconButton: ['styles', 'buttonElement'],
+  VwcIconButton: ['styles', 'buttonElement', 'ripple'],
   VwcIconButtonToggle: ['styles', 'ripple'],
-  VwcDataGrid: ['styles', 'selectedItems']
+  VwcDataGrid: ['styles', 'selectedItems'],
+  VwcSlider: ['styles', 'ripple']
 }
 
 const CompoundComponentsMap = {

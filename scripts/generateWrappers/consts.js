@@ -84,7 +84,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcTabBar: ['styles', 'active'],
   VwcTextarea: ['styles', 'validity'],
   VwcTextfield: ['styles', 'validity', 'willValidate', 'selectionStart', 'selectionEnd', 'ripple'],
-  VwcMenu: ['styles', 'slotElement', 'items', 'index', 'selected'],
+  VwcMenu: ['styles', 'slotElement', 'items', 'index', 'selected', 'mdcRoot', 'anchor'],
   VwcRadio: ['styles', 'isRippleActive'],
   VwcRadioListItem: ['styles', 'ripple'],
   VwcSelect: ['styles', 'items'],

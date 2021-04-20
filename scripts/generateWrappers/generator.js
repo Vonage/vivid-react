@@ -13,12 +13,12 @@ const { pathExists, outputFile, outputJson } = require('fs-extra')
 const {
   compileTypescript,
   prepareDir,
-  kebab2Camel,
-  capitalize,
+  getComponentName,
   toJsonObjectsList,
   filePath,
   renderJsDoc,
   getIndexFileName,
+  getProperties,
   getUniqueEvents,
   getVividPackageName,
   prepareCompoundComponents,
@@ -42,8 +42,11 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(getUniqueEvents(tag.events)))
     .replace(TemplateToken.PROPERTIES,
-      toJsonObjectsList((tag.properties || []).map(({ name }) => name).filter(name =>
-        !(ComponentsReadOnlyPropertiesMap[componentName] || []).includes(name))))
+      toJsonObjectsList(
+        getProperties(tag)
+          .filter(property => property.bindable)
+          .map(({ name }) => name))
+    )
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, getPropTypes(tag).join(',\n'))
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
@@ -83,8 +86,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   const components = []
 
   for (const tag of tags) {
-    const camelizedName = kebab2Camel(tag.name)
-    const componentName = capitalize(camelizedName)
+    const componentName = getComponentName(tag)
     components.push(componentName)
     if (verbose) {
       console.info(`Processing ${componentName}...`)

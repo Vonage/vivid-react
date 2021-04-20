@@ -76,19 +76,33 @@ const ComponentsEventsMap = {
 const ComponentsReadOnlyPropertiesMap = {
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
   VwcListExpansionPanel: ['styles', 'headerNodes'],
+  VwcExpansionPanel: ['styles'],
+  VwcBadge: ['styles'],
+  VwcFilePicker: ['styles'],
+  VwcFormfield: ['styles'],
+  VwcHelperMessage: ['styles'],
+  VwcLinearProgress: ['styles'],
+  VwcThemeSwitch: ['styles'],
+  VwcTopAppBar: ['styles'],
+  VwcChip: ['styles'],
+  VwcCircularProgress: ['styles'],
+  VwcTopAppBarFixed: ['styles'],
+  VwcMediaController: ['floatingLabelFoundation', 'lineRippleFoundation'],
+  VwcRelativeTime: ['floatingLabelFoundation', 'lineRippleFoundation'],
+  VwcCarouselItem: ['floatingLabelFoundation', 'lineRippleFoundation'],
   VwcList: ['styles', 'items', 'selected', 'index', 'layout', 'debouncedLayout'],
   VwcListItem: ['styles', 'ripple', 'text'],
   VwcSwitch: ['styles', 'ripple'],
   VwcTab: ['styles', 'active', 'ripple', 'isRippleActive'],
   VwcFab: ['styles', 'ripple'],
   VwcTabBar: ['styles', 'active'],
-  VwcTextarea: ['styles', 'validity'],
+  VwcTextarea: ['styles', 'validity', 'ripple'],
   VwcTextfield: ['styles', 'validity', 'willValidate', 'selectionStart', 'selectionEnd', 'ripple'],
   VwcMenu: ['styles', 'slotElement', 'items', 'index', 'selected', 'mdcRoot', 'anchor'],
-  VwcRadio: ['styles', 'isRippleActive'],
+  VwcRadio: ['styles', 'ripple', 'isRippleActive'],
   VwcRadioListItem: ['styles', 'ripple'],
-  VwcSelect: ['styles', 'items'],
-  VwcCheckbox: ['styles', 'isRippleActive'],
+  VwcSelect: ['styles', 'items', 'ripple'],
+  VwcCheckbox: ['styles', 'isRippleActive', 'ripple'],
   VwcChipSet: ['styles', 'chips'],
   VwcCheckListItem: ['styles', 'ripple'],
   VwcDialog: ['styles'],
@@ -97,7 +111,18 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcIconButton: ['styles', 'buttonElement', 'ripple'],
   VwcIconButtonToggle: ['styles', 'ripple'],
   VwcDataGrid: ['styles', 'selectedItems'],
-  VwcSlider: ['styles', 'ripple', 'disabled']
+  VwcSlider: ['styles', 'ripple']
+}
+
+// Bindable means property has complex type: Function, Object, Array, etc.
+// Those properties needs to be binded directly to the underlying web element "as is"
+// w/o toString => fromString transformations via HTML attributes
+const ComponentsBindablePropertiesMap = {
+  VwcButton: ['form'],
+  VwcTextarea: ['form'],
+  VwcTextfield: ['form'],
+  VwcDataGrid: ['rowDetailsRenderer'],
+  VwcDataGridColumn: ['headerRenderer', 'footerRenderer', 'cellRenderer']
 }
 
 const CompoundComponentsMap = {
@@ -142,6 +167,7 @@ const CompoundComponentsMap = {
 module.exports = {
   ComponentsEventsMap,
   ComponentsReadOnlyPropertiesMap,
+  ComponentsBindablePropertiesMap,
   CompoundComponentsMap,
   FileName,
   Assets,

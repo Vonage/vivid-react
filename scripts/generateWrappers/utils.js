@@ -4,7 +4,7 @@ const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } 
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, VividRepo, FileName, OutputLanguage } = require('./consts')
+const { WCAConfig, VividRepo, FileName, OutputLanguage, ComponentsBindablePropertiesMap, ComponentsReadOnlyPropertiesMap } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 const { copySync } = require('fs-extra')
@@ -19,6 +19,7 @@ const toJsonObjectsList = collection => (collection || []).map(JSON.stringify).j
 const toCommaSeparatedList = collection => (collection || []).map(x => `'${stripQuotes(x.name)}'`).join(',')
 const capitalize = input => input.replace(/(^|\s)[a-z]/g, s => s.toUpperCase())
 const deCapitalize = input => input.replace(/(^|\s)[A-Z]/g, s => s.toLowerCase())
+const getComponentName = tag => capitalize(kebab2Camel(tag.name))
 const kebab2Camel = input => deCapitalize(input.split('-').map(x => capitalize(x)).join(''))
 const snake2Camel = input => deCapitalize(input.split('_').map(x => capitalize(x)).join(''))
 const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(eventName)))}`
@@ -58,11 +59,18 @@ const prepareDir = (p, clean = true, verbose = true) => {
   mkdirp.sync(p)
 }
 const getFirstFolderNameFromPath = path => readdirSync(path, { withFileTypes: true }).find(x => x.isDirectory()).name
-const getProperties = tag =>
-  (tag.properties || [])
-    .filter(prop => prop.type) // only props having certain type
-    .filter(prop => /'.*?'/.test(prop.name) ||
-      /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
+const getProperties = tag => (tag.properties || [])
+  .filter(prop => !(ComponentsReadOnlyPropertiesMap[getComponentName(tag)] || []).includes(prop.name)) // skip readonly properties
+  .filter(prop => prop.type) // only props having certain type
+  .filter(prop => /'.*?'/.test(prop.name) ||
+/^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
+  .map(prop => {
+    const isBindable = (ComponentsBindablePropertiesMap[getComponentName(tag)] || []).includes(prop.name) ||
+    prop.type.indexOf('=>') > 0 || // property type is function
+    prop.type.indexOf('[]') > 0 // property type is array
+    prop.bindable = isBindable
+    return prop
+  })
 
 const isFileExists = (fileName) => new Promise(
   (resolve, reject) => access(
@@ -208,6 +216,7 @@ module.exports = {
   copyStaticAssets,
   getIndexFileName,
   getProperties,
+  getComponentName,
   getParsedJson,
   getVividPackageName,
   getVividPackageNames,

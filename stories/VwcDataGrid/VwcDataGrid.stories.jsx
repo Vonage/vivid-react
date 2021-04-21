@@ -65,6 +65,11 @@ const actionCellRenderer = (container, configuration, { item }) => {
   }
 }
 
+const actionHeaderRenderer = (container, configuration) => {
+  container.style.display = 'flex'
+  container.firstElementChild.style.margin = '0 auto'
+}
+
 export const Default = () => {
   const setDataGridRef = (gridElement) => {
     // Please refere to grid API at this document
@@ -100,6 +105,7 @@ export const Default = () => {
         header='Action'
         autoWidth
         resizable
+        headerRenderer={actionHeaderRenderer}
         cellRenderer={actionCellRenderer}
         footer=''
       />

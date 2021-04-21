@@ -2,7 +2,6 @@ const packageJson = require('../../package.json')
 const { getImportPathFromTag } = require('./helpers/generator')
 const {
   ComponentsEventsMap,
-  ComponentsReadOnlyPropertiesMap,
   CompoundComponentsMap,
   OutputLanguage,
   FileName

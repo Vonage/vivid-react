@@ -1,9 +1,9 @@
 import context from '@vonage/vvd-context'
 import fonts from '@vonage/vvd-fonts'
 
-const initVivid = (callback) => Promise.all([
+const initVivid = (target, callback) => Promise.all([
   fonts.init(),
-  context.mount()
+  context.mount(target)
 ]).then(callback)
 
 export default initVivid

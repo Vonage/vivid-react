@@ -65,7 +65,7 @@
     "@vonage/vwc-select": "^2.6.0",
     "@vonage/vwc-slider": "^2.6.0",
     "@vonage/vwc-switch": "^2.6.0",
-    "@vonage/vwc-tab-bar": "^2.5.0",
+    "@vonage/vwc-tab-bar": "^2.2.4",
     "@vonage/vwc-textarea": "^2.5.0",
     "@vonage/vwc-textfield": "^2.5.0",
     "@vonage/vwc-theme-switch": "^2.5.0",

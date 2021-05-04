@@ -61,11 +61,11 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcSlider | @vonage/vwc-slider | ^2.6.0 |
 | VwcSwitch | @vonage/vwc-switch | ^2.6.0 |
 | VwcTabBar | @vonage/vwc-tab-bar | ^2.2.4 |
-| VwcTextarea | @vonage/vwc-textarea | ^2.0.1 |
-| VwcTextfield | @vonage/vwc-textfield | ^2.0.2 |
-| VwcThemeSwitch | @vonage/vwc-theme-switch | ^2.0.1 |
-| VwcTopAppBar | @vonage/vwc-top-app-bar | ^2.0.1 |
-| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | ^2.0.1 |
+| VwcTextarea | @vonage/vwc-textarea | ^2.5.0 |
+| VwcTextfield | @vonage/vwc-textfield | ^2.5.0 |
+| VwcThemeSwitch | @vonage/vwc-theme-switch | ^2.5.0 |
+| VwcTopAppBar | @vonage/vwc-top-app-bar | ^2.5.0 |
+| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | ^2.5.0 |
 
 If the one you're looking for is missing, just [add a new one](#adding-a-component), so everyone can access them.
 

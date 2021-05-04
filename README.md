@@ -25,40 +25,42 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 
 | Component Name | Package Name | Package Version |
 |----------------|--------------|-----------------|
-| VwcAudio | @vonage/vwc-audio | ^2.5.0 |
-| VwcBadge | @vonage/vwc-badge | ^2.5.0 |
-| VwcButton | @vonage/vwc-button | ^2.5.0 |
-| VwcCalendar | @vonage/vwc-calendar | ^2.5.0 |
-| VwcCarousel | @vonage/vwc-carousel | ^2.5.0 |
-| VwcCheckbox | @vonage/vwc-checkbox | ^2.5.0 |
-| VwcChips | @vonage/vwc-chips | ^2.5.0 |
-| VwcCircularProgress | @vonage/vwc-circular-progress | ^2.5.0 |
-| VwcDataGrid | @vonage/vwc-data-grid | ^2.5.0 |
-| VwcDatepicker | @vonage/vwc-datepicker | ^2.5.0 |
-| VwcDialog | @vonage/vwc-dialog | ^2.5.0 |
-| VwcDrawer | @vonage/vwc-drawer | ^2.5.0 |
-| VwcExpansionPanel | @vonage/vwc-expansion-panel | ^2.5.0 |
-| VwcFab | @vonage/vwc-fab | ^2.5.0 |
-| VwcFilePicker | @vonage/vwc-file-picker | ^2.5.0 |
-| VwcFormfield | @vonage/vwc-formfield | ^2.5.0 |
-| VwcHelperMessage | @vonage/vwc-helper-message | ^2.5.0 |
-| VwcIcon | @vonage/vwc-icon | ^2.5.0 |
-| VwcIconButton | @vonage/vwc-icon-button | ^2.5.0 |
-| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | ^2.5.0 |
-| VwcInline | @vonage/vwc-inline | ^2.5.0 |
-| VwcKeypad | @vonage/vwc-keypad | ^2.5.0 |
-| VwcLinearProgress | @vonage/vwc-linear-progress | ^2.5.0 |
-| VwcList | @vonage/vwc-list | ^2.5.0 |
-| VwcMediaController | @vonage/vwc-media-controller | ^2.5.0 |
-| VwcMenu | @vonage/vwc-menu | ^2.5.0 |
-| VwcNotchedOutline | @vonage/vwc-notched-outline | ^2.5.0 |
-| VwcNote | @vonage/vwc-note | ^2.5.0 |
-| VwcRadio | @vonage/vwc-radio | ^2.5.0 |
-| VwcSchemeSelect | @vonage/vwc-scheme-select | ^2.5.0 |
-| VwcSelect | @vonage/vwc-select | ^2.5.0 |
-| VwcSlider | @vonage/vwc-slider | ^2.5.0 |
-| VwcSwitch | @vonage/vwc-switch | ^2.5.0 |
-| VwcTabBar | @vonage/vwc-tab-bar | ^2.5.0 |
+| VwcAudio | @vonage/vwc-audio | ^2.6.0 |
+| VwcBadge | @vonage/vwc-badge | ^2.6.0 |
+| VwcButton | @vonage/vwc-button | ^2.6.0 |
+| VwcCalendar | @vonage/vwc-calendar | ^2.6.0 |
+| VwcCarousel | @vonage/vwc-carousel | ^2.6.0 |
+| VwcCheckbox | @vonage/vwc-checkbox | ^2.6.0 |
+| VwcChips | @vonage/vwc-chips | ^2.6.0 |
+| VwcCircularProgress | @vonage/vwc-circular-progress | ^2.6.0 |
+| VwcDataGrid | @vonage/vwc-data-grid | ^2.6.0 |
+| VwcDatepicker | @vonage/vwc-datepicker | ^2.6.0 |
+| VwcDialog | @vonage/vwc-dialog | ^2.6.0 |
+| VwcDrawer | @vonage/vwc-drawer | ^2.6.0 |
+| VwcExpansionPanel | @vonage/vwc-expansion-panel | ^2.6.0 |
+| VwcFab | @vonage/vwc-fab | ^2.6.0 |
+| VwcFilePicker | @vonage/vwc-file-picker | ^2.6.0 |
+| VwcFormfield | @vonage/vwc-formfield | ^2.6.0 |
+| VwcHelperMessage | @vonage/vwc-helper-message | ^2.6.0 |
+| VwcIcon | @vonage/vwc-icon | ^2.6.0 |
+| VwcIconButton | @vonage/vwc-icon-button | ^2.6.0 |
+| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | ^2.6.0 |
+| VwcInline | @vonage/vwc-inline | ^2.6.0 |
+| VwcKeypad | @vonage/vwc-keypad | ^2.6.0 |
+| VwcLinearProgress | @vonage/vwc-linear-progress | ^2.6.0 |
+| VwcList | @vonage/vwc-list | ^2.6.0 |
+| VwcMediaController | @vonage/vwc-media-controller | ^2.6.0 |
+| VwcMenu | @vonage/vwc-menu | ^2.6.0 |
+| VwcNotchedOutline | @vonage/vwc-notched-outline | ^2.6.0 |
+| VwcNote | @vonage/vwc-note | ^2.6.0 |
+| VwcPagination | @vonage/vwc-pagination | ^2.6.0 |
+| VwcRadio | @vonage/vwc-radio | ^2.6.0 |
+| VwcRelativeTime | @vonage/vwc-relative-time | ^1.3.1 |
+| VwcSchemeSelect | @vonage/vwc-scheme-select | ^2.6.0 |
+| VwcSelect | @vonage/vwc-select | ^2.6.0 |
+| VwcSlider | @vonage/vwc-slider | ^2.6.0 |
+| VwcSwitch | @vonage/vwc-switch | ^2.6.0 |
+| VwcTabBar | @vonage/vwc-tab-bar | ^2.2.4 |
 | VwcTextarea | @vonage/vwc-textarea | ^2.5.0 |
 | VwcTextfield | @vonage/vwc-textfield | ^2.5.0 |
 | VwcThemeSwitch | @vonage/vwc-theme-switch | ^2.5.0 |
@@ -80,22 +82,22 @@ $ yarn add @vonage/vivid-react
 No need for importing `vivid` directly. The dependencies will be installed for you.
  
 ## Font initialization
-There are 2 ways to initialize Vivid context & fonts. You can use initialization function or HOC.
+There are 2 ways to initialize Vivid fonts. You can use initialization function or HOC.
 
 ```javascript
 // Function
 import ReactDOM from 'react-dom'
 import { initVivid } from '@vonage/vivid-react'
-const rootElement = document.getElementById('react-root')
+
 const renderApp = () => {
   // do some more initialization before rendering the main App
   ReactDOM.render(
     <App />,
-    rootElement
+    document.getElementById('react-root')
   )
 }
 
-initVivid(rootElement, renderApp)
+initVivid(renderApp)
 ```
 
 ```javascript

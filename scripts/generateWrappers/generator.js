@@ -2,7 +2,6 @@ const packageJson = require('../../package.json')
 const { getImportPathFromTag } = require('./helpers/generator')
 const {
   ComponentsEventsMap,
-  ComponentsPropertiesMap,
   CompoundComponentsMap,
   OutputLanguage,
   FileName
@@ -13,12 +12,12 @@ const { pathExists, outputFile, outputJson } = require('fs-extra')
 const {
   compileTypescript,
   prepareDir,
-  kebab2Camel,
-  capitalize,
+  getComponentName,
   toJsonObjectsList,
   filePath,
   renderJsDoc,
   getIndexFileName,
+  getProperties,
   getUniqueEvents,
   getVividPackageName,
   prepareCompoundComponents,
@@ -41,8 +40,12 @@ const renderComponent = tag => language => componentName => {
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
     .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
     .replace(TemplateToken.EVENTS, toJsonObjectsList(getUniqueEvents(tag.events)))
-    // skip wrapping properties and attributes - no need for that, but wrapper needs arrays
-    .replace(TemplateToken.PROPERTIES, toJsonObjectsList(tag.customProperties))
+    .replace(TemplateToken.PROPERTIES,
+      toJsonObjectsList(
+        getProperties(tag)
+          .filter(property => property.bindable)
+          .map(({ name }) => name))
+    )
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, getPropTypes(tag).join(',\n'))
     .replace(TemplateToken.PROPS, getProps(tag).join(',\n'))
@@ -82,15 +85,12 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   const components = []
 
   for (const tag of tags) {
-    const camelizedName = kebab2Camel(tag.name)
-    const componentName = capitalize(camelizedName)
+    const componentName = getComponentName(tag)
     components.push(componentName)
     if (verbose) {
       console.info(`Processing ${componentName}...`)
     }
     tag.events = [...(tag.events || []), ...(ComponentsEventsMap[componentName] || [])]
-    // Use only custom properties
-    tag.customProperties = ComponentsPropertiesMap[componentName] || []
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
     const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)

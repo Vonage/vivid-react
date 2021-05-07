@@ -82,22 +82,22 @@ $ yarn add @vonage/vivid-react
 No need for importing `vivid` directly. The dependencies will be installed for you.
  
 ## Font initialization
-There are 2 ways to initialize Vivid fonts. You can use initialization function or HOC.
+There are 2 ways to initialize Vivid context & fonts. You can use initialization function or HOC.
 
 ```javascript
 // Function
 import ReactDOM from 'react-dom'
 import { initVivid } from '@vonage/vivid-react'
-
+const rootElement = document.getElementById('react-root')
 const renderApp = () => {
   // do some more initialization before rendering the main App
   ReactDOM.render(
     <App />,
-    document.getElementById('react-root')
+    rootElement
   )
 }
 
-initVivid(renderApp)
+initVivid(rootElement, renderApp)
 ```
 
 ```javascript

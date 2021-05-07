@@ -5,10 +5,6 @@ const { dependencies } = require('../package.json')
 
 const spinner = ora()
 
-const IGNORED_PACKAGES = [
-  '@vonage/vwc-angular-forms'
-]
-
 const spawnPromise = (...args) => new Promise((resolve, reject) => {
   const cmd = spawn(...args)
   const stdout = []
@@ -19,40 +15,65 @@ const spawnPromise = (...args) => new Promise((resolve, reject) => {
   cmd.on('error', () => reject(stderr.join('')))
 })
 
-const keepOnlyWebComponents = ({ name }) => !IGNORED_PACKAGES.includes(name)
+// TODO: find a better way to load complete search results when searching NPM
+// naive way to force paging when doing NPM search
+// NPM limits the number of packages it returns and drops some versions and packages all together
+const forcePaging = (pattern = '') =>
+  'abcdefghijklmnopqrstuvwxyz'.split('').map((letter) => `${pattern}-${letter}`)
+
+const ignoredPackages = [
+  '@vonage/vwc-angular-forms',
+  '@vonage/vwc-relative-time'
+]
+
+const defaultPatterns = [
+  ...forcePaging('vonage/vwc'),
+  'vonage/vvd-context',
+  'vonage/vvd-core',
+  'vonage/vvd-fonts'
+]
+
+const removeIgnoredPackages = ({ name }) => !ignoredPackages.includes(name)
 
 const keepOnlyChangedPackages = ({ name, version }) => dependencies[name] !== `^${version}`
 
-const getLatestPackages = async (pattern = 'vonage/vwc') => {
-  spinner.start(`Searching for '${pattern}' packages`)
-  try {
-    const stdout = await spawnPromise('npm', ['search', pattern, '--json', '--no-description'], { encoding: 'utf8' })
-    spinner.succeed()
-    return JSON.parse(stdout).filter(keepOnlyWebComponents)
-  } catch {
-    spinner.fail('Failed to grab the list of packages from `npm`')
-    return []
+const getPackages = async (patterns = defaultPatterns) => {
+  const packages = []
+  spinner.start('')
+  for (const pattern of patterns) {
+    spinner.text = `Searching for Vivid packages to update. [found: ${packages.length}]`
+    try {
+      const stdout = await spawnPromise('npm', ['search', '--json', '--no-description', pattern], { encoding: 'utf8' })
+      packages.push(...JSON.parse(stdout).filter(removeIgnoredPackages).filter(keepOnlyChangedPackages))
+    } catch {
+    }
   }
+  spinner.clear()
+  return packages
 }
 
 const updatePackageJson = async () => {
-  const packages = await getLatestPackages()
-  const packagesToUpdate = packages.filter(keepOnlyChangedPackages)
-  spinner.info(`Found ${packagesToUpdate.length} packages to update`)
+  const packages = await getPackages()
+  if (!packages.length) {
+    spinner.info('Nothing to update. All packages already in latest versions.')
+    return
+  }
   let updated = 0
-  for (const { name, version } of packagesToUpdate) {
+  spinner.succeed(`Found ${packages.length} packages needing update.`)
+  spinner.start()
+  for (const { name, version } of packages) {
     const versionedPackage = `${name}@^${version}`
-    spinner.start(`Updating '${versionedPackage}' from '${dependencies[name]}'`)
+    spinner.text = `Updating '${name}@${dependencies[name]}' to '^${version}'. [updated: ${updated}/${packages.length}]`
     try {
       await spawnPromise('yarn', ['add', versionedPackage], { encoding: 'utf8' })
       updated++
-      spinner.succeed()
     } catch (errorMessage) {
       spinner.fail()
       spinner.fail(errorMessage.trim(EOL))
+      spinner.start()
     }
   }
-  console.log(`Updated ${updated} of ${packagesToUpdate.length}`)
+  spinner.info(`Updated ${updated} of ${packages.length}`)
 }
 
 updatePackageJson()

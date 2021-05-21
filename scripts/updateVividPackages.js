@@ -23,14 +23,15 @@ const forcePaging = (pattern = '') =>
 
 const ignoredPackages = [
   '@vonage/vwc-angular-forms',
+  '@vonage/vwc-angular-dialog',
   '@vonage/vwc-relative-time'
 ]
 
 const defaultPatterns = [
-  ...forcePaging('vonage/vwc'),
   'vonage/vvd-context',
   'vonage/vvd-core',
-  'vonage/vvd-fonts'
+  'vonage/vvd-fonts',
+  ...forcePaging('vonage/vwc')
 ]
 
 const removeIgnoredPackages = ({ name }) => !ignoredPackages.includes(name)

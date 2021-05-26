@@ -58,6 +58,7 @@ const OutputLanguage = {
 
 // TODO: this can be removed when JSDocs for each component will be updated in Vivid repository
 const ComponentsEventsMap = {
+  VwcSnackbar: ['opening', 'opened', 'closing', 'closed'],
   VwcButton: ['click'],
   VwcIconButton: ['click'],
   VwcDialog: ['opening', 'opened', 'closing', 'closed'],

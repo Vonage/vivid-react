@@ -1,9 +1,9 @@
 import React from 'react'
-import VwcRelativeTime from '../../dist/VwcRelativeTime'
+import VwcAccordion from '../../dist/VwcAccordion'
 
-export const Default = () => <VwcRelativeTime />
+export const Default = () => <VwcAccordion />
 export default {
-  title: 'VwcRelativeTime',
+  title: 'VwcAccordion',
   argTypes: {
       //
       // Example values

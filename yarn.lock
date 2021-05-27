@@ -3973,6 +3973,16 @@
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vvd-typography/2.9.0/9a9109f0d3c53b155b01ab272220a0abe64be2fdf10fdeb5e8b5dfbc1bda5323#b581eda2e99e12b947b52765fe2f871b51ff7c3d"
   integrity sha1-tYHtoumeErlHtSdl/i+HG1H/fD0=
 
+"@vonage/vwc-accordion@^2.9.0":
+  version "2.9.0"
+  resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-accordion/2.9.0/60a862b865ff45e596542b2a92a755436b1b03b4c919f687d0582cf3571a640f#16f240579eea250cf5704dc50f109ae20c520a63"
+  integrity sha1-FvJAV57qJQz1cE3FDxCa4gxSCmM=
+  dependencies:
+    "@vonage/vvd-core" "2.9.0"
+    "@vonage/vwc-expansion-panel" "2.9.0"
+    lit-element "^2.4.0"
+    tslib "^2.0.3"
+
 "@vonage/vwc-audio@^2.9.0":
   version "2.9.0"
   resolved "https://vonagecc.jfrog.io/vonagecc/api/npm/npm/download/@vonage/vwc-audio/2.9.0/7521cfb4cb7d2661cd2d1e1306b74af2ce3650c6abcc45ea8aaec0bf7ff970fd#7eb126b6668494aedbb2e8e2639f7abbddae984d"

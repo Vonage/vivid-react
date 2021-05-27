@@ -31,6 +31,7 @@
     "@vonage/vvd-context": "^2.9.0",
     "@vonage/vvd-core": "^2.9.0",
     "@vonage/vvd-fonts": "^2.9.0",
+    "@vonage/vwc-accordion": "^2.9.0",
     "@vonage/vwc-audio": "^2.9.0",
     "@vonage/vwc-badge": "^2.9.0",
     "@vonage/vwc-banner": "^2.9.0",

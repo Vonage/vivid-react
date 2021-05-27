@@ -25,6 +25,7 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 
 | Component Name | Package Name | Package Version |
 |----------------|--------------|-----------------|
+| VwcAccordion | @vonage/vwc-accordion | ^2.9.0 |
 | VwcAudio | @vonage/vwc-audio | ^2.9.0 |
 | VwcBadge | @vonage/vwc-badge | ^2.9.0 |
 | VwcBanner | @vonage/vwc-banner | ^2.9.0 |

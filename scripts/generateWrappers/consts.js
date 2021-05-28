@@ -61,6 +61,7 @@ const ComponentsEventsMap = {
   VwcSnackbar: ['opening', 'opened', 'closing', 'closed'],
   VwcButton: ['click'],
   VwcIconButton: ['click'],
+  VwcDataGrid: [{ name: 'selected-items-changed', propName: 'onSelectedItemsChange' }],
   VwcDialog: ['opening', 'opened', 'closing', 'closed'],
   VwcListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
   VwcListExpansionPanel: ['closed', 'opened'],

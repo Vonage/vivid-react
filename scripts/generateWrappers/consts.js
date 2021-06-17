@@ -58,21 +58,22 @@ const OutputLanguage = {
 
 // TODO: this can be removed when JSDocs for each component will be updated in Vivid repository
 const ComponentsEventsMap = {
-  VwcSnackbar: ['opening', 'opened', 'closing', 'closed'],
   VwcButton: ['click'],
-  VwcIconButton: ['click'],
+  VwcCheckbox: ['change'],
+  VwcChipSet: [{ name: 'MDCChip:selection', propName: 'onSelection'}],
   VwcDataGrid: [{ name: 'selected-items-changed', propName: 'onSelectedItemsChange' }],
   VwcDialog: ['opening', 'opened', 'closing', 'closed'],
-  VwcListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
-  VwcListExpansionPanel: ['closed', 'opened'],
+  VwcIconButton: ['click'],
   VwcIconButtonToggle: [{ name: 'MDCIconButtonToggle:change', propName: 'onChange' }],
-  VwcCheckbox: ['change'],
+  VwcListExpansionPanel: ['closed', 'opened'],
+  VwcListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
   VwcRadio: ['change'],
   VwcSlider: ['change'],
+  VwcSnackbar: ['opening', 'opened', 'closing', 'closed'],
   VwcSwitch: ['change'],
-  VwcTextfield: ['input'],
   VwcTab: [{ name: 'MDCTab:interacted', propName: 'onInteracted' }],
-  VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }]
+  VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }],
+  VwcTextfield: ['input']
 }
 
 const ComponentsReadOnlyPropertiesMap = {

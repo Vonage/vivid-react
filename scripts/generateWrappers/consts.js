@@ -110,6 +110,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcCheckListItem: ['styles', 'ripple'],
   VwcDialog: ['styles'],
   VwcButton: ['styles', 'buttonElement', 'ripple'],
+  VwcButtonToggleGroup: ['items'],
   VwcKeypad: ['styles', 'digitsDisplay'],
   VwcIconButton: ['styles', 'buttonElement', 'ripple'],
   VwcIconButtonToggle: ['styles', 'ripple'],

@@ -58,6 +58,7 @@ const OutputLanguage = {
 
 // TODO: this can be removed when JSDocs for each component will be updated in Vivid repository
 const ComponentsEventsMap = {
+  VwcButtonToggleGroup: ['selected'],
   VwcButton: ['click'],
   VwcCheckbox: ['change'],
   VwcChipSet: [{ name: 'MDCChip:selection', propName: 'onSelection'}],

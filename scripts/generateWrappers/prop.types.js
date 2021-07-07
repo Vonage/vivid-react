@@ -5,7 +5,8 @@ const { event2PropName, getProperties } = require('./utils')
 const getEvents = tag => (tag.events || []).map(x => x.propName || event2PropName(x.name || x))
 const isTypeSet = type => /(".*?" \|)/.test(type)
 const isStringTypeSet = type => /".*"[ |]?/.test(type) && /".*"[ |]?/.exec(type)[0] === type
-const isBoolean = type => /(true|false)/.test(type)
+const isBoolean = type => /^(true|false)$/.test(type) || type === 'boolean'
+const isArray = type => /(.*)\[\]$/gm.test(type) || type === 'array'
 const isNumber = type => /(integer)/.test(type) || type === 'number | null'
 
 // TypeScript
@@ -29,7 +30,7 @@ const getProps = tag => {
       ? 'boolean'
       : isNumber(type)
         ? 'number'
-        : (type === 'array')
+        : isArray(type)
             ? 'any[]'
             : `any /* ${type} */`
   const props = properties.map(x => `  ${x.name}?: ${mapType(x.type)}`)
@@ -61,9 +62,11 @@ const getPropTypes = tag => {
         ? 'string'
         : isNumber(type)
           ? 'number'
-          : isBoolean(type)
-            ? 'bool'
-            : `any /* ${type} */`
+          : isArray(type)
+            ? 'array' 
+            : isBoolean(type)
+              ? 'bool'
+              : `any /* ${type} */`
   const propertiesPropTypes = properties.map(x =>
     `  ${x.name}: PropTypes.${mapTypeToPropType(x.type.toLowerCase())}${x.default ? `/* default: ${x.default} */` : ''}`)
 

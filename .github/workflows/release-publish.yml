@@ -35,10 +35,10 @@ jobs:
         id: get_version
         uses: battila7/get-version-action@v2
 
-      - name: Setup NodeJS 12
+      - name: Setup NodeJS 14
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Install dependencies
         run: |

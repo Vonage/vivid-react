@@ -116,6 +116,9 @@
     "react": ">=16.8",
     "react-dom": ">=16.8"
   },
+  "engines": {
+		"node": ">=14.0.0"
+	},
   "optionalDependencies": {
     "prop-types": "^15.7.2"
   }

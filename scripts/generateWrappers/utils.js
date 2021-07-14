@@ -9,8 +9,8 @@ const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 const { copySync } = require('fs-extra')
 
-const renderPropertyJsDoc = property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''}`
-const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsDoc).join('\n')
+const renderPropertyJsDoc = tag => property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''} ${property.attribute ? `attribute: <${getComponentName(tag)} ${property.attribute} />` : ''}`
+const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsDoc(tag)).join('\n')
 const renderJsDoc = tag => `/** ${tag.description || ''} \n${renderTagPropertiesJsDoc(tag)}\n*/`
 const stripQuotes = input => input.replace(/'/g, '')
 const unique = stringArray => Array.from(new Set(stringArray))

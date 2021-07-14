@@ -44,7 +44,7 @@ const getProps = tag => {
 // JavaScript
 
 const getDefaultProps = tag => {
-  const defaultProperties = (tag.properties || []).filter(x => x.default)
+  const defaultProperties = getProperties(tag).filter(x => x.default)
   return defaultProperties.map(x => `  ${x.name}: ${x.default}`)
 }
 
@@ -68,7 +68,7 @@ const getPropTypes = tag => {
               ? 'bool'
               : `any /* ${type} */`
   const propertiesPropTypes = properties.map(x =>
-    `  ${x.name}: PropTypes.${mapTypeToPropType(x.type.toLowerCase())}${x.default ? `/* default: ${x.default} */` : ''}`)
+    `  ${x.name}: PropTypes.${mapTypeToPropType(x.type?.toLowerCase())}${x.default ? `/* default: ${x.default} */` : ''}`)
 
   return [
     ...eventsPropTypes,

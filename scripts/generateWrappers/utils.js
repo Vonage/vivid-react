@@ -61,13 +61,12 @@ const prepareDir = (p, clean = true, verbose = true) => {
 const getFirstFolderNameFromPath = path => readdirSync(path, { withFileTypes: true }).find(x => x.isDirectory()).name
 const getProperties = tag => (tag.properties || [])
   .filter(prop => !(ComponentsReadOnlyPropertiesMap[getComponentName(tag)] || []).includes(prop.name)) // skip readonly properties
-  .filter(prop => prop.type) // only props having certain type
   .filter(prop => /'.*?'/.test(prop.name) ||
 /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
   .map(prop => {
     const isBindable = (ComponentsBindablePropertiesMap[getComponentName(tag)] || []).includes(prop.name) ||
-    prop.type.indexOf('=>') > 0 || // property type is function
-    prop.type.indexOf('[]') > 0 // property type is array
+    prop.type?.indexOf('=>') > 0 || // property type is function
+    prop.type?.indexOf('[]') > 0 // property type is array
     prop.bindable = isBindable
     return prop
   })

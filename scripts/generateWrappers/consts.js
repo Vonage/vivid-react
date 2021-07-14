@@ -96,6 +96,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcCarouselItem: ['floatingLabelFoundation', 'lineRippleFoundation'],
   VwcList: ['styles', 'items', 'selected', 'index', 'layout', 'debouncedLayout'],
   VwcListItem: ['styles', 'ripple', 'text'],
+  VwcInline: ['styles'],
   VwcSwitch: ['styles', 'ripple'],
   VwcTab: ['styles', 'active', 'ripple', 'isRippleActive'],
   VwcFab: ['styles', 'ripple'],

@@ -126,6 +126,7 @@ const ComponentsReadOnlyPropertiesMap = {
 // w/o toString => fromString transformations via HTML attributes
 const ComponentsBindablePropertiesMap = {
   VwcButton: ['form'],
+  VwcText: ['fontFace'],
   VwcTextarea: ['form'],
   VwcTextfield: ['form'],
   VwcDataGrid: ['rowDetailsRenderer'],

@@ -27,7 +27,7 @@
     "CLI"
   ],
   "dependencies": {
-    "@vonage/vivid-react-wrapper": "^1.2.1",
+    "@vonage/vivid-react-wrapper": "^1.2.2",
     "@vonage/vvd-context": "^2.15.0",
     "@vonage/vvd-core": "^2.15.0",
     "@vonage/vvd-fonts": "^2.15.0",

@@ -24,6 +24,7 @@ const forcePaging = (pattern = '') =>
 const ignoredPackages = [
   '@vonage/vwc-angular-forms',
   '@vonage/vwc-angular-dialog',
+  '@vonage/vwc-toggle-buttons-group',
   '@vonage/vwc-relative-time'
 ]
 

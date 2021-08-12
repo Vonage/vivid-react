@@ -41,8 +41,8 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcDialog | @vonage/vwc-dialog | ^2.17.0 |
 | VwcDrawer | @vonage/vwc-drawer | ^2.17.0 |
 | VwcDropdown | @vonage/vwc-dropdown | ^2.17.0 |
-| VwcExpansionPanel | @vonage/vwc-expansion-panel | ^2.17.0 |
 | VwcEmptyState | @vonage/vwc-empty-state | ^2.17.0 |
+| VwcExpansionPanel | @vonage/vwc-expansion-panel | ^2.17.0 |
 | VwcFab | @vonage/vwc-fab | ^2.17.0 |
 | VwcFilePicker | @vonage/vwc-file-picker | ^2.17.0 |
 | VwcFormfield | @vonage/vwc-formfield | ^2.17.0 |
@@ -62,11 +62,11 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcRadio | @vonage/vwc-radio | ^2.17.0 |
 | VwcSchemeSelect | @vonage/vwc-scheme-select | ^2.17.0 |
 | VwcSelect | @vonage/vwc-select | ^2.17.0 |
+| VwcSideDrawer | @vonage/vwc-side-drawer | ^2.17.0 |
 | VwcSlider | @vonage/vwc-slider | ^2.17.0 |
 | VwcSnackbar | @vonage/vwc-snackbar | ^2.17.0 |
 | VwcSurface | @vonage/vwc-surface | ^2.17.0 |
 | VwcSwitch | @vonage/vwc-switch | ^2.17.0 |
-| VwcSideDrawer | @vonage/vwc-side-drawer | ^2.17.0 |
 | VwcTabBar | @vonage/vwc-tab-bar | ^2.17.0 |
 | VwcText | @vonage/vwc-text | ^2.17.0 |
 | VwcTextarea | @vonage/vwc-textarea | ^2.17.0 |

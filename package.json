@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "2.8.6",
+  "version": "2.8.7",
   "description": "Vivid wrapped for easy React usage",
   "main": "index.js",
   "types": "index.d.ts",
@@ -37,8 +37,8 @@
     "@vonage/vwc-banner": "^2.18.1",
     "@vonage/vwc-button": "^2.18.1",
     "@vonage/vwc-button-toggle-group": "^2.18.1",
-    "@vonage/vwc-card": "^2.18.1",
     "@vonage/vwc-calendar": "^2.18.1",
+    "@vonage/vwc-card": "^2.18.1",
     "@vonage/vwc-carousel": "^2.18.1",
     "@vonage/vwc-checkbox": "^2.18.1",
     "@vonage/vwc-chips": "^2.18.1",

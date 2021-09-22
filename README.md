@@ -31,8 +31,8 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcBanner | @vonage/vwc-banner | ^2.18.1 |
 | VwcButton | @vonage/vwc-button | ^2.18.1 |
 | VwcButtonToggleGroup | @vonage/vwc-button-toggle-group | ^2.18.1 |
-| VwcCard | @vonage/vwc-card | ^2.18.1 |
 | VwcCalendar | @vonage/vwc-calendar | ^2.18.1 |
+| VwcCard | @vonage/vwc-card | ^2.18.1 |
 | VwcCarousel | @vonage/vwc-carousel | ^2.18.1 |
 | VwcCheckbox | @vonage/vwc-checkbox | ^2.18.1 |
 | VwcChips | @vonage/vwc-chips | ^2.18.1 |

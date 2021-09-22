@@ -8,6 +8,7 @@ export const Validation = () => {
   const [errorMessage, setErrorMessage] = useState('')
 
   return <VwcTextfield
+    style={{ width: '100%' }}
     pattern='[a-zA-Z0-9 ]*'
     required
     validationMessage={errorMessage}

@@ -78,10 +78,15 @@ const ComponentsEventsMap = {
 }
 
 const ComponentsReadOnlyPropertiesMap = {
+  VwcAccordion: ['styles'],  
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
   VwcListExpansionPanel: ['styles', 'headerNodes'],
   VwcExpansionPanel: ['styles'],
   VwcBadge: ['styles'],
+  VwcBanner: ['styles'],
+  VwcDrawer: ['styles'],
+  VwcNotchedOutline: ['styles'],
+  VwcSurface: ['styles'],
   VwcFilePicker: ['styles'],
   VwcFormfield: ['styles'],
   VwcHelperMessage: ['styles'],
@@ -112,6 +117,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcChipSet: ['styles', 'chips'],
   VwcCheckListItem: ['styles', 'ripple'],
   VwcDialog: ['styles'],
+  VwcDropdown: ['styles'],
   VwcButton: ['styles', 'buttonElement', 'ripple'],
   VwcButtonToggleGroup: ['items', 'selected'],
   VwcKeypad: ['styles', 'digitsDisplay'],

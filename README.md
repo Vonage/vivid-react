@@ -51,8 +51,8 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcIcon | @vonage/vwc-icon | ^2.20.1 |
 | VwcIconButton | @vonage/vwc-icon-button | ^2.20.1 |
 | VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | ^2.20.1 |
-| VwcLayout | @vonage/vwc-layout | ^2.20.1 |
 | VwcKeypad | @vonage/vwc-keypad | ^2.20.1 |
+| VwcLayout | @vonage/vwc-layout | ^2.20.1 |
 | VwcLinearProgress | @vonage/vwc-linear-progress | ^2.20.1 |
 | VwcList | @vonage/vwc-list | ^2.20.1 |
 | VwcMediaController | @vonage/vwc-media-controller | ^2.20.1 |

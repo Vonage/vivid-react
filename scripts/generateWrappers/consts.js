@@ -60,6 +60,7 @@ const OutputLanguage = {
 const ComponentsEventsMap = {
   VwcButtonToggleGroup: ['selected'],
   VwcButton: ['click'],
+  VwcCard: ['click'],
   VwcCheckbox: ['change'],
   VwcChipSet: [{ name: 'MDCChip:selection', propName: 'onSelection'}],
   VwcDataGrid: [{ name: 'selected-items-changed', propName: 'onSelectedItemsChange' }],
@@ -101,7 +102,7 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcCarouselItem: ['floatingLabelFoundation', 'lineRippleFoundation'],
   VwcList: ['styles', 'items', 'selected', 'index', 'layout', 'debouncedLayout'],
   VwcListItem: ['styles', 'ripple', 'text'],
-  VwcInline: ['styles'],
+  VwcLayout: ['styles'],
   VwcSwitch: ['styles', 'ripple'],
   VwcTab: ['styles', 'active', 'ripple', 'isRippleActive'],
   VwcFab: ['styles', 'ripple'],
@@ -133,6 +134,7 @@ const ComponentsReadOnlyPropertiesMap = {
 const ComponentsBindablePropertiesMap = {
   VwcButton: ['form'],
   VwcText: ['fontFace'],
+  VwcCard: ['headerIcon'],
   VwcTextarea: ['form'],
   VwcTextfield: ['form'],
   VwcDataGrid: ['rowDetailsRenderer'],

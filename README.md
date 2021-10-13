@@ -18,6 +18,10 @@ Goals:
 
 **now also implemented in _raw_ Vivid.
 
+# Why is this repository exists?
+
+[![Using Web Components in React - Web Component Essentials](https://img.youtube.com/vi/o1dMXrIv3Q8/0.jpg)](https://www.youtube.com/watch?v=o1dMXrIv3Q8)
+
 ## Supported components
 Here's the list of all available wrappers, with the `Vivid` package name and version used to generate each one.
 If you need to use a different version of a `Vivid` component, simply add it to your application's `package.json`.

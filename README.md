@@ -30,7 +30,6 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | Component Name | Package Name | Package Version |
 |----------------|--------------|-----------------|
 | VwcAccordion | @vonage/vwc-accordion | ^2.20.1 |
-| VwcAudio | @vonage/vwc-audio | ^2.20.1 |
 | VwcBadge | @vonage/vwc-badge | ^2.20.1 |
 | VwcBanner | @vonage/vwc-banner | ^2.20.1 |
 | VwcButton | @vonage/vwc-button | ^2.20.1 |
@@ -59,7 +58,6 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcLayout | @vonage/vwc-layout | ^2.20.1 |
 | VwcLinearProgress | @vonage/vwc-linear-progress | ^2.20.1 |
 | VwcList | @vonage/vwc-list | ^2.20.1 |
-| VwcMediaController | @vonage/vwc-media-controller | ^2.20.1 |
 | VwcMenu | @vonage/vwc-menu | ^2.20.1 |
 | VwcNotchedOutline | @vonage/vwc-notched-outline | ^2.20.1 |
 | VwcNote | @vonage/vwc-note | ^2.20.1 |

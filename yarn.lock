@@ -1928,6 +1928,13 @@
   dependencies:
     tslib "^1.9.3"
 
+"@material/base@=12.0.0-canary.197f64fa2.0":
+  version "12.0.0-canary.197f64fa2.0"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/base/-/base-12.0.0-canary.197f64fa2.0.tgz#142c079b72005419d5aa0b499b4acd35c2c564e3"
+  integrity sha1-FCwHm3IAVBnVqgtJm0rNNcLFZOM=
+  dependencies:
+    tslib "^2.1.0"
+
 "@material/button@12.0.0-canary.22d29cbb4.0":
   version "12.0.0-canary.22d29cbb4.0"
   resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/button/-/button-12.0.0-canary.22d29cbb4.0.tgz#cdaa5d3a9e29ff663ecd2aef4bb221bea1c16d53"
@@ -2048,6 +2055,14 @@
     "@material/feature-targeting" "9.0.0-canary.1c156d69d.0"
     tslib "^1.9.3"
 
+"@material/dom@=12.0.0-canary.197f64fa2.0":
+  version "12.0.0-canary.197f64fa2.0"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/dom/-/dom-12.0.0-canary.197f64fa2.0.tgz#857fcc3646a6ca6cde0ed8f4c0ba12c1bce96da5"
+  integrity sha1-hX/MNkamymzeDtj0wLoSwbzpbaU=
+  dependencies:
+    "@material/feature-targeting" "12.0.0-canary.197f64fa2.0"
+    tslib "^2.1.0"
+
 "@material/drawer@=12.0.0-canary.22d29cbb4.0":
   version "12.0.0-canary.22d29cbb4.0"
   resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/drawer/-/drawer-12.0.0-canary.22d29cbb4.0.tgz#c50f99259f7460dc2f07ccf5d73e6c33a46e3a14"
@@ -2086,6 +2101,13 @@
     "@material/base" "9.0.0-canary.1c156d69d.0"
     "@material/feature-targeting" "9.0.0-canary.1c156d69d.0"
     "@material/theme" "9.0.0-canary.1c156d69d.0"
+
+"@material/feature-targeting@12.0.0-canary.197f64fa2.0":
+  version "12.0.0-canary.197f64fa2.0"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/feature-targeting/-/feature-targeting-12.0.0-canary.197f64fa2.0.tgz#4e55c1664ee8319d352ec98ef2365d7990747f9f"
+  integrity sha1-TlXBZk7oMZ01LsmO8jZdeZB0f58=
+  dependencies:
+    tslib "^2.1.0"
 
 "@material/feature-targeting@12.0.0-canary.22d29cbb4.0":
   version "12.0.0-canary.22d29cbb4.0"
@@ -2214,6 +2236,16 @@
     "@material/rtl" "12.0.0-canary.22d29cbb4.0"
     "@material/theme" "12.0.0-canary.22d29cbb4.0"
     tslib "^2.1.0"
+
+"@material/mwc-base@^0.21.0":
+  version "0.21.0"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/@material/mwc-base/-/mwc-base-0.21.0.tgz#8e80884cbfc4c5dc1b8d460bb4037dfdbac84aff"
+  integrity sha1-joCITL/ExdwbjUYLtAN9/brISv8=
+  dependencies:
+    "@material/base" "=12.0.0-canary.197f64fa2.0"
+    "@material/dom" "=12.0.0-canary.197f64fa2.0"
+    lit-element "~2.4.0"
+    tslib "^2.0.1"
 
 "@material/mwc-base@^0.22.1":
   version "0.22.1"
@@ -4508,6 +4540,15 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
+"@vonage/vvd-core@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-core/2.13.0/39984b95690142415104b226376da7d8f93476e86445b0fd9004100f4fd1d04b#fa733c2f73c16fc5b80cc85fd6aa6a4683878c56"
+  integrity sha512-3kQRmEm/1uIbFcIVbgWGhaet/Ir8IPT7mjIJbs/e4MzZ3NJiomhb0ouzAJvpsi5b4rJJ50iuvHKwSC6YeLW1JQ==
+  dependencies:
+    "@vonage/vvd-fonts" "2.13.0"
+    "@vonage/vvd-scheme" "2.13.0"
+    tslib "^2.3.0"
+
 "@vonage/vvd-core@2.20.1", "@vonage/vvd-core@^2.20.1":
   version "2.20.1"
   resolved "https://npm.pkg.github.com/download/@vonage/vvd-core/2.20.1/b6887464dbdc57f8195951fbae0c17194abcd1b070e496b86cb63f09b170eac2#86fa87dc60c2d3150d9bf2c4dcca6180d52c7614"
@@ -4522,6 +4563,14 @@
   resolved "https://npm.pkg.github.com/download/@vonage/vvd-design-tokens/2.20.1/25dd2f768fadcec5541ca7714ea3cc9fe7382528c6db450eaf2ca4190521d6dc#18955c133a45c253ad6ecb4713b1896dc548f1fa"
   integrity sha512-2gbe3JBXryOyLe2A2tVpSKluPzDeUfJxfbSZNtf+l9Uvhk6JFoQR7tAa5qZxn5Sa192kRuohb955BrVUK4I+Wg==
 
+"@vonage/vvd-fonts@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-fonts/2.13.0/40ba97a4d6b9b01bc1487823a7ecb7bcd17522daf22c6d441e35cf19c6e89893#017cb630265b68139154bd0fb8ad3f7d549a2cba"
+  integrity sha512-FzHUed3fsT4oe/J8ihWhv7nHpsXRKg7GatLLr44tohdxTTRNLvylzhP9eoEUllt/fhzYc7vxTP7p9mwV5bOAaQ==
+  dependencies:
+    lit-element "^2.4.0"
+    tslib "^2.3.0"
+
 "@vonage/vvd-fonts@2.20.1", "@vonage/vvd-fonts@^2.20.1":
   version "2.20.1"
   resolved "https://npm.pkg.github.com/download/@vonage/vvd-fonts/2.20.1/377bfd5e10c94dfe168019286b821c69eddc1c30686fb018a7e6c9ef67815fca#c66cedb8cef94d871cd77e3905ff4ab1f079a0c0"
@@ -4531,12 +4580,28 @@
     ramda "^0.27.1"
     tslib "^2.3.0"
 
+"@vonage/vvd-foundation@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-foundation/2.13.0/0d6ee13938dfdaf6eedaa89edcb1a204a27c9d28c20bace188bd7641dbcd4b9a#21cb674339f251786a20e8b558b9239017a56b41"
+  integrity sha512-Tt3v8W4Qjsr/hDxzKsPZ26R7CODrs/vOxzG+QVU3QH/D4aJBBS/Ge5XiCVhPEfiBuuNliFbEzL4ZGJC7R2NNTA==
+  dependencies:
+    lit-element "^2.4.0"
+    tslib "^2.3.0"
+
 "@vonage/vvd-foundation@2.20.1":
   version "2.20.1"
   resolved "https://npm.pkg.github.com/download/@vonage/vvd-foundation/2.20.1/ddb7725a7cf76d419876b743787e94327c77c7c2b38fe2b165b39cad94957c81#29315bcd6c67d0cb73d933a437dd3665d91aa7c2"
   integrity sha512-WL9cJMrnP9+fHvoQXiSBoO9ML2XImfXUEuDc4sMfZ2e8qS1xmSaP+2hFKptnNFe1aoggOPgEWxiFM6ng1KV8Jw==
   dependencies:
     lit-element "^2.4.0"
+    tslib "^2.3.0"
+
+"@vonage/vvd-scheme@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-scheme/2.13.0/8add946085c56d9e056f040576ce3c71a833e08ce42fa67dc458ea839ee36546#e64e4bbb81fa61356d5d9dbd182e0dd0a76442f0"
+  integrity sha512-MbHc+ADCGHAFC7/DZyVGAaWC/bfxmGSrRrgpUHTcvDX5DOzkZtlz5/5hHHryxWxHnF3T4F8a7aVMknJ9pkcOuA==
+  dependencies:
+    "@vonage/vvd-foundation" "2.13.0"
     tslib "^2.3.0"
 
 "@vonage/vvd-scheme@2.20.1":
@@ -4569,16 +4634,14 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-audio@^2.20.1":
-  version "2.20.1"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-audio/2.20.1/629be36492e0d5f726a3d327504a7a5e127310f28f497eb78457502e9579c9e2#289c13acf199eeb8dbdad19dad95383e29ac6583"
-  integrity sha512-JXUqPIq5NbaSP3+JPQ8Yird+PIi7LPBFQhAN10q5cvRdjLy6bDfkkYKlP8OHEBjPO0XagZyV511EAyW5r53CAA==
+"@vonage/vwc-audio@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-audio/2.13.0/9594135580cad175fc5d0427c8c4b2821925e90c845ea796ff46af0e7028fa68#708af72c5e264087d6fd1fb65d04081775208fb4"
+  integrity sha512-m8jVlf6dhNf3Dw1VYPUoY8/uO8hK32xVHNT5WN34qsOmk95wRSB32n3yh3jZom0w7EE1ADtIN+U9sx+WBLEYrw==
   dependencies:
-    "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.20.1"
-    "@vonage/vvd-foundation" "2.20.1"
-    "@vonage/vwc-icon" "2.20.1"
-    "@vonage/vwc-media-controller" "2.20.1"
+    "@vonage/vvd-core" "2.13.0"
+    "@vonage/vwc-icon" "2.13.0"
+    "@vonage/vwc-media-controller" "2.13.0"
     lit-element "^2.4.0"
     lit-html "^1.1.1"
     ramda "^0.27.1"
@@ -4863,6 +4926,18 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
+"@vonage/vwc-icon@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon/2.13.0/05617312854df57d989e2fc0a2a38a9ed6e4cddc1280f39a3958f70b13b1b7da#08b0d20c345b7c8142c227b948579dd76f41cafd"
+  integrity sha512-XSn0qyE0uUahwPQMrov1ayRogbv72JBhr+J8WvfM9YKJpsRGBF6g4XEVFFdvM6DFk6lvAUq5yBfi5GOt6aSvtA==
+  dependencies:
+    "@material/mwc-base" "^0.21.0"
+    "@vonage/vvd-core" "2.13.0"
+    "@vonage/vvd-foundation" "2.13.0"
+    lit-element "^2.4.0"
+    lit-html "^1.3.0"
+    ramda "^0.27.1"
+
 "@vonage/vwc-icon@2.20.1", "@vonage/vwc-icon@^2.20.1":
   version "2.20.1"
   resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon/2.20.1/991df4f3ab592415a57dcdab8cd9d20e8b62da8f882ba1487c50b5a5f2de936a#4a6ed06be2a9bd9c3c3d149b59bb2e1b5233fd21"
@@ -4922,7 +4997,18 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-media-controller@2.20.1", "@vonage/vwc-media-controller@^2.20.1":
+"@vonage/vwc-media-controller@2.13.0":
+  version "2.13.0"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-media-controller/2.13.0/da6b3c48bb4f6bf638502c7c2a6312a765b467b56751f5c2cff1032738b9e4e2#e94aca2e25bf1b6b75b488509530289663a4f832"
+  integrity sha512-n6d4MOyNhhyeoDjodKHQqW7bmsSE2QL6LBDLFlvmQ9s+fiahhpHbUocWWCAgHUYPH6AzoVUVHSRWev66ysxtkQ==
+  dependencies:
+    "@vonage/vvd-core" "2.13.0"
+    "@vonage/vwc-icon" "2.13.0"
+    kefir "^3.8.7"
+    lit-element "^2.4.0"
+    ramda "^0.27.1"
+
+"@vonage/vwc-media-controller@^2.20.1":
   version "2.20.1"
   resolved "https://npm.pkg.github.com/download/@vonage/vwc-media-controller/2.20.1/66063e2d9125cf78697c611c712bdb21bc1f9319bded5cf26f653c25941ebfc8#a75080df222d63ad6b9846d33ee42490dda7ac18"
   integrity sha512-l9iRs1Ywav4GLVOy7UeZ4qLc262IOnW5DSakyRa4vmRSe3I5jeqmGvW7s3f9ouXNsVtOTYnTP3wD/4ZU3hBRHQ==
@@ -10306,7 +10392,7 @@ log-symbols@^4.1.0:
     chalk "^4.1.0"
     is-unicode-supported "^0.1.0"
 
-loose-envify@^1.0.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8=
@@ -11874,6 +11960,15 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
+react-dom@>=16.8:
+  version "17.0.2"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
+  integrity sha1-7P+2hF462Nv83EmPDQqTlzZQLCM=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
+    scheduler "^0.20.2"
+
 react-draggable@^4.4.3:
   version "4.4.3"
   resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/react-draggable/-/react-draggable-4.4.3.tgz#0727f2cae5813e36b0e4962bf11b2f9ef2b406f3"
@@ -11996,6 +12091,14 @@ react-transition-group@^4.4.0:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react@>=16.8:
+  version "17.0.2"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
+  integrity sha1-0LXMUW0p6z7uOD91tihkz7aAADc=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 read-pkg-up@^2.0.0:
   version "2.0.0"
@@ -12440,6 +12543,14 @@ saxes@^5.0.1:
   integrity sha1-7rq5U/o7dgjb6U5drbFciI+maW0=
   dependencies:
     xmlchars "^2.2.0"
+
+scheduler@^0.20.2:
+  version "0.20.2"
+  resolved "https://vonagecc.jfrog.io/artifactory/api/npm/npm/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
+  integrity sha1-S67jlDbjSqk7SHS93L8P6Li1DpE=
+  dependencies:
+    loose-envify "^1.1.0"
+    object-assign "^4.1.1"
 
 schema-utils@2.7.0:
   version "2.7.0"

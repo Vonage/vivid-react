@@ -1,18 +1,40 @@
 import React from 'react'
 import VwcMenu from '../../dist/VwcMenu'
+import VwcButton from '../../dist/VwcButton'
+import VwcListItem from '../../dist/VwcListItem'
 
-export const Default = () => <VwcMenu />
+function anchorClickHandler () {
+  const anchor = document.querySelector('#button')
+  const menu = document.querySelector('#menu')
+  menu.anchor = anchor
+  menu.open = true
+}
+
+export const Default = () => (
+  <>
+    <VwcButton
+      id='button'
+      label='Open menu'
+      onClick={() => anchorClickHandler()}
+    ></VwcButton>
+    <VwcMenu
+      id='menu'
+      onSelected={e => console.log(`Selected: `, e)}
+      onAction={e => console.log(`Action: `, e)}
+      onOpened={e => console.log(`Opened: `, e)}
+      onClosed={e => console.log(`Closed: `, e)}
+    >
+      <VwcListItem>
+        <div>Basic item 1</div>
+      </VwcListItem>
+      <VwcListItem>
+        <div>Basic item 2</div>
+      </VwcListItem>
+    </VwcMenu>
+  </>
+)
+
 export default {
   title: 'VwcMenu',
-  argTypes: {
-      //
-      // Example values
-      // numberValue: { control: 'number', defaultValue: 123 },
-      // booleanValue: { control: 'boolean', defaultValue: true },
-      // objectValue: { control: 'object', defaultValue: {} },
-      // stringValue: { control: 'string', defaultValue: 'string' },
-      // colorValue: { control: 'color' },
-      // dateValue: { control: 'date' }
-      //
-    }
+  argTypes: {}
 }

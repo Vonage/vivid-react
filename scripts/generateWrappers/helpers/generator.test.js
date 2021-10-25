@@ -1,7 +1,7 @@
 const { posix, win32 } = require('path')
-const { getImportPathFromTag } = require('./generator')
+const { getImportsFromTag } = require('./generator')
 
-describe('getImportPathFromTag', () => {
+describe('getImportsFromTag', () => {
   const mainComponentTag = {
     name: 'vwc-list',
     path: './../node_modules/@vonage/vwc-list/src/vwc-list.ts'
@@ -13,15 +13,18 @@ describe('getImportPathFromTag', () => {
   }
 
   it('should create a default import for main component', () => {
-    const result = getImportPathFromTag(mainComponentTag)
+    const result = getImportsFromTag(mainComponentTag)
 
-    expect(result).toEqual('@vonage/vwc-list')
+    expect(result).toEqual([`import '@vonage/vwc-list'`])
   })
 
-  it('should create import from specific file for subcomponent', () => {
-    const result = getImportPathFromTag(subComponentTag)
+  it('should create import from specific file for subcomponent and main component import', () => {
+    const result = getImportsFromTag(subComponentTag)
 
-    expect(result).toEqual(`@vonage/vwc-list/${subComponentTag.name}`)
+    expect(result).toEqual([
+      `import '@vonage/vwc-list'`,
+      `import '@vonage/vwc-list/${subComponentTag.name}'`
+    ])
   })
 
   it('should work for win32 paths', () => {
@@ -30,8 +33,11 @@ describe('getImportPathFromTag', () => {
       path: subComponentTag.path.split(posix.sep).join(win32.sep)
     }
 
-    const result = getImportPathFromTag(winTag)
+    const result = getImportsFromTag(winTag)
 
-    expect(result).toEqual(`@vonage/vwc-list/${subComponentTag.name}`)
+    expect(result).toEqual([
+      `import '@vonage/vwc-list'`,
+      `import '@vonage/vwc-list/${subComponentTag.name}'`
+    ])
   })
 })

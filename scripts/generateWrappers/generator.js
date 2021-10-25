@@ -1,5 +1,5 @@
 const packageJson = require('../../package.json')
-const { getImportPathFromTag } = require('./helpers/generator')
+const { getImportsFromTag } = require('./helpers/generator')
 const {
   ComponentsEventsMap,
   CompoundComponentsMap,
@@ -38,7 +38,7 @@ const renderComponent = tag => language => componentName => {
   const getCompoundComponents = prepareCompoundComponents(componentName, compoundComponentTemplate, compoundsConfig)
   return getTemplate('react-component', language)
     .replace(TemplateToken.CLASS_JSDOC, renderJsDoc(tag))
-    .replace(TemplateToken.IMPORTS, `import '${getImportPathFromTag(tag)}'`)
+    .replace(TemplateToken.IMPORTS, getImportsFromTag(tag).join('\n'))
     .replace(TemplateToken.EVENTS, toJsonObjectsList(getUniqueEvents(tag.events)))
     .replace(TemplateToken.PROPERTIES,
       toJsonObjectsList(

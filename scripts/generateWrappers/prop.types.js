@@ -68,7 +68,7 @@ const getPropTypes = tag => {
               ? 'bool'
               : `any /* ${type || 'type not provided'} */`
   const propertiesPropTypes = properties.map(x =>
-    `  ${x.name}: PropTypes.${mapTypeToPropType(x.type?.toLowerCase())}${x.default ? `/* default: ${x.default} */` : ''}${x.attribute ? `/* attribute: ${x.attribute} */` : ''}`)
+    `  ${x.name}: PropTypes.${mapTypeToPropType(x.type)}${x.default ? `/* default: ${x.default} */` : ''}${x.attribute ? `/* attribute: ${x.attribute} */` : ''}`)
 
   return [
     ...eventsPropTypes,

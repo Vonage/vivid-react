@@ -7,6 +7,11 @@ describe('getImportsFromTag', () => {
     path: './../node_modules/@vonage/vwc-list/src/vwc-list.ts'
   }
 
+  const subComponentExclusionTag = {
+    name: 'vwc-tag',
+    path: './..\\node_modules\\@vonage\\vwc-tags\\vwc-tag.d.ts'
+  }
+
   const subComponentTag = {
     name: 'vwc-radio-list-item',
     path: './../node_modules/@vonage/vwc-list/src/vwc-radio-list-item.ts'
@@ -24,6 +29,14 @@ describe('getImportsFromTag', () => {
     expect(result).toEqual([
       `import '@vonage/vwc-list'`,
       `import '@vonage/vwc-list/${subComponentTag.name}'`
+    ])
+  })
+
+  it('should create import from specific file for subcomponent with exclusion', () => {
+    const result = getImportsFromTag(subComponentExclusionTag)
+
+    expect(result).toEqual([
+      `import '@vonage/vwc-tags/${subComponentExclusionTag.name}'`
     ])
   })
 

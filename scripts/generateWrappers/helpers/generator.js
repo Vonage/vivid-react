@@ -1,5 +1,7 @@
 const { posix, win32 } = require('path')
 
+const rootImportExclusions = ['vwc-tags']
+
 module.exports.getImportsFromTag = ({ name, path }) => {
   const normalizedPath = path.split(win32.sep).join(posix.sep)
   const [, rootComponent] = /@vonage\/([\w-]+)\//g.exec(normalizedPath)
@@ -7,7 +9,9 @@ module.exports.getImportsFromTag = ({ name, path }) => {
   if (rootComponent === name) {
     result.push(`@vonage/${name}`)
   } else {
-    result.push(`@vonage/${rootComponent}`)
+    if (rootImportExclusions.indexOf(rootComponent) < 0) {
+      result.push(`@vonage/${rootComponent}`)
+    }
     result.push(`@vonage/${rootComponent}/${name}`)
   }
   return result.map(x => `import '${x}'`)

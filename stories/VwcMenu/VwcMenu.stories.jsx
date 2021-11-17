@@ -19,6 +19,7 @@ export const Default = () => (
     ></VwcButton>
     <VwcMenu
       id='menu'
+      corner='BOTTOM_RIGHT'
       onSelected={e => console.log(`Selected: `, e)}
       onAction={e => console.log(`Action: `, e)}
       onOpened={e => console.log(`Opened: `, e)}

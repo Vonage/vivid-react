@@ -139,7 +139,8 @@ const ComponentsBindablePropertiesMap = {
   VwcTextarea: ['form'],
   VwcTextfield: ['form'],
   VwcDataGrid: ['rowDetailsRenderer'],
-  VwcDataGridColumn: ['headerRenderer', 'footerRenderer', 'cellRenderer']
+  VwcDataGridColumn: ['headerRenderer', 'footerRenderer', 'cellRenderer'],
+  VwcDialog: ['closeButton']
 }
 
 const CompoundComponentsMap = {

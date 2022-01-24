@@ -6,8 +6,8 @@ name: Release Vivid React (GitHub)
 # events but only for the master branch
 on:
   push:
-    # tags:
-    #  - v*
+    tags:
+      - v*
 
 jobs:
   build-publish:

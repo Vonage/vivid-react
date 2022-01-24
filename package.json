@@ -44,7 +44,7 @@
     "@vonage/vwc-circular-progress": "2.25.0",
     "@vonage/vwc-data-grid": "2.25.0",
     "@vonage/vwc-datepicker": "2.25.0",
-    "@vonage/vwc-dialog": "2.25.0",
+    "@vonage/vwc-dialog": "2.25.2",
     "@vonage/vwc-drawer": "2.25.0",
     "@vonage/vwc-dropdown": "2.25.0",
     "@vonage/vwc-empty-state": "2.25.0",

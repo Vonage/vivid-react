@@ -135,7 +135,7 @@ const ComponentsReadOnlyPropertiesMap = {
 const ComponentsBindablePropertiesMap = {
   VwcButton: ['form'],
   VwcText: ['fontFace'],
-  VwcCard: ['headerIcon'],
+  VwcCard: ['headerIcon', 'supportingText'],
   VwcTextarea: ['form'],
   VwcTextfield: ['form'],
   VwcDataGrid: ['rowDetailsRenderer'],

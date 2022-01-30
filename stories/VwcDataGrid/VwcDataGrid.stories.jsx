@@ -114,7 +114,5 @@ export const Default = () => {
 }
 
 export default {
-  title: 'VwcDataGrid',
-  argTypes: {
-  }
+  title: 'VwcDataGrid'
 }

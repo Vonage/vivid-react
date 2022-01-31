@@ -1,3 +1,10 @@
+/**
+ * Patches provided HTMLElement (styles) to crop long text and 
+ * shows browser tooltip when actually cropped
+ *
+ * @param {HTMLElement} element - target element to apply the text cropping logic to
+ * @example <span ref={vwcTooltipEllipsisDecorator(text)} >{text}</span>
+ */
 export const vwcTooltipEllipsisDecorator = fullText => element =>
     setTimeout(() => {
         if (element) {

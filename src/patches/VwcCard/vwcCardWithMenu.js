@@ -8,5 +8,5 @@
  */
 export const vwcCardWithMenu = (element) => setTimeout(() => {
   const card = element?.shadowRoot.querySelector('.vwc-card')
-  if(card) card.style.overflow = 'unset'
+  card?.style.overflow = 'unset'
 }, 0)

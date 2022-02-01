@@ -1,4 +1,4 @@
-import { vwcTooltipEllipsisDecorator } from "./vwcTooltip"
+import { vwcTooltipEllipsisDecorator } from "../vwcTooltip"
 
 /**
  * Patches provided `VwcCard` (styles) to crop long heading text and 

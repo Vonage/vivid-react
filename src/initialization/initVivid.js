@@ -12,7 +12,7 @@ import fonts from '@vonage/vvd-fonts'
  * @param {Function} callback - callback function to be invoked once init is done
  * @throws {Error} error - if the provided target argument is `null` or not a Node of type `Document` / `DocumentFragment` / `HTMLElement`
  */
-const initVivid = (target, callback) => {
+export const initVivid = (target, callback) => {
   if (target instanceof HTMLElement) {
     target.classList.add('vivid-scope')
     target = undefined
@@ -22,5 +22,3 @@ const initVivid = (target, callback) => {
     context.mount(target)
   ]).then(callback)
 }
-
-export default initVivid

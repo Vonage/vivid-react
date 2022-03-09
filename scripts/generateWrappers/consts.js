@@ -147,35 +147,42 @@ const ComponentsBindablePropertiesMap = {
 const CompoundComponentsMap = {
   VwcButton: {
     CallToAction: {
+      unelevated: true,
       connotation: 'cta',
       type: 'button',
       layout: 'filled'
     },
     Alert: {
+      unelevated: true,
       connotation: 'alert',
       type: 'button',
       layout: 'filled'
     },
     Outlined: {
+      unelevated: true,
       layout: 'outlined',
       type: 'button'
     },
     Success: {
+      unelevated: true,
       connotation: 'success',
       type: 'button',
       layout: 'filled'
     },
     Info: {
+      unelevated: true,
       connotation: 'info',
       type: 'button',
       layout: 'filled'
     },
     Primary: {
+      unelevated: true,
       connotation: 'primary',
       type: 'button',
       layout: 'filled'
     },
     Announcement: {
+      unelevated: true,
       connotation: 'announcement',
       type: 'button',
       layout: 'filled'

@@ -45,8 +45,8 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcDialog | @vonage/vwc-dialog | 2.27.1 |
 | VwcDrawer | @vonage/vwc-drawer | 2.27.1 |
 | VwcDropdown | @vonage/vwc-dropdown | 2.27.1 |
-| VwcEmptyState | @vonage/vwc-empty-state | 2.27.1 |
 | VwcElevation | @vonage/vwc-elevation | 2.27.1 |
+| VwcEmptyState | @vonage/vwc-empty-state | 2.27.1 |
 | VwcExpansionPanel | @vonage/vwc-expansion-panel | 2.27.1 |
 | VwcFab | @vonage/vwc-fab | 2.27.1 |
 | VwcFilePicker | @vonage/vwc-file-picker | 2.27.1 |
@@ -74,11 +74,11 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcSwitch | @vonage/vwc-switch | 2.27.1 |
 | VwcTabBar | @vonage/vwc-tab-bar | 2.27.1 |
 | VwcTags | @vonage/vwc-tags | 2.27.1 |
-| VwcTooltip | @vonage/vwc-tooltip | 2.27.1 |
 | VwcText | @vonage/vwc-text | 2.27.1 |
 | VwcTextarea | @vonage/vwc-textarea | 2.27.1 |
 | VwcTextfield | @vonage/vwc-textfield | 2.27.1 |
 | VwcThemeSwitch | @vonage/vwc-theme-switch | 2.27.1 |
+| VwcTooltip | @vonage/vwc-tooltip | 2.27.1 |
 | VwcTopAppBar | @vonage/vwc-top-app-bar | 2.27.1 |
 | VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | 2.27.1 |
 

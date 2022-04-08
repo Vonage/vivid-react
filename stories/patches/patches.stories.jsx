@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom'
 import VwcDataGrid from '../../dist/VwcDataGrid'
 import VwcSlider from '../../dist/VwcSlider'
 import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
+import VwcTooltip from '../../dist/VwcTooltip'
+import VwcButton from '../../dist/VwcButton'
+
 import {
   vwcTooltipEllipsisDecorator,
-  vwcDataGridElementCellOverflowDecorator
+  vwcDataGridElementCellOverflowDecorator,
+  vwcTooltipShowOnHoverDecorator
 } from '../../src'
 
 const originalText = 'very loooooong tteeeext'
 
-export const VwcTooltip = () => (
+export const VwcTooltipEllipsis = () => (
   <>
     <span
       style={{ width: '80px' }}
@@ -19,6 +23,18 @@ export const VwcTooltip = () => (
       {originalText}
     </span>
     <span ref={vwcTooltipEllipsisDecorator(originalText)}>{originalText}</span>
+  </>
+)
+
+export const VwcTooltipShowOnHover = () => (
+  <>
+    <VwcTooltip
+      ref={vwcTooltipShowOnHoverDecorator()}
+      anchor='btn'
+      id='tooltip'
+      text='Tooltip text'
+    />
+    <VwcButton label='Button' aria-describedby='tooltip' id='btn' />
   </>
 )
 

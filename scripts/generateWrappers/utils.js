@@ -1,6 +1,6 @@
 const { join, parse } = require('path')
 const { flowRight, map, replace, reverse, startCase, uniqBy } = require('lodash/fp')
-const { access, F_OK, readFileSync, readdirSync, rmdirSync, createWriteStream } = require('fs')
+const { access, F_OK, readFileSync, readdirSync, existsSync, rmSync, createWriteStream } = require('fs')
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
@@ -50,11 +50,11 @@ const getVividPackageName = componentPath => {
 }
 const getYarnCommand = () => `yarn${os.platform() === 'win32' ? '.cmd' : ''}`
 const prepareDir = (p, clean = true, verbose = true) => {
-  if (clean) {
+  if (clean && existsSync(p)) {
     if (verbose) {
       console.info(`Clearing folder: ${p}`)
     }
-    rmdirSync(p, { recursive: true })
+    rmSync(p, { recursive: true })
   }
   mkdirp.sync(p)
 }

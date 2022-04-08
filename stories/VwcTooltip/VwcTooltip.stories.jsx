@@ -1,18 +1,16 @@
 import React from 'react'
 import VwcTooltip from '../../dist/VwcTooltip'
+import VwcButton from '../../dist/VwcButton'
 
-export const Default = () => <VwcTooltip />
+export const Default = () => {
+  return (
+    <>
+      <VwcTooltip anchor='btn' id='tooltip' text='Tooltip text' open />
+      <VwcButton label='Button' aria-describedby='tooltip' id='btn' />
+    </>
+  )
+}
+
 export default {
-  title: 'VwcTooltip',
-  argTypes: {
-      //
-      // Example values
-      // numberValue: { control: 'number', defaultValue: 123 },
-      // booleanValue: { control: 'boolean', defaultValue: true },
-      // objectValue: { control: 'object', defaultValue: {} },
-      // stringValue: { control: 'string', defaultValue: 'string' },
-      // colorValue: { control: 'color' },
-      // dateValue: { control: 'date' }
-      //
-    }
+  title: 'VwcTooltip'
 }

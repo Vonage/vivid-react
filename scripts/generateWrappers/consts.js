@@ -129,19 +129,24 @@ const ComponentsReadOnlyPropertiesMap = {
   VwcSlider: ['styles', 'ripple']
 }
 
-// Bindable means property has complex type: Function, Object, Array, etc.
+// Properties reflected as attributes having different name
+const RenamedReflectedAttributesPropertiesMap = {
+  VwcText: ['fontFace'],
+  VwcLayout: ['columnBasis', 'columnSpacing', 'autoSizing']
+}
+
+// Bindable means property has complex type: (Function, Object, Array, etc.) OR properties reflected as attributes having different name
 // Those properties needs to be binded directly to the underlying web element "as is"
 // w/o toString => fromString transformations via HTML attributes
 const ComponentsBindablePropertiesMap = {
   VwcButton: ['form'],
-  VwcText: ['fontFace'],
-  VwcCard: ['headerIcon', 'supportingText'],
   VwcTextarea: ['form'],
   VwcTextfield: ['form'],
   VwcDataGrid: ['rowDetailsRenderer'],
   VwcDataGridColumn: ['headerRenderer', 'footerRenderer', 'cellRenderer'],
   VwcDialog: ['closeButton'],
-  VwcMenu: ['anchor']
+  VwcMenu: ['anchor'],
+  ...RenamedReflectedAttributesPropertiesMap
 }
 
 const CompoundComponentsMap = {

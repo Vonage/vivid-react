@@ -62,7 +62,7 @@ const ComponentsEventsMap = {
   VwcButton: ['click'],
   VwcCard: ['click'],
   VwcCheckbox: ['change'],
-  VwcChipSet: [{ name: 'MDCChip:selection', propName: 'onSelection'}],
+  VwcChipSet: [{ name: 'MDCChip:selection', propName: 'onSelection' }],
   VwcDataGrid: [{ name: 'selected-items-changed', propName: 'onSelectedItemsChange' }],
   VwcDialog: ['opening', 'opened', 'closing', 'closed'],
   VwcIconButton: ['click'],
@@ -80,7 +80,7 @@ const ComponentsEventsMap = {
 }
 
 const ComponentsReadOnlyPropertiesMap = {
-  VwcAccordion: ['styles'],  
+  VwcAccordion: ['styles'],
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
   VwcListExpansionPanel: ['styles', 'headerNodes'],
   VwcExpansionPanel: ['styles'],

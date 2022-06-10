@@ -81,6 +81,7 @@ const ComponentsEventsMap = {
 
 const ComponentsReadOnlyPropertiesMap = {
   VwcAccordion: ['styles'],
+  VwcActionGroup: ['styles'],
   VwcAudio: ['styles', 'floatingLabelFoundation', 'lineRippleFoundation'],
   VwcListExpansionPanel: ['styles', 'headerNodes'],
   VwcExpansionPanel: ['styles'],

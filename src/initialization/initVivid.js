@@ -1,6 +1,6 @@
 /* global HTMLElement */
 import context from '@vonage/vvd-context'
-import fonts from '@vonage/vvd-fonts'
+import { init } from '@vonage/vvd-fonts'
 
 /**
  * mounts Vivid context (styles) & Fonts into the target scope / document
@@ -18,7 +18,7 @@ export const initVivid = (target, callback) => {
     target = undefined
   }
   return Promise.all([
-    fonts.init(),
+    init(),
     context.mount(target)
   ]).then(callback)
 }

@@ -1,7 +1,26 @@
 import React from 'react'
 import VwcButtonToggleGroup from '../../dist/VwcButtonToggleGroup'
+import VwcButton from '../../dist/VwcButton'
 
-export const Default = () => <VwcButtonToggleGroup />
+export const Default = () => {
+  return (
+    <VwcButtonToggleGroup
+      ref={btnGroupElement =>
+        setTimeout(() => {
+          if (!btnGroupElement) {
+            return
+          }
+          btnGroupElement.values = ['foo']
+        }, 0)
+      }
+      required
+    >
+      <VwcButton value='foo'>Foo</VwcButton>
+      <VwcButton value='bar'>Bar</VwcButton>
+    </VwcButtonToggleGroup>
+  )
+}
+
 export default {
   title: 'VwcButtonToggleGroup',
   argTypes: {

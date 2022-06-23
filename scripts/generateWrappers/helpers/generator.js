@@ -13,6 +13,9 @@ module.exports.getImportsFromTag = ({ name, path }) => {
       result.push(`@vonage/${rootComponent}`)
     }
     result.push(`@vonage/${rootComponent}/${name}`)
+    if (name === 'vwc-check-list-item') {
+      result.push(`@vonage/vwc-checkbox`)
+    }
   }
   return result.map(x => `import '${x}'`)
 }

@@ -1,1 +1,0 @@
-declare module '@vonage/vivid-react-wrapper';

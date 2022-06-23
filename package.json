@@ -3,7 +3,7 @@
   "version": "2.10.22",
   "description": "Vivid wrapped for easy React usage & IDE autocomplete support & typescript typings",
   "main": "index.js",
-  "types": "index.d.ts",
+  "types": "types/index.d.ts",
   "license": "MIT",
   "scripts": {
     "build": "yarn generateWrappers && rollup -c",

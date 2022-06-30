@@ -4108,712 +4108,712 @@
   resolved "https://npm.pkg.github.com/download/@vonage/vivid-react-wrapper/1.2.3/65321d465e4b3f7ba54b7e3649ce7f07e1a608d602906a806c9dcadf32f8ff92#5be2a71bcd287005a32fcfb5a423a40843409612"
   integrity sha512-Jblq7TptVBnijMvHaw23twq0pILQYwx8Q5bLKJ4Uo09QEhVQRsmNW0zEWJ4Zp1S49Ee1kvfsv5sMnkBGufNVuQ==
 
-"@vonage/vvd-context@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-context/2.34.0/a80dbc2474ad03a10fd756e97721167e85a6a9bb755e56a9c79a686762eb2487#95ff68ec5368b410ccdd20f679e7dfd6d13eab7e"
-  integrity sha512-Rbd96pYKM3OgKL/em+ymFVyx2/GH2SW/Ey/PM4jGGAmFZSXfpGYma10uqoaazziAsag9yDY5UVCD7Mzb0Y1gDw==
+"@vonage/vvd-context@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-context/2.34.1/0b63073031bb19b23f2bfb6daca211d29ea393daf074bf6029ba6d784a370ccd#e54d58fb41b2b2ccf265f38dd0391a60969c67e5"
+  integrity sha512-0a52vYuz3jcDFeYs/Hpnvg9W31IfBdpRk11WBcOmTPkGQDlpx9FmmLUPlyaje7azPR8hCffmvdLwBAFLKnC7pQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-core@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-core/2.34.0/161f515d2b2406371292b9babadbe6a40ba7620af69f874bc83048997d58ddcd#8f72513205126daf7b2f7f2b2897ab1d4ac2e0bc"
-  integrity sha512-fesnmiR/BWcIQoKIInuiKe7IZr1n3bqmnrwpBen/4B4Ri0pcjv70SIzTVF3zx0dHYVUhqaMDl1gxeztZNpjmMg==
+"@vonage/vvd-core@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-core/2.34.1/797726601f595b2bfa8e0d0bd73747dc38f0dc534946668586119bacdbb952c9#ba45bde4ecbca4382177653ca5529aa020843155"
+  integrity sha512-p0fhBYnQNKQPdkKwHblPVhyD1J294ihn5oHOdg1A762tRZhMzInF9XX1IuM3HWgnvA8Fg0ykHJBw9+Odsm9mEw==
   dependencies:
-    "@vonage/vvd-fonts" "2.34.0"
-    "@vonage/vvd-scheme" "2.34.0"
+    "@vonage/vvd-fonts" "2.34.1"
+    "@vonage/vvd-scheme" "2.34.1"
     tslib "^2.3.0"
 
-"@vonage/vvd-design-tokens@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-design-tokens/2.34.0/9bce1d3273499e8fa913efc26bb1213e3cd19fca28af71ea7feccb640ce95ea1#bf3840445cfebc2f8b0893d1857706f09a88cc44"
-  integrity sha512-iy3vZNaUZScR/cCskQfw8crzcDVBCJOgdNtMpyPcCQrrMEZG0Y0UF+ahXDIFg3l7qWTsRzQDfr25ldZdZuWoRA==
+"@vonage/vvd-design-tokens@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-design-tokens/2.34.1/89b8ccb357f1524ffe1bb32f19fb55768a315262ee72d63483156d4de3eeaf44#1713e7f204ef4696aaecec978aa78d78f451ff5e"
+  integrity sha512-+mQ9lmn/rXpcfDT2ooDxq7ONcsFoVERsHOTPPPKgpg/yCkqyyHzBMHaAh7SNHCDeIknz3hKrdT/GHH5dHsCFug==
 
-"@vonage/vvd-fonts@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-fonts/2.34.0/1428774b4db8bf34e03969d8a8edd6f3ef7d9ac5ceb70980206fe15abfe5e6d8#6557fe35e4a968dd7e508d69a2c81d46d35aca55"
-  integrity sha512-35qas0OlDJ/lA0Bs80C0J6rmGrfzbWxxxGMdXucZJFEKqSVd4mG1zq419jbb7cgWWr43KMEPA/TEwWmpeNXJWg==
+"@vonage/vvd-fonts@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-fonts/2.34.1/21acecb3c2618c941d919cb489050c36cbea1dc03cf3b744385a590f565357a3#b338857903d69a74af3f8fc34332c1f51bf95a25"
+  integrity sha512-onIebOhGQZ3+elQU7sZc0Nb12Y9QphH2dVtScpuIKyYYXFjRffg2LrpkRAZxfpi0rT54JSZztkP1N1XmTYyzgg==
   dependencies:
     lit-element "^2.4.0"
     ramda "^0.27.1"
     tslib "^2.3.0"
 
-"@vonage/vvd-foundation@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-foundation/2.34.0/168d0bb205da05fd7436c7a3a843137a5357447df8944c205752e9ad275d3519#a0bd4ae31fbf30953af212b72ef9824a7e3f45d8"
-  integrity sha512-MRRvhfnOwI4jK98nvO2IxfTU33XajNj9aOoMq15MHcLlX+CO+c2BueGo1NWnFUpyY+e1Ye76Lk5PqZAprWytyA==
+"@vonage/vvd-foundation@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-foundation/2.34.1/973dae2b3c117d4665c5f8aebc5264e2033c4ef36559cf9b1e607e986f026d41#211c378f11e6dc274f2ecdd68ecf4d709a2c36d4"
+  integrity sha512-/keC3bT1sI66SmLCW/4f/l16B1OU16uvPKPm9JgIv9buTCwWUqClJxK20Qq54JkJdDD+T1nmTWbK8IMlPkaqrA==
   dependencies:
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-scheme@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-scheme/2.34.0/a8646ea4d8f287b7b718fbea84608773c569b882331b6c6ea8b9ceb66b680c2e#ff52486efe97bede0be678724e48ce7c3b03f9e9"
-  integrity sha512-ubdfVxNBZIrXzad/t6hBrfzd9/5cpcQerv5Jctx49c0VlIIWWYaJY7HAh5z7M1+aiJDs9iApmfVOcfRwHQGQPQ==
+"@vonage/vvd-scheme@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-scheme/2.34.1/91c0056dad503dbcb40c8731df475c0805a5a8cafc115467c4fa725d298419ec#c18f9ccb4f54a64745488e4f3460c6effef443da"
+  integrity sha512-kmm3hl+9M4UgikXlU/V53oYfMbSuLZ4ltBTBqIHS21RSDEB6LC0uTTZ7gWW2mBTqc/s29QJm8o0V0w05KE97Hw==
   dependencies:
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-foundation" "2.34.1"
     tslib "^2.3.0"
 
-"@vonage/vvd-style-coupling@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-style-coupling/2.34.0/2e834b30abf14e54b49837c87d4b0dbaa943b63f43e33f562e62ad10f055daca#b7b283ade828987ffdf32f8c8b839c8a995b8f13"
-  integrity sha512-11QeIqvu1JmG0pzt9b1MAfKWOcHdtvLYDW39VJnqhPr0Mmj0IdDaDyt+KfxlaBVTTvSHvaPHevXv0ZAUJsYhiA==
+"@vonage/vvd-style-coupling@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-style-coupling/2.34.1/1946668a034a79a58e6ae520432bfd7e7497e71243937f0570c66212d3aaf8ce#d4ec863326dcadc11311a3b88cb89731fbef0262"
+  integrity sha512-nBhpBqdzivhw7GHtRNzYw4rZclgL52WlMsqdTcH4OkIJ4wsbJTs30Un2S0zq53MM2PDICv04mNpToI7czt3BhA==
   dependencies:
     tslib "^2.3.0"
 
-"@vonage/vvd-typography@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vvd-typography/2.34.0/5d1941fae9efbf559736b295d9ca2d8051328d535329dccbba14a7183b37406a#4af784ced37f67ab3c1476e03408e0126117f3aa"
-  integrity sha512-blFHurJHh8nAXVU6KpG+Rip8P2ND4ntC3W1C5wWbQLseh2uDzbReOFNEd9umcFkExAOD0G9DbHsaKEQgVEagXw==
+"@vonage/vvd-typography@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vvd-typography/2.34.1/1e5f02d5fdb07f3f3da09d0ac632fca60a60808e9a722b74cfadbdd658380cb4#c95e4ca200a6f6108c1e031b14c55d085e64fb75"
+  integrity sha512-MAPuivowb6W+3cP2xozHpMR6eQ/OXJGO+VM0r6nl4V6lagvsY6XnlSJMtSFcR91SWfy0/1y4GVRNgccQ6TBO5Q==
 
-"@vonage/vwc-accordion@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-accordion/2.34.0/e6d761ddd3e2b3eb0a1bcb1a85fb33da819f59a3c42e882c5880d00d1028b6e4#486a8e539fe884c75cee8577686091bf516c03c6"
-  integrity sha512-ET+UGsCmUkTIp9lPQEsO+o1NSGYs4/tw6Of4/4wSO9bhYxZYetS4jTm7ELsF1Hf35vhCrk3SldUg1JWvamnnrQ==
+"@vonage/vwc-accordion@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-accordion/2.34.1/28d56013aa4189c42bbbec1341075a1f914290e337708cbcc8367e0c67fce8bd#3da4640862070eac894ebe2ca7322a8ef92590da"
+  integrity sha512-U6Vggv4g3MtJxoCv6ONNemhVWfUp04HWUazd35tgXCRFqUth/lnk2UDrNNbJREV0ls37KaKKSPntz/cPefJR7g==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-expansion-panel" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-expansion-panel" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-action-group@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-action-group/2.34.0/e894a2541aa9d07ab7868eb2fcca1bb7064bdd6bb57d5109b1a83342d5777eef#9100910723b4f6721de8369b6c89c795ea8ce318"
-  integrity sha512-u868X/h/qJv0afpPH3rlfZUw33EXDJwVB9vRpZi1igVy7bBE6YxS1TGdnKEn/ppc3jJUCxTHSbAwomG3BQMIwQ==
+"@vonage/vwc-action-group@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-action-group/2.34.1/ffcde318cbcbb2b2d2e208d5c82dd70b0a54b28f368c89301d24568c52787aa8#1d59d9def5753041794093e3f4d464c99366a7a8"
+  integrity sha512-xOlDxW4cYYWgdy1f0OvUCTtVh5vLwM+PJIq+iXVbrkv4wHGtTCpCdWhqOGq7k2QLunb6viACJ/cBAyA8amqBoQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-badge@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-badge/2.34.0/a89fd015bdf6a8c0c6c3f378b2fe81926d23c62bfcae7a7f6f44520cd3a88c60#314d5d302388d7bbae279c3a2d8921e42cd6dae5"
-  integrity sha512-8ctbbq7nnFcgfm5BYXfoAqGPC0c98BYESLREUKVyA8zK6gvCGJtX93/Ar2trveYIC05ctv/Jyh56ODz1nRPQnQ==
+"@vonage/vwc-badge@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-badge/2.34.1/f4224adae7c88c42b8c747531314a2a6597db6eb276d35ba2ac70a4d20957df8#7c188806453c26d6c6a4b861e56c1d2627ddf0bb"
+  integrity sha512-xXQZDNTZPRf0iGVXMnGpCiAm9vRT08xHMqMoKUlXYNHTINAfau6ZxSilJveZ8QUfQePQl0Lf5d389757eNVjhQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-banner@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-banner/2.34.0/960837f5876cd6a63432ab249405b503dd3dc27d3c2dac3cc277e87f226c8fff#2dd561f6e3879b9f54780bf1a43802b8498fc182"
-  integrity sha512-WPbIJfLNwlayVI+S3WAzIv2fqSQNOaxAyLzMZ/eh/nbvUGEHfrrqvV5BAco5q21SJeOWsFuK19PMAvihLEFV/g==
+"@vonage/vwc-banner@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-banner/2.34.1/ed8b4776b9ce6773eb28d3ba833c56263157fcd1212d0c2d45787213e95bf225#13b5871539e79ffa8691da4a6995c3757384d302"
+  integrity sha512-cHcS2Yh+Bhewkg9DYyzy+qWbtyz4XfV7vZ+y/r54IPRFyI6lfOaexHR1DUPLmiZ+Y76T1Ypqf+EVKfsYq376Jw==
   dependencies:
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button-toggle-group@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-button-toggle-group/2.34.0/ba5e78744859ebc86700264c434f9506bb3bf5dfc9a74f7d426dd9e2889387a4#7262f343b71f2a202e6941a82184a7ca459ba2c7"
-  integrity sha512-im6Nd6JaD2kEtcUl0FRPQdr/cmSK5wchX2+U8vnLTWQRVmKPVgYno5KURmuPUoS8gUZlSFaEi5DyR/P6aoiSng==
+"@vonage/vwc-button-toggle-group@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-button-toggle-group/2.34.1/7981bdf0e8bf49d51d52c4619a03a6e2b5828fd210304ee9823cb0418613e24c#df9a9328f58d040c17480dc0a2faee62b7fb7514"
+  integrity sha512-LNfn0xro/9kkIYjkL22Bbr4f2nOgQMkH2wfYhq3V5BbDgV+Mjp6pq6CpUvzGjgU8rprIx/adf/36t1cREE7VYw==
   dependencies:
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-button/2.34.0/01d06ab555ac24cded9de4d17a4f52115256f97bab8a2f432445671b87f5de76#47e88093c66e838e01ca9d1c9fad9f6ebc533b75"
-  integrity sha512-tOPO9fW5pt6A5QBDtu9ad9LA1SSctVulDB6pGzBiKtvVkUUh1qikfbPlbY8m33MECTP6TgiAVik+cJh9zSw3cw==
+"@vonage/vwc-button@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-button/2.34.1/253ddf9aaa541969b7fcde9c7c2dbaae4692dd3bf862939246429ea8e7569425#36facdd81a3b331953dede57582769fd41795bdb"
+  integrity sha512-fubpdqMaqQqDjlj0nL5fjO4DehahbiIW0bkdOKjhG5189uBa4aQNSgUUs0N8wAyfzntQkmaDah52qZ1jk2unDA==
   dependencies:
     "@material/mwc-button" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-calendar@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-calendar/2.34.0/8d5d92bd4bf1af99eb22b939539efb2725c61c783bc410925e57db4347031c5d#d048646d1cea11aef38218ce4ea5653402b3ee0d"
-  integrity sha512-pK1IBG3DDLK3OBAWU/QVJl4RsTBOU5z2Uz0R+yx+u/gurYMzMngrIiowYe4F4QzumM0TBVpdyksU2jkb1OEisw==
+"@vonage/vwc-calendar@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-calendar/2.34.1/3d32ec4941c738bf61c091588e3da3e5678be96632f73049f085f6a255e84398#bb248f0bb35cdf1f02800aef6dc18ba33d61a8c0"
+  integrity sha512-+rGRxYdVQhNvC5TMkoIPwxhV74JUDZ4qKVwpqqOE9FQnkap4spm/DElrQ0GAizb/9Ss1KUtS4LXaYRW84BCw7A==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-card@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-card/2.34.0/3bb75f0e270356bfa2c56702bc6b8163fd1a7d80f8fe88de791383caeae4434a#756c0f04615116337ccc27e5da81fde2e79b3d0c"
-  integrity sha512-wcCmec/hMBCiOxtQQhuajxhYr210nd96vpvSWOk3brFaeXHwzIuLr+ERfmoLnsxMbjvzwb5kHefL5b4qrQqNkw==
+"@vonage/vwc-card@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-card/2.34.1/088ddd0ce58fb822b1938ad37b0b94355587c257676648e068ae2882c81c8417#d99883ce803e2fecd52daebaead418208e8b42c0"
+  integrity sha512-TdJr5J4XvROPlGXGFoOir7y4Ru6LqNw1/q3gH0RHMseDSgAr2fCXQuSKosV7iXVfb4FVFvUmTpB6brD6eFfFrg==
   dependencies:
-    "@vonage/vwc-button" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vwc-button" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-carousel@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-carousel/2.34.0/ce8f905aaa3c12580f55d208124c31cd15422283c62d0e6142ff5065f7727759#339a08ed7b158e104a8e54c5a73a367d57c08662"
-  integrity sha512-/q7HV+Ag2gO5nwD19mFfBveOnAsHy8461ILCN2pnNW9XU3REuVmDjlc7Q2IzKp/OzSQrUChxFmV0YbR53aNi1g==
+"@vonage/vwc-carousel@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-carousel/2.34.1/2bc2b1d080636a722302e560649cf3850e0666887a7082a510b42d99bd3437f0#7e2fb15a0c38dbbf90074d53907f437076ff48af"
+  integrity sha512-3lEiIpNeuJPLWsH34eSrj59jGzL5W+4ddKJuWU5xv4XCN2r/LPH4Sw8KGoCP3mJ8QodpjJwPaWuq/LEj6v+fpA==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     swiper "^6.5.7"
     tslib "^2.3.0"
 
-"@vonage/vwc-checkbox@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-checkbox/2.34.0/8106e12b7434fbfe3ada6f9071d8c70fb842389cca5643cb12a996c0e970f691#1aff029615f081b488ec8c6e1c6281e43da7b15b"
-  integrity sha512-IydgOaYQ7Lm3+B+kP/3uLtJluQOwmfPrEuxmvg3niYkjpWmc1Qd8nt6bjhZOal2GuHDc1ljmSyzvUbsP2jK4gA==
+"@vonage/vwc-checkbox@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-checkbox/2.34.1/f9ac4f0ce5c3fc5d0334e9c3989960f96ee325408e51cd07b0a8ff9bb886ab7f#7cbb996b374846bdadca0a49a2bbf332e6fde636"
+  integrity sha512-170fMNlMnTu4w6f39ipZ5b7lODllfDTj2jM/BvnzVVZ9QVEZEExr/dB++b6voJX1OxmM1diybJihIe6D7GOTjg==
   dependencies:
     "@material/mwc-checkbox" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-chips@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-chips/2.34.0/d9fdef56a27c7a7fb3ef38db16c75df502d5a5068960ce40b813e0f43996399f#4a391f45c4feccd382f0d703f95273a9127269a2"
-  integrity sha512-iNaiVQ1T45eqL0GafbPVqlYV7fPBlYttGmxZB3gua39tGdJGB0suTB43CpEdFtY2BC1DnCf2QvmW+LMVHMKbEA==
+"@vonage/vwc-chips@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-chips/2.34.1/ad5636b651ec783116e57267170aec21edeb2c596ea591d2ecaa943a04efde82#a8e188a595df99bfacfcd174e90cf1242e7f677f"
+  integrity sha512-5d42QdMZbfMjARWTan2Jz7vZRCu4LqrwkwHKgXp1XPq2jEn0/SxsdyygtFUfAUxTgWiVYXk/w0VCVdxVkzltfg==
   dependencies:
     "@material/chips" "9.0.0-canary.1c156d69d.0"
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-circular-progress@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-circular-progress/2.34.0/39356cfbb75cf8899f0b28e681f3a5f031e10831a4518eb3c0a38e03e58f8f8d#f76750ca97cac5117a652bceebbad84d3b59c436"
-  integrity sha512-A6fJfflWyErb80Tbwf0l8PvkWSreHulTHJ0X3Tb6+dPzZyP/yh9ZgDfZxHfCUxQx90kjsTXBgqum9hoRWiA1Bw==
+"@vonage/vwc-circular-progress@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-circular-progress/2.34.1/b5f798551f6a998822a6bd4f3af701820a05351067d71b045d279778cc5eea3e#264e94caa42f7c805d89be003815b116e27460d7"
+  integrity sha512-0UEWOSFFdLCAQ5X2erHKPynqyK0mFP+VPmvFWQbdSDblynTxqymHIncqM9b25ubMdOoPWGtk988owblhMDhJUQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-circular-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-design-tokens" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-design-tokens" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-data-grid@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-data-grid/2.34.0/c46c6928b12feda5a227047c906b0b9bb83898a902eb185c0a6ad23daf3c7f49#f075d6443f6aac0248d738b277182c6a95b19c9b"
-  integrity sha512-eR2ToRxHGj4m4mNUgYbK1kmoexAU+ndm4jBCtE1ro4II3xDa4tJyeQgApFaKtptVo9UBfgzNC+P8V86cq0V0YA==
+"@vonage/vwc-data-grid@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-data-grid/2.34.1/be1e35fbeb9189386a736fa2d42af5515713f91a2e7e844438050b95580098cf#2c0fbd6a2d30595953f6a919f80170dbb72e0361"
+  integrity sha512-NxFHys4fOKC0XjdlKSRVlDypiYKiYGKUcubiWiZ0V3jFMA43+gbDULXBn1C6KLsya3o+Xf4CvgyS1EQ8FYg0+Q==
   dependencies:
     "@vaadin/vaadin-grid" "6.0.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-checkbox" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-checkbox" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-datepicker@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-datepicker/2.34.0/497a0e852d18a7070caddd257f64a8bbc9a82f723d72b95d7e83b84ac1f21c7f#a6d0357df732b982000e2e48c2f6e3dd1e5ee057"
-  integrity sha512-qWiywmilsMb94CFB07o+byu2UKBLaiLphOhfW41vz+d8HrW5K5In2dRe6fy8I+3VNbmnnX8wMP4fKhSmCT3+AA==
+"@vonage/vwc-datepicker@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-datepicker/2.34.1/216d8f1009dc42dcf178c38b495f7ca5ff38db3ba368675282653b33e278c624#52f33ffacb318bb2d5f939f02a379072d05e9da3"
+  integrity sha512-4ytl+Bqrm4qjFlOaYt0bRpioGah+FDA2viZixaeBgizkXMi9xJjVcNzmVqieq9SlXu9uQJaoLORZVAZoJg96NQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-button" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
-    "@vonage/vwc-menu" "2.34.0"
-    "@vonage/vwc-textfield" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-button" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
+    "@vonage/vwc-menu" "2.34.1"
+    "@vonage/vwc-textfield" "2.34.1"
     flatpickr "^4.6.9"
     lit-element "^2.4.0"
     lit-flatpickr "0.2.9"
     tslib "^2.3.0"
 
-"@vonage/vwc-dialog@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-dialog/2.34.0/4f650206b32376cbda885ce2104e8da198a03e87e5e4b00dedd73b05dc1196f3#d7a8d6d57926c41061fd2945b82499cc0896476e"
-  integrity sha512-GvewkL/J1EliHRqzhBOJ3OpevAbeHVMhmOIl5DvCNIAmnrvaoVqrzhDcmwPBtVV3RIWCJmBhyrJSdbIkYBVXpQ==
+"@vonage/vwc-dialog@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-dialog/2.34.1/ff695f3caf848ff8f94d7904305fe9d7620236cb8dce001006e378bec52cb57d#611f44367ddbe5ab23ce75678ff888f0a1512a7c"
+  integrity sha512-P2ZYGkaAvTWGBGMdO+J2kqHw92ZOaqqXoWXyh0kmqpIdkxlJu8xrWW88Xwo++Cyvkvqt8+XtJfvkqiDxi9Lorg==
   dependencies:
     "@material/mwc-dialog" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vvd-typography" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vvd-typography" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-drawer@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-drawer/2.34.0/26c8d55fb04aa58c66e4b43aebd410b3b753b2253b3515bff45bdd89af923841#6165542c376991ea350c9ec05ba37a3c27bfccca"
-  integrity sha512-OTH/e2LyI3ymyC7MKRpOJkbl74y1vXORo3g0jZP66Fvi4mKOOPof8+KbT/uogSzmIJj5Y0Qo48a0TVpH3+5+yQ==
+"@vonage/vwc-drawer@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-drawer/2.34.1/9ecf30a9284550aa3c433a26613169eb04544e13057159707218aabd1488071a#b731a7c3297c6cf6d8454a75dc2b882c141b888a"
+  integrity sha512-P65jkdIGImjFMrHnkQQtnnE9aD7G1ZZ8ab7zMp8J3tBVgrcaprHfW+XfmHV039Tq+VBMIbi8fco/hlr22p9LJw==
   dependencies:
     "@material/mwc-drawer" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-dropdown@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-dropdown/2.34.0/6615204c22590184a3db2a187a8056fa0cb6052b5db66e4a40cefd4ae319074a#98f8d9f7d6180155e101894cef981ceb96186ac6"
-  integrity sha512-0Tfk/McTD08fJFQuXzGPRKbwagLm8ZfseVYpRE2v5Vv22gFochaK9RbzR0DiJzL7/TDcraS0cr9tUSNn40mm5g==
+"@vonage/vwc-dropdown@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-dropdown/2.34.1/d58ba7d85aa7c1779105e727b7498b26c10751ce6cc3753db6b6c96593219748#68060a67036087aa4812c889d1b72132cb17f7a5"
+  integrity sha512-KT58DMWV+6e2BvUiOgJJ3oyNRSEvngnTjLcg1C1E9wQIXWZQthOfBfAltKFVKTRwaXvhVWQEirZdpHrT6iCN3A==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-menu" "2.34.0"
-    "@vonage/vwc-surface" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-menu" "2.34.1"
+    "@vonage/vwc-surface" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-elevation@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-elevation/2.34.0/3538baf8fd7b844fc13418075b1fb110b7b2e41126f6842c0ce64325a0c43d9f#aa3ea93af423dbaaa1aa979a225b0565d13f274b"
-  integrity sha512-KkSJRhLw7RqDegIepXbzqGEgF+7dz9Tg0wU6CYtKhheeMaM63dC2jPBRE5R2loL+8w16Ue2jDg6AvG1M+ygwdA==
+"@vonage/vwc-elevation@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-elevation/2.34.1/422c626c6a5b7ace12d6614c2b4c65c66046aa8ac7c28a7b7c50ad72ef8cdc7a#6270ab3c6605cb93bfbb62f6a12d4cd2ccd06489"
+  integrity sha512-y8C7C2YJJsNPRuG1V4C4MhodVTCJXu8dRscVMEyVO6A1ZU3CZGSLvVK8tYfMDnIdjU7Y8fy60wYEtIWQsre4Kg==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-empty-state@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-empty-state/2.34.0/da5cb2a7d07fab436cf2c0a27451b8f5dd1df035f68d360402f1823db883b10b#f647be4c175e4716e10b7879f0391f39dddcbd39"
-  integrity sha512-CU+9jkYISO0XbjP8DVonFCT1XoJ0oGStLY2d9LWWfNwqB+mi3JQw9iNvylnrNrzw0dlHBd1daodIXEcCkyFd5g==
+"@vonage/vwc-empty-state@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-empty-state/2.34.1/75448b5ff1327e377885fe091c69bdbf7868536e4b7ee432d040cc5b28993935#24ae01fe73c83eef25c076f4ba0ddf9d09fe9c5d"
+  integrity sha512-qy1csjOpfCbH3E8ouW1oqoL9OJnj0bGg+vhbCxEuqwt3NDcN3K39S9RIq79Dn8bYRQvyLVU1fmDxotPKS89/vw==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-expansion-panel@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-expansion-panel/2.34.0/4fe53d56476d50cdc5ab82c367a0edfbbae0d538a37d0f82d29221a8a60e67ab#23040bb6090d865779f25b9b97d69534ec69c01b"
-  integrity sha512-yt2kZfa241szUI9Dfx//NajRIX7EYmQqNk15pLjuRqrKT8L4yDp6JXQVSD+IVdb/RI+Q6soHcTS9C8AzEBpM8w==
+"@vonage/vwc-expansion-panel@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-expansion-panel/2.34.1/a1f7d3bd601665e7f9f8d1a8907eb26d91b89452e419ac619af721a307c18a41#337cf022842aeb1a0fb39d3fb265000ffddafaa0"
+  integrity sha512-2i8CrwMbmh4i7HTI76dcdK4mTLVD5q3yyke9NW00mci037ZlLcftRhnCJ9Tn9kXwIfQberNozzjx6T59sMReGQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-fab@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-fab/2.34.0/5ad3432a9b384dbecd48fbff9b1f2ea0f2438ab72d06deff13c3f57ee675c526#ff593a4b6e8c08f55f4ccd668f1880ccb77cb892"
-  integrity sha512-DBKwGSr5iKx62BYDBMMH1RRaNNc1AUu1tuEaUG6W31RX97rpMQMgEUiTAVYFcxMiXeSISjbWTEVxEz7wCROeVg==
+"@vonage/vwc-fab@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-fab/2.34.1/9a1e92bdd0e477af2af858090ce650ad3b88bab897ac23fb64d8fb0475906b5c#64913b39002ac0766025e0df9ecc367e48a9b470"
+  integrity sha512-MJqCf9/InZGEDSPeX18hD5zrI/CSqM4z2Ru6H4EHb0UQdYl4v903k4ddqJtwgTYdIe/G5ux1C+Vj2RGpzq8aRg==
   dependencies:
     "@material/mwc-fab" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-file-picker@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-file-picker/2.34.0/acd2b5190009a1f9a4700ccd1cd86e9fc2aefc987a97b518e8282f3c900fd1de#8782e2ebfa43e30bb1b00ca160c6c5b607f92190"
-  integrity sha512-7kAtLBYt8xg/QTNbgKJWln50hnGofiUloWzYxbo+uf/Eg29RAczm8yT86LG9GAsQ4qL/f2UjSEFTXzCk2svk1A==
+"@vonage/vwc-file-picker@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-file-picker/2.34.1/c19efc775ff7a3de1370f517a6644bdf15a0f44fda01e3e40b8cf6d87548ebdb#6fb025ee0210ba5bc324cf4b64deeca3d8035485"
+  integrity sha512-1eq3xktVFntg7brLFdDswcgmyKaEtdMgambH0B3LowG/BERPPsOvM6pTswb/tdxbqJvI8ybxVzd80uWDBguqZw==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-badge" "2.34.0"
-    "@vonage/vwc-helper-message" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-badge" "2.34.1"
+    "@vonage/vwc-helper-message" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-formfield@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-formfield/2.34.0/21f6f8fcafe3d12fb3b79ea46d6e36b8f174c26e2d6ad2e334969fde2cf130c8#2482e5e2d2b1f85cad8a74b84353ffa47a18b6f1"
-  integrity sha512-9WUKHxt0vYtv2kvcg07F1vC3cVriertIVOYMg3be53IKHWpD+LufUiJEv2O51Ewrz6iXUzMcC5ijuvL80vkFZA==
+"@vonage/vwc-formfield@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-formfield/2.34.1/1823f95a678517af28acfdbabcab4d2de4ffa4dbe675f80f41e4909df18f3eac#4dfb2a579a1fe34ad1dc2d865d5c6c1a3ca0aa9b"
+  integrity sha512-Y/fVQZ0u1hd7/IFblpsR+NumQeRlfQslXLdkzLApDCZPbH51fewf8TWFmSTSqgG+Wyr0+pIw5GN62bJLpcJjlQ==
   dependencies:
     "@material/mwc-formfield" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-helper-message@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-helper-message/2.34.0/3cf61ce13ec60b33b631294819284d3405fd2231d210ca71b41e02415ab9c5d0#2b6e126d9002ad7f9b244260565296529a210ba1"
-  integrity sha512-1tI4vXkc3Y6Wyc6mR2DRPASYFzuvjjG1AC3OUqh6oika8gMfRaAF3I6AWKziMa8MeJBlJ5WC4DC4a28gJcoZVQ==
+"@vonage/vwc-helper-message@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-helper-message/2.34.1/5d63a3878da52dc2e3d737a90f4add5da74259b3127af30338ee259bb3314c15#d74d740e9258c1396451e3374c55f2c95b1a61bb"
+  integrity sha512-k5TNv/qFdUKtQG0PgSTpquYGL24YuluHhzHZvYQd/1xqEcnPp7kf5089+lkvRmO2wIN+Og3hYsD5EN5OCTFBgA==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon-button-toggle@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon-button-toggle/2.34.0/2b091b572d320c96d40b1ce15480d07bef59e79f87beb3e2054e37de1c00c003#0c08a7cab2efdda081b03dc7d369830207c42a25"
-  integrity sha512-Avy3wHWTEXPfNiXwSLjXJ9oFiODF4S7lt0Q/zouq1IERkNXqwpXk59Rf59RAfJa4L5cAvfTKW1INw7CPmYk8jw==
+"@vonage/vwc-icon-button-toggle@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon-button-toggle/2.34.1/450e067bda94c88b7611e574a1c5ffdb80475355e9d77e00726ea97c9cece9f2#ef99e202cadafc5f26427acde8a772610069833f"
+  integrity sha512-4dK1kPTwPMr8KOHyFxY2FuryvG5gMml+IrIEY9W8/K39czyO8wvG3jyAqHW7ZCKkeT0iFbpXmrD1G2r5rRgtDw==
   dependencies:
     "@material/mwc-icon-button" "^0.22.1"
     "@material/mwc-icon-button-toggle" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon-button@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon-button/2.34.0/58e785f36d03f336e7c33a68de40711053d7adf98121790651035e9bf994d373#51a3b80947d66cdd6a6fddebd4d807276d4b1b60"
-  integrity sha512-Gyu67x0aa73bWeobIjsbI+MEo4UcSX+WpARPRbQ+nk6x4G9FwQqEE1D97gAG1TQ8E/xpXvN3EQDw6jhx3kr8Sw==
+"@vonage/vwc-icon-button@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon-button/2.34.1/377d1cc28f7e3dae2cc8305a7ecfcf567e3c1feb6539dabe359a906bd2af619f#2a1aae93ffc933880fca09a7b893dd52afa5d8e8"
+  integrity sha512-ErE3lxCLYDuisJCEQoq+i7+4V+MwuSu907wDMPW/NGdLrQXuYWQqtCS7aHg4rHkaFXDfL7PNXMat4biQEFVmIA==
   dependencies:
     "@material/mwc-icon-button" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon/2.34.0/ecf6e295d0d2692af54644738d041b760992ea9ad1d4b58ede8407e9158ede36#df57ca23f90cb5fdaadf820a3c168a7be5a08273"
-  integrity sha512-xhYAWXKPTEbM5WFx4ZNAeb/2x3/V9z2871Hspl3MfMj3TQGjG9vVDdlwe+3Gd8C7eKU0k5NAfUs+swMBza48cw==
+"@vonage/vwc-icon@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-icon/2.34.1/a57572522180c72a2f6b4e623f8545395441643afa6c0672a9425da3f0adfffe#545b32ad6d5be06f2dfb1e54d458a128ff4e2633"
+  integrity sha512-xKz6lB9iDSGV4w0Luj12TECAKe/8bZhQ96RTkK7iVI2uYr0PaxZSz4PgO/sa8MiWCb+P7RlEjb/MRlK+IfGd+Q==
   dependencies:
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     ramda "^0.27.1"
 
-"@vonage/vwc-keypad@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-keypad/2.34.0/9c84b2ad7e5ad76882ae185b160d9102a16175f21803769ab5df00f51cfa1dd6#8067293ff5ef849a74e6890d44c2722fbc91fcf5"
-  integrity sha512-tW/Ms+Kn9pbRAkkpgoYfArXsfxHDspEdvhgAZNBi0jxUKlzIS5GmfpmtSYdI02INIYdKdlzlUO0HUSJzyqxADg==
+"@vonage/vwc-keypad@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-keypad/2.34.1/7fc4c1996bc726248a2e51871521b9b4ff17f23536b3432b755100b96e8a8e99#b2cc52b9669aa492e73504dd5434b6c99181239e"
+  integrity sha512-D+PRduhX1l2CLP7Soot8u0Bq2M1DSb28anyKLGxNSncIrCJspZJ7b6qA2th+E37lrzLqAmN7UhDZiHHCuQ72VA==
   dependencies:
-    "@vonage/vwc-button" "2.34.0"
-    "@vonage/vwc-textfield" "2.34.0"
+    "@vonage/vwc-button" "2.34.1"
+    "@vonage/vwc-textfield" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-layout@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-layout/2.34.0/85c58b55aace2a5af80fc99992673deb0a76e64cc1281f4e7f1c39129c195c1f#31cef824ef3f06ba5dc0730414fd2a3065023058"
-  integrity sha512-CB31Ut9/dlMzDgbu5BBWylRYQiNlg++QBcoazqjXJjk46vldmDnZBz7EzHclu9+DVvdqX3Qs2B9dGDI1D1NmPA==
+"@vonage/vwc-layout@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-layout/2.34.1/7e0654f8bc2632532bd68d6ff68e986761c4fc6e82e7c23379272adc560e9009#94be44271ea44c8c55de88a7175298104f272f31"
+  integrity sha512-wJiu7WFsAS8uKd1VcgB5cgAPht4DARTnpa+9HGbJFIebscQHHDLBLvjT0ojSs1fMFT7kfqPr8rADEePyb45DRg==
   dependencies:
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-linear-progress@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-linear-progress/2.34.0/fd227351a5558f19c3597c492d1c5cef134cf0d122ee8323721e66ae606c36b9#30857a20c9b5efe3fecbf8c422bda58d79f73128"
-  integrity sha512-2DZO07W1yjMNa9vI9ypFeOAySzn/76lKbtBJz3pzaB5ekLY69u3RfB1PQvzrgA2QoTvXO4C/6JKNEMZZoyjWUQ==
+"@vonage/vwc-linear-progress@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-linear-progress/2.34.1/8b672fac1161ccd6ec415835bde592608d542eaca646de6593e4c5c109a7a002#4604023a5080799cee94001e0a6d937984478d46"
+  integrity sha512-ucCf+wHuv8/Ix9JBbrm7imX+Wk2LM8Z2zQrk7QW19NyMrwsVUOIzPIKyNy+Qp+NZZcjkfDb2i0jo2ZDClpMwVg==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-linear-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-design-tokens" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-design-tokens" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-list@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-list/2.34.0/e1ee744b6090d31258f49e30b5d0816847769744b2f1a862d888911385646e16#652c79c38be6d116e5f4e8a83c43946bb8ae5c50"
-  integrity sha512-oiv++/IsgoINcEEX383X9HZdEjNgjN3w/uilPSr1CZWux4usiKtrM32kjawrf2Af+d9tXXbH8PN756cgvvZ8hA==
+"@vonage/vwc-list@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-list/2.34.1/c6aeb4ba3df3f599abdafd832563ad49ee48ebc0702e6f6d40dcda87d1743984#6f9878a2644baf828472b15138f3c28bfa7ec334"
+  integrity sha512-gJvii43uP38d4PQzwL5QzVplds3wnl8vDOhKHP/kGp+ORciGm0ieSuu4NdCOwf4FLLhfhvo296W0+1p8P+NHCg==
   dependencies:
     "@material/mwc-list" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-expansion-panel" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-expansion-panel" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-menu@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-menu/2.34.0/8d82a4d057d1fa889d37142ddf993ccb7fbab482fe7f321029f1e522f5fe0408#9d179c8a06a3948856c60b6f378a6948bcb5125d"
-  integrity sha512-ulPEE0VrPzsl1pSMRKK3y69p6Fkj61s3H+wGNYjGY9EjSXeTLvXrSXG9ECR+sg6pLKn6JJvO5cM4RQLLYkMnpw==
+"@vonage/vwc-menu@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-menu/2.34.1/b6536c51a3fe07e1bd8db989e470dea6abc734cf7679a3beb0d2448ecf3be86c#6761c46225cd8678a88fd5161788aee81515c400"
+  integrity sha512-5T2MhEfGsSQSLphcrpS1WdqQ53TvOLhmHQRUaUkIesd2ZEuMkoS1UwfjsyfCwW1IEI0AlqMlN5rt394OOR+EUA==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-list" "2.34.0"
-    "@vonage/vwc-surface" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-list" "2.34.1"
+    "@vonage/vwc-surface" "2.34.1"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-notched-outline@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-notched-outline/2.34.0/8e4645b5515068cf952721c9ce2b64a12be8d38b4c0eb068e7859ce3c96f0db4#41aa8b6703744ea282cfdbf46c99f7e8071697ff"
-  integrity sha512-SRq0KECLb/VzgRxMN+59E2YnGEs53PeHcA6Tr+WJ1q9GDFvMMrLitfCk4+knvSpSDKlCu5yHi0Erco0kEJViag==
+"@vonage/vwc-notched-outline@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-notched-outline/2.34.1/5461596de7b5bc07420374a676086a78250df00cb149493833c90e2a424f8ed0#a2253a987fa02173924c2770d18042b369802d4a"
+  integrity sha512-xF1y1JzyrKWdZ346PSFGgatYr6UZrCJjL4TVa13Gfo1AKhitGxxoCphQYnBRRhKqhm/lCbLyQmS3DJtTR25T7A==
   dependencies:
     "@material/mwc-notched-outline" "^0.22.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-note@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-note/2.34.0/c6fc72d92596671ef889ebca04534ae53b6eee85070f392768c59f1b76c47858#d8632d3ca7f3f05637a96b82afdabb40cabd8a40"
-  integrity sha512-W7FIEMt61++4mux9VgJjz6slDgvUfD3Mf/awHMKlzRaFxkyp+0+IsN6b9IkLlLTThPVfZVhtX5Qjw7MDq9oMfA==
+"@vonage/vwc-note@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-note/2.34.1/95c8e12a78929d445b72b1d7f5d178119109b0959a6871a468a9fc23f32fe237#aedcf1a3cc8ab42d09227bcbfd42c995f5522727"
+  integrity sha512-LnS6EjiouchWtoAVyzfZnJJbLExJS+E1b84xxkZY3H8WHOynHJ/FnYsNiWePiyWZXpdYdI6RJF+utk0rU8LZQQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-pagination@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-pagination/2.34.0/225912dc458be7f8a45dc463b00a9100b9f724e2db59250b4468d710b003a279#8e27e96185fd0059257704a0152edf9cc0238c13"
-  integrity sha512-EZ68lYFzYyAQOeLU81mLBT0U3WgkRmyzsSoZTDWjmwTr1thK4dLyGnH6Wy4UUjSAau6DgZC+KocEXtOPIbr3Uw==
+"@vonage/vwc-pagination@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-pagination/2.34.1/c8ca6649d96f8be811eaf65c4d8e7b308074d80b116f8d334c1a993c5493cb6d#40f5c68ea609726569c2f49fc181cb2f88b6cb68"
+  integrity sha512-d6oIjSz2hSFo6SKC1SekQiHycr/3CfXQ5ktMKnJ+FQUUvXIEjmP8VwtZga8DC5DFyVjlTc/TnB7x/Sml24agiA==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-popup@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-popup/2.34.0/57815531c54b27f20ca803db5eb03640aae01045ddfa12bb7487c1adddb4a0eb#8621ff27ebb1fe0b6544eb9b93a79215c57a06c7"
-  integrity sha512-vUKfitgxlHjIHSk/CH0grcnVx8pPqWyobBGngId889gzySWwkq+RI/8OdBDfb+wB+0ajxapCtTGDfTRLueNjeA==
+"@vonage/vwc-popup@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-popup/2.34.1/6ef60f73dd31e2cc2c5087965475527d10000c96f4d7ad82282b7b272f49ac33#1dec9ce07e7453597bb859f223f338352a3d80b5"
+  integrity sha512-JtfnmxUlmrFxFUUUyG9slm/rjeicQCy9OAS7Q41+ijcgMePw6mEhxLz0WEUT/lKwDmTIK3jWxs5Z//HxHS+Eiw==
   dependencies:
     "@floating-ui/dom" "^0.5.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-elevation" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-elevation" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-radio@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-radio/2.34.0/3947206420b07aa8ccff45776de39b378df5e5e00644ad799da1c0ea61b555a0#047570d2cd2b10cf2291e6314c24da9c1f3c143d"
-  integrity sha512-aIDkbM/6nc0/Cc0CZPkXi7TWmO9Yhe92o8CpnXt/wO4xrbLbbPPvMtZCy+AVPUuyUWPr6hmUT7sJpYase+u0Dg==
+"@vonage/vwc-radio@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-radio/2.34.1/3a9f86810aa4173e85ab8941751a42f089c3edf6ff197bcfc368d8de29ba13f0#3ba6179d4e9279f10868cf52e1d912c1395aa2b3"
+  integrity sha512-B1iukFqOh8B+yTdGShxb7ABRhsiTuoN1dLOXlrkQtn5EerfyiLpwIWFbs7xhpEvp8ij1abjrBCLsPmDWXu+l3g==
   dependencies:
     "@material/mwc-radio" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-scheme-select@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-scheme-select/2.34.0/b04171f1f8121f1ea013da8a56ee4cc561ad9e5868a17ce5468b1b910b4e4f60#32e3bedb7fc0d878f5de3427ed962c675bf2cc9d"
-  integrity sha512-4BErgsVoGpYMDQryScYyjKvFWpZU5F/RSLhpHV02Kbi7id+rD+Z1WuDexUena+//eL2q2J9QGv6Rc2L8Thk4zg==
+"@vonage/vwc-scheme-select@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-scheme-select/2.34.1/2bb36c668bb77144df7b1c4d7387612f4f882b09caaabf389bfe5d1c63e9a428#15097d077a374aabccc610745a8a5f7a0704c178"
+  integrity sha512-Ygc6IIrV+Idla29ES/cxOuYbaPtVDfWqwXvbLas3NWv9KEPrGgUxXF+WlPp+AcG0Fq2E7ZMqouBAGJezdTalZw==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-scheme" "2.34.0"
-    "@vonage/vwc-button" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-scheme" "2.34.1"
+    "@vonage/vwc-button" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-select@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-select/2.34.0/5974ae2329e148c88eb90acad5d8cc1522c0c9f170632e0a744c2532393c7665#398f0219edac58754a679abdf45428bd0512a4c1"
-  integrity sha512-V/C0phaBMzXiI790ew8D+2utYS4JbshB7b3oNMHKBkWlCsXFMyeAbBuChdv76vHbtxQKF+SSURJAnPWFas27DQ==
+"@vonage/vwc-select@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-select/2.34.1/9ff2532bba83e111fc054f80452bd70f3f6888ec5edc2e2b1957e82fde69f18a#92c77249f6a6ad753075344b8d08bff1a9f3c311"
+  integrity sha512-vO48xpKM5IustvTPVGGwUp+1RwI+x32upAlY0Ejk5kp7WuIMW4r8i6MqZ4UVbgtElSLynFZVZ+D2YAK9rXwwbg==
   dependencies:
     "@material/mwc-select" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-helper-message" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
-    "@vonage/vwc-notched-outline" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-helper-message" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
+    "@vonage/vwc-notched-outline" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-side-drawer@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-side-drawer/2.34.0/1e3a155f64f1435a62fba9d887e54135f21cffe62454fb424409d3b368d4600d#231d7559afa6b557f3be5aaa0d96b0c40010170e"
-  integrity sha512-wR7QUBrmY4aAsaUYHA2rWp9YrVEZlrR3GggRyNNNKFYkUX5FvQ3PVD/5Qo2no3vN1leCmQPDW/+pl5DXsShvzQ==
+"@vonage/vwc-side-drawer@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-side-drawer/2.34.1/7e1d6f844c5378d294f024447cbbcaf6c16377b8db52b916d6d4c446a89e921a#ac34a37823c24f1f70c64bd6898234014d11db64"
+  integrity sha512-sk1N4OdjZcK9ttAWtvHDwL+aO7JwFfTPojl4A463hS3RKnGa91MOeS59bidMoZoQcsO+brNzaSshzbngsI6kKw==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
     blocking-elements "^0.1.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
     wicg-inert "^3.0.0"
 
-"@vonage/vwc-slider@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-slider/2.34.0/897ee03db283ec07e191eb8ef7886112e8fa6590b48a8216490e9f0aef2decb8#9956aa25fb1c7096f744970e192441c4a93f66b7"
-  integrity sha512-X0mqInZCfkKsK7EoETuJfrKhpH8JdK2CjGD0USqkOT2hLpTijLr41OGCtFiWqiqfUudI//k9AB/qWsgl7rv7Mw==
+"@vonage/vwc-slider@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-slider/2.34.1/8f65cad24cecafbaf0487e7ac5b6710972c7cb51befc9da0ce0b3d10e7d6da4c#f0a21e034b7cc9b63b12d072f92f1afd8ccbdbb2"
+  integrity sha512-/5JInlcce3rJO37XekPu+Eh//3g94cb6O3AykSZ5OnCJRYU/LknCFVjqdmyrj66yNBAc2Wy0p9VoEfIO9Z9Pug==
   dependencies:
     "@material/mwc-slider" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-snackbar@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-snackbar/2.34.0/8d0e41689900844ae8bdff70b86f14c1008de8a520558aca094d2d427650cbac#3a319170b736b0ec720c681f6e96e065124f6f97"
-  integrity sha512-R/a+oe0CJRa96sC5esVWSIatHzXX6g4FW19HVK868nL7umsRj97bxiDaPak2cXS1ahhr6wadn4c+Y1+5leGCog==
+"@vonage/vwc-snackbar@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-snackbar/2.34.1/c389b5a7803a0602da33e50b30a736864851821267c6be74a7a7fb1415579e22#50915d5b12c63eac215a51839677bd167bc4bf97"
+  integrity sha512-BCyjWDsTLWwlXybGsc4xZjBEKQJmeVadsK8uDYdEB7FOe2LR/wS7/mM+bvwiMLoFPfJRz8F0JGChiUpG3WK+1A==
   dependencies:
     "@material/mwc-snackbar" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-surface@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-surface/2.34.0/71afc9def6f6259d1fd5f8a8c85c1c45e2048b335d7aec435efcc7ae91721b3b#485034154eb9e46e1f194da09de1f7c108c4b8f8"
-  integrity sha512-AKpLhFxkmig3hmAyoLobyfxn1ZgXAe5kmJ/nQLRwmxZi3U65oPg4mDLzort92yai6OU/trkrSDoH3Zu6FplLhg==
+"@vonage/vwc-surface@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-surface/2.34.1/20baeb4edaa422722a52df2043d36c3cf0df37098da0b65208d3802859266007#9133f381b4804292b3d4ab299804ad68a2a3da39"
+  integrity sha512-BUZgFQqsoY2EBjdiIk/oKIvmIvMJHmhYmqPSZl3M0ojVdRnIu25KViK8Ib53ZQNi80ZKXku5zk0y83Y4CevTHg==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-switch@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-switch/2.34.0/5b7a5bc865060b61eaae5824a11fd63c153b5f229c2dee6e355a454735a287bc#12ef1f6ac79633bbdc0533f26c3f23682550cf5c"
-  integrity sha512-s2sslVD16v62hNMcYFEwuI+XtI0AxND8V2YS0NQKFUy3Z0bxPoUNRzLjR4Pqdb/V3ArWAW8cf8rbaMuDNs+cQQ==
+"@vonage/vwc-switch@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-switch/2.34.1/411be7e9b64fe81bbe609acf97559b219beeffdc3e6437ff2c64529a3304c8ea#2de50a016e4d0e34fc5ad878117a3caa7ca3eb70"
+  integrity sha512-tRaiKrxb/J/Wts94Bj36dieYrmm3mRZlGt69nhW0zqabj3sVW20ygcuZIIR8MiJkA5YKsFp3dZ8VPmDCDHL3AQ==
   dependencies:
     "@material/mwc-switch" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tab-bar@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tab-bar/2.34.0/5bb02d9b4617d88acc6325061cbe27f3ccbb3985deec944bc996638410db3068#39bd64c2c9187206b364ecb9fedd356da0738b99"
-  integrity sha512-WOiKThm8jX1K37ZTxpBwXT72n0Q9v7cboES0huNvUscPweP+HS9YXbFt4h17RXK2d46rnFFLVrIvKGx9ruAJfQ==
+"@vonage/vwc-tab-bar@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tab-bar/2.34.1/e3579fc2473954d6bd755cd6f6b759255fd7832ef25a1b7d78eae6f4cd086552#45248cedcd1c06b36ec5f9749432ac7acbcc31d4"
+  integrity sha512-aJbob3Ne75hQv9hryDUPH5TO1Vv8kHzh7gzh2mSyPefiWvMTJEz06+OEinnYphPxipCxnZqymBnQ0vATfVeF7w==
   dependencies:
     "@material/mwc-tab" "^0.22.1"
     "@material/mwc-tab-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tags@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tags/2.34.0/1b8b6c99119fe3adb5ad76a399e4353b854f357f0dc4953068fd1f9d9e4ff693#e49dc6a29c59ff605e8c325aaefe898539c394d6"
-  integrity sha512-JLH+TeTwCLt9E5izZeYwSy9HYjwBYc4QjeFv7x3VL1sJc30zveYve5BoPtZwca5hyBn9mkrlT9mup7KKIxSrvA==
+"@vonage/vwc-tags@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tags/2.34.1/ad0ed25b3da53f3ab98453e1c838cb847fc1b8e719b444fce932926e299d0792#5f7b16612bc5ddc34aa3a146d2b0cc8d9e8d4be7"
+  integrity sha512-F0em1cPHRgZZ1+EqRhc+szp20acMXZaldwZMf0+GkFKupZT96vyc93rf6CDJmGsyA/l1eibvTy5YTw3PUWnnwQ==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-typography" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-typography" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-text@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-text/2.34.0/be46ae747ea7590964fb3c00f2ac097f4a96e8606bc963169b3ad6613a881626#171aba0e78831fcde79c3957f2358bdcd835feeb"
-  integrity sha512-YEQJXCo6TClK5wIUBwJygoi4qcAiXKolbiW8Id/0uRVf76JdioB7ANs1QPJCc283KIVRnHI4zBe7Qp5QAJ7u3A==
+"@vonage/vwc-text@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-text/2.34.1/005be9021f991c98f40fcb217b6862a1a64b87016bfba9ab8eaef9d8603c877e#9ba7726921ee084d84662fdb8b9c50576a8e00ae"
+  integrity sha512-bHYY+SY9WL+xLykA2cgJ9qOZaIrLiohxIOg6lp35FO9TT4FKvqSfzpJpPxxe5jKb+gwhmVh8/lNKCetj7oeMRQ==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textarea@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-textarea/2.34.0/6767dff46dd049529cde8b29a0adb15f706c51bcbd44147569a518c9bdd0e57e#261660084299671f40d716555159cb83911a3932"
-  integrity sha512-dY26zroC5iw+nc3PVEbPFuNeMrooDDfM6IHl89OdiOC2NW4FpMsqCEvn2RBLWO6RNro7AOPmtAVIcbwP6PQfmg==
+"@vonage/vwc-textarea@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-textarea/2.34.1/388c0633bd03dc4d7b6e2db74f45a33069d4db44f73aa861ec35ac20bb62b0f7#1cc1624b7873584740f47424f5bc59f1b82fa3a3"
+  integrity sha512-JEUUQtgJkxg7vIfoUH+HmemrU6BISFGaQRL45LufroUz4yhBQldIdlbIFoPEWdjtTexRSep4hybDYpgFHIUCdg==
   dependencies:
     "@material/mwc-textarea" "^0.22.1"
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-helper-message" "2.34.0"
-    "@vonage/vwc-notched-outline" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-helper-message" "2.34.1"
+    "@vonage/vwc-notched-outline" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textfield@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-textfield/2.34.0/ba1c0bd92ac2391bc67245d36e9bc380d39c425113c1bb49e936da3737a7f64f#873a1b55b777f352c11206a88d2bd256c51b38ae"
-  integrity sha512-FuAm9NX/CzFu+4502KfwXoi+AooBHS0w92P8N2sY0W4YuqqZLtjTV7bj0rcPALUi8exdAY1IY3333sBWIcK4Zw==
+"@vonage/vwc-textfield@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-textfield/2.34.1/6304490d2e8912c8ad7c48225e5e84c7ed5d17fdc07167fe5cbe60a4d3d7fbb5#b4ff00ffbda995b85bef2a79ebff74ccbf37cd09"
+  integrity sha512-+b3G7pp5vJr6mtJlcbhiDJVeNuWM7rsRTGaD/yPpe8vdSOGhhvsrBY4PG+xbBZiNZbNNiDAFhBee5/16g2Ojrw==
   dependencies:
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vvd-style-coupling" "2.34.0"
-    "@vonage/vwc-helper-message" "2.34.0"
-    "@vonage/vwc-icon" "2.34.0"
-    "@vonage/vwc-notched-outline" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vvd-style-coupling" "2.34.1"
+    "@vonage/vwc-helper-message" "2.34.1"
+    "@vonage/vwc-icon" "2.34.1"
+    "@vonage/vwc-notched-outline" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-theme-switch@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-theme-switch/2.34.0/3710abbcae98cc1d82a87d9764e0203ec22a8493372deb51e01ce0d7f0538c45#286748c0e743b399a3c328ecc2ac07a3395642aa"
-  integrity sha512-pO0E7etljTd9a9YbJDcSToTvRHuGWkYK2uBOJEyUYNIgHtLNbbzSKHUsJHcwM9K1Yu/9gXFcxjZ2LORmHWQpSQ==
+"@vonage/vwc-theme-switch@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-theme-switch/2.34.1/cbcc595b9251a3ee9b3ae83bb2a34bca517aa101c48f695843ff104f6e4a6e40#5f049c86cee91d1f1774816f48f6181ac203e82d"
+  integrity sha512-ROBSJEjJugFe2SgeLuud9qcNl5zRynqRCPXLmadFu64P4giasxq4/yNQCUIP63q00eUM91rlxSCdzOdj7kFV1Q==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-scheme" "2.34.0"
-    "@vonage/vwc-switch" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-scheme" "2.34.1"
+    "@vonage/vwc-switch" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tooltip@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tooltip/2.34.0/e2941b881ff0175ba3c3655bebadbf55c4f4ace84e1a44ff69ebdd60071994c9#97935c8612bf5c02834c829aec440286cf02fd53"
-  integrity sha512-pliku4BKsn//cVBq+4RSQM399YpjnymSz2Yx6ZB2dJOMia/YvPcendIg9LifPP+htBYijFrDcCNmgF6BXMgSpg==
+"@vonage/vwc-tooltip@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-tooltip/2.34.1/67d438be6abdc55737d41040fc6ac8cdd48070006798b5aa211db301b5b913f9#080e016825844a11f78cc6fbbda6cfb453cafd28"
+  integrity sha512-mVszup8cLDvnMKZGXNQvISIGBI6p8cvlsvWdtYn94b+wctSrvItU+QUvtXABA46UXiXnwNofxLPk0PTRVaybPw==
   dependencies:
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vvd-foundation" "2.34.0"
-    "@vonage/vwc-icon-button" "2.34.0"
-    "@vonage/vwc-popup" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vvd-foundation" "2.34.1"
+    "@vonage/vwc-icon-button" "2.34.1"
+    "@vonage/vwc-popup" "2.34.1"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar-fixed@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-top-app-bar-fixed/2.34.0/8ef2e6e7e7553b3e894b92417a1fa4339a48946a318ad097a5f02f1be566b5ea#4bb2d7234c11ea0ead21c28a8ad415d6cf3fce04"
-  integrity sha512-3Gk+XEmHfX0DiOo1kHApM4oIUF6RIAoajdqcU8WYPv9ibqi9Rf/mKFnTAxPdrCmlNY6chSWh1O9gyonVEA79Bw==
+"@vonage/vwc-top-app-bar-fixed@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-top-app-bar-fixed/2.34.1/f43b0e99366b1dc5363ebc6828b2d7c6c63df47946cd69e8af124d17e952a79b#cb24ad0a0493da3838286dd966e20f7c8192d52e"
+  integrity sha512-R52dDP0fk113EgBBsqhy5jDM34jqSYvwMRv+8/pS/WblREnUA2XELO3DnrNX+XynI9glO/DNf7PnX+6q2QWA1Q==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
     "@material/mwc-top-app-bar-fixed" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
-    "@vonage/vwc-top-app-bar" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
+    "@vonage/vwc-top-app-bar" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar@2.34.0":
-  version "2.34.0"
-  resolved "https://npm.pkg.github.com/download/@vonage/vwc-top-app-bar/2.34.0/edb586a4c57a077bcfd85c77631545dc60b0b846f2b86f945ba32eff2e52da12#1707b50139a36bfa49e05901fa2a6fbd2fc78923"
-  integrity sha512-iTaruigKMFFqTojkTDssuk9hrQ17lPQ+kQMn/AulGKf4tKysGOrUEe4YQ5QhVyRZsgNgjqIzpkAouGb4ouaCjw==
+"@vonage/vwc-top-app-bar@2.34.1":
+  version "2.34.1"
+  resolved "https://npm.pkg.github.com/download/@vonage/vwc-top-app-bar/2.34.1/3dc0b285723d84681f6fc8a69663a9c41868b3990f3511be18ea594ca007decf#d8c4466a153430d2ff8b3b8c82ec900edd7ed47e"
+  integrity sha512-GcHxcI+DRVlzI0XiyfpV98LWLkMFNX5TLepkj+x58I1kKHyaQgfI8gdYhN2pDu7Im3m7roE6h3wWnTp0N+Mriw==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.34.0"
+    "@vonage/vvd-core" "2.34.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 

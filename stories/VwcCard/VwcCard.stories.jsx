@@ -1,8 +1,43 @@
 import React from 'react'
 import VwcCard from '../../dist/VwcCard'
 import VwcIconButton from '../../dist/VwcIconButton'
+import { vwcCardHeadingCropDecorator } from '../../src'
+
+const originalText = 'very loooooo ngt te eeex tkjhn klhkjg hlkjh kjuhk jhkjh kjhk jhk jhjk'
+const damnLoongWordText = 'veryloooooongtteeeextkjhnklhkjghlkjhkjuhkjhkjhkjhk jhk jhjk'
+
 export const Default = () => (
   <>
+    <div
+      style={{
+        width: '200px'
+      }}
+    >
+      <VwcCard
+        style={{
+          '--title-line-clamp': 2
+        }}
+        heading={originalText}
+        ref={vwcCardHeadingCropDecorator(originalText)}
+        subtitle='Subtitle'
+      ></VwcCard>
+    </div>
+
+    <div
+      style={{
+        width: '200px'
+      }}
+    >
+      <VwcCard
+        style={{
+          '--title-line-clamp': 2
+        }}
+        heading={damnLoongWordText}
+        ref={vwcCardHeadingCropDecorator(damnLoongWordText)}
+        subtitle='Subtitle'
+      ></VwcCard>
+    </div>
+
     <VwcCard
       label='All Options'
       heading='All Options on Deck'

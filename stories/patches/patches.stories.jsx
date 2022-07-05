@@ -7,24 +7,9 @@ import VwcTooltip from '../../dist/VwcTooltip'
 import VwcButton from '../../dist/VwcButton'
 
 import {
-  vwcTooltipEllipsisDecorator,
   vwcDataGridElementCellOverflowDecorator,
   vwcTooltipShowOnHoverDecorator
 } from '../../src'
-
-const originalText = 'very loooooong tteeeext'
-
-export const VwcTooltipEllipsis = () => (
-  <>
-    <span
-      style={{ width: '80px' }}
-      ref={vwcTooltipEllipsisDecorator(originalText)}
-    >
-      {originalText}
-    </span>
-    <span ref={vwcTooltipEllipsisDecorator(originalText)}>{originalText}</span>
-  </>
-)
 
 export const VwcTooltipShowOnHover = () => (
   <>

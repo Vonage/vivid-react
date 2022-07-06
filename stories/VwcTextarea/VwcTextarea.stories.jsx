@@ -1,7 +1,7 @@
 import React from 'react'
 import VwcTextarea from '../../dist/VwcTextarea'
 
-export const Default = () => <VwcTextarea />
+export const Default = () => <VwcTextarea onInput={(x) => console.log(x)} onBlur={(x) => console.log(x)} />
 export default {
   title: 'VwcTextarea',
   argTypes: {

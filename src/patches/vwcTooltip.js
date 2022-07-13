@@ -26,6 +26,7 @@ export const vwcTooltipShowOnHoverDecorator = (timeout = 1000) => tooltipElement
             return
         }
         const anchorElement = document.getElementById(tooltipElement.anchor)
+        anchorElement.style.setProperty('pointer-events', 'auto')
         let showTimeoutHandler
         anchorElement.addEventListener("mouseover", () => {
             showTimeoutHandler = setTimeout(() => {

@@ -8,7 +8,7 @@
 export const vwcTooltipEllipsisDecorator = fullText => element =>
     setTimeout(() => {
         const isTextCropped = element?.clientHeight < element?.scrollHeight
-        if (isTextCropped) {
+        if (isTextCropped && element) {
             element.setAttribute('title', fullText)
         }
     }, 0)
@@ -26,6 +26,9 @@ export const vwcTooltipShowOnHoverDecorator = (timeout = 1000) => tooltipElement
             return
         }
         const anchorElement = document.getElementById(tooltipElement.anchor)
+        if (!anchorElement) {
+            return
+        }
         anchorElement.style.setProperty('pointer-events', 'auto')
         let showTimeoutHandler
         anchorElement.addEventListener("mouseover", () => {

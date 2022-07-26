@@ -16,7 +16,7 @@ export const vwcCardHeadingCropDecorator = text => element =>
             '.vwc-card-title'
         )
         vwcTooltipEllipsisDecorator(text)(titleElement)
-        if (cardContentElement.clientWidth < titleElement.clientWidth) {
+        if (cardContentElement?.clientWidth < titleElement?.clientWidth) {
             const computedCardContentStyle = window.getComputedStyle(cardContentElement, null)
             titleElement.setAttribute('title', text)
             titleElement.style.width = computedCardContentStyle.getPropertyValue('width')

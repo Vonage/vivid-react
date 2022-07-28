@@ -18,9 +18,10 @@ export const vwcTooltipEllipsisDecorator = fullText => element =>
 *
 * @param {HTMLElement} tooltipElement - target element to apply behavior to
 * @param {number} timeout - timeout before showing tooltip, default: 1000
+* @param {string} minWidth - min width in pixels, default: 'none'
 * @example <VwcTooltip ref={vwcTooltipShowOnHoverDecorator()} />
 */
-export const vwcTooltipShowOnHoverDecorator = (timeout = 1000) => tooltipElement =>
+export const vwcTooltipShowOnHoverDecorator = (minWidth = 'none', timeout = 1000) => tooltipElement =>
     setTimeout(() => {
         if (!tooltipElement) {
             return
@@ -30,6 +31,8 @@ export const vwcTooltipShowOnHoverDecorator = (timeout = 1000) => tooltipElement
             return
         }
         anchorElement.style.setProperty('pointer-events', 'auto')
+        tooltipElement.style.setProperty('--tooltip-inline-size', minWidth)
+
         let showTimeoutHandler
         anchorElement.addEventListener("mouseover", () => {
             showTimeoutHandler = setTimeout(() => {

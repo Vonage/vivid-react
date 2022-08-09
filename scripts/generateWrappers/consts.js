@@ -70,7 +70,7 @@ const ComponentsEventsMap = {
   VwcIconButton: ['click'],
   VwcIconButtonToggle: [{ name: 'MDCIconButtonToggle:change', propName: 'onChange' }],
   VwcListExpansionPanel: ['closed', 'opened'],
-  VwcListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
+  VwcListItem: ['click', { name: 'request-selected', propName: 'onRequestSelected' }],
   VwcCheckListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
   VwcRadio: ['change'],
   VwcSlider: ['change'],

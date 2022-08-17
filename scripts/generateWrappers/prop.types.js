@@ -12,7 +12,7 @@ const isNumber = type => /(integer)/.test(type) || type === 'number | null'
 // TypeScript
 
 const getProps = tag => {
-  const eventsProps = getEvents(tag).map(x => `  ${x}?: (event: Event) => void`)
+  const eventsProps = getEvents(tag).map(x => `  ${x}?: (event: SyntheticEvent) => void`)
 
   const properties = getProperties(tag)
   const mapType = type => ([
@@ -63,7 +63,7 @@ const getPropTypes = tag => {
         : isNumber(type)
           ? 'number'
           : isArray(type)
-            ? 'array' 
+            ? 'array'
             : isBoolean(type)
               ? 'bool'
               : `any /* ${type || 'type not provided'} */`

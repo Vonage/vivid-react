@@ -2,7 +2,7 @@
 
 Vivid-react is a script allowing you to generate `Vivid-React` components for the newest version of `Vivid` components stored as a package with all necessary dependencies and available through Artifactory npm registry.
 
-The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` applications. We still use regular `Vivid` web components, so be sure to target a recent browser. 
+The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` typescript applications. We still use regular `Vivid` web components, so be sure to target a recent browser. 
 
 Goals:
 * wrap adding handlers for events like `change` which natively doesn't work in the environment
@@ -17,6 +17,9 @@ Goals:
 *may provide a cut off at props inherited from MWC source.
 
 **now also implemented in _raw_ Vivid.
+
+# Similar strongly typed wrappers for other frameworks?
+* https://github.com/Vonage/vivid-vue
 
 # Why is this repository exists?
 

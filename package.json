@@ -121,8 +121,10 @@
     "web-component-analyzer": "2.0.0-next.4"
   },
   "resolutions": {
-    "glob-parent": "5.1.2",
-    "trim": "0.0.3"
+    "glob-parent": "^5.1.2",
+    "trim": "^0.0.3",
+    "trim-newlines": "^3.0.1",
+    "terser": "^5.14.2"
   },
   "peerDependencies": {
     "react": ">=16.8",

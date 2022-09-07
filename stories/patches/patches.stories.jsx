@@ -5,11 +5,15 @@ import VwcSlider from '../../dist/VwcSlider'
 import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
 import VwcTooltip from '../../dist/VwcTooltip'
 import VwcButton from '../../dist/VwcButton'
+import VwcNote from '../../dist/VwcNote'
+import VwcSelect from '../../dist/VwcSelect'
+import VwcListItem from '../../dist/VwcListItem'
 
 import {
   vwcDataGridElementCellOverflowDecorator,
   vwcTooltipShowOnHoverDecorator
 } from '../../src'
+import { vwcNoteContentOverflowDecorator } from '../../src/patches/vwcNoteContentOverflow'
 
 export const VwcTooltipShowOnHover = () => (
   <>
@@ -53,6 +57,21 @@ export const DataGridCellOverflow = () => (
       footer=''
     />
   </VwcDataGrid>
+)
+
+export const AllowContentOverflow = () => (
+  <VwcNote
+    ref={vwcNoteContentOverflowDecorator}
+    header='Allow dropdown content overflow the Note card boundaries'
+  >
+    <VwcSelect>
+      <VwcListItem>Item 1</VwcListItem>
+      <VwcListItem>Item 1</VwcListItem>
+      <VwcListItem>Item 1</VwcListItem>
+      <VwcListItem>Item 1</VwcListItem>
+      <VwcListItem>Item 1</VwcListItem>
+    </VwcSelect>
+  </VwcNote>
 )
 
 export default {

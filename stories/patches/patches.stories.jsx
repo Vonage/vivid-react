@@ -8,12 +8,14 @@ import VwcButton from '../../dist/VwcButton'
 import VwcNote from '../../dist/VwcNote'
 import VwcSelect from '../../dist/VwcSelect'
 import VwcListItem from '../../dist/VwcListItem'
+import VwcSnackbar from '../../dist/VwcSnackbar'
 
 import {
   vwcDataGridElementCellOverflowDecorator,
   vwcTooltipShowOnHoverDecorator
 } from '../../src'
 import { vwcNoteContentOverflowDecorator } from '../../src/patches/vwcNoteContentOverflow'
+import { vwcSnackBarHtmlMessageDecorator } from '../../src/patches/vwcSnackBarHtmlMessage'
 
 export const VwcTooltipShowOnHover = () => (
   <>
@@ -72,6 +74,20 @@ export const AllowContentOverflow = () => (
       <VwcListItem>Item 1</VwcListItem>
     </VwcSelect>
   </VwcNote>
+)
+
+export const SnackBarWithHTMLContent = () => (
+  <VwcSnackbar
+    ref={vwcSnackBarHtmlMessageDecorator(
+      'This is <i>truly</i> html <b>message</b> to be shown inside snack bar'
+    )}
+    onClosed={e => (e.target.open = true)}
+    legacy
+    header='html message demo'
+    icon='info'
+    open
+    timeoutMs={9000}
+  ></VwcSnackbar>
 )
 
 export default {

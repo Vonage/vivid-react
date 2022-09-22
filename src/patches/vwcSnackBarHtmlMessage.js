@@ -16,6 +16,6 @@ const createHtmlMessageElement = (html) => {
 export const vwcSnackBarHtmlMessageDecorator = (htmlMessage = '<b>bold</b>') => element =>
   setTimeout(() => {
     const component = element?.shadowRoot.querySelector('.header-and-label')
-    component.style.setProperty('width', '100%')
+    component?.style.setProperty('width', '100%')
     component?.append(createHtmlMessageElement(htmlMessage))
   }, 0)

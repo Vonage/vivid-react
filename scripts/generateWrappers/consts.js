@@ -135,7 +135,7 @@ const ComponentsReadOnlyPropertiesMap = {
 
 // Properties reflected as attributes having different name
 const RenamedReflectedAttributesPropertiesMap = {
-  VwcText: ['fontFace'],
+  VwcText: ['fontFace'], // font-face attribute
   VwcLayout: ['columnBasis', 'columnSpacing', 'autoSizing']
 }
 

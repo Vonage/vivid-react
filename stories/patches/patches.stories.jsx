@@ -79,11 +79,12 @@ export const AllowContentOverflow = () => (
 export const SnackBarWithHTMLContent = () => (
   <VwcSnackbar
     ref={vwcSnackBarHtmlMessageDecorator(
-      'This is <i>truly</i> html <b>message</b> to be shown inside snack bar'
+      'This is <i>truly</i> html <b>message</b>'
     )}
     onClosed={e => (e.target.open = true)}
     legacy
     header='html message demo'
+    dismissible
     icon='info'
     open
     timeoutMs={9000}

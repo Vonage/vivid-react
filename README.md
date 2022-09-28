@@ -100,7 +100,7 @@ $ yarn add @vonage/vivid-react
 ```
 No need for importing `vivid` directly. The dependencies will be installed for you.
  
-## Font initialization
+## Initialization
 
 ```javascript
 // Function

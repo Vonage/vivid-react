@@ -153,6 +153,16 @@ const ComponentsBindablePropertiesMap = {
   ...RenamedReflectedAttributesPropertiesMap
 }
 
+// Extra properties to be exposed for element
+const ComponentsExtraPropertiesMap = {
+  VwcIconButton: [
+    {
+      "name": "value",
+      "type": "string"
+    }
+  ]
+}
+
 const CompoundComponentsMap = {
   VwcButton: {
     CallToAction: {
@@ -203,6 +213,7 @@ module.exports = {
   ComponentsEventsMap,
   ComponentsReadOnlyPropertiesMap,
   ComponentsBindablePropertiesMap,
+  ComponentsExtraPropertiesMap,
   CompoundComponentsMap,
   FileName,
   Assets,

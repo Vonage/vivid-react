@@ -4,7 +4,7 @@ const { access, F_OK, readFileSync, readdirSync, existsSync, rmSync, createWrite
 const mkdirp = require('mkdirp')
 const os = require('os')
 const { spawnSync } = require('child_process')
-const { WCAConfig, VividRepo, FileName, OutputLanguage, ComponentsBindablePropertiesMap, ComponentsReadOnlyPropertiesMap } = require('./consts')
+const { WCAConfig, VividRepo, FileName, OutputLanguage, ComponentsBindablePropertiesMap, ComponentsReadOnlyPropertiesMap, ComponentsExtraPropertiesMap } = require('./consts')
 const { Octokit } = require('@octokit/core')
 const extract = require('extract-zip')
 const { copySync } = require('fs-extra')
@@ -69,7 +69,7 @@ const getProperties = tag => (tag.properties || [])
     prop.type?.indexOf('[]') > 0 // property type is array
     prop.bindable = isBindable
     return prop
-  })
+  }).concat(ComponentsExtraPropertiesMap[getComponentName(tag)] || [])
 
 const isFileExists = (fileName) => new Promise(
   (resolve, reject) => access(

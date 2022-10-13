@@ -9,6 +9,7 @@ import VwcNote from '../../dist/VwcNote'
 import VwcSelect from '../../dist/VwcSelect'
 import VwcListItem from '../../dist/VwcListItem'
 import VwcSnackbar from '../../dist/VwcSnackbar'
+import VwcIconButton from '../../dist/VwcIconButton'
 
 import {
   vwcDataGridElementCellOverflowDecorator,
@@ -16,6 +17,7 @@ import {
 } from '../../src'
 import { vwcNoteContentOverflowDecorator } from '../../src/patches/vwcNoteContentOverflow'
 import { vwcSnackBarHtmlMessageDecorator } from '../../src/patches/vwcSnackBarHtmlMessage'
+import { vwcSetAttributeValue } from '../../src/patches/vwcSetAttributeValue'
 
 export const VwcTooltipShowOnHover = () => (
   <>
@@ -89,6 +91,10 @@ export const SnackBarWithHTMLContent = () => (
     open
     timeoutMs={9000}
   ></VwcSnackbar>
+)
+
+export const VwcIconButtonValue = () => (
+  <VwcIconButton ref={vwcSetAttributeValue('value', 'v')}></VwcIconButton>
 )
 
 export default {

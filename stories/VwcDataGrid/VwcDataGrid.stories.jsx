@@ -1,9 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import VwcSwitch from '../../dist/VwcSwitch'
 import VwcButton from '../../dist/VwcButton'
 import VwcDataGrid from '../../dist/VwcDataGrid'
 import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
+import { cellRendererFactory } from '../../src/dataGrid'
 
 const sequentalData = (rowBlueprint, totalRows) => {
   const result = new Array(totalRows)
@@ -23,7 +23,8 @@ const sequentalData = (rowBlueprint, totalRows) => {
 }
 
 const dataSourceSimulated = sequentalData(
-  { fname: 'A-{i}', active: false }, 5000
+  { fname: 'A-{i}', active: false },
+  5000
 )
 
 const dataProvider = ({ page, pageSize }, callback) => {
@@ -32,38 +33,28 @@ const dataProvider = ({ page, pageSize }, callback) => {
   callback(pageItems, dataSourceSimulated.length)
 }
 
-const switchCellRenderer = (container, { grid }, { item }) => {
-  const switchWebElement = container.firstElementChild
-  if (switchWebElement) {
-    // Re-use & direct update existing instance of web component
-    // during vertical scroll cellRenderer is reused in a name of performance
-    switchWebElement.checked = item.active
-  } else {
-    // First render
-    ReactDOM.render(<VwcSwitch
+const switchCellRenderer = (container, { grid }, { item }) =>
+  cellRendererFactory(
+    <VwcSwitch
       connotation='cta'
       onChange={() => {
         item.active = !item.active
         grid.refreshData()
       }}
       checked={item.active}
-                    />, container)
-  }
-}
+    />,
+    container
+  )
 
-const actionCellRenderer = (container, configuration, { item }) => {
-  const buttonWebElement = container.firstElementChild
-  if (buttonWebElement) {
-    buttonWebElement.disabled = item.active
-  } else {
-    // First render
-    ReactDOM.render(<VwcButton.CallToAction
+const actionCellRenderer = (container, configuration, { item }) =>
+  cellRendererFactory(
+    <VwcButton.CallToAction
       disabled={item.active}
       label='Run'
       onClick={() => alert('Run!')}
-                    />, container)
-  }
-}
+    />,
+    container
+  )
 
 const actionHeaderRenderer = (container, configuration) => {
   container.style.display = 'flex'
@@ -71,7 +62,7 @@ const actionHeaderRenderer = (container, configuration) => {
 }
 
 export const Default = () => {
-  const setDataGridRef = (gridElement) => {
+  const setDataGridRef = gridElement => {
     // Please refere to grid API at this document
     // https://vivid.vonage.com/?path=/story/components-beta-datagrid-introduction--introduction
     console.log(gridElement)

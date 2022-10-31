@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import VwcDataGrid from '../../dist/VwcDataGrid'
 import VwcSlider from '../../dist/VwcSlider'
 import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
@@ -12,6 +11,7 @@ import VwcSnackbar from '../../dist/VwcSnackbar'
 import VwcIconButton from '../../dist/VwcIconButton'
 
 import {
+  cellRendererFactory,
   vwcDataGridElementCellOverflowDecorator,
   vwcTooltipShowOnHoverDecorator
 } from '../../src'
@@ -31,19 +31,11 @@ export const VwcTooltipShowOnHover = () => (
   </>
 )
 
-const sliderCellRenderer = (container, { grid }, { item }) => {
-  const webElement = container.firstElementChild
-  if (webElement) {
-    // Re-use & direct update existing instance of web component
-    // during vertical scroll cellRenderer is reused in a name of performance
-  } else {
-    // First render
-    ReactDOM.render(
-      <VwcSlider pin step={1} value={5} min={1} max={10} />,
-      container
-    )
-  }
-}
+const sliderCellRenderer = (container, { grid }, { item }) =>
+  cellRendererFactory(
+    <VwcSlider pin step={1} value={5} min={1} max={10} />,
+    container
+  )
 
 const dataProvider = ({ page, pageSize }, callback) => {
   callback([{}], 1)

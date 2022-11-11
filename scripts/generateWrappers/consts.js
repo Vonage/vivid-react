@@ -78,8 +78,8 @@ const ComponentsEventsMap = {
   VwcSwitch: ['change'],
   VwcTab: [{ name: 'MDCTab:interacted', propName: 'onInteracted' }],
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }],
-  VwcTextfield: ['input', 'blur'],
-  VwcTextarea: ['input', 'blur']
+  VwcTextfield: ['input', 'blur', 'focus'],
+  VwcTextarea: ['input', 'blur', 'focus']
 }
 
 const ComponentsReadOnlyPropertiesMap = {

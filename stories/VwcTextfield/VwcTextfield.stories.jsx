@@ -1,26 +1,34 @@
 import React, { useState } from 'react'
-import VwcTextfield from '../../dist/VwcTextfield'
+import VwcTextfield from '../../dist/VwcTextfield/index'
 import { action } from '@storybook/addon-actions'
 
-export const Default = () => <VwcTextfield/>
+export const Default = () => (
+  <VwcTextfield
+    onBlur={x => console.log(x)}
+    onFocus={x => console.log(x)}
+    onInput={x => console.log(x)}
+  />
+)
 
 export const Validation = () => {
   const [errorMessage, setErrorMessage] = useState('')
 
-  return <VwcTextfield
-    style={{ width: '100%' }}
-    pattern='[a-zA-Z0-9 ]*'
-    required
-    validationMessage={errorMessage}
-    validityTransform={(newValue, nativeValidity) => {
-      action('validity')(newValue, nativeValidity)
-      if (nativeValidity.patternMismatch) {
-        setErrorMessage('You can only use letters and numbers')
-      } else if(nativeValidity.valueMissing) {
-        setErrorMessage('Field is required')
-      }
-    }}
-  />
+  return (
+    <VwcTextfield
+      style={{ width: '100%' }}
+      pattern='[a-zA-Z0-9 ]*'
+      required
+      validationMessage={errorMessage}
+      validityTransform={(newValue, nativeValidity) => {
+        action('validity')(newValue, nativeValidity)
+        if (nativeValidity.patternMismatch) {
+          setErrorMessage('You can only use letters and numbers')
+        } else if (nativeValidity.valueMissing) {
+          setErrorMessage('Field is required')
+        }
+      }}
+    />
+  )
 }
 
 export default {

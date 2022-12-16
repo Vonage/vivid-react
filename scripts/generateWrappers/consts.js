@@ -1,6 +1,8 @@
 const FileName = {
   packageJson: 'package.json',
   tempFolder: 'temp',
+  customElements: 'custom-elements.json',
+  vividApi: 'vivid.api.json',
   tempFileName: 'analyzerOutput.json',
   tempTsFolder: 'ts',
   tempVividZipball: 'vivid.zip',

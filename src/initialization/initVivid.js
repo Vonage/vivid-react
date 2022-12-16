@@ -15,6 +15,7 @@ import { init } from '@vonage/vvd-fonts'
 export const initVivid = (target, callback) => {
   if (target instanceof HTMLElement) {
     target.classList.add('vivid-scope')
+    target.classList.add('vvd-root')
     target = undefined
   }
   return Promise.all([

@@ -9,6 +9,8 @@ const TemplateToken = {
   EXPORTS: '<% exports %>',
   TAG: '<% tag %>',
   COMPONENT_CLASS_NAME: '<% component-class-name %>',
+  COMPONENT_NAME: '<% component-name %>',
+  COMPONENT_NAME_KEBAB: '<% component-name-kebab %>',
   PROP_TYPES: '<% prop-types %>',
   PROPS: '<% props %>',
   DEFAULT_PROPS: '<% default-props %>',

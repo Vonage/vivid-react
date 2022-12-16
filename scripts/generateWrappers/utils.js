@@ -20,6 +20,7 @@ const toCommaSeparatedList = collection => (collection || []).map(x => `'${strip
 const capitalize = input => input.replace(/(^|\s)[a-z]/g, s => s.toUpperCase())
 const deCapitalize = input => input.replace(/(^|\s)[A-Z]/g, s => s.toLowerCase())
 const getComponentName = tag => capitalize(kebab2Camel(tag.name))
+const camel2kebab = input => deCapitalize(input).replace(/([a-z])([A-Z])/g, "$1-$2").replace(/[\s_]+/g, '-').toLowerCase()
 const kebab2Camel = input => deCapitalize(input.split('-').map(x => capitalize(x)).join(''))
 const snake2Camel = input => deCapitalize(input.split('_').map(x => capitalize(x)).join(''))
 const event2PropName = eventName => `on${capitalize(kebab2Camel(snake2Camel(eventName)))}`
@@ -62,11 +63,11 @@ const getFirstFolderNameFromPath = path => readdirSync(path, { withFileTypes: tr
 const getProperties = tag => (tag.properties || [])
   .filter(prop => !(ComponentsReadOnlyPropertiesMap[getComponentName(tag)] || []).includes(prop.name)) // skip readonly properties
   .filter(prop => /'.*?'/.test(prop.name) ||
-/^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
+    /^([a-zA-Z_$][a-zA-Z\\d_$]*)$/.test(prop.name)) // only props having valid names
   .map(prop => {
     const isBindable = (ComponentsBindablePropertiesMap[getComponentName(tag)] || []).includes(prop.name) ||
-    prop.type?.indexOf('=>') > 0 || // property type is function
-    prop.type?.indexOf('[]') > 0 // property type is array
+      prop.type?.indexOf('=>') > 0 || // property type is function
+      prop.type?.indexOf('[]') > 0 // property type is array
     prop.bindable = isBindable
     return prop
   }).concat(ComponentsExtraPropertiesMap[getComponentName(tag)] || [])
@@ -80,6 +81,18 @@ const isFileExists = (fileName) => new Promise(
       : resolve(fileName)
   ))
 const filePath = (fileName) => join(process.cwd(), fileName)
+
+const readMetaData = () => new Promise(
+  (resolve) => {
+    const vividPackageFolder = join(process.cwd(), 'node_modules/@vonage/vivid')
+    const elementsMetaData = `${vividPackageFolder}/${FileName.customElements}`
+    const apiMetaData = `${vividPackageFolder}/${FileName.vividApi}`
+    const meta = {
+      api: getParsedJson(apiMetaData),
+      elements: getParsedJson(elementsMetaData)
+    }
+    resolve(meta)
+  })
 
 const getParsedJson = (jsonFilePath) => JSON.parse(readFileSync(jsonFilePath, { encoding: 'utf8' }))
 
@@ -210,6 +223,8 @@ module.exports = {
   getComponentNameFromPackage,
   getInputArgument,
   getUniqueEvents,
+  readMetaData,
+  camel2kebab,
   isFileExists,
   isVividPackageName,
   copyStaticAssets,

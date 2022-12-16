@@ -15,6 +15,7 @@ const {
   getComponentName,
   toJsonObjectsList,
   filePath,
+  camel2kebab,
   renderJsDoc,
   getIndexFileName,
   getProperties,
@@ -30,6 +31,12 @@ const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
 const generateTypings = outputDir => async tags => {
   const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
   await generateWrappers(distTs, OutputLanguage.TypeScript, false, false)(tags)
+  await compileTypescript(distTs)(outputDir)
+}
+
+const generateTypingsV3 = outputDir => async meta => {
+  const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
+  await generateWrappersV3(distTs, OutputLanguage.TypeScript, false, false)(meta)
   await compileTypescript(distTs)(outputDir)
 }
 
@@ -58,6 +65,9 @@ const renderComponent = tag => language => componentName => {
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }
 
+/**
+ * Generates Vivid 2.x wrappers
+ */
 const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (tags) => {
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
@@ -78,7 +88,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   }
 
   const getStoriesContent = (componentName, tag) =>
-    getTemplate('stories', 'js')
+    getTemplate('stories', OutputLanguage.JavaScript)
       .split(TemplateToken.COMPONENT_CLASS_NAME).join(componentName)
 
   prepareDir(outputDir, true, verbose)
@@ -93,7 +103,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
     tag.events = [...(tag.events || []), ...(ComponentsEventsMap[componentName] || [])]
 
     const componentOutputDir = join(process.cwd(), outputDir, componentName)
-    const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, componentName)
+    const storyOutputDir = join(process.cwd(), FileName.storyOutputDir, 'v2', componentName)
     const componentContent = renderComponent(tag)(language)(componentName)
 
     await saveIndex(componentOutputDir, componentContent)
@@ -125,6 +135,55 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   }
 }
 
+const renderComponentV3 = classDeclaration => language => componentClassName => {
+  const componentName = classDeclaration.name
+  const componentNameKebab = camel2kebab(componentName)
+  return getTemplate('react-component-v3', language)
+    .replace(TemplateToken.ATTRIBUTES, '')
+    .replace(TemplateToken.PROP_TYPES, '')
+    .replace(TemplateToken.PROPS, '')
+    .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(classDeclaration, null, ' '))
+    .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentClassName)
+    .replace(new RegExp(TemplateToken.COMPONENT_NAME, 'g'), componentName)
+    .replace(new RegExp(TemplateToken.COMPONENT_NAME_KEBAB, 'g'), componentNameKebab)
+    .replace(new RegExp(TemplateToken.EVENTS, 'g'), '')
+    .replace(new RegExp(TemplateToken.PROPERTIES, 'g'), '')
+}
+
+/**
+ * Generates Vivid 3.x wrappers
+ */
+const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (meta) => {
+  const indexFileName = getIndexFileName(language)
+  const saveIndex = (outputDir, content) => {
+    const indexOutputFileName = join(outputDir, indexFileName)
+    return outputFile(
+      indexOutputFileName,
+      content
+    )
+  }
+
+  const outDir = `${outputDir}/v3`
+
+  const classDeclarations = meta.elements.modules.reduce((acc, { declarations }) =>
+    [...acc, ...declarations.filter(({ kind }) => kind === 'class')]
+    , [])
+
+  for (const classDeclaration of classDeclarations) {
+    const componentName = `Vwc${classDeclaration.name}`
+    const componentOutputDir = join(process.cwd(), outDir, componentName)
+    const componentContent = renderComponentV3(classDeclaration)(language)(componentName)
+    await saveIndex(componentOutputDir, componentContent)
+  }
+
+  if (language === OutputLanguage.JavaScript) {
+    await generateTypingsV3(outputDir)(meta)
+  }
+
+  prepareDir(filePath(FileName.tempFolder), cleanTemp, verbose)
+}
+
 module.exports = {
-  generateWrappers
+  generateWrappers,
+  generateWrappersV3
 }

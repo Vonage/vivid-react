@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcTab from '../../dist/VwcTab'
+import VwcTab from '../../../dist/VwcTab'
 
 export const Default = () => <VwcTab />
 export default {

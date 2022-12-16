@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcIcon from '../../dist/VwcIcon'
+import VwcIcon from '../../../dist/VwcIcon'
 
 export const Default = () => <VwcIcon />
 export default {

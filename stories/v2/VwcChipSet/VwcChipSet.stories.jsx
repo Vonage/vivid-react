@@ -1,6 +1,6 @@
 import React from 'react'
-import VwcChipSet from '../../dist/VwcChipSet'
-import VwcChip from '../../dist/VwcChip'
+import VwcChipSet from '../../../dist/VwcChipSet'
+import VwcChip from '../../../dist/VwcChip'
 
 export const Default = (argTypes) =>
   <VwcChipSet {...argTypes}>

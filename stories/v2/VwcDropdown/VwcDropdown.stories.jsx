@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcDropdown from '../../dist/VwcDropdown'
+import VwcDropdown from '../../../dist/VwcDropdown'
 
 export const Default = () => <VwcDropdown />
 export default {

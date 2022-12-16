@@ -1,6 +1,6 @@
 import React from 'react'
-import VwcLayout from '../../dist/VwcLayout'
-import VwcCard from '../../dist/VwcCard'
+import VwcLayout from '../../../dist/VwcLayout'
+import VwcCard from '../../../dist/VwcCard'
 
 const testData = [
   'understand cognitive dangerous child consistent efficient temperature limit silver viewer ',

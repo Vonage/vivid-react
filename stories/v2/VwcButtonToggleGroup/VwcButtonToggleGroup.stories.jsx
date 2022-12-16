@@ -1,6 +1,6 @@
 import React from 'react'
-import VwcButtonToggleGroup from '../../dist/VwcButtonToggleGroup'
-import VwcButton from '../../dist/VwcButton'
+import VwcButtonToggleGroup from '../../../dist/VwcButtonToggleGroup'
+import VwcButton from '../../../dist/VwcButton'
 
 export const Default = () => {
   return (

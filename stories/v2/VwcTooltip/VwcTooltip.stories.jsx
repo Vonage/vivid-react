@@ -1,7 +1,7 @@
 import React from 'react'
-import VwcTooltip from '../../dist/VwcTooltip'
-import VwcButton from '../../dist/VwcButton'
-import { vwcTooltipShowOnHoverDecorator } from '../../src/patches/vwcTooltip'
+import VwcTooltip from '../../../dist/VwcTooltip'
+import VwcButton from '../../../dist/VwcButton'
+import { vwcTooltipShowOnHoverDecorator } from '../../../src/patches/vwcTooltip'
 
 export const Default = () => {
   return (

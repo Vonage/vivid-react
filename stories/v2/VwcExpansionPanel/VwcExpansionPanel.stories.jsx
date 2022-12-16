@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcExpansionPanel from '../../dist/VwcExpansionPanel'
+import VwcExpansionPanel from '../../../dist/VwcExpansionPanel'
 
 export const Default = () => <VwcExpansionPanel />
 export default {

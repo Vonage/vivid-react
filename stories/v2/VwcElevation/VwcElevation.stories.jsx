@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcElevation from '../../dist/VwcElevation'
+import VwcElevation from '../../../dist/VwcElevation'
 
 export const Default = () => <VwcElevation />
 export default {

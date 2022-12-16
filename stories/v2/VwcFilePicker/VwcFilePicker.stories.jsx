@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcFilePicker from '../../dist/VwcFilePicker'
+import VwcFilePicker from '../../../dist/VwcFilePicker'
 
 export const Default = () => <VwcFilePicker />
 export default {

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcThemeSwitch from '../../dist/VwcThemeSwitch'
+import VwcThemeSwitch from '../../../dist/VwcThemeSwitch'
 
 export const Default = () => <VwcThemeSwitch />
 export default {

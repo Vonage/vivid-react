@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcEmptyState from '../../dist/VwcEmptyState'
+import VwcEmptyState from '../../../dist/VwcEmptyState'
 
 export const Default = () => <VwcEmptyState body="body" icon="chat-line" heading="heading" />
 export default {

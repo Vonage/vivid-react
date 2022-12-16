@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSideDrawer from '../../dist/VwcSideDrawer'
+import VwcSideDrawer from '../../../dist/VwcSideDrawer'
 
 export const Default = () => <VwcSideDrawer />
 export default {

@@ -1,6 +1,6 @@
 import React from 'react'
-import VwcCheckListItem from '../../dist/VwcCheckListItem'
-import VwcList from '../../dist/VwcList'
+import VwcCheckListItem from '../../../dist/VwcCheckListItem'
+import VwcList from '../../../dist/VwcList'
 
 export const Default = () => (
   <VwcList>

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcCarouselItem from '../../dist/VwcCarouselItem'
+import VwcCarouselItem from '../../../dist/VwcCarouselItem'
 
 export const Default = () => <VwcCarouselItem />
 export default {

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcButton from '../../dist/VwcButton'
+import VwcButton from '../../../dist/VwcButton'
 
 export const Default = () => <VwcButton />
 export default {

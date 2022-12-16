@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSlider from '../../dist/VwcSlider'
+import VwcSlider from '../../../dist/VwcSlider'
 
 export const Default = () => <VwcSlider />
 export default {

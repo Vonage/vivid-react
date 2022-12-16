@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcRadio from '../../dist/VwcRadio'
+import VwcRadio from '../../../dist/VwcRadio'
 
 export const Default = () => <VwcRadio />
 export default {

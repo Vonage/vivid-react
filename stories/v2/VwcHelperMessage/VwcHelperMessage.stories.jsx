@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcHelperMessage from '../../dist/VwcHelperMessage'
+import VwcHelperMessage from '../../../dist/VwcHelperMessage'
 
 export const Default = () => <VwcHelperMessage />
 export default {

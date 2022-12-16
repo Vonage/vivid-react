@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcNotchedOutline from '../../dist/VwcNotchedOutline'
+import VwcNotchedOutline from '../../../dist/VwcNotchedOutline'
 
 export const Default = () => <VwcNotchedOutline />
 export default {

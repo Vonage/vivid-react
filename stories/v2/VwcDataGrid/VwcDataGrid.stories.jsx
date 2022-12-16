@@ -1,9 +1,9 @@
 import React from 'react'
-import VwcSwitch from '../../dist/VwcSwitch'
-import VwcButton from '../../dist/VwcButton'
-import VwcDataGrid from '../../dist/VwcDataGrid'
-import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
-import { cellRendererFactory } from '../../src/dataGrid'
+import VwcSwitch from '../../../dist/VwcSwitch'
+import VwcButton from '../../../dist/VwcButton'
+import VwcDataGrid from '../../../dist/VwcDataGrid'
+import VwcDataGridColumn from '../../../dist/VwcDataGridColumn'
+import { cellRendererFactory } from '../../../src/dataGrid'
 
 const sequentalData = (rowBlueprint, totalRows) => {
   const result = new Array(totalRows)

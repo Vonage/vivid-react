@@ -1,7 +1,7 @@
 import React from 'react'
-import VwcMenu from '../../dist/VwcMenu'
-import VwcButton from '../../dist/VwcButton'
-import VwcListItem from '../../dist/VwcListItem'
+import VwcMenu from '../../../dist/VwcMenu'
+import VwcButton from '../../../dist/VwcButton'
+import VwcListItem from '../../../dist/VwcListItem'
 
 function anchorClickHandler () {
   const anchor = document.querySelector('#button')

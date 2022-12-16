@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcCalendarEvent from '../../dist/VwcCalendarEvent'
+import VwcCalendarEvent from '../../../dist/VwcCalendarEvent'
 
 export const Default = () => <VwcCalendarEvent />
 export default {

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSelect from '../../dist/VwcSelect'
+import VwcSelect from '../../../dist/VwcSelect'
 
 export const Default = () => <VwcSelect />
 export default {

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcLinearProgress from '../../dist/VwcLinearProgress'
+import VwcLinearProgress from '../../../dist/VwcLinearProgress'
 
 export const Default = () => <VwcLinearProgress />
 export default {

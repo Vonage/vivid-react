@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcCircularProgress from '../../dist/VwcCircularProgress'
+import VwcCircularProgress from '../../../dist/VwcCircularProgress'
 
 export const Default = () => <VwcCircularProgress />
 export default {

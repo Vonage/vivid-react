@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcBanner from '../../dist/VwcBanner'
+import VwcBanner from '../../../dist/VwcBanner'
 
 export const Default = () => <VwcBanner />
 export default {

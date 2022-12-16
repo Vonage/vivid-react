@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcFormfield from '../../dist/VwcFormfield'
+import VwcFormfield from '../../../dist/VwcFormfield'
 
 export const Default = () => <VwcFormfield />
 export default {

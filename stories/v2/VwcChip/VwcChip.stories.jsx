@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcChip from '../../dist/VwcChip'
+import VwcChip from '../../../dist/VwcChip'
 
 export const Default = () => <VwcChip />
 export default {

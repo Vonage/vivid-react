@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSwitch from '../../dist/VwcSwitch'
+import VwcSwitch from '../../../dist/VwcSwitch'
 
 export const Default = () => <VwcSwitch />
 export default {

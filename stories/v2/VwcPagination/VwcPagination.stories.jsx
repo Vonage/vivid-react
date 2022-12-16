@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcPagination from '../../dist/VwcPagination'
+import VwcPagination from '../../../dist/VwcPagination'
 
 export const Default = () => <VwcPagination />
 export default {

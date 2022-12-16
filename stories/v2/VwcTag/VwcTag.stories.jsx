@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcTag from '../../dist/VwcTag'
+import VwcTag from '../../../dist/VwcTag'
 
 export const Default = () => <VwcTag />
 export default {

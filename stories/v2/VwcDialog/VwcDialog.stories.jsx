@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcDialog from '../../dist/VwcDialog'
+import VwcDialog from '../../../dist/VwcDialog'
 
 export const Default = () => <VwcDialog />
 export default {

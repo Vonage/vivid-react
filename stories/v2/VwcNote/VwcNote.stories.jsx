@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcNote from '../../dist/VwcNote'
+import VwcNote from '../../../dist/VwcNote'
 
 export const Default = () => <VwcNote />
 export default {

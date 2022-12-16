@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSurface from '../../dist/VwcSurface'
+import VwcSurface from '../../../dist/VwcSurface'
 
 export const Default = () => <VwcSurface />
 export default {

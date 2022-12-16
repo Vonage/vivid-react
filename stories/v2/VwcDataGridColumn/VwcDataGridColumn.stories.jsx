@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcDataGridColumn from '../../dist/VwcDataGridColumn'
+import VwcDataGridColumn from '../../../dist/VwcDataGridColumn'
 
 export const Default = () => <VwcDataGridColumn />
 export default {

@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcKeypad from '../../dist/VwcKeypad'
+import VwcKeypad from '../../../dist/VwcKeypad'
 
 export const Default = () => <VwcKeypad />
 export default {

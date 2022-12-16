@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import VwcTextfield from '../../dist/VwcTextfield/index'
+import VwcTextfield from '../../../dist/VwcTextfield/index'
 import { action } from '@storybook/addon-actions'
 
 export const Default = () => (

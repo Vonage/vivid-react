@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcActionGroup from '../../dist/VwcActionGroup'
+import VwcActionGroup from '../../../dist/VwcActionGroup'
 
 export const Default = () => <VwcActionGroup />
 export default {

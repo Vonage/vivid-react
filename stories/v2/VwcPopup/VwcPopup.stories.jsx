@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcPopup from '../../dist/VwcPopup'
+import VwcPopup from '../../../dist/VwcPopup'
 
 export const Default = () => <VwcPopup />
 export default {

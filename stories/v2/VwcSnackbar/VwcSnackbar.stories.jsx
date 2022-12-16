@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcSnackbar from '../../dist/VwcSnackbar'
+import VwcSnackbar from '../../../dist/VwcSnackbar'
 
 export const Default = () => <VwcSnackbar />
 export default {

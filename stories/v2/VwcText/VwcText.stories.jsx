@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcText from '../../dist/VwcText'
+import VwcText from '../../../dist/VwcText'
 
 export const Default = () => <VwcText />
 export default {

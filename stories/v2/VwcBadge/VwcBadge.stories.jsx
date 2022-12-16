@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcBadge from '../../dist/VwcBadge'
+import VwcBadge from '../../../dist/VwcBadge'
 
 export const Default = () => <VwcBadge />
 export default {

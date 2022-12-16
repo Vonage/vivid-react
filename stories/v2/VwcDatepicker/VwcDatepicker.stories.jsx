@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcDatepicker from '../../dist/VwcDatepicker'
+import VwcDatepicker from '../../../dist/VwcDatepicker'
 
 export const Default = () => <VwcDatepicker />
 export default {

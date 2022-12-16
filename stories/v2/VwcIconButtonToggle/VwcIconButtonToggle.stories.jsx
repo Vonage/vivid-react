@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcIconButtonToggle from '../../dist/VwcIconButtonToggle'
+import VwcIconButtonToggle from '../../../dist/VwcIconButtonToggle'
 
 export const Default = () => <VwcIconButtonToggle />
 export default {

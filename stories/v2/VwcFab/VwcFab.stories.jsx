@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcFab from '../../dist/VwcFab'
+import VwcFab from '../../../dist/VwcFab'
 
 export const Default = () => <VwcFab />
 export default {

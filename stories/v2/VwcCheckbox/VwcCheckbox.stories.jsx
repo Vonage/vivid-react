@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcCheckbox from '../../dist/VwcCheckbox'
+import VwcCheckbox from '../../../dist/VwcCheckbox'
 
 export const Default = () => <VwcCheckbox />
 export default {

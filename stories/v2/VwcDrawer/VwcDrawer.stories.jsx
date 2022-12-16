@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcDrawer from '../../dist/VwcDrawer'
+import VwcDrawer from '../../../dist/VwcDrawer'
 
 export const Default = () => <VwcDrawer />
 export default {

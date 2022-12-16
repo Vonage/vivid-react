@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcTextarea from '../../dist/VwcTextarea'
+import VwcTextarea from '../../../dist/VwcTextarea'
 
 export const Default = () => (
   <VwcTextarea

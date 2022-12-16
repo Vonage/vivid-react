@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import VwcTabBar from '../../dist/VwcTabBar'
-import VwcTab from '../../dist/VwcTab'
+import VwcTabBar from '../../../dist/VwcTabBar'
+import VwcTab from '../../../dist/VwcTab'
 
 export const Default = () => <VwcTabBar/>
 

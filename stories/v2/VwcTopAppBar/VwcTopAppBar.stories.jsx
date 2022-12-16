@@ -1,5 +1,5 @@
 import React from 'react'
-import VwcTopAppBar from '../../dist/VwcTopAppBar'
+import VwcTopAppBar from '../../../dist/VwcTopAppBar'
 
 export const Default = () => <VwcTopAppBar />
 export default {

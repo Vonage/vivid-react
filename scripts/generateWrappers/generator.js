@@ -174,6 +174,10 @@ const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cle
     const componentOutputDir = join(process.cwd(), outDir, componentName)
     const componentContent = renderComponentV3(classDeclaration)(language)(componentName)
     await saveIndex(componentOutputDir, componentContent)
+
+    if (verbose) {
+      console.info(`${componentName}... v3`)
+    }
   }
 
   if (language === OutputLanguage.JavaScript) {

@@ -1,12 +1,9 @@
 const { join, parse } = require('path')
 const { flowRight, map, replace, reverse, startCase, uniqBy } = require('lodash/fp')
-const { access, F_OK, readFileSync, readdirSync, existsSync, rmSync, createWriteStream } = require('fs')
+const { access, F_OK, readFileSync, existsSync, rmSync } = require('fs')
 const mkdirp = require('mkdirp')
-const os = require('os')
 const { spawnSync } = require('child_process')
 const { WCAConfig, VividRepo, FileName, OutputLanguage, ComponentsBindablePropertiesMap, ComponentsReadOnlyPropertiesMap, ComponentsExtraPropertiesMap } = require('./consts')
-const { Octokit } = require('@octokit/core')
-const extract = require('extract-zip')
 const { copySync } = require('fs-extra')
 
 const renderPropertyJsDoc = tag => property => `* @param ${property.type ? `{${property.type}}` : ''} ${property.name} ${property.description ? `- ${property.description}` : ''} ${property.attribute ? `attribute: &lt;${getComponentName(tag)} ${property.attribute} />` : ''}`
@@ -14,7 +11,6 @@ const renderTagPropertiesJsDoc = tag => getProperties(tag).map(renderPropertyJsD
 const renderJsDoc = tag => `/** ${tag.description || ''} \n${renderTagPropertiesJsDoc(tag)}\n*/`
 const stripQuotes = input => input.replace(/'/g, '')
 const unique = stringArray => Array.from(new Set(stringArray))
-const getGithubToken = () => process.env.GITHUB_ACCESS_TOKEN || process.env.GITHUB_TOKEN
 const toJsonObjectsList = collection => (collection || []).map(JSON.stringify).join(',')
 const toCommaSeparatedList = collection => (collection || []).map(x => `'${stripQuotes(x.name)}'`).join(',')
 const capitalize = input => input.replace(/(^|\s)[a-z]/g, s => s.toUpperCase())
@@ -33,7 +29,6 @@ const getUniqueEvents = flowRight(
   reverse,
   map(event2EventDescriptor)
 )
-const getFileNameFromDispositionHeader = input => /filename=(.*$)/.exec(input)[1]
 const isVividPackageName = (packageName) => /@vonage\/vwc-*/.test(packageName)
 const getIndexFileName = language => `index.${language === OutputLanguage.TypeScript ? 'tsx' : language}`
 const getVividPackageName = componentPath => {
@@ -49,7 +44,6 @@ const getVividPackageName = componentPath => {
   const pkg = getParsedJson(packageJson)
   return pkg.name
 }
-const getYarnCommand = () => `yarn${os.platform() === 'win32' ? '.cmd' : ''}`
 const prepareDir = (p, clean = true, verbose = true) => {
   if (clean && existsSync(p)) {
     if (verbose) {
@@ -59,7 +53,6 @@ const prepareDir = (p, clean = true, verbose = true) => {
   }
   mkdirp.sync(p)
 }
-const getFirstFolderNameFromPath = path => readdirSync(path, { withFileTypes: true }).find(x => x.isDirectory()).name
 const getProperties = tag => (tag.properties || [])
   .filter(prop => !(ComponentsReadOnlyPropertiesMap[getComponentName(tag)] || []).includes(prop.name)) // skip readonly properties
   .filter(prop => /'.*?'/.test(prop.name) ||
@@ -155,42 +148,6 @@ const getInputArgument = (argumentName, defaultValue = null) => {
   return targetArgument ? targetArgument.value : defaultValue
 }
 
-const getVividLatestRelease = async (config = { tempFolder: FileName.tempFolder, tempFileName: FileName.tempVividZipball }) => {
-  const outFolder = filePath(config.tempFolder)
-  prepareDir(outFolder, false)
-  console.log('Fetching latest Vivid release artifact...')
-  if (!getGithubToken()) {
-    console.warn('It seems GITHUB_ACCESS_TOKEN or GITHUB_TOKEN environment variable is not defined.')
-    return
-  }
-  const octokit = new Octokit({ auth: getGithubToken() })
-  const result = await octokit.request(`GET /repos/${VividRepo}/zipball`)
-  if (result.status === 200) {
-    const filename = getFileNameFromDispositionHeader(result.headers['content-disposition'])
-    console.info(`Got zipball ${filename}`)
-    return new Promise((resolve, reject) => {
-      const vividZipFileName = join(outFolder, config.tempFileName)
-      const vividZipStream = createWriteStream(vividZipFileName)
-      vividZipStream.write(Buffer.from(result.data), async () => {
-        try {
-          await extract(vividZipFileName, { dir: outFolder })
-        } catch (err) {
-          console.error(err)
-          reject(err)
-        }
-        const vividFolder = join(outFolder, getFirstFolderNameFromPath(outFolder))
-        console.log(`Installing Vivid packages at: ${vividFolder}...`)
-        const child = spawnSync(getYarnCommand(), [], { cwd: vividFolder, stdio: 'ignore' })
-        if (child.status === 0) {
-          console.log('Analyzing Vivid elements...')
-          resolve(`${vividFolder}/**/components/**`)
-        }
-        resolve()
-      })
-    })
-  }
-}
-
 const getComponentNameFromPackage = flowRight(
   replace(/\s/g, ''),
   startCase,
@@ -234,7 +191,6 @@ module.exports = {
   getParsedJson,
   getVividPackageName,
   getVividPackageNames,
-  getVividLatestRelease,
   getCustomElementTagsDefinitionsList,
   prepareCompoundComponents,
   compoundComponentTemplate

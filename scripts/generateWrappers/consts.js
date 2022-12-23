@@ -35,24 +35,11 @@ const WCAConfig = {
   ]
 }
 
-const WCAConfigAll = {
-  tempFolder: FileName.tempFolder,
-  tempFileName: FileName.tempFileName,
-  nodeArgumentsFactory: (targetFolder, analyzerOutputFile) => [
-    './node_modules/web-component-analyzer/cli.js',
-    'analyze',
-    `${targetFolder}/{src/,}*.?s`,
-    '--format', 'json',
-    '--outFile', analyzerOutputFile
-  ]
-}
-
 const CLIArgument = {
   Assets: 'assets', // static assets to be copied to output folder
   Output: 'output', // output folder
   Language: 'language', // language js,ts
-  CleanTemp: 'clean', // clean up temp folder after CLI run
-  All: 'all' // ignore local package.json and produce wrappers for *all* Vivid components
+  CleanTemp: 'clean' // clean up temp folder after CLI run
 }
 
 const OutputLanguage = {
@@ -221,7 +208,6 @@ module.exports = {
   Assets,
   OutputLanguage,
   WCAConfig,
-  WCAConfigAll,
   CLIArgument,
   VividRepo
 }

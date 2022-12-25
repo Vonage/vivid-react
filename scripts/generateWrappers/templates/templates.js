@@ -10,7 +10,7 @@ const TemplateToken = {
   TAG: '<% tag %>',
   COMPONENT_CLASS_NAME: '<% component-class-name %>',
   COMPONENT_NAME: '<% component-name %>',
-  COMPONENT_NAME_KEBAB: '<% component-name-kebab %>',
+  TAG_PREFIX: '<% tag-prefix %>',
   PROP_TYPES: '<% prop-types %>',
   PROPS: '<% props %>',
   DEFAULT_PROPS: '<% default-props %>',

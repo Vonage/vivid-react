@@ -1,17 +1,18 @@
 import React from 'react'
 import VwcBadge from '../../dist/v3/VwcBadge'
+import VwcButton from '../../dist/v3/VwcButton'
 import '@vonage/vivid/styles/fonts/spezia.css'
 import '@vonage/vivid/styles/tokens/theme-light.css'
 
-
-export const Default = () =>
+export const VwcBadge_ = () =>
   <div class="vvd-root">
-    <VwcBadge>Badge</VwcBadge>
+    <VwcBadge connotation={'alert'} text={'Badge'} />
+    <VwcButton connotation={'info'} label='Button' onClick={(e) => console.log(e)} ></VwcButton>
 
   </div>
 
 export default {
-  title: 'V3/VwcBadge',
+  title: 'V3',
   argTypes: {
     //
     // Example values

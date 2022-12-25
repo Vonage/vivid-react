@@ -2,6 +2,7 @@ const packageJson = require('../../package.json')
 const { getImportsFromTag } = require('./helpers/generator')
 const {
   ComponentsEventsMap,
+  ComponentsEventsMapV3,
   CompoundComponentsMap,
   OutputLanguage,
   FileName
@@ -16,6 +17,7 @@ const {
   toJsonObjectsList,
   filePath,
   camel2kebab,
+  event2PropName,
   renderJsDoc,
   getIndexFileName,
   getProperties,
@@ -26,7 +28,7 @@ const {
 } = require('./utils')
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
-const { getPropTypes, getDefaultProps, getProps } = require('./prop.types')
+const { getPropTypes, getDefaultProps, getProps, mapType } = require('./prop.types')
 
 const generateTypings = outputDir => async tags => {
   const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
@@ -135,25 +137,40 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   }
 }
 
-const renderComponentV3 = classDeclaration => language => componentClassName => {
+const renderComponentV3 = prefix => classDeclaration => language => componentClassName => {
+  const componentPrefix = prefix
   const componentName = classDeclaration.name
-  const componentNameKebab = camel2kebab(componentName)
+  const componentTagName = `${componentPrefix}-${camel2kebab(componentName)}`
+  const events = [...(classDeclaration.events?.map(({ name }) => name) || []), ...(ComponentsEventsMapV3[componentClassName] || [])]
+  const properties = classDeclaration.members?.filter(({ privacy = 'public', kind, readonly }) => kind === 'field' && privacy === 'public' && readonly !== true) || []
+  const attributes = classDeclaration.attributes?.filter(({ fieldName }) => properties.find(({ name }) => fieldName === name)) || []
+  const propertyNames = properties.map(({ name }) => `'${name}'`)
+  const props = [
+    ...(events.map(x => x.propName || event2PropName(x.name || x)).map(x => `  ${x}?: (event: SyntheticEvent) => void`)),
+    ...(properties.map(({ name, type }) => `  ${name}?: ${mapType(type?.text)}`))
+  ]
+  const renderPropertyJsDoc = ({ type, name, attribute = null, description }) => `* @param ${type?.text ? `{${type?.text}}` : ''} ${name} ${description ? `- ${description}` : ''} ${attribute ? `**attribute** \`${attribute.name || attribute.fieldName}\`` : ''}`
+  const jsDoc = `/** ${classDeclaration.description || componentClassName} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
+
   return getTemplate('react-component-v3', language)
+    .replace(TemplateToken.CLASS_JSDOC, jsDoc)
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, '')
-    .replace(TemplateToken.PROPS, '')
+    .replace(TemplateToken.PROPS, props.join(',\n'))
     .replace(TemplateToken.TAG_DESCRIPTOR_JSON, JSON.stringify(classDeclaration, null, ' '))
     .replace(new RegExp(TemplateToken.COMPONENT_CLASS_NAME, 'g'), componentClassName)
+    .replace(new RegExp(TemplateToken.TAG_PREFIX, 'g'), componentPrefix)
     .replace(new RegExp(TemplateToken.COMPONENT_NAME, 'g'), componentName)
-    .replace(new RegExp(TemplateToken.COMPONENT_NAME_KEBAB, 'g'), componentNameKebab)
-    .replace(new RegExp(TemplateToken.EVENTS, 'g'), '')
-    .replace(new RegExp(TemplateToken.PROPERTIES, 'g'), '')
+    .replace(new RegExp(TemplateToken.TAG, 'g'), componentTagName)
+    .replace(new RegExp(TemplateToken.EVENTS, 'g'), toJsonObjectsList(getUniqueEvents(events)))
+    .replace(new RegExp(TemplateToken.PROPERTIES, 'g'), propertyNames.join(', '))
 }
 
 /**
  * Generates Vivid 3.x wrappers
  */
 const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (meta) => {
+  const componentPrefix = 'xxx'
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)
@@ -171,9 +188,24 @@ const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cle
 
   for (const classDeclaration of classDeclarations) {
     const componentName = `Vwc${classDeclaration.name}`
+    const componentNameKebab = camel2kebab(classDeclaration.name)
     const componentOutputDir = join(process.cwd(), outDir, componentName)
-    const componentContent = renderComponentV3(classDeclaration)(language)(componentName)
+    const componentContent = renderComponentV3(componentPrefix)(classDeclaration)(language)(componentName)
     await saveIndex(componentOutputDir, componentContent)
+
+    const packageName = '@vonage/vivid'
+    const packageJsonContent = {
+      name: `@vonage/vivid-react-${componentPrefix}-${componentNameKebab}`,
+      version: packageJson.dependencies[packageName],
+      main: indexFileName,
+      types: 'index.d.ts',
+      private: true,
+      license: 'MIT',
+      dependencies: {
+        [packageName]: packageJson.dependencies[packageName]
+      }
+    }
+    await outputJson(join(componentOutputDir, FileName.packageJson), packageJsonContent, { spaces: 2 })
 
     if (verbose) {
       console.info(`${componentName}... v3`)

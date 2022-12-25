@@ -71,6 +71,10 @@ const ComponentsEventsMap = {
   VwcTextarea: ['input', 'blur', 'focus']
 }
 
+const ComponentsEventsMapV3 = {
+  VwcButton: ['click']
+}
+
 const ComponentsReadOnlyPropertiesMap = {
   VwcAccordion: ['styles'],
   VwcActionGroup: ['styles'],
@@ -200,6 +204,7 @@ const CompoundComponentsMap = {
 
 module.exports = {
   ComponentsEventsMap,
+  ComponentsEventsMapV3,
   ComponentsReadOnlyPropertiesMap,
   ComponentsBindablePropertiesMap,
   ComponentsExtraPropertiesMap,

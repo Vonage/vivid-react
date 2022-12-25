@@ -10,29 +10,29 @@ const isArray = type => /(.*)\[\]$/gm.test(type) || type === 'array'
 const isNumber = type => /(integer)/.test(type) || type === 'number | null'
 
 // TypeScript
+const mapType = type => ([
+  'boolean',
+  'Boolean',
+  'string',
+  'string | null',
+  'string | undefined',
+  'string | number',
+  'number',
+  'unknown'].indexOf(type) >= 0 ||
+isTypeSet(type))
+  ? type
+  : isBoolean(type)
+    ? 'boolean'
+    : isNumber(type)
+      ? 'number'
+      : isArray(type)
+          ? 'any[]'
+          : `any /* ${type} */`
 
 const getProps = tag => {
   const eventsProps = getEvents(tag).map(x => `  ${x}?: (event: SyntheticEvent) => void`)
 
   const properties = getProperties(tag)
-  const mapType = type => ([
-    'boolean',
-    'Boolean',
-    'string',
-    'string | null',
-    'string | undefined',
-    'string | number',
-    'number',
-    'unknown'].indexOf(type) >= 0 ||
-  isTypeSet(type))
-    ? type
-    : isBoolean(type)
-      ? 'boolean'
-      : isNumber(type)
-        ? 'number'
-        : isArray(type)
-            ? 'any[]'
-            : `any /* ${type} */`
   const props = properties.map(x => `  ${x.name}?: ${mapType(x.type)}`)
 
   return [
@@ -82,5 +82,6 @@ module.exports = {
   getPropTypes,
 
   // TypeScript
-  getProps
+  getProps,
+  mapType
 }

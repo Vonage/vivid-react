@@ -7,16 +7,15 @@ import React, { ReactNode, SyntheticEvent, ForwardRefExoticComponent } from 'rea
 import wrapper from '@vonage/vivid-react-wrapper'
 import { register<% component-name %> } from '@vonage/vivid'
 
-const prefix = 'xxx'
+register<% component-name %>('<% tag-prefix %>')
 
-register<% component-name %>(prefix)
-
-const WrappedComponent = wrapper(`${prefix}-<% component-name-kebab %>`,  {
+const WrappedComponent = wrapper(`<% tag %>`,  {
     events: [<% events %>],
     attributes: [<% attributes %>],
     properties: [<% properties %>]
 }) as ForwardRefExoticComponent<any>;
 
+<% jsdoc.class %>
 const <% component-class-name %> = (props:
 {
   children?: ReactNode,

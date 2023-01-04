@@ -170,7 +170,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
  * Generates Vivid 3.x wrappers
  */
 const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (meta) => {
-  const componentPrefix = 'xxx'
+  const componentPrefix = 'vvd'
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)

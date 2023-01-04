@@ -2625,6 +2625,11 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
+"@oddbird/popover-polyfill@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@oddbird/popover-polyfill/-/popover-polyfill-0.0.4.tgz#ea8ba8d0d2d1ebd4ccfa703aaff46983651c89ce"
+  integrity sha512-GhZqDTzoHWI76hMYAMkfn/GW6opyqC2rzFGRMGkaWyLgeP5zspX4dKPxc3tVDKG/WU9xhdcHXuIIRohXh0YqyQ==
+
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.10"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.10.tgz#2eba163b8e7dbabb4ce3609ab5e32ab63dda3ef8"
@@ -3976,15 +3981,16 @@
   resolved "https://npm.pkg.github.com/download/@Vonage/vivid-react-wrapper/1.2.3/5be2a71bcd287005a32fcfb5a423a40843409612#5be2a71bcd287005a32fcfb5a423a40843409612"
   integrity sha512-Jblq7TptVBnijMvHaw23twq0pILQYwx8Q5bLKJ4Uo09QEhVQRsmNW0zEWJ4Zp1S49Ee1kvfsv5sMnkBGufNVuQ==
 
-"@vonage/vivid@3.0.0-next.123":
-  version "3.0.0-next.123"
-  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.0.0-next.123.tgz#ff850f327affa4756fb5aaadc73e0b501ca7080f"
-  integrity sha512-h2dqJR6+oB9ol3uZ5hiHWozB3GM+bOxDFlR0Nn9DuCnCdzTffLkB5DqUJJutHHe9QIEuGCUJ+F5Bt6dKIg48XA==
+"@vonage/vivid@3.0.0-next.129":
+  version "3.0.0-next.129"
+  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.0.0-next.129.tgz#d037e2283934e0e320a5c6fa3e0c14713929ae5f"
+  integrity sha512-rGpBV7ro1lFYvojy0Kh2PchZgRmTglZakbXnjsW92gDt//KdTUtlRMRPL7KJtzD9YtK/hIxcA4P0nT6BUwIjGw==
   dependencies:
     "@floating-ui/dom" "0.5.4"
     "@microsoft/fast-element" "1.11.0"
     "@microsoft/fast-foundation" "2.47.0"
     "@microsoft/fast-web-utilities" "5.4.1"
+    "@oddbird/popover-polyfill" "0.0.4"
     dialog-polyfill "0.5.6"
     ramda "0.27.2"
     rollup-plugin-postcss "4.0.2"

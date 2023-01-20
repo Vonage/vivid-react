@@ -21,7 +21,7 @@ isFileExists(FileName.packageJson)
   .then(getVividPackageNames)
   .then(getCustomElementTagsDefinitionsList())
   .then(generateWrappers(outputDir, language, cleanTemp))
-  .then(copyStaticAssets(outputDir, staticAssets))
   .then(() => readMetaData() // generate wrappers for Vivid 3.x
     .then(generateWrappersV3(outputDir, language, cleanTemp)))
+  .then(copyStaticAssets(outputDir, staticAssets))
 

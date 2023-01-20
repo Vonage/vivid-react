@@ -212,6 +212,23 @@ const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cle
     }
   }
 
+  if (language === OutputLanguage.TypeScript) {
+    const typesDir = filePath(FileName.types)
+    prepareDir(typesDir)
+    await outputFile(
+      join(typesDir, `index.d.ts`),
+      getTemplate('types', OutputLanguage.TypeScript)
+        .replace(TemplateToken.ELEMENT_TYPES,
+          classDeclarations.map(({ attributes, name }) => {
+            const componentTagName = `${componentPrefix}-${camel2kebab(name)}`
+            return getTemplate('element-type', OutputLanguage.TypeScript)
+              .replace(TemplateToken.TAG, componentTagName)
+              .replace(TemplateToken.ATTRIBUTES, (attributes || []).map(({ name, fieldName, type = { text: 'string' } }) => `            "${name || fieldName}": ${type.text};`).join('\n'))
+          }).join('\n')
+        )
+    )
+  }
+
   if (language === OutputLanguage.JavaScript) {
     await generateTypingsV3(outputDir)(meta)
   }

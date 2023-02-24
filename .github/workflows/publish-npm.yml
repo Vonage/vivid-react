@@ -1,0 +1,25 @@
+name: publish to npmjs.com
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+        with:
+          node-version: 18
+
+      - name: Build & Test
+        run: |
+          npm install
+          npm run build
+      - name: Publish to >> npmjs.com
+        run: |
+          echo registry=https://registry.npmjs.org/ > .npmrc
+          echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
+          npm publish --access public
+        env:
+          TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year

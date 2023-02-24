@@ -11,9 +11,8 @@ jobs:
       - uses: actions/setup-node@main
         with:
           node-version: 18
-      - name: Set Release Version
-        id: get_version
-        uses: battila7/get-version-action@v2
+      - name: Fetch package version
+        run: node -p -e '`RELEASE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
       - name: Install dependencies
         run: |
           npm install -g yarn
@@ -31,4 +30,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year
-          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}

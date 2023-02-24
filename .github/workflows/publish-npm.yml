@@ -23,10 +23,10 @@ jobs:
 
       - name: Publish to >> npmjs.com
         run: |
-          cd dist
+          rm .npmrc
           echo registry=https://registry.npmjs.org/ > .npmrc
           echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
+          cd dist
           yarn publish --new-version ${RELEASE_VERSION}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year

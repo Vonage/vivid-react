@@ -18,6 +18,7 @@ jobs:
           npm run build
       - name: Publish to >> npmjs.com
         run: |
+          cd dist
           echo registry=https://registry.npmjs.org/ > .npmrc
           echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
           npm publish --access public

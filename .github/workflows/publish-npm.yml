@@ -11,16 +11,23 @@ jobs:
       - uses: actions/setup-node@main
         with:
           node-version: 18
-
-      - name: Build & Test
+      - name: Set Release Version
+        id: get_version
+        uses: battila7/get-version-action@v2
+      - name: Install dependencies
         run: |
-          npm install
-          npm run build
+          npm install -g yarn
+          yarn
+          yarn build
+        env:
+          GITHUB_TOKEN: ${{ secrets.CI_AT }}
+
       - name: Publish to >> npmjs.com
         run: |
           cd dist
           echo registry=https://registry.npmjs.org/ > .npmrc
           echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
-          npm publish --access public
+          yarn publish --new-version ${RELEASE_VERSION}
         env:
           TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year
+          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}

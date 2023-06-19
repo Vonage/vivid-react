@@ -61,6 +61,7 @@ const ComponentsEventsMap = {
   VwcListExpansionPanel: ['closed', 'opened'],
   VwcListItem: ['click', { name: 'request-selected', propName: 'onRequestSelected' }],
   VwcCheckListItem: [{ name: 'request-selected', propName: 'onRequestSelected' }],
+  VwcPagination: ['change'],
   VwcRadio: ['change'],
   VwcSlider: ['change'],
   VwcSnackbar: ['opening', 'opened', 'closing', 'closed'],

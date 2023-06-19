@@ -1,9 +1,5 @@
-# This is a basic workflow to help you get started with Actions
+name: Release Vivid React
 
-name: Release Vivid React (GitHub)
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     tags:
@@ -12,53 +8,39 @@ on:
 jobs:
   build-publish:
     runs-on: ubuntu-latest
-    env:
-      ARTIFACTORY_AUTH_TOKEN: ${{ secrets.ARTIFACTORY_AUTH_TOKEN }}
-      ARTIFACTORY_SECRET: ${{ secrets.ARTIFACTORY_SECRET }}
-      ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER }}
-      ARTIFACTORY_NPM_TOKEN: ${{ secrets.ARTIFACTORY_NPM_TOKEN }}
 
     steps:
-      - name: Install GitHub SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_KEY_GITHUB }}
-          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
-
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@main
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 18
 
-      - name: Set Release Version
-        id: get_version
-        uses: battila7/get-version-action@v2
+      - name: Fetch package version
+        run: node -p -e '`RELEASE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
 
-      - name: Setup NodeJS 14
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Install dependencies
+      - name: Install dependencies & build
         run: |
           npm install -g yarn
-          yarn install
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
-
-      # Build and publish
-      - name: Build components
-        run: yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
-
-      - name: Publish components
-        run: |
+          yarn
+          yarn build
           cd dist
+
+      - name: Publish to Github
+        run: |
           echo registry=https://npm.pkg.github.com/ > .npmrc
           echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
           yarn publish --new-version ${RELEASE_VERSION}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}
+
+      - name: Publish to Npmjs.com
+        run: |
+          rm .npmrc || true
+          echo registry=https://registry.npmjs.org/ > .npmrc
+          echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
+          yarn publish --new-version ${RELEASE_VERSION}
+        env:
+          TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year

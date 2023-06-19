@@ -2,7 +2,7 @@
 
 Vivid-react is a script allowing you to generate `Vivid-React` components for the newest version of `Vivid` components stored as a package with all necessary dependencies and available through Artifactory npm registry.
 
-The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` typescript applications. We still use regular `Vivid` web components, so be sure to target a recent browser. 
+The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` typescript applications. We still use regular `Vivid` web components, so be sure to target a recent browser.
 
 Goals:
 * wrap adding handlers for events like `change` which natively doesn't work in the environment
@@ -32,66 +32,66 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 
 | Component Name | Package Name | Package Version |
 |----------------|--------------|-----------------|
-| VwcAccordion | @vonage/vwc-accordion | 2.37.0 |
-| VwcActionGroup | @vonage/vwc-action-group | 2.37.0 |
-| VwcBadge | @vonage/vwc-badge | 2.37.0 |
-| VwcBanner | @vonage/vwc-banner | 2.37.0 |
-| VwcButton | @vonage/vwc-button | 2.37.0 |
-| VwcButtonToggleGroup | @vonage/vwc-button-toggle-group | 2.37.0 |
-| VwcCalendar | @vonage/vwc-calendar | 2.37.0 |
-| VwcCard | @vonage/vwc-card | 2.37.0 |
-| VwcCarousel | @vonage/vwc-carousel | 2.37.0 |
-| VwcCheckbox | @vonage/vwc-checkbox | 2.37.0 |
-| VwcChips | @vonage/vwc-chips | 2.37.0 |
-| VwcCircularProgress | @vonage/vwc-circular-progress | 2.37.0 |
-| VwcDataGrid | @vonage/vwc-data-grid | 2.37.0 |
-| VwcDatepicker | @vonage/vwc-datepicker | 2.37.0 |
-| VwcDialog | @vonage/vwc-dialog | 2.37.0 |
-| VwcDrawer | @vonage/vwc-drawer | 2.37.0 |
-| VwcDropdown | @vonage/vwc-dropdown | 2.37.0 |
-| VwcElevation | @vonage/vwc-elevation | 2.37.0 |
-| VwcEmptyState | @vonage/vwc-empty-state | 2.37.0 |
-| VwcExpansionPanel | @vonage/vwc-expansion-panel | 2.37.0 |
-| VwcFab | @vonage/vwc-fab | 2.37.0 |
-| VwcFilePicker | @vonage/vwc-file-picker | 2.37.0 |
-| VwcFormfield | @vonage/vwc-formfield | 2.37.0 |
-| VwcHelperMessage | @vonage/vwc-helper-message | 2.37.0 |
-| VwcIcon | @vonage/vwc-icon | 2.37.0 |
-| VwcIconButton | @vonage/vwc-icon-button | 2.37.0 |
-| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | 2.37.0 |
-| VwcKeypad | @vonage/vwc-keypad | 2.37.0 |
-| VwcLayout | @vonage/vwc-layout | 2.37.0 |
-| VwcLinearProgress | @vonage/vwc-linear-progress | 2.37.0 |
-| VwcList | @vonage/vwc-list | 2.37.0 |
-| VwcMenu | @vonage/vwc-menu | 2.37.0 |
-| VwcNotchedOutline | @vonage/vwc-notched-outline | 2.37.0 |
-| VwcNote | @vonage/vwc-note | 2.37.0 |
-| VwcPagination | @vonage/vwc-pagination | 2.37.0 |
-| VwcPopup | @vonage/vwc-popup | 2.37.0 |
-| VwcRadio | @vonage/vwc-radio | 2.37.0 |
-| VwcSchemeSelect | @vonage/vwc-scheme-select | 2.37.0 |
-| VwcSelect | @vonage/vwc-select | 2.37.0 |
-| VwcSideDrawer | @vonage/vwc-side-drawer | 2.37.0 |
-| VwcSlider | @vonage/vwc-slider | 2.37.0 |
-| VwcSnackbar | @vonage/vwc-snackbar | 2.37.0 |
-| VwcSurface | @vonage/vwc-surface | 2.37.0 |
-| VwcSwitch | @vonage/vwc-switch | 2.37.0 |
-| VwcTabBar | @vonage/vwc-tab-bar | 2.37.0 |
-| VwcTags | @vonage/vwc-tags | 2.37.0 |
-| VwcText | @vonage/vwc-text | 2.37.0 |
-| VwcTextarea | @vonage/vwc-textarea | 2.37.0 |
-| VwcTextfield | @vonage/vwc-textfield | 2.37.0 |
-| VwcThemeSwitch | @vonage/vwc-theme-switch | 2.37.0 |
-| VwcTooltip | @vonage/vwc-tooltip | 2.37.0 |
-| VwcTopAppBar | @vonage/vwc-top-app-bar | 2.37.0 |
-| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | 2.37.0 |
+| VwcAccordion | @vonage/vwc-accordion | 2.42.0 |
+| VwcActionGroup | @vonage/vwc-action-group | 2.42.0 |
+| VwcBadge | @vonage/vwc-badge | 2.42.0 |
+| VwcBanner | @vonage/vwc-banner | 2.42.0 |
+| VwcButton | @vonage/vwc-button | 2.42.0 |
+| VwcButtonToggleGroup | @vonage/vwc-button-toggle-group | 2.42.0 |
+| VwcCalendar | @vonage/vwc-calendar | 2.42.0 |
+| VwcCard | @vonage/vwc-card | 2.42.0 |
+| VwcCarousel | @vonage/vwc-carousel | 2.42.0 |
+| VwcCheckbox | @vonage/vwc-checkbox | 2.42.0 |
+| VwcChips | @vonage/vwc-chips | 2.42.0 |
+| VwcCircularProgress | @vonage/vwc-circular-progress | 2.42.0 |
+| VwcDataGrid | @vonage/vwc-data-grid | 2.42.0 |
+| VwcDatepicker | @vonage/vwc-datepicker | 2.42.0 |
+| VwcDialog | @vonage/vwc-dialog | 2.42.0 |
+| VwcDrawer | @vonage/vwc-drawer | 2.42.0 |
+| VwcDropdown | @vonage/vwc-dropdown | 2.42.0 |
+| VwcElevation | @vonage/vwc-elevation | 2.42.0 |
+| VwcEmptyState | @vonage/vwc-empty-state | 2.42.0 |
+| VwcExpansionPanel | @vonage/vwc-expansion-panel | 2.42.0 |
+| VwcFab | @vonage/vwc-fab | 2.42.0 |
+| VwcFilePicker | @vonage/vwc-file-picker | 2.42.0 |
+| VwcFormfield | @vonage/vwc-formfield | 2.42.0 |
+| VwcHelperMessage | @vonage/vwc-helper-message | 2.42.0 |
+| VwcIcon | @vonage/vwc-icon | 2.42.0 |
+| VwcIconButton | @vonage/vwc-icon-button | 2.42.0 |
+| VwcIconButtonToggle | @vonage/vwc-icon-button-toggle | 2.42.0 |
+| VwcKeypad | @vonage/vwc-keypad | 2.42.0 |
+| VwcLayout | @vonage/vwc-layout | 2.42.0 |
+| VwcLinearProgress | @vonage/vwc-linear-progress | 2.42.0 |
+| VwcList | @vonage/vwc-list | 2.42.0 |
+| VwcMenu | @vonage/vwc-menu | 2.42.0 |
+| VwcNotchedOutline | @vonage/vwc-notched-outline | 2.42.0 |
+| VwcNote | @vonage/vwc-note | 2.42.0 |
+| VwcPagination | @vonage/vwc-pagination | 2.42.0 |
+| VwcPopup | @vonage/vwc-popup | 2.42.0 |
+| VwcRadio | @vonage/vwc-radio | 2.42.0 |
+| VwcSchemeSelect | @vonage/vwc-scheme-select | 2.42.0 |
+| VwcSelect | @vonage/vwc-select | 2.42.0 |
+| VwcSideDrawer | @vonage/vwc-side-drawer | 2.42.0 |
+| VwcSlider | @vonage/vwc-slider | 2.42.0 |
+| VwcSnackbar | @vonage/vwc-snackbar | 2.42.0 |
+| VwcSurface | @vonage/vwc-surface | 2.42.0 |
+| VwcSwitch | @vonage/vwc-switch | 2.42.0 |
+| VwcTabBar | @vonage/vwc-tab-bar | 2.42.0 |
+| VwcTags | @vonage/vwc-tags | 2.42.0 |
+| VwcText | @vonage/vwc-text | 2.42.0 |
+| VwcTextarea | @vonage/vwc-textarea | 2.42.0 |
+| VwcTextfield | @vonage/vwc-textfield | 2.42.0 |
+| VwcThemeSwitch | @vonage/vwc-theme-switch | 2.42.0 |
+| VwcTooltip | @vonage/vwc-tooltip | 2.42.0 |
+| VwcTopAppBar | @vonage/vwc-top-app-bar | 2.42.0 |
+| VwcTopAppBarFixed | @vonage/vwc-top-app-bar-fixed | 2.42.0 |
 
 If the one you're looking for is missing, just [add a new one](#adding-a-component), so everyone can access them.
 
 # Usage
 
 ## Artifactory
-To use this package, you need to have Artifactory setup for your project. See how to do it [here](https://confluence.vonage.com/pages/viewpage.action?pageId=123601806) and [here](https://github.com/newvoicemedia/vonage-cli/blob/master/pipeline-guide/how-to/NODEJS-NPM-DEVELOPMENT.md). 
+To use this package, you need to have Artifactory setup for your project. See how to do it [here](https://confluence.vonage.com/pages/viewpage.action?pageId=123601806) and [here](https://github.com/newvoicemedia/vonage-cli/blob/master/pipeline-guide/how-to/NODEJS-NPM-DEVELOPMENT.md).
 
 ## Installation
 Once you have Artifactory configured, just run:
@@ -99,7 +99,7 @@ Once you have Artifactory configured, just run:
 $ yarn add @vonage/vivid-react
 ```
 No need for importing `vivid` directly. The dependencies will be installed for you.
- 
+
 ## Initialization
 
 ```javascript
@@ -117,9 +117,9 @@ const renderApp = () => {
 
 initVivid(rootElement).then(renderApp)
 ```
- 
+
 ## Importing
-Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead. 
+Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead.
 ```javascript
 import VwcCheckbox from '@vonage/vivid-react/VwcCheckbox'
 import VwcSlider from '@vonage/vivid-react/VwcSlider'
@@ -147,7 +147,7 @@ It'll work also for _raw_ `vivid` components used in project, since js-dom doesn
 
 # Development
 
-## Adding a component 
+## Adding a component
 Follow the steps:
 * clone this repo
 * create a branch

@@ -17,7 +17,7 @@ export default {
         if (!x) {
           return
         }
-        initVivid(x, () => {}, {
+        initVivid(x, () => { }, {
           font: 'proprietary',
           theme: 'light'
         })

@@ -22,31 +22,36 @@ jobs:
           known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@main
 
-      - name: Set Release Version
-        id: get_version
-        uses: battila7/get-version-action@v2
-
-      - name: Setup NodeJS 14
-        uses: actions/setup-node@v1
+      - name: Setup NodeJS
+        uses: actions/setup-node@main
         with:
-          node-version: 14
+          node-version: 18
 
-      - name: Install dependencies
+      - name: Fetch package version
+        run: node -p -e '`RELEASE_VERSION=${require("./package.json").version}`' >> $GITHUB_ENV
+
+      - name: Install dependencies & build
         run: |
           npm install -g yarn
-          yarn install
-
-      - name: Build
-        run: yarn build
+          yarn
+          yarn build
+          cd dist
 
       - name: Publish to Github
         run: |
-          cd dist
           echo registry=https://npm.pkg.github.com/ > .npmrc
           echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
           yarn publish --new-version ${RELEASE_VERSION}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_VERSION: ${{ steps.get_version.outputs.version-without-v }}
+
+      - name: Publish to >> npmjs.com
+        run: |
+          rm .npmrc || true
+          echo registry=https://registry.npmjs.org/ > .npmrc
+          echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
+          yarn publish --new-version ${RELEASE_VERSION}
+        env:
+          TOKEN: ${{ secrets.NPM_TOKEN }} # token has been issued on January 4, 2023. It's valid for 1 year

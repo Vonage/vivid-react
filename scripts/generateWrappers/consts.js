@@ -5,6 +5,7 @@ const FileName = {
   vividApi: 'vivid.api.json',
   tempFileName: 'analyzerOutput.json',
   tempTsFolder: 'ts',
+  generatedFolder: 'src/generated',
   tempVividZipball: 'vivid.zip',
   defaultOutputDirectory: 'dist',
   storyOutputDir: 'stories',

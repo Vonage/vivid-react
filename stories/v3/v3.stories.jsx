@@ -1,27 +1,28 @@
 import React from 'react'
 import VwcBadge from '../../dist/v3/VwcBadge'
 import VwcButton from '../../dist/v3/VwcButton'
-import '@vonage/vivid/styles/fonts/spezia.css'
-import '@vonage/vivid/styles/tokens/theme-light.css'
+import { initVivid } from '../../src/initialization/initVivid'
 
 export const VwcBadge_ = () =>
-  <div class="vvd-root">
+  <>
     <VwcBadge connotation={'alert'} text={'Badge'} />
     <VwcButton connotation={'info'} label='Button' onClick={(e) => console.log(e)} ></VwcButton>
-
-  </div>
+  </>
 
 export default {
   title: 'V3',
-  argTypes: {
-    //
-    // Example values
-    // numberValue: { control: 'number', defaultValue: 123 },
-    // booleanValue: { control: 'boolean', defaultValue: true },
-    // objectValue: { control: 'object', defaultValue: {} },
-    // stringValue: { control: 'string', defaultValue: 'string' },
-    // colorValue: { control: 'color' },
-    // dateValue: { control: 'date' }
-    //
-  }
+  decorators: [
+    (story) => {
+      const InitVivid = ({ children }) => <div ref={x => {
+        if (!x) {
+          return
+        }
+        initVivid(x, () => {}, {
+          font: 'proprietary',
+          theme: 'light'
+        })
+      }} >{children}</div>
+      return <InitVivid>{story()}</InitVivid>
+    }
+  ]
 }

@@ -29,6 +29,7 @@ const {
 const { getTemplate, TemplateToken } = require('./templates/templates')
 const { join } = require('path')
 const { getPropTypes, getDefaultProps, getProps, mapType } = require('./prop.types')
+const { writeFileSync, readFileSync } = require('fs')
 
 const generateTypings = outputDir => async tags => {
   const distTs = join(FileName.tempFolder, FileName.tempTsFolder)
@@ -170,7 +171,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
  * Generates Vivid 3.x wrappers
  */
 const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cleanTemp = true, verbose = true) => async (meta) => {
-  const componentPrefix = 'vvd'
+  const componentPrefix = 'vvd3'
   const indexFileName = getIndexFileName(language)
   const saveIndex = (outputDir, content) => {
     const indexOutputFileName = join(outputDir, indexFileName)
@@ -230,6 +231,27 @@ const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cle
   }
 
   if (language === OutputLanguage.JavaScript) {
+    const generatedDir = filePath(FileName.generatedFolder)
+    prepareDir(generatedDir)
+
+    writeFileSync(
+      `${generatedDir}/vivid.version.js`,
+      `export default { v2: '${packageJson.dependencies['@vonage/vvd-core']}', v3: \`${packageJson.dependencies['@vonage/vivid']}\`}`
+    )
+
+    for (const { name, file } of [
+      { name: 'core.all', file: './node_modules/@vonage/vivid/styles/core/all.css' },
+      { name: 'theme.light', file: './node_modules/@vonage/vivid/styles/tokens/theme-light.css' },
+      { name: 'theme.dark', file: './node_modules/@vonage/vivid/styles/tokens/theme-dark.css' },
+      { name: 'font.spezia', file: './node_modules/@vonage/vivid/styles/fonts/spezia-variable.css' }
+    ]) {
+      const cssText = readFileSync(file, { encoding: 'utf8' }).replace(/\/\*# sourceMappingURL=.*\*\//g, '')
+      writeFileSync(
+        `${generatedDir}/style.${name}.js`,
+        `export default { id: '${name}', css: \`${cssText}\`}`
+      )
+    }
+
     await generateTypingsV3(outputDir)(meta)
   }
 

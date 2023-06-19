@@ -27,6 +27,7 @@
     "CLI"
   ],
   "dependencies": {
+    "@vonage/vivid": "3.18.0",
     "@vonage/vivid-react-wrapper": "1.2.9",
     "@vonage/vvd-context": "2.42.0",
     "@vonage/vvd-core": "2.42.0",
@@ -92,21 +93,19 @@
     "@babel/preset-react": "^7.14.5",
     "@babel/runtime": "^7.13.17",
     "@material-ui/core": "^4.11.1",
-    "@octokit/core": "^3.1.2",
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
-    "@storybook/addon-actions": "6.5.13",
-    "@storybook/addon-controls": "6.5.13",
-    "@storybook/addon-essentials": "6.5.13",
-    "@storybook/addon-links": "6.5.13",
-    "@storybook/addons": "6.5.13",
-    "@storybook/react": "6.5.13",
+    "@storybook/addon-actions": "6.5.14",
+    "@storybook/addon-controls": "6.5.14",
+    "@storybook/addon-essentials": "6.5.14",
+    "@storybook/addon-links": "6.5.14",
+    "@storybook/addons": "6.5.14",
+    "@storybook/react": "6.5.14",
     "@types/react": "16.9.49",
     "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-jest": "^26.6.1",
     "babel-loader": "^8.2.2",
-    "extract-zip": "2.0.1",
     "fs-extra": "^9.0.1",
     "jest": "^26.6.1",
     "lodash": "^4.17.20",
@@ -132,7 +131,7 @@
     "react-dom": ">=16.8"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0 <=16.19.0"
   },
   "optionalDependencies": {
     "prop-types": "^15.7.2"

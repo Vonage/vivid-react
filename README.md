@@ -88,13 +88,8 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 
 If the one you're looking for is missing, just [add a new one](#adding-a-component), so everyone can access them.
 
-# Usage
-
-## Artifactory
-To use this package, you need to have Artifactory setup for your project. See how to do it [here](https://confluence.vonage.com/pages/viewpage.action?pageId=123601806) and [here](https://github.com/newvoicemedia/vonage-cli/blob/master/pipeline-guide/how-to/NODEJS-NPM-DEVELOPMENT.md).
-
 ## Installation
-Once you have Artifactory configured, just run:
+Just run:
 ```shell
 $ yarn add @vonage/vivid-react
 ```
@@ -103,7 +98,6 @@ No need for importing `vivid` directly. The dependencies will be installed for y
 ## Initialization
 
 ```javascript
-// Function
 import ReactDOM from 'react-dom'
 import { initVivid } from '@vonage/vivid-react'
 const rootElement = document.getElementById('react-root')
@@ -115,14 +109,30 @@ const renderApp = () => {
   )
 }
 
+// for Vivid 2.x
 initVivid(rootElement).then(renderApp)
+
+// OR
+
+// for Vivid 2.x + Vivid 3.x
+initVivid(rootElement, () => {}, {
+  font: 'oss',
+  theme: 'light'
+}).then(renderApp)
 ```
 
 ## Importing
+For vivid **2.x**
 Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead.
 ```javascript
 import VwcCheckbox from '@vonage/vivid-react/VwcCheckbox'
 import VwcSlider from '@vonage/vivid-react/VwcSlider'
+```
+
+For vivid **3.x**
+```javascript
+import VwcCheckbox from '@vonage/vivid-react/v3/VwcCheckbox'
+import VwcSlider from '@vonage/vivid-react/v3/VwcSlider'
 ```
 
 ## Bundling

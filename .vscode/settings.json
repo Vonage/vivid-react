@@ -1,0 +1,4 @@
+{
+  "npm.exclude": "**/dist",
+  "npm.scriptExplorerExclude": ["install"]
+}

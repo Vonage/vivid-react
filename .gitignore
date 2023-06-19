@@ -5,3 +5,5 @@ temp
 *.g.*
 dist/
 /yarn-error.log
+types/index.d.ts
+src/generated

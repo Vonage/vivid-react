@@ -1,8 +1,11 @@
 const FileName = {
   packageJson: 'package.json',
   tempFolder: 'temp',
+  customElements: 'custom-elements.json',
+  vividApi: 'vivid.api.json',
   tempFileName: 'analyzerOutput.json',
   tempTsFolder: 'ts',
+  generatedFolder: 'src/generated',
   tempVividZipball: 'vivid.zip',
   defaultOutputDirectory: 'dist',
   storyOutputDir: 'stories',
@@ -33,24 +36,11 @@ const WCAConfig = {
   ]
 }
 
-const WCAConfigAll = {
-  tempFolder: FileName.tempFolder,
-  tempFileName: FileName.tempFileName,
-  nodeArgumentsFactory: (targetFolder, analyzerOutputFile) => [
-    './node_modules/web-component-analyzer/cli.js',
-    'analyze',
-    `${targetFolder}/{src/,}*.?s`,
-    '--format', 'json',
-    '--outFile', analyzerOutputFile
-  ]
-}
-
 const CLIArgument = {
   Assets: 'assets', // static assets to be copied to output folder
   Output: 'output', // output folder
   Language: 'language', // language js,ts
-  CleanTemp: 'clean', // clean up temp folder after CLI run
-  All: 'all' // ignore local package.json and produce wrappers for *all* Vivid components
+  CleanTemp: 'clean' // clean up temp folder after CLI run
 }
 
 const OutputLanguage = {
@@ -81,6 +71,10 @@ const ComponentsEventsMap = {
   VwcTabBar: [{ name: 'MDCTabBar:activated', propName: 'onActivated' }],
   VwcTextfield: ['input', 'blur', 'focus'],
   VwcTextarea: ['input', 'blur', 'focus']
+}
+
+const ComponentsEventsMapV3 = {
+  VwcButton: ['click']
 }
 
 const ComponentsReadOnlyPropertiesMap = {
@@ -212,6 +206,7 @@ const CompoundComponentsMap = {
 
 module.exports = {
   ComponentsEventsMap,
+  ComponentsEventsMapV3,
   ComponentsReadOnlyPropertiesMap,
   ComponentsBindablePropertiesMap,
   ComponentsExtraPropertiesMap,
@@ -220,7 +215,6 @@ module.exports = {
   Assets,
   OutputLanguage,
   WCAConfig,
-  WCAConfigAll,
   CLIArgument,
   VividRepo
 }

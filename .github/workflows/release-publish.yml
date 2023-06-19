@@ -1,9 +1,5 @@
-# This is a basic workflow to help you get started with Actions
+name: Release Vivid React
 
-name: Release Vivid React (GitHub)
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     tags:
@@ -27,9 +23,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Release Version
         id: get_version
@@ -44,16 +37,11 @@ jobs:
         run: |
           npm install -g yarn
           yarn install
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
 
-      # Build and publish
-      - name: Build components
+      - name: Build
         run: yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
 
-      - name: Publish components
+      - name: Publish to Github
         run: |
           cd dist
           echo registry=https://npm.pkg.github.com/ > .npmrc

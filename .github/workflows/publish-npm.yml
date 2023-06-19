@@ -18,12 +18,10 @@ jobs:
           npm install -g yarn
           yarn
           yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.CI_AT }}
 
-      - name: Publish to >> npmjs.com
+      - name: Publish to >> npmjs.com0
         run: |
-          rm .npmrc
+          rm .npmrc || true
           echo registry=https://registry.npmjs.org/ > .npmrc
           echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc
           cd dist

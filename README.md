@@ -2,7 +2,7 @@
 
 Vivid-react is a script allowing you to generate `Vivid-React` components for the newest version of `Vivid` components stored as a package with all necessary dependencies and available through Artifactory npm registry.
 
-The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` typescript applications. We still use regular `Vivid` web components, so be sure to target a recent browser. 
+The main goal of output package is to provide a better developer experience when using `Vivid` inside of `React` typescript applications. We still use regular `Vivid` web components, so be sure to target a recent browser.
 
 Goals:
 * wrap adding handlers for events like `change` which natively doesn't work in the environment
@@ -91,7 +91,7 @@ If the one you're looking for is missing, just [add a new one](#adding-a-compone
 # Usage
 
 ## Artifactory
-To use this package, you need to have Artifactory setup for your project. See how to do it [here](https://confluence.vonage.com/pages/viewpage.action?pageId=123601806) and [here](https://github.com/newvoicemedia/vonage-cli/blob/master/pipeline-guide/how-to/NODEJS-NPM-DEVELOPMENT.md). 
+To use this package, you need to have Artifactory setup for your project. See how to do it [here](https://confluence.vonage.com/pages/viewpage.action?pageId=123601806) and [here](https://github.com/newvoicemedia/vonage-cli/blob/master/pipeline-guide/how-to/NODEJS-NPM-DEVELOPMENT.md).
 
 ## Installation
 Once you have Artifactory configured, just run:
@@ -99,7 +99,7 @@ Once you have Artifactory configured, just run:
 $ yarn add @vonage/vivid-react
 ```
 No need for importing `vivid` directly. The dependencies will be installed for you.
- 
+
 ## Initialization
 
 ```javascript
@@ -117,9 +117,9 @@ const renderApp = () => {
 
 initVivid(rootElement).then(renderApp)
 ```
- 
+
 ## Importing
-Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead. 
+Instead of importing each `vivid` component from `@vonage/vwc-*`, import them from `@vonage/vivid-react` instead.
 ```javascript
 import VwcCheckbox from '@vonage/vivid-react/VwcCheckbox'
 import VwcSlider from '@vonage/vivid-react/VwcSlider'
@@ -147,7 +147,7 @@ It'll work also for _raw_ `vivid` components used in project, since js-dom doesn
 
 # Development
 
-## Adding a component 
+## Adding a component
 Follow the steps:
 * clone this repo
 * create a branch

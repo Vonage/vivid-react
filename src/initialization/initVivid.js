@@ -43,6 +43,9 @@ export const initVivid = (target, callback, options) => {
     target.setAttribute(`${vividDataAttributePrefix}-v3`, vividVersion.v3)
     target = undefined
   }
+  if (!options.theme) {
+    options.theme = 'light'
+  }
   const appendStyle = appendStyleElement()
   appendStyle(coreStyles)
   appendStyle(options.theme === 'light' ? lightThemeStyles : darkThemeStyles)

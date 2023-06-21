@@ -26,10 +26,10 @@ jobs:
           npm install -g yarn
           yarn
           yarn build
-          cd dist
 
       - name: Publish to Github
         run: |
+          cd dist
           echo registry=https://npm.pkg.github.com/ > .npmrc
           echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
           yarn publish --new-version ${RELEASE_VERSION}
@@ -38,6 +38,7 @@ jobs:
 
       - name: Publish to Npmjs.com
         run: |
+          cd dist
           rm .npmrc || true
           echo registry=https://registry.npmjs.org/ > .npmrc
           echo //registry.npmjs.org/:_authToken=${TOKEN} >> .npmrc

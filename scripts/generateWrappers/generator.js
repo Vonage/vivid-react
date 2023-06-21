@@ -151,7 +151,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
     ...(properties.map(({ name, type }) => `  ${name}?: ${mapType(type?.text)}`))
   ]
   const renderPropertyJsDoc = ({ type, name, attribute = null, description }) => `* @param ${type?.text ? `{${type?.text}}` : ''} ${name} ${description ? `- ${description}` : ''} ${attribute ? `**attribute** \`${attribute.name || attribute.fieldName}\`` : ''}`
-  const jsDoc = `/** ${classDeclaration.description || componentClassName} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
+  const jsDoc = `/** ${classDeclaration.description || componentClassName} \n* For more info on this Vivid element please visit https://vivid.deno.dev/components/${camel2kebab(classDeclaration.name)} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
 
   return getTemplate('react-component-v3', language)
     .replace(TemplateToken.CLASS_JSDOC, jsDoc)

@@ -27,7 +27,7 @@
     "CLI"
   ],
   "dependencies": {
-    "@vonage/vivid": "3.18.0",
+    "@vonage/vivid": "3.20.0",
     "@vonage/vivid-react-wrapper": "1.2.9",
     "@vonage/vvd-context": "2.42.0",
     "@vonage/vvd-core": "2.42.0",
@@ -131,7 +131,7 @@
     "react-dom": ">=16.8"
   },
   "engines": {
-    "node": ">=14.0.0 <=18.16.0"
+    "node": ">=16"
   },
   "optionalDependencies": {
     "prop-types": "^15.7.2"

@@ -4092,10 +4092,10 @@
   resolved "https://registry.yarnpkg.com/@vonage/vivid-react-wrapper/-/vivid-react-wrapper-1.2.9.tgz#0cf18ac442f92e884cb7efe6eb0a09892f8e1f69"
   integrity sha512-NYIz0/6ZlGmpdJRp8ye50qrc66vRNmj7ntwTiYyUGDjjhtlKnxuSXXVlNQfxbseK5+kpSOC9uYcqM72HnzW91g==
 
-"@vonage/vivid@3.18.0":
-  version "3.18.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.18.0.tgz#a057f7392d5ea256712cc6026cef07cef4a41711"
-  integrity sha512-u2DYRX11AWA0UwBY8xKIpuazXzp87lK51ie9mJAjmyr2CuKkm/d7rv6ENatyzD/jhdsjUU5e6TwHLHUNEkm9iA==
+"@vonage/vivid@3.20.0":
+  version "3.20.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.20.0.tgz#45c2baa5fff90e59dc6e758dab9d6d49da2e520e"
+  integrity sha512-mLHsS8UW0ithpSjFl3hjDpR8ec7vINPRzPAQk2a9PrWZVeHpFWCS7VHSbaL2ZczV081vKOBY16ITcxnu7W/kYg==
   dependencies:
     "@floating-ui/dom" "1.2.0"
     "@microsoft/fast-element" "1.11.0"

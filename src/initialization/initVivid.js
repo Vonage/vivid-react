@@ -34,7 +34,7 @@ const appendStyleElement = (document = window.document) => (styleDescriptor) => 
  *
  * @throws {Error} error - if the provided target argument is `null` or not a Node of type `Document` / `DocumentFragment` / `HTMLElement`
  */
-export const initVivid = (target, callback, options) => {
+export const initVivid = (target, callback, options = {}) => {
   if (target instanceof HTMLElement) {
     target.classList.add('vivid-scope') // vivid 2.x
     target.setAttribute(`${vividDataAttributePrefix}-v2`, vividVersion.v2)

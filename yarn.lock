@@ -1196,6 +1196,13 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
+"@babel/runtime@^7.21.0":
+  version "7.22.11"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.11.tgz#7a9ba3bbe406ad6f9e8dd4da2ece453eb23a77a4"
+  integrity sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/template@^7.12.7", "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.22.5.tgz#0c8c4d944509875849bd0344ff0050756eefc6ec"
@@ -1284,17 +1291,19 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.3.tgz#d274116678ffae87f6b60e90f88cc4083eefab86"
   integrity sha512-buc8BXHmG9l82+OQXOFU3Kr2XQx9ys01U/Q9HMIrZ300iLc8HLMgh7dcCqgYzAzf4BkoQvDcXf5Y+CuEZ5JBYg==
 
-"@floating-ui/core@^1.2.0":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.3.1.tgz#4d795b649cc3b1cbb760d191c80dcb4353c9a366"
-  integrity sha512-Bu+AMaXNjrpjh41znzHqaz3r2Nr8hHuHZT6V2LBKMhyMl0FgKA62PNYbqnfgmzOhoWZj70Zecisbo4H1rotP5g==
-
-"@floating-ui/dom@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.0.tgz#a60212069cc58961c478037c30eba4b191c75316"
-  integrity sha512-QXzg57o1cjLz3cGETzKXjI3kx1xyS49DW9l7kV2jw2c8Yftd434t2hllX0sVGn2Q8MtcW/4pNm8bfE1/4n6mng==
+"@floating-ui/core@^1.3.1":
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.4.1.tgz#0d633f4b76052668afb932492ac452f7ebe97f17"
+  integrity sha512-jk3WqquEJRlcyu7997NtR5PibI+y5bi+LS3hPmguVClypenMsCY3CBa3LAQnozRCtCrYWSEtAdiskpamuJRFOQ==
   dependencies:
-    "@floating-ui/core" "^1.2.0"
+    "@floating-ui/utils" "^0.1.1"
+
+"@floating-ui/dom@1.4.5":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.4.5.tgz#336dfb9870c98b471ff5802002982e489b8bd1c5"
+  integrity sha512-96KnRWkRnuBSSFbj0sFGwwOUd8EkiecINVl0O9wiZlZ64EkpyAOG3Xc2vKKNJmru0Z7RqWNymA+6b8OZqjgyyw==
+  dependencies:
+    "@floating-ui/core" "^1.3.1"
 
 "@floating-ui/dom@^0.5.1":
   version "0.5.4"
@@ -1302,6 +1311,11 @@
   integrity sha512-419BMceRLq0RrmTSDxn8hf9R3VCJv2K9PUfugh5JyEFmdjzDo+e8U5EdR8nzKq8Yj1htzLm3b6eQEEam3/rrtg==
   dependencies:
     "@floating-ui/core" "^0.7.3"
+
+"@floating-ui/utils@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
+  integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
@@ -2664,27 +2678,29 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@microsoft/fast-element@1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-element/-/fast-element-1.11.0.tgz#494f6c87057bcbb42406982d68a92887d6b5acb1"
-  integrity sha512-VKJYMkS5zgzHHb66sY7AFpYv6IfFhXrjQcAyNgi2ivD65My1XOhtjfKez5ELcLFRJfgZNAxvI8kE69apXERTkw==
-
-"@microsoft/fast-element@^1.11.0":
+"@microsoft/fast-element@1.12.0", "@microsoft/fast-element@^1.12.0":
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/@microsoft/fast-element/-/fast-element-1.12.0.tgz#aabfc75518c3a9000710cce5f66dfc677de8c254"
   integrity sha512-gQutuDHPKNxUEcQ4pypZT4Wmrbapus+P9s3bR/SEOLsMbNqNoXigGImITygI5zhb+aA5rzflM6O8YWkmRbGkPA==
 
-"@microsoft/fast-foundation@2.47.1-0":
-  version "2.47.1-0"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-foundation/-/fast-foundation-2.47.1-0.tgz#ccb26e45464916518e158737d3e9a37168cf5439"
-  integrity sha512-Ehl3hDClql91j/LnugpmDUzBo3pSo2KvqqAG53zghPgf70ifoWI1XJ3mKyn8FkH9/BCwvEgjbCbaezAwRs++jA==
+"@microsoft/fast-foundation@2.49.0":
+  version "2.49.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/fast-foundation/-/fast-foundation-2.49.0.tgz#cfacc35fb48c713d08d1bb493476bafe88d77455"
+  integrity sha512-Wk4e4QXFVtT5hPwhMfHyGY30kixM0td8aDs7bAD6NM2z2SCBNvpTTWp+FCjx0I0lpUMlMenb6wsw7pMWQreRkQ==
   dependencies:
-    "@microsoft/fast-element" "^1.11.0"
+    "@microsoft/fast-element" "^1.12.0"
     "@microsoft/fast-web-utilities" "^5.4.1"
     tabbable "^5.2.0"
     tslib "^1.13.0"
 
-"@microsoft/fast-web-utilities@5.4.1", "@microsoft/fast-web-utilities@^5.4.1":
+"@microsoft/fast-web-utilities@6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/fast-web-utilities/-/fast-web-utilities-6.0.0.tgz#7678c2b2cd12aeef785f4e2288da93a4db9e38a6"
+  integrity sha512-ckCA4Xn91ja1Qz+jhGGL1Q3ZeuRpA5VvYcRA7GzA1NP545sl14bwz3tbHCq8jIk+PL7mkSaIveGMYuJB2L4Izg==
+  dependencies:
+    exenv-es6 "^1.1.1"
+
+"@microsoft/fast-web-utilities@^5.4.1":
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/@microsoft/fast-web-utilities/-/fast-web-utilities-5.4.1.tgz#8e3082ee2ff2b5467f17e7cb1fb01b0e4906b71f"
   integrity sha512-ReWYncndjV3c8D8iq9tp7NcFNc1vbVHvcBFPME2nNFKNbS1XCesYZGlIlf3ot5EmuOXPlrzUHOWzQ2vFpIkqDg==
@@ -3677,6 +3693,11 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
+"@swc/helpers@^0.2.13":
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.2.14.tgz#20288c3627442339dd3d743c944f7043ee3590f0"
+  integrity sha512-wpCQMhf5p5GhNg2MmGKXzUNwxe7zRiCsmqYsamez2beP7mKPCSiu+BjZcdN95yYSzO857kr0VfQewmGpS77nqA==
+
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
@@ -4092,725 +4113,728 @@
   resolved "https://registry.yarnpkg.com/@vonage/vivid-react-wrapper/-/vivid-react-wrapper-1.2.9.tgz#0cf18ac442f92e884cb7efe6eb0a09892f8e1f69"
   integrity sha512-NYIz0/6ZlGmpdJRp8ye50qrc66vRNmj7ntwTiYyUGDjjhtlKnxuSXXVlNQfxbseK5+kpSOC9uYcqM72HnzW91g==
 
-"@vonage/vivid@3.20.0":
-  version "3.20.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.20.0.tgz#45c2baa5fff90e59dc6e758dab9d6d49da2e520e"
-  integrity sha512-mLHsS8UW0ithpSjFl3hjDpR8ec7vINPRzPAQk2a9PrWZVeHpFWCS7VHSbaL2ZczV081vKOBY16ITcxnu7W/kYg==
+"@vonage/vivid@3.32.0":
+  version "3.32.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.32.0.tgz#fecd6ce1e0ea1d462e11aecf91f540756909bfb4"
+  integrity sha512-whAttDMS/0kV9pCmz3hO+Op3c6QYWU5SdF5GD6rzGWQeqtVcdwGMX+mNC3i9+MjTxWgsNrLdg8tAIg6V1wQgXw==
   dependencies:
-    "@floating-ui/dom" "1.2.0"
-    "@microsoft/fast-element" "1.11.0"
-    "@microsoft/fast-foundation" "2.47.1-0"
-    "@microsoft/fast-web-utilities" "5.4.1"
+    "@floating-ui/dom" "1.4.5"
+    "@microsoft/fast-element" "1.12.0"
+    "@microsoft/fast-foundation" "2.49.0"
+    "@microsoft/fast-web-utilities" "6.0.0"
+    date-fns "2.30.0"
     dialog-polyfill "0.5.6"
+    dropzone "6.0.0-beta.2"
+    promise "7.3.1"
     ramda "0.28.0"
     rollup-plugin-postcss "4.0.2"
 
-"@vonage/vvd-context@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-context/-/vvd-context-2.42.0.tgz#87bac7891a684dc5d3213fc6fc844e02d13ec8aa"
-  integrity sha512-PwGgiAwiAIKXHcdvGPcIr3OR8A7fHaqhf2R4bFen3wqGgrADG9mJprkFngwNzkhXbFgQIn1Yzidhx4QbRDSM3w==
+"@vonage/vvd-context@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-context/-/vvd-context-2.43.2.tgz#934926aa4ecd961f3b8b50de9af7f888b5f5c06c"
+  integrity sha512-qMwg0QMCpQh6enQK/9/K8VFMDpw9vSd8ICe0t4lbXu7a6wJ71Ld1CPLBnqs700Ad84SlXBM84laVmVQ+555tOQ==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-core@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-core/-/vvd-core-2.42.0.tgz#8e3e46559ad69cad318a5630ff8ae7a3a188e375"
-  integrity sha512-nqjKixYIJOVUr1w/oqcrmCCbM4EusUY49r5Fr6/KE15gnz6tj0eW9vCHdKjJA5gwyPh1gFcKY6kcxRC6guVH3Q==
+"@vonage/vvd-core@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-core/-/vvd-core-2.43.2.tgz#57e126f76407a9e44fe5ba4d6155d109bd11e40c"
+  integrity sha512-bZyXmhBCOPoyq0OlnMWOVcBj6ifp+eDDRZ+kH2LNdNlH4932Ki8DtOlYrqPNsmUx0v9CHhiEK9eb6AwB63a3Cg==
   dependencies:
-    "@vonage/vvd-fonts" "2.42.0"
-    "@vonage/vvd-scheme" "2.42.0"
+    "@vonage/vvd-fonts" "2.43.2"
+    "@vonage/vvd-scheme" "2.43.2"
     tslib "^2.3.0"
 
-"@vonage/vvd-design-tokens@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-design-tokens/-/vvd-design-tokens-2.42.0.tgz#27ad7248fd527d46702a33029f06f866608c54cc"
-  integrity sha512-T+xaE0Lwoy3drg716SsWX5HAV8f9jjLkoc+IHXdL0PX5Kc6DhpirZf/DsV6YXqWajNXipgNiIpnoa2//PGgRSg==
+"@vonage/vvd-design-tokens@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-design-tokens/-/vvd-design-tokens-2.43.2.tgz#8404969198195024ba3ef9c623dcf883ed9ead37"
+  integrity sha512-m2uK7WqHZM49kY/qnwhCgNQuPdkgrhKP+QYhG19nUuGjDnnnIfPyr8PDH0x0/iMc4zp5NJ7f7uWYRpfPJks5RQ==
 
-"@vonage/vvd-fonts@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-fonts/-/vvd-fonts-2.42.0.tgz#04bfaae6621538eed24c6ad1a3363bd3c11ec0a1"
-  integrity sha512-f6G5gGanQWfBRkQjk5zZemgae/2bjMjvN2Qyczi1d2w7TONEUqBaupYju0jE1U7mknqzNahfi9WaJsRYbph7KA==
+"@vonage/vvd-fonts@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-fonts/-/vvd-fonts-2.43.2.tgz#35d24edd05e0aff5f4a2b62d36aff2127e3ece86"
+  integrity sha512-q2FQEvCbMtbKnzSyPg0F7tZFVKQ+wj4YNQWj+7jjuztTJk9SBDwqLb7pG12ZP6zJmGRRVMMSEVEDJXsZUj5sog==
   dependencies:
     lit-element "^2.4.0"
     ramda "^0.27.1"
     tslib "^2.3.0"
 
-"@vonage/vvd-foundation@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-foundation/-/vvd-foundation-2.42.0.tgz#3e7bf1b3a25e7f5c3a05e60175f15f1d28721a58"
-  integrity sha512-VntCbyXdwZiI+oPPBtSJP5p53JJCTTLlwklYenkRlfRKWSKJlcReMW94oXq0SYjz+eXUZqMBaY39DubLlOOkNA==
+"@vonage/vvd-foundation@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-foundation/-/vvd-foundation-2.43.2.tgz#2b79cf73c5a6969f874b684ea9c1e30899877dbc"
+  integrity sha512-lf9sCkLk+VTFtWka3umoz9onuDFtS6aRQXmCITeDB4aIWWIn423egxLAFOVboux1eLWRsJQ7GrRV2EHh6E6wBg==
   dependencies:
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-scheme@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-scheme/-/vvd-scheme-2.42.0.tgz#f71cf9cc5f80ae42d89e7ae26d7064b7ebeff373"
-  integrity sha512-MzxobGVwpogZZcP0OfJumzs+vjtL/KNxLUP+5epHodogaPYrov0Usrs962DsJz/3kISJxzyX3xpeuxU9Yae6+w==
+"@vonage/vvd-scheme@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-scheme/-/vvd-scheme-2.43.2.tgz#ae270b91b568d35841297b5e187cfd3f8628cc34"
+  integrity sha512-DNwcqzurxt3fcEagaf9lAXSYXPKUb0RDyYDasW91pkoC9tGTWINkRW0A7nUu3op7Z+Wd+IQEXrzlIA8WP7HNCg==
   dependencies:
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-foundation" "2.43.2"
     tslib "^2.3.0"
 
-"@vonage/vvd-style-coupling@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-style-coupling/-/vvd-style-coupling-2.42.0.tgz#4e2c129d51ed38e13a444fbb13dac16bb669780f"
-  integrity sha512-W9KLLZecGdE2TfsKgIcraVLwz6gbh+zYVenMhtDCgISL7wKbp7pneSIjx1rFYDVc+BUPzpDypbdBFdRAsCfcVg==
+"@vonage/vvd-style-coupling@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-style-coupling/-/vvd-style-coupling-2.43.2.tgz#651ccbd45997393e2fd4796156d3a737e65b4e20"
+  integrity sha512-g1p+q0P7LIZ2hYdm2h4UF1TZk4kIg4wiAaqepmuFFqhlsyUO3kPRP3uMYGPM0lcRO0eaSjeOQKZJsl2TW3WlEw==
   dependencies:
     tslib "^2.3.0"
 
-"@vonage/vvd-typography@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-typography/-/vvd-typography-2.42.0.tgz#b342c39441c19df9947da1f76335e926d9ab697b"
-  integrity sha512-YGe1m4V6spSXIFkuwLz4zzn2svJ7C6bXBYxPRaFncyIsiCeEB5pKBvF74j3s472xaMuEyFKL6dv/advWp6f3qQ==
+"@vonage/vvd-typography@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-typography/-/vvd-typography-2.43.2.tgz#76a3f6c5c893fc364834e70e5a48ab7683a6263e"
+  integrity sha512-dMs2G7+DaxHZaBcs5qguyvMPBLqYFr0uh98DjBE1jr35QwdAfdHr1mjvL7DGWVEJQizWhtjcThvsTEjCmE+KFQ==
 
-"@vonage/vwc-accordion@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-accordion/-/vwc-accordion-2.42.0.tgz#e0761ee34a241cf6d573a2e5222787094a41b29b"
-  integrity sha512-tcP7/g59cT0enFjnfsAaa/1Jyjh5BnfBbt2pagu9CYIId+ZFEV4uVXIfJEaDPzHbmkrzorsInOBN5TDHHjx0Rg==
+"@vonage/vwc-accordion@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-accordion/-/vwc-accordion-2.43.2.tgz#7289634f82df2763628f9207da19cd5ae5cc7d42"
+  integrity sha512-0pj9Mcl1lnRsBWO6OHuq2ckrpYE9tsOtE7i8lFFofaNCPwOEhXOkb40T03/JMKaOzlOn2UtQetsuVxvXEXdpfQ==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-expansion-panel" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-expansion-panel" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-action-group@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-action-group/-/vwc-action-group-2.42.0.tgz#72af49002fc38c5db83c76e537d59cb9b2681169"
-  integrity sha512-1fDhTnboV7n3RXaQ1BQ3XcEWg6eSRL3Op4W3nO4yA8CjWgDkjaKjiVfo2h6id+Kkee0R2Nv9n7XdzV7MWcVuow==
+"@vonage/vwc-action-group@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-action-group/-/vwc-action-group-2.43.2.tgz#fffc412fb505983a13626937b917a5b18af8872b"
+  integrity sha512-0EGHLYjXqhtHdzPYVL17neLyy2MHr39Hrf052ptiaoG1iA26SIjtUXUCMfnKsVLRsxkj9lukv1bYfcqNzpSZdg==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-badge@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-badge/-/vwc-badge-2.42.0.tgz#973b5d698ce6c7befe9f5b59766b0c63895ee4b8"
-  integrity sha512-TXBSTR7BOnOsHkD0zQjjLosBGKTM5dK5n3bvk03r/6CSAVeAi14zyXs99czsAe+xbQ/X5Kw4ZVLM8VkoRcgeGw==
+"@vonage/vwc-badge@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-badge/-/vwc-badge-2.43.2.tgz#fece622bca68925ca6d474f36994be468784ffc4"
+  integrity sha512-wyxOEGPPWNkvcsb/UJVCgoqMpYQcb9kRtvwotlUCUaw1H0l9ubnc5ChHZ+qohbdDRNTliUN7bNqCR1XZWzWnHw==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-banner@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-banner/-/vwc-banner-2.42.0.tgz#d8d44784a0b1f4c87b862e5400b8cfefccd74322"
-  integrity sha512-+z1WnYOCggZxQoK4NqZYU2PCNaVXVu8ptwgM4cYwhQnDJ52P4Mg/FTzgei7oNcgIID2CZ9KhQYfU3uezqfCvyA==
+"@vonage/vwc-banner@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-banner/-/vwc-banner-2.43.2.tgz#a7bc1d0c58afb830cb8db1d0b8c662a39e1fd3e0"
+  integrity sha512-OTkiiCPAU+kqDGziEtqgVTA8ed+8SNY0IDhn1WWApsKWM5MzqNFPgXQ5IFNRjANSyWY+PHpW6VFb1+p6LicsZw==
   dependencies:
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button-toggle-group@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-button-toggle-group/-/vwc-button-toggle-group-2.42.0.tgz#26b7e2b551e320bd8e93dd60c0bc29b9a9858423"
-  integrity sha512-28IIXnfZh8bqxH+xxxeOSn8g/B0DPhKEFiO6TVDUrg5Kvkn7JTAqp1M7Ck9siTIAqifhkhvfmdoGPC3jCLd58A==
+"@vonage/vwc-button-toggle-group@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-button-toggle-group/-/vwc-button-toggle-group-2.43.2.tgz#cbb827050a5238d7f69f7d3d10588d51a99fd7e8"
+  integrity sha512-cOKjr0PN1to4KlIQwFWLJOX3I+rKW6Ja2+FP9wNIzGDotf7Pyns+3+0Cg3rw8I+aDUA4pI4QJ+Ulc4Ptp5dR+w==
   dependencies:
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-button/-/vwc-button-2.42.0.tgz#fedd458ab698239ccab5a45887a36eea208daf66"
-  integrity sha512-bPgE8e91p0cQXVHd3AccNfX5ymg1ZERi6dicml1/ZlGySvHyBpmt6kvGyQRzgUrzlQBZ8pEQFhnHyMfN9h6Xdw==
+"@vonage/vwc-button@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-button/-/vwc-button-2.43.2.tgz#60f4c09e770dc42cc54a5de523eb4d5dc9f0046a"
+  integrity sha512-iKOpVlPPF3D0e+BtlYv2i50Jw44ng50ZPyyCaaMiD4y/86ZXNogzYyK8I+I5bGi4eTVwz0S69AvH8yTvZjgs/g==
   dependencies:
     "@material/mwc-button" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-calendar@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-calendar/-/vwc-calendar-2.42.0.tgz#86afdf99352925172588911746757e793d6d6054"
-  integrity sha512-V6/MxGfTHHjOgTllahpv9Xyghz7u4LCAg+9jtrY3YmLz3SNCEWAMJUJCSodFhqDpHYClXesJQp3s+u/G7smMKA==
+"@vonage/vwc-calendar@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-calendar/-/vwc-calendar-2.43.2.tgz#22c674a777d6d690bbadff9b4c58d7c9e8bf20e0"
+  integrity sha512-upAXGL5YviANUcoAiMhe9kkeesFViakOZzkPg6iC4uYeWdKPb6J9DJ5QXsJFxVeusBi0J2Xc2vD31uB0nPSq/w==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-card@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-card/-/vwc-card-2.42.0.tgz#f6ac6948ff5ec2aad7fda9582fec3b27e9c5ef7d"
-  integrity sha512-jn8hheYp8Ss/Ne9KbgkMaYej0NgMy2gKyPlP8ictBP7ZGmpC2W+yS/cw1mPMyy/CEzm6u6EO5DSGTbP60hjcmg==
+"@vonage/vwc-card@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-card/-/vwc-card-2.43.2.tgz#6e69fc4a99ac6175830466ebb05c1e68167456ba"
+  integrity sha512-9l3NSHmkAlkFUa06TNoQQ0Ytg3IBu2xiztZyFN+MLg5/UThdQsnGRVeDQ+xmuNA1qOsvOkXpy0az+P24LK2Trg==
   dependencies:
-    "@vonage/vwc-button" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vwc-button" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-carousel@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-carousel/-/vwc-carousel-2.42.0.tgz#a07aa3abf9d7280ea18e42147c6c8b99b3f74f2a"
-  integrity sha512-ABN0AWYEoJAFUABXYz7THsWysNp8CSrhiV5GWashI0xuSwzLMfTrMf/aIXeS+imI8+2QGB0Rqvu/3xk/sXOOtw==
+"@vonage/vwc-carousel@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-carousel/-/vwc-carousel-2.43.2.tgz#6e085d5dca4bfc32eb79df02963004effb30a150"
+  integrity sha512-l5JFu+JyEYW2M51nY+yKTd0PT2n+APqaqloDuitQl25XoIN/PsjMDH2vAIRltnbgI1cOpoGk6StOXJEhALOHVw==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     swiper "^6.5.7"
     tslib "^2.3.0"
 
-"@vonage/vwc-checkbox@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-checkbox/-/vwc-checkbox-2.42.0.tgz#564dda016b4c31e9423c53b0f752a84f193c3be8"
-  integrity sha512-zM2LztGHR7KjQxQ5K4DeWEXB9BPyGaCZe03nufHewEoATnU6OVyGL3TAxbMWzBCkBmLzLYg0TTDVoKc8rekvrA==
+"@vonage/vwc-checkbox@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-checkbox/-/vwc-checkbox-2.43.2.tgz#b1c12ce8020f3a37a71d69506711d0bdfb5625c1"
+  integrity sha512-QluGDpXepgTT71JiYoKsB5Y9F3rC4Kq928a5yGdmjmceNurnprnzlsG5d3vQGHi4kvwrXendDVth2waUUcmnng==
   dependencies:
     "@material/mwc-checkbox" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-chips@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-chips/-/vwc-chips-2.42.0.tgz#a0a0c87d08bab88409daf47a449bdd62d1860306"
-  integrity sha512-ay6s5j4DAWFML/XmEDXu7mSrK3Xg0TpiCZFCwdr5F6AIch8I+CDNjz+jNLPbmL8AJm9pag0BmGVxAJC/dI0f7Q==
+"@vonage/vwc-chips@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-chips/-/vwc-chips-2.43.2.tgz#a80fb5925c98464a858d69b14b05857b08da9bad"
+  integrity sha512-9ytFXpNWuViPGHN1XkfeHugrqVwxRGKUz/AoipUUB3wHWVS/T481hA9xBHEyIM80LAIV71OgvgnE/ESD61vhTg==
   dependencies:
     "@material/chips" "9.0.0-canary.1c156d69d.0"
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-circular-progress@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-circular-progress/-/vwc-circular-progress-2.42.0.tgz#86afe819619da42d1143e5ee7f03a3e395a82b91"
-  integrity sha512-cBszZU6T1TK48Wjidgn3KDGaKKbRzUbjARv9O6BvinFuxFIFcGAf1eSayUMp5GGLTUY6Sa/zqJSKnZ4j7/rn7g==
+"@vonage/vwc-circular-progress@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-circular-progress/-/vwc-circular-progress-2.43.2.tgz#114747a1dac9c5828755f8d1dda8a6a85097babf"
+  integrity sha512-YbtYV8S3Wtw+ju3ryQJhSX0m5LoHl+V6bL2PiSb3Of8yESMptNVWAnuab5Hqa1XglFD0ccVxss5i2adC712+OQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-circular-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-design-tokens" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-design-tokens" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-data-grid@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-data-grid/-/vwc-data-grid-2.42.0.tgz#0c5f6d231d4c578186cc324dc2b6ba6570f5eded"
-  integrity sha512-/UFi1LlFkI/A7vFMhl1rMzRdXuoIpVcxd6JnMj9RF5ceX70UtQ586+1FSsL0Uv/C1e94g6ndewR9zvhVLZZGfw==
+"@vonage/vwc-data-grid@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-data-grid/-/vwc-data-grid-2.43.2.tgz#873951da4ad6a02da46e27c7dbcace71f9bf42f3"
+  integrity sha512-0h7WhmPGmrT+SC6Y0BYFx1E9Ni9ifOjtpY9F/8WnhpIUH0w0aF6R3eRpytb4QYJx98Xs2Lzu6k5n5/5mtwGGWQ==
   dependencies:
     "@vaadin/vaadin-grid" "6.0.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-checkbox" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-checkbox" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-datepicker@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-datepicker/-/vwc-datepicker-2.42.0.tgz#e01d26f038fe4bbb3cb2c00e85175af4d16e17ea"
-  integrity sha512-WJAgxU8/bQ7rdB9NrxDtRbPBUXK7FUoaxUR1R+tooKh9q0AoEwx0ZsNhktIb/mTL8maUstvIA0XSEcUu9N1YJg==
+"@vonage/vwc-datepicker@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-datepicker/-/vwc-datepicker-2.43.2.tgz#46989a6e1e52cd8fd5922ff497a109084b675e0b"
+  integrity sha512-3NL5fnjdd/G3se2NjNVWq1Uc45yGmeTR7w4VpmPS7k8oPFOyFGKOyBk34dGpuFp8fyc4qHHkaCnQLc2cf5MBmA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-button" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
-    "@vonage/vwc-menu" "2.42.0"
-    "@vonage/vwc-textfield" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-button" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
+    "@vonage/vwc-menu" "2.43.2"
+    "@vonage/vwc-textfield" "2.43.2"
     flatpickr "^4.6.9"
     lit-element "^2.4.0"
     lit-flatpickr "0.2.9"
     tslib "^2.3.0"
 
-"@vonage/vwc-dialog@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-dialog/-/vwc-dialog-2.42.0.tgz#de3619df8b3de14fc898ba8aa7f8b761e147f6b6"
-  integrity sha512-dFgeWr9KoQyArTK5UkkOlvgeKzKnDdHe2Qv6RBxaw1I9BnbHVHnOxYBuJZBWF0O0dm2pQziKeRZnJxSfcgNwaA==
+"@vonage/vwc-dialog@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-dialog/-/vwc-dialog-2.43.2.tgz#36c5af53f8294e271251709f6fdd29ea4374361c"
+  integrity sha512-O7HrNRIAkGHnfvjsmEbB6hEYoRog2/TzmoX1JOUkbH0rqH8q9vKfQhlNw6noMHOBfpmPYdoHpLAW0iQK+9pqFQ==
   dependencies:
     "@material/mwc-dialog" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vvd-typography" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-typography" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-drawer@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-drawer/-/vwc-drawer-2.42.0.tgz#86ad128fe2e8220859e9d4f3408c73e016644df5"
-  integrity sha512-Ou/zUMYlLi3bUTVPMqr+g1CH7WcULq8Qs6Td8Fytl0bpWlLP92Fb9Ocd/bPRK53utdsmIePdOdWq1/znTtmn9w==
+"@vonage/vwc-drawer@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-drawer/-/vwc-drawer-2.43.2.tgz#6bdfdcbddae7ca892f19ec7cfaf0098792517cc1"
+  integrity sha512-6/ZgXBSjaf7PVtU22cWhbTOTmuhrVyefC0SGvCRpiL9h3RPsqMYmqGh1T5MqkO6UoTIrjLuG8W/XyXr7zQr+3Q==
   dependencies:
     "@material/mwc-drawer" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-dropdown@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-dropdown/-/vwc-dropdown-2.42.0.tgz#ab0549056e673aaf0b226e8eda72c07434d5bd48"
-  integrity sha512-qBVALA7WtAwuILATlbHCcuT+e8o5SVuLG1PrF4Jn27BVoEgjxE8JL6R/rRCDxZo9fcr4EV10pft4dzTLFfxfsw==
+"@vonage/vwc-dropdown@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-dropdown/-/vwc-dropdown-2.43.2.tgz#3c68d95ee87d9313953ab47566dbb9a93f570f26"
+  integrity sha512-b1Z+hu2FlT5F208bEBn/t8fK3mX2GABCRgIiKfWtZHisZgkzXbiP92vYDLq0aa2jYv50kOFostydBhbpY0Z9kA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-menu" "2.42.0"
-    "@vonage/vwc-surface" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-menu" "2.43.2"
+    "@vonage/vwc-surface" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-elevation@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-elevation/-/vwc-elevation-2.42.0.tgz#18c65c0bddaa33bd8313f448dd838d96c57a00c4"
-  integrity sha512-D2vPSUjs1TYSgX4NomPtPdFXXfp3O+Yo9aEbklUkGElQmiNyWCI1OcHjZ3e4Y1A3+46d/I6tA0Sowv7AZLOxWw==
+"@vonage/vwc-elevation@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-elevation/-/vwc-elevation-2.43.2.tgz#c5c07c0dd60cdd344e713cca240e3b2797627f3c"
+  integrity sha512-Q3CrLS5M3L+3paD0pwKfUJak8FFBZn4oMSotzlmMkjZc/bmIFuAXtk7btief8PgMTfNn3sXYj3n9IcFgJ2NfyA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-empty-state@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-empty-state/-/vwc-empty-state-2.42.0.tgz#5c0de901a1019f4e7a6a18f82f52f3fbce08230a"
-  integrity sha512-ZwBh/T0lRUFnsLneDGgADKJ+Z7G/zugriV0W1GYp0JpAMPFl9CheQqwj5zVCPo9SnABB4HsbyZ2JorJZj+DBiw==
+"@vonage/vwc-empty-state@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-empty-state/-/vwc-empty-state-2.43.2.tgz#3f6deaf7f8cd48f8fd17ff319164ab91397cd443"
+  integrity sha512-n3NnizqLRk9Ab7TlJeT8oRh5FoPVWM03taM914WrnI3mzlUJXaNgg5UzdNRGG+6/+ooZK9NhSUcdUSay9SqU9g==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-expansion-panel@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-expansion-panel/-/vwc-expansion-panel-2.42.0.tgz#84ada56d2a99176971dd4e72044034664c59a1ff"
-  integrity sha512-8Y/ijIr0Ps0brorj2VwXNAzDkXXBAuOw895vyESBtJVqO1QXgzjsZYFXXfcqYny7fSsI6C/Q4jyDOWv8B97hfQ==
+"@vonage/vwc-expansion-panel@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-expansion-panel/-/vwc-expansion-panel-2.43.2.tgz#8b3e22a76feacd0fd722d3f259ae4aab6b50ba46"
+  integrity sha512-HSLPfQ/7Y2Mhw3N7VhbIgDR6yIIHA3gtQdZjpsYTsGu9vgSlCrNgaOp6MYV/KWLi8Z51bDg/D6cKHaurBoiYbQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-fab@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-fab/-/vwc-fab-2.42.0.tgz#bb2d65e4ee1ff538e95fbf25ed2190a5edead3d1"
-  integrity sha512-BdhMFTxlsW5FjputIQR/Nu6+jqSeXbGjw1Zh6mujQerbPOIGUoQl3iTkZAPFGM1OIhvkmwgeRUnk0oWQH0mbpw==
+"@vonage/vwc-fab@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-fab/-/vwc-fab-2.43.2.tgz#c92ca33c1dbfdaec431a4b880e22f40615f290dd"
+  integrity sha512-CyJQuMFreASJacbhbun1CxhJSlkLS9fdgfP7yKr2R6kqhWxrHznLxnVcwnr2RW7SRMZqFtV9BunMiPykAjtM1g==
   dependencies:
     "@material/mwc-fab" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-file-picker@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-file-picker/-/vwc-file-picker-2.42.0.tgz#ff9f9dac5b1df2640bed7e65b51cbeb33566dfdc"
-  integrity sha512-l1N5jVTyeCcNSSL+5V3N9ReJE/YCmCl7cimFTLH9Zs8lc3ywI3TKxs7eJxkQ3QHM7WTWqgchBAugDaqFothjvQ==
+"@vonage/vwc-file-picker@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-file-picker/-/vwc-file-picker-2.43.2.tgz#65197e75432d88fe2ebbe1ff476774f3b3dfc030"
+  integrity sha512-xoEUN3EuUM+bbP9CC3ScwbRJFJZT08LEH0gKA5zTSsiHEFujCZvUJKXJgoOmMlOpQ+InWYxgh+cmMdCtFhLBWA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-badge" "2.42.0"
-    "@vonage/vwc-helper-message" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-badge" "2.43.2"
+    "@vonage/vwc-helper-message" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-formfield@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-formfield/-/vwc-formfield-2.42.0.tgz#7d2b620876b5c38263fcedc23ef9dfbe5627b887"
-  integrity sha512-G4MpIf9ExUCHkmmCokl2kkQzhY/hEkrQiRPPZBuFgXFnfRNaEDx533cFadDQotM1/jawJyYcTegtjurCli9caw==
+"@vonage/vwc-formfield@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-formfield/-/vwc-formfield-2.43.2.tgz#bebbd188212ad6503cfcea2c69a5bde232355dd0"
+  integrity sha512-by5Q13s/lmve18JyYpXqbToEr7wPNDkb5AmiDBsKiD+VgWjwYx8Dh8GS1n10Sj0Vz8D6hjynMnho8sMp7azhCQ==
   dependencies:
     "@material/mwc-formfield" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-helper-message@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-helper-message/-/vwc-helper-message-2.42.0.tgz#daded2c1d72d4e4d3883a7476b261f7add7a4c45"
-  integrity sha512-9+l3vu9ulvX4Vlp2qpIgVZAKxQJ8sq0K4dqkmfVF1SldYJq1FO00Eq7mPwUE+aPFlU33PkmQn62FqIsyAaWdiw==
+"@vonage/vwc-helper-message@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-helper-message/-/vwc-helper-message-2.43.2.tgz#e3c92c0f5ecacc6ff28f45559a3dc914d07f3968"
+  integrity sha512-y445n+2rL6tygxvl+TWq25XAQ46nZhfJX1FwL8nl++foajT7TKQVIdIdQefx8EQKXoCqtMfGEj200rfAgzOxHA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon-button-toggle@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button-toggle/-/vwc-icon-button-toggle-2.42.0.tgz#dec8c754f7703579d3611caebc3aa49111fc75a5"
-  integrity sha512-/6ES8vVk8E7Z0RbH1JHimbpKO+0UtzidfB491W7idNubZswODTnbhJimLx51Om8EKmEQj/JeWLlkAKHOcEnkHQ==
+"@vonage/vwc-icon-button-toggle@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button-toggle/-/vwc-icon-button-toggle-2.43.2.tgz#0fdd5732a2b14f9458464ce3647056d2e6221b19"
+  integrity sha512-uGOR4tFWimRlbGxd+VoC2A9ylK+VppGJlHoes8qilfZ0SSBFHK8oKL++fKg11y4GMPtyPdsrZe7Yfk/kmsJSkA==
   dependencies:
     "@material/mwc-icon-button" "^0.22.1"
     "@material/mwc-icon-button-toggle" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon-button@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button/-/vwc-icon-button-2.42.0.tgz#82680cb2d6cc8df750df9a3ef5a32d48d077c13e"
-  integrity sha512-+2OCqHInx018NyOCkCpYfDPHHoEdTOW0NpF+z4Nd/rQKXMOoQavmrWoaIT+S9vLfBrXM7j0yXYfIWF7hpmaGVw==
+"@vonage/vwc-icon-button@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button/-/vwc-icon-button-2.43.2.tgz#bc89edc138e8b0c676829918ec76c53c1d0f6f1c"
+  integrity sha512-nhx/88wtFhdiiwy3/+nJRUzZqG61D2E/GlczS0AC6kqUb8a3LokVp0EPEjg+wqQQ56dwgnsKByFQYdexsHfbgQ==
   dependencies:
     "@material/mwc-icon-button" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon/-/vwc-icon-2.42.0.tgz#f329d198d6d8fe83b641356708b91f0f39be70c9"
-  integrity sha512-tViflCO4YxNN4hFG2ShUB8ZJ9ln6z2mfX6SnuF7tENOx0dlmkL6p7nw+NN0EvyazwZVZKeceAI1z8a+PHGDSVA==
+"@vonage/vwc-icon@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon/-/vwc-icon-2.43.2.tgz#d00d65e3a9d53ccea82ba3be7477048eab40a8e1"
+  integrity sha512-hz0U7SEndk3s754y6zXhJ645CJzWPaPRVrHeWPXIaVRG/EkPXwgxhzOlyanicHBCL4AYqBlV1zNss4gQvygUYg==
   dependencies:
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     ramda "^0.27.1"
 
-"@vonage/vwc-keypad@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-keypad/-/vwc-keypad-2.42.0.tgz#6e9d515053acf6b1b5953140c83a78ce03b5f62c"
-  integrity sha512-JJIGhugqo1oCwKwox9C5vFhdHOZxU5mdbqwx/enTIg/+x9G1lyqXlpUVm+3BVVHQlYNn4mqGVSzPzmPe6ngC/Q==
+"@vonage/vwc-keypad@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-keypad/-/vwc-keypad-2.43.2.tgz#add899bf2e1b860aaefdc3bae32ddd827aa3be4f"
+  integrity sha512-eQTJTOqXsIUhKuRHVbNlMtqkt7Fif7XJ4WwIlHM6AieKFeielsz4vH+m9egO7Q4o8MYHnKjKMTh0qeOuJBe1FQ==
   dependencies:
-    "@vonage/vwc-button" "2.42.0"
-    "@vonage/vwc-textfield" "2.42.0"
+    "@vonage/vwc-button" "2.43.2"
+    "@vonage/vwc-textfield" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-layout@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-layout/-/vwc-layout-2.42.0.tgz#6497aa148dea6b01d289a0a9218c60eed61a617e"
-  integrity sha512-VqECQZ6y0KKZ9+EvOMQeEtvrSlTd8tsNA8JAbkGbOA6kSrl3TzVWCtvfmTDRfd04Hwoaib+xLYWSitiVWiWY/w==
+"@vonage/vwc-layout@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-layout/-/vwc-layout-2.43.2.tgz#6efc9a4d2dcb11134ffebe71ae4f6bd3cfbff40e"
+  integrity sha512-AFzxSoLbVujVS9nhJCBiZBrwJwTuINRaIeH0fwJSy2v4D8p9Z2HH+tdW312YnZn0u4ixso50F5K68pCKQ2A4KQ==
   dependencies:
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-linear-progress@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-linear-progress/-/vwc-linear-progress-2.42.0.tgz#6296bd103c9e4a0cd758318309fed833d8c2d91f"
-  integrity sha512-d8C/1+NDdKz2GzYPfavogkSXs45jd+ZCQVvC2SwVIKDoP31zxBO786w/MQDRVXkK9sqca5UgcYBx/VUj7ZBcYA==
+"@vonage/vwc-linear-progress@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-linear-progress/-/vwc-linear-progress-2.43.2.tgz#f9fa9303ae005d1a3f13be3903e46d05c47be71c"
+  integrity sha512-CQr1UGoeYWPBNZnyu95oFeTndHcttDund1xe0Mwes4Kur/RZod7xBKTC4uZ7QdvOSeQqvrt67DrwFtJ8KVX6ng==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-linear-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-design-tokens" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-design-tokens" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-list@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-list/-/vwc-list-2.42.0.tgz#0ccc9b2e2e8bda7b50030a349de226317339a11b"
-  integrity sha512-hebuJwSIxL3VdL6lGY6WsMiFuetpmjouO75ACXNHlwGYVXibcAOJX8yj7cWHCie5sMeQC6PdSMs/JBM0O6SMCw==
+"@vonage/vwc-list@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-list/-/vwc-list-2.43.2.tgz#73a436d25cdcdc9470085e35ec07ce78820b7136"
+  integrity sha512-b/8fDOqlZpPe1i9x9siYLgDTwlsh3XHsKJdnoMBjgLf+F5C7Q4oT8kRdh31k9tTemJUsTUL8eEr3zxH9OBxTbQ==
   dependencies:
     "@material/mwc-list" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-expansion-panel" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-expansion-panel" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-menu@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-menu/-/vwc-menu-2.42.0.tgz#6171ab28b3bb99f49f1b0c617b4b1c8d2361e7c9"
-  integrity sha512-i1d3ihoZStxTqo9zZZ8j0JIiz4SUIABht7OUOSqLmL+CFF2/24oAbpsJEheQ7LXclPgZoNiISc1GFNEoEoo3mw==
+"@vonage/vwc-menu@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-menu/-/vwc-menu-2.43.2.tgz#aab9683565cf0d2908d5643c05171bdb2e18b091"
+  integrity sha512-KETA6YxG0BXH/HwGwPLOPJfTVoH7iA/nxSBEbZC/lidpT0sTMTqJlThPTWo7xuhXyMgaQ+pc/pX2y5qPlCyOSA==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-list" "2.42.0"
-    "@vonage/vwc-surface" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-list" "2.43.2"
+    "@vonage/vwc-surface" "2.43.2"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-notched-outline@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-notched-outline/-/vwc-notched-outline-2.42.0.tgz#aa26608b8b371da2e1ad79ecd69b2cb38b1a6550"
-  integrity sha512-mrZxqaAR0vdBcKvDp07PsKOnn2bkrvkkH85fD8sKndhdPdhEreiv6dDNWws4RFl72r0YK62uLhw1V9xzHkF+Zw==
+"@vonage/vwc-notched-outline@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-notched-outline/-/vwc-notched-outline-2.43.2.tgz#1edf590f275f77b237a2d32db8cc8aec26ed65c0"
+  integrity sha512-ZQ1MMhQIEdAzg4rI5LOQfChlzti1NWRlpej1fM7eR/xvE4uGaSOOA8Ejqrgxpa/KRe08hImN3Da+Fudg03e9lQ==
   dependencies:
     "@material/mwc-notched-outline" "^0.22.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-note@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-note/-/vwc-note-2.42.0.tgz#2d18601e13672e69d10df1f552d65c9d4a3de32d"
-  integrity sha512-lWhIaG6BqL90KwoIKAHbffONRSgzjScJAl8NFVv//UMyFkQuP92qkasXBDK+AoDC6xLNzYC+J/Bb1QgqXKbyfg==
+"@vonage/vwc-note@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-note/-/vwc-note-2.43.2.tgz#225335e51ff8d4c62b113b36429c8707da531ce2"
+  integrity sha512-cT5brSVY3iIvaaLfWXUCCBv4VFAAV1ERTb2D6ESLOsIwOVfrn5JvkPzfVohJxjBNjBF+JBB4slrGmD15IPokIA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-pagination@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-pagination/-/vwc-pagination-2.42.0.tgz#094c4ca04154ffd6a8cf0d456b88139ad86d1128"
-  integrity sha512-TQazFvrY4bQET1wNM5lIcMjl9R1B1UIvtRU56h7c4TN6kyCjMXnsUDgM/S2PnhJ4ZDfQksGw12QTP/3hhS5f+w==
+"@vonage/vwc-pagination@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-pagination/-/vwc-pagination-2.43.2.tgz#9f10c3724e8e69e8567703fe9c2e8f5ad640a1c3"
+  integrity sha512-DToAYGCrtq/TAh0X2hOlr8Am6agOyXZEww7HQ+qxafIQ+O0Ke/Qp31CYKoUMs8NrdCQyQ45l2xuEQ//R240+PA==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-popup@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-popup/-/vwc-popup-2.42.0.tgz#3a9ec1f39825f204da85fa41676119e3282aae86"
-  integrity sha512-eDsheP/MDXUbzrkbYZ1lcD2mlTlIW5PfhTvmK+NBLab4MWBCP1iTacJgMSkp7FwHPL9pz+WabQ0Se9cUL/0QhQ==
+"@vonage/vwc-popup@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-popup/-/vwc-popup-2.43.2.tgz#72fe8c9aea89b30cae2664017643f9e49d8c3e31"
+  integrity sha512-hfxz4ul57qljrR4vt0tOxudyYJ0gHy5R0lUURbicBYVrSAkTh+0/e4gpLXwuM2+PJNkv+hU9JDKqXxMA5w3+JA==
   dependencies:
     "@floating-ui/dom" "^0.5.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-elevation" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-elevation" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-radio@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-radio/-/vwc-radio-2.42.0.tgz#583b3420bbbba4d2e863fccd9998c40a9eede355"
-  integrity sha512-YfVQxcw7kIuuGZVz7pqo5V1a9ZGpJs1lksQYsComFxFEwCzwhiAnpgfTto8ceADI9N1wWgg8x8YI7VJvsatPnA==
+"@vonage/vwc-radio@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-radio/-/vwc-radio-2.43.2.tgz#e5f3ee0a365a37259785d2a2e162cc450dfdec96"
+  integrity sha512-3FZEG5nW8dkvrg8Gfv5ef3VnaqemrzCo6ASj0xM+jIjZM23L3UrEfJqFeMne5xvqjIzXy77+eJBrTYZDB8dK5Q==
   dependencies:
     "@material/mwc-radio" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-scheme-select@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-scheme-select/-/vwc-scheme-select-2.42.0.tgz#4b55fdeb233def57033291da9c42d5aff93bc967"
-  integrity sha512-zOJkEaRDy7h6xPVQM/NETLbiUED8cG69Dobqk+4xxYm9FrMockgOEVhq3rQNWTWESTOXwCg+QwIQYhdlL38a6Q==
+"@vonage/vwc-scheme-select@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-scheme-select/-/vwc-scheme-select-2.43.2.tgz#8d63c5d46defcd9d0d4687250757f8f57df1c0ac"
+  integrity sha512-BkvbypyKFCYpPwPtRXn9AHGBg3FIEXwgH1n1T7Y10CRRqCNOzwSAJaDPKXRSB3t7hmOKUjWuqKhpFCYwkZhKaA==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-scheme" "2.42.0"
-    "@vonage/vwc-button" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-scheme" "2.43.2"
+    "@vonage/vwc-button" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-select@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-select/-/vwc-select-2.42.0.tgz#39a4f1c89e87ace6644d900723eb305b102fb252"
-  integrity sha512-6aGiACssCa5LwyaVvl1lFdWQ6ddfs/Etgef/S5JHwXUVb2sAIxesqOQdCVsHmv3JeUrIN/COd6Ok8QlsTlNn8w==
+"@vonage/vwc-select@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-select/-/vwc-select-2.43.2.tgz#125fc988d5ac6bf5d7d58e9cd7b0e928f5a0775d"
+  integrity sha512-iUighwfbZFp5s0SrGaVp4ONOwctzi787J8gZhaBwulIOfmHD0daZH3HpoNcPitiV7cPcjZi7YIiPJfl86RPreg==
   dependencies:
     "@material/mwc-select" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-helper-message" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
-    "@vonage/vwc-notched-outline" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-helper-message" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-notched-outline" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-side-drawer@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-side-drawer/-/vwc-side-drawer-2.42.0.tgz#ad95d78d5ff1e8a126ea84338fbfd3b12dde7904"
-  integrity sha512-7RJmrgoUd4X461rmUnNwYSkFRUdU3iBy6qwgl3HrKpGKBoJQt3SrVtqr92aK8EnU8beS+1TLuIdbZlVvi4mFyw==
+"@vonage/vwc-side-drawer@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-side-drawer/-/vwc-side-drawer-2.43.2.tgz#d776df9e785e5d2660b45f7a3cfd5ac1f140d007"
+  integrity sha512-j5XjWym4VOjgNWFw5TZ1SeAI6V7WOx10bdfIyx72vXfUOLbMRj7bb8R80a3WqLOG+KGEl3x6BdaGcL+ec9kV4Q==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
     blocking-elements "^0.1.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
     wicg-inert "^3.0.0"
 
-"@vonage/vwc-slider@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-slider/-/vwc-slider-2.42.0.tgz#a7c77b7d32fa383377fb715d04e40dc3ed388c62"
-  integrity sha512-zmQAbJGWhUsJDotJXqJt2dPdf83dCvXyrkm3r/UAvsUjiL29j2F4MdwGC66xr4aZrBR20PDnTuLd1XOdpIFyAg==
+"@vonage/vwc-slider@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-slider/-/vwc-slider-2.43.2.tgz#2d16e9b69b6cfa7d20aa317969b8c6198cca53ec"
+  integrity sha512-BYwmCa6lw19pXX40WeELq6zO3P0UcJSEAQxqqnMG0M+NLD2FbJTpAfa1Yi6e6Mgqf/ZHdkJaRWsLggwyYxz8yg==
   dependencies:
     "@material/mwc-slider" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-snackbar@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-snackbar/-/vwc-snackbar-2.42.0.tgz#37448eb0ce0fa211330eb08d1a3ced908435b48f"
-  integrity sha512-uKtg0PC5V/9r7fRwc0yhqlQ1ZjwQ5zKRdPknDLnYB0vCYnuD6/oI9S6kDFtDtGg/EGYG4NjxEm8GJfM/MsDgtA==
+"@vonage/vwc-snackbar@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-snackbar/-/vwc-snackbar-2.43.2.tgz#4a6c9b87c1838627bda8d5a742b63ae9cbaee02b"
+  integrity sha512-sczLBFoc+tXyKVbENx2NzleCw9QlJaQLiBA/n8s712biasoXohtxlqN67pvnkyi7D5CIF1RCM3EOwMB5LYAByg==
   dependencies:
     "@material/mwc-snackbar" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-surface@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-surface/-/vwc-surface-2.42.0.tgz#02f9dab92ee7a34308912508fdb2044b3c3a8a41"
-  integrity sha512-IwJ9p2YTzn+DtmqdKoC+qUoW3C7wmBDzazn/UejBwW/d5DfQjCH35D5nc1gDqtU5ufFGLj+hZ+iUkVT1COBukQ==
+"@vonage/vwc-surface@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-surface/-/vwc-surface-2.43.2.tgz#c2ab64014026c6f2635d0d4493a456a9bdc1ba99"
+  integrity sha512-g35mCn+rdtW7i+P9zpyeWstDLJBROfltSlKWbdUas9/EzH02lbXkZC6QnU+4NDwys02LdvCGjlrPNUih308CvQ==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-switch@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-switch/-/vwc-switch-2.42.0.tgz#044498b7ce3afbf8570142f0d9418d9c438b86b2"
-  integrity sha512-MtnnvbjSXhyWJW2LUmmgTpDAX2hP7rNoen+n/atyBlXHXuizWhD+kr5NvyJzYb7Wep5rJX0jnz8kV/SUPWg6uA==
+"@vonage/vwc-switch@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-switch/-/vwc-switch-2.43.2.tgz#e1987fff220e1821f225e44a713d1d42d3783354"
+  integrity sha512-fY23cJ8gK4VywutIOrV8Woyaj8Ee6Osw57y3z3xOVO3vWCnWsHkVFCYsIDkX6XUEjDQ6mE4HJ5hXoeH8HkTeDQ==
   dependencies:
     "@material/mwc-switch" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tab-bar@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tab-bar/-/vwc-tab-bar-2.42.0.tgz#f2050da28e60ae5a8a002105ef1b1c077ad35426"
-  integrity sha512-fXkeipQVno3D39MC0VOyxc7JxjCn41PGLOiUJMTh0pmLbl95XPX5SijdAGN8iec+7PJdao3mu19d3tgA9HCvdQ==
+"@vonage/vwc-tab-bar@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tab-bar/-/vwc-tab-bar-2.43.2.tgz#a0f7c5d83393e1ece7ea9f1783744088529a5d37"
+  integrity sha512-qtwAtV/SoSTigvw8dXfmRmN9EPPDJj7TbTLR8+nUsn30NWPmJA8jfPaEcSf7KulBWfMyCSrPi8DlFFc23IuaUw==
   dependencies:
     "@material/mwc-tab" "^0.22.1"
     "@material/mwc-tab-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tags@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tags/-/vwc-tags-2.42.0.tgz#2e01b51376d898847a191752d361547197d012bb"
-  integrity sha512-7LwnSTW6Iuk/G/d0xOysoQN4IXusXLnUt2D1ZvvcKpM5Iexwy3Xaja6NQJHMszXer7T4jYD+i6tr4vmoEDPePA==
+"@vonage/vwc-tags@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tags/-/vwc-tags-2.43.2.tgz#bb3d24494346b14401c2e7fa92b2af090d2e848c"
+  integrity sha512-EmxwvDbUP+AAyzdTidxJLO6DfNmIKsOQkfAfx2cY8zEYk4IDXLjmB/2wBcte28Hv4z+J9EJRmzy/gvvb/SyBmw==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-typography" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-typography" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-text@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-text/-/vwc-text-2.42.0.tgz#4518e1bb3026f4e7a235ecb19f09eabfc172535c"
-  integrity sha512-jtxO/YtLeJW7q2DOjs0CkOCSF1VMm5pmFDC70NHF5I0wWau1HkYPFYtbaCp1r/ygEgpdyZLNNpzMtd1+kq5SMg==
+"@vonage/vwc-text@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-text/-/vwc-text-2.43.2.tgz#99394b2bf1dcaa107e8b7235667fb93e2721cb09"
+  integrity sha512-jpFJCiYKLoGsC38yQ7WpRb4yiGIITefkWf2eF9W4Jx61p0Nxd4TYxFx1vAv0YBT2TGNAA1aVz9XB3/HjT16h0Q==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textarea@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-textarea/-/vwc-textarea-2.42.0.tgz#f9af7c8722138ee98b8258d52212b300b5dec8ad"
-  integrity sha512-4PIAdRyuJ3Z3RPknay//GkP1VfC3NBelVdsRflS3FzZTQkO7Ma+hR0VKqMDRXE9jHegHr0m54lMbu6jQzHpCJQ==
+"@vonage/vwc-textarea@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-textarea/-/vwc-textarea-2.43.2.tgz#1a648b5a35c1c40d57c94a0c97ab51bbe7f5b3be"
+  integrity sha512-d3IWu5NErx2zV1r6SUFlxVE82xVSY3SWEUNl7msGWwLy64OGXr4cnenvlA8fsXRc2Z4RHX/zNO5umeBgKPLGcg==
   dependencies:
     "@material/mwc-textarea" "^0.22.1"
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-helper-message" "2.42.0"
-    "@vonage/vwc-notched-outline" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-helper-message" "2.43.2"
+    "@vonage/vwc-notched-outline" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textfield@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-textfield/-/vwc-textfield-2.42.0.tgz#a49d5d0a5466cd48f9505485ab96077e1dca8b0a"
-  integrity sha512-rxiUoV06+wsbVEvL9I5ggFZ285X/a7Wsq9Eszujoqf5gVwzM34B3hnlnB1evFuD2bpHAjNFR+/L/dSsLUnFtwA==
+"@vonage/vwc-textfield@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-textfield/-/vwc-textfield-2.43.2.tgz#d49a49f11896fa953ce7cbc4fddce2bbc71d1d7e"
+  integrity sha512-oZCrQC+2IC+3gGVhwdLJlY9qwYJhXiHNud/UxaSEi7/CC46JJ/r7DyRe2slAX81yla48CZmxQ43H+Scy0EvL/A==
   dependencies:
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vvd-style-coupling" "2.42.0"
-    "@vonage/vwc-helper-message" "2.42.0"
-    "@vonage/vwc-icon" "2.42.0"
-    "@vonage/vwc-notched-outline" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vwc-helper-message" "2.43.2"
+    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-notched-outline" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-theme-switch@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-theme-switch/-/vwc-theme-switch-2.42.0.tgz#abba35c67f59be8296fcc86d7347599978f00dfc"
-  integrity sha512-KpwDdxdXKhvDXNnxGVusRrZgrG4B4v6m54AoHo7wklBFmweZ5+bFzgU1qwRhnFJFfJhA2KIuoQZhmqh3FJPYKA==
+"@vonage/vwc-theme-switch@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-theme-switch/-/vwc-theme-switch-2.43.2.tgz#ba97ffc0bbe6d395da8f2439801bfd4da62c272b"
+  integrity sha512-LcSdyK7/86C0y4hnFOaaQN6L2qZO0u71xQ16x/jszHMjBqKnAciyJPlcFF7q/cnlLlQxCjJSXBLc/9f0uYSpcw==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-scheme" "2.42.0"
-    "@vonage/vwc-switch" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-scheme" "2.43.2"
+    "@vonage/vwc-switch" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tooltip@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tooltip/-/vwc-tooltip-2.42.0.tgz#e50a923d1f4bba326e51691525b7de87f3d0ecb1"
-  integrity sha512-osiSI98/kQdrveA5xKAmAoRuLhvXCPfWmiaKESGgqMhKRUs0GLKla2mFisLqc7wM/XA9PoGy4C0W6msJHhSMhw==
+"@vonage/vwc-tooltip@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tooltip/-/vwc-tooltip-2.43.2.tgz#582b91fdfa2ee20c2c92a30b4c11be74491bb7bc"
+  integrity sha512-e+b8BAcgNyDaG7ov6MI4m1mSqhzTGfPLB2+qY/QkTKfnVrzzCj0GS+XPWFUbtBIkxbQ5FvORNWPqFSNGeyVr0A==
   dependencies:
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vvd-foundation" "2.42.0"
-    "@vonage/vwc-icon-button" "2.42.0"
-    "@vonage/vwc-popup" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vwc-icon-button" "2.43.2"
+    "@vonage/vwc-popup" "2.43.2"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar-fixed@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar-fixed/-/vwc-top-app-bar-fixed-2.42.0.tgz#b3758301677b45b420c3528eec6029b37b2072b7"
-  integrity sha512-0zW5r+o1eQNRH0dh3oFMfAn0oriGGm6sPxi7xfcteydm8zhedKMHNRLZIPyrPRuK8488KWEBqrDnUz3+fag3fw==
+"@vonage/vwc-top-app-bar-fixed@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar-fixed/-/vwc-top-app-bar-fixed-2.43.2.tgz#22fe9cf71cd138e44069fb64c0da8d4b7b83bab5"
+  integrity sha512-lT1LzCUget/4NsRbRd7iqwdDi6yU5DvPuySMYcEOYDYjQrcj2cmwIsxCb7dF/oipjkO+ttj13j76dv//APSz/A==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
     "@material/mwc-top-app-bar-fixed" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
-    "@vonage/vwc-top-app-bar" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vwc-top-app-bar" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar@2.42.0":
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar/-/vwc-top-app-bar-2.42.0.tgz#be9d3f13a2cc460fd7acca9023d4ce5578b2d698"
-  integrity sha512-B+g2e+9Wit+e6szRWII3YLD+xVKzebLRjneg9mles/VUlOzy060knS3or9Z40mAU0Fb+bL+fKfm8fhu4suCAQw==
+"@vonage/vwc-top-app-bar@2.43.2":
+  version "2.43.2"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar/-/vwc-top-app-bar-2.43.2.tgz#eb093825161354453844faf71942fb085a82d7c0"
+  integrity sha512-ZTQskXC5IssI+P042SKlUMroGY/1wsTZdQJbVSkat48EhNcorIqBc6FyJpJ9BdyqOKOYP6OFvhxbSyxDcOigRA==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.42.0"
+    "@vonage/vvd-core" "2.43.2"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
@@ -5442,6 +5466,11 @@ arrify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
+
+asap@~2.0.3:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
+  integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
 asn1.js@^5.2.0:
   version "5.4.1"
@@ -6825,6 +6854,13 @@ data-urls@^2.0.0:
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
 
+date-fns@2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -7115,6 +7151,14 @@ dotenv@^8.0.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
+
+dropzone@6.0.0-beta.2:
+  version "6.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.0.0-beta.2.tgz#098be8fa84bdc08674cf0b74f4c889e2679083d6"
+  integrity sha512-k44yLuFFhRk53M8zP71FaaNzJYIzr99SKmpbO/oZKNslDjNXQsBTdfLs+iONd0U0L94zzlFzRnFdqbLcs7h9fQ==
+  dependencies:
+    "@swc/helpers" "^0.2.13"
+    just-extend "^5.0.0"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
@@ -9917,6 +9961,11 @@ junk@^3.1.0:
   resolved "https://registry.yarnpkg.com/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
+just-extend@^5.0.0:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-5.1.1.tgz#4f33b1fc719964f816df55acc905776694b713ab"
+  integrity sha512-b+z6yF1d4EOyDgylzQo5IminlUmzSeqR1hs/bzjBNjuGras4FXq/6TrzjxfN0j+TmI0ltJzTNlqXUMCniciwKQ==
+
 kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
@@ -11773,6 +11822,13 @@ promise.series@^0.2.0:
   resolved "https://registry.yarnpkg.com/promise.series/-/promise.series-0.2.0.tgz#2cc7ebe959fc3a6619c04ab4dbdc9e452d864bbd"
   integrity sha512-VWQJyU2bcDTgZw8kpfBpB/ejZASlCrzwz5f2hjb/zlujOEB4oeiAhHygAWq8ubsX2GVkD4kCU5V2dwOTaCY5EQ==
 
+promise@7.3.1:
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
+  integrity sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
+  dependencies:
+    asap "~2.0.3"
+
 prompts@^2.0.1, prompts@^2.4.0:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/prompts/-/prompts-2.4.2.tgz#7b57e73b3a48029ad10ebd44f74b01722a4cb069"
@@ -12133,6 +12189,11 @@ regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.7:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
+
+regenerator-runtime@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
+  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 regenerator-transform@^0.15.1:
   version "0.15.1"

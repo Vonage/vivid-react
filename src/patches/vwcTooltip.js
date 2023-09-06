@@ -32,14 +32,15 @@ export const vwcTooltipShowOnHoverDecorator = (minWidth = 'none', timeout = 1000
         }
         anchorElement.style.setProperty('pointer-events', 'auto')
         tooltipElement.style.setProperty('--tooltip-inline-size', minWidth)
+        tooltipElement.shadowRoot.querySelector('vwc-popup').setAttribute('strategy', 'absolute')
 
         let showTimeoutHandler
-        anchorElement.addEventListener("mouseover", () => {
+        anchorElement.addEventListener('mouseover', () => {
             showTimeoutHandler = setTimeout(() => {
                 tooltipElement.open = true
             }, timeout)
         })
-        anchorElement.addEventListener("mouseout", () => {
+        anchorElement.addEventListener('mouseout', () => {
             clearTimeout(showTimeoutHandler)
             tooltipElement.open = false
         })

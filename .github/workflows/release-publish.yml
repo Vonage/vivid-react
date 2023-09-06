@@ -10,6 +10,8 @@ permissions: read-all
 jobs:
   build-publish:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
 
     steps:
       - name: Checkout
@@ -36,7 +38,7 @@ jobs:
           echo //npm.pkg.github.com/:_authToken=${GITHUB_TOKEN} >> .npmrc
           yarn publish --new-version ${RELEASE_VERSION}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Publish to Npmjs.com
         run: |

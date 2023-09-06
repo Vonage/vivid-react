@@ -1,6 +1,7 @@
 name: Release Vivid React
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*

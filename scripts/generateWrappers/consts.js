@@ -152,8 +152,29 @@ const ComponentsBindablePropertiesMap = {
 const ComponentsExtraPropertiesMap = {
   VwcIconButton: [
     {
-      "name": "value",
-      "type": "string"
+      'name': 'value',
+      'type': 'string'
+    }
+  ]
+}
+
+const Vivid3ComponentsExtraPropertiesMap = {
+  TextField: [
+    {
+      name: 'placeholder',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'label',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'form',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'onClick',
+      type: { text: 'any' }
     }
   ]
 }
@@ -216,5 +237,6 @@ module.exports = {
   OutputLanguage,
   WCAConfig,
   CLIArgument,
-  VividRepo
+  VividRepo,
+  Vivid3ComponentsExtraPropertiesMap
 }

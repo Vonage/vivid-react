@@ -18,7 +18,7 @@ declare namespace JSX {
             "shape": ActionGroupShape | undefined;
             "appearance": ActionGroupAppearance | undefined;
             "tight": boolean;
-            "role": string | undefined;
+            "role": string | null;
             "aria-label": string | null;
         }>;
         "vvd3-alert": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
@@ -46,11 +46,11 @@ declare namespace JSX {
             "text": string | undefined;
         }>;
         "vvd3-banner": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "role": string | null;
             "action-href": string | undefined;
             "action-text": string | undefined;
             "removable": boolean;
             "aria-live": any;
-            "role": string | undefined;
             "text": string | undefined;
             "connotation": BannerConnotation | undefined;
         }>;
@@ -61,6 +61,7 @@ declare namespace JSX {
             "text": string | undefined;
         }>;
         "vvd3-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "title": string;
             "connotation": ButtonConnotation | undefined;
             "shape": ButtonShape | undefined;
             "appearance": ButtonAppearance | undefined;
@@ -99,12 +100,21 @@ declare namespace JSX {
         }>;
         "vvd3-data-grid-cell": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "aria-selected": string | null;
+            "aria-sort": string | null;
         }>;
         "vvd3-data-grid-row": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "aria-selected": string | null;
         }>;
         "vvd3-data-grid": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "selection-mode": DataGridSelectionMode | undefined;
+        }>;
+        "vvd3-date-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "label": string | undefined;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "value": DateStr | null;
+            "disabled": boolean;
+            "readonly": boolean;
         }>;
         "vvd3-dialog": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "open": boolean;
@@ -133,6 +143,13 @@ declare namespace JSX {
             "size": FABSize | undefined;
             "label": string | undefined;
         }>;
+        "vvd3-file-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "label": string | undefined;
+            "max-files": number | undefined;
+            "max-file-size": number;
+            "accept": string | undefined;
+            "size": FileUploaderSize | undefined;
+        }>;
         "vvd3-focus": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
@@ -156,10 +173,10 @@ declare namespace JSX {
             "appearance": LisboxAppearance | undefined;
         }>;
         "vvd3-menu": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "open": boolean;
             "placement": Placement | undefined;
-            "anchor": string | undefined;
+            "anchor": AnchorType;
             "auto-dismiss": boolean;
+            "open": boolean;
         }>;
         "vvd3-menu-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
@@ -171,6 +188,7 @@ declare namespace JSX {
         "vvd3-nav-disclosure": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
             "open": boolean;
+            "aria-current": string | null;
         }>;
         "vvd3-nav-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
@@ -190,6 +208,7 @@ declare namespace JSX {
         }>;
         "vvd3-pagination": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "size": PaginationSize | undefined;
+            "shape": PaginationShape | undefined;
             "nav-icons": boolean;
             "total": number;
             "selected-index": number | undefined;
@@ -214,6 +233,7 @@ declare namespace JSX {
         }>;
         "vvd3-radio": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
+            "connotation": RadioConnotation | undefined;
         }>;
         "vvd3-radio-group": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
@@ -222,6 +242,7 @@ declare namespace JSX {
             "appearance": SelectAppearance | undefined;
             "shape": SelectShape | undefined;
             "fixed-dropdown": boolean;
+            "placeholder": string | undefined;
         }>;
         "vvd3-side-drawer": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "alternate": boolean;
@@ -232,11 +253,25 @@ declare namespace JSX {
         "vvd3-slider": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "markers": boolean;
         }>;
+        "vvd3-split-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "connotation": SplitButtonConnotation | undefined;
+            "shape": SplitButtonShape | undefined;
+            "appearance": SplitButtonAppearance | undefined;
+            "size": SplitButtonSize | undefined;
+            "label": string | undefined;
+            "icon": string | undefined;
+            "split-indicator": string;
+            "disabled": boolean;
+            "aria-label": string | null;
+            "aria-expanded": string | null;
+        }>;
         "vvd3-switch": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
             "connotation": SwitchConnotation | undefined;
         }>;
         "vvd3-tab": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "connotation": TabConnotation | undefined;
+            "shape": TabShape | undefined;
             "label": string | undefined;
             "tabIndex": any;
             "aria-selected": string | null;
@@ -245,7 +280,7 @@ declare namespace JSX {
 
         }>;
         "vvd3-tabs": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "connotation": TabsConnotation | undefined;
         }>;
         "vvd3-tag": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": TagConnotation | undefined;

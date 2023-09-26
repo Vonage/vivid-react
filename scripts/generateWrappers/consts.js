@@ -169,10 +169,6 @@ const Vivid3ComponentsExtraPropertiesMap = {
       type: { text: 'string | undefined' }
     },
     {
-      name: 'form',
-      type: { text: 'string | undefined' }
-    },
-    {
       name: 'onInput',
       type: { text: 'any' }
     }

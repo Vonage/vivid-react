@@ -173,7 +173,7 @@ const Vivid3ComponentsExtraPropertiesMap = {
       type: { text: 'string | undefined' }
     },
     {
-      name: 'onClick',
+      name: 'onInput',
       type: { text: 'any' }
     }
   ]

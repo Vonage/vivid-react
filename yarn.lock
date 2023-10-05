@@ -1196,13 +1196,6 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.21.0":
-  version "7.22.11"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.11.tgz#7a9ba3bbe406ad6f9e8dd4da2ece453eb23a77a4"
-  integrity sha512-ee7jVNlWN09+KftVOu9n7S8gQzD/Z6hN/I8VBRXW4P1+Xe7kJGXMwu8vds4aGIMHZnNbdpSWCfZZtinytpcAvA==
-  dependencies:
-    regenerator-runtime "^0.14.0"
-
 "@babel/template@^7.12.7", "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.22.5.tgz#0c8c4d944509875849bd0344ff0050756eefc6ec"
@@ -1291,31 +1284,12 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-0.7.3.tgz#d274116678ffae87f6b60e90f88cc4083eefab86"
   integrity sha512-buc8BXHmG9l82+OQXOFU3Kr2XQx9ys01U/Q9HMIrZ300iLc8HLMgh7dcCqgYzAzf4BkoQvDcXf5Y+CuEZ5JBYg==
 
-"@floating-ui/core@^1.3.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.4.1.tgz#0d633f4b76052668afb932492ac452f7ebe97f17"
-  integrity sha512-jk3WqquEJRlcyu7997NtR5PibI+y5bi+LS3hPmguVClypenMsCY3CBa3LAQnozRCtCrYWSEtAdiskpamuJRFOQ==
-  dependencies:
-    "@floating-ui/utils" "^0.1.1"
-
-"@floating-ui/dom@1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.4.5.tgz#336dfb9870c98b471ff5802002982e489b8bd1c5"
-  integrity sha512-96KnRWkRnuBSSFbj0sFGwwOUd8EkiecINVl0O9wiZlZ64EkpyAOG3Xc2vKKNJmru0Z7RqWNymA+6b8OZqjgyyw==
-  dependencies:
-    "@floating-ui/core" "^1.3.1"
-
 "@floating-ui/dom@^0.5.1":
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-0.5.4.tgz#4eae73f78bcd4bd553ae2ade30e6f1f9c73fe3f1"
   integrity sha512-419BMceRLq0RrmTSDxn8hf9R3VCJv2K9PUfugh5JyEFmdjzDo+e8U5EdR8nzKq8Yj1htzLm3b6eQEEam3/rrtg==
   dependencies:
     "@floating-ui/core" "^0.7.3"
-
-"@floating-ui/utils@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.1.tgz#1a5b1959a528e374e8037c4396c3e825d6cf4a83"
-  integrity sha512-m0G6wlnhm/AX0H12IOWtK8gASEMffnX08RtKkCgTdHb9JpHKGloI7icFfLg9ZmQeavcvR0PKmzxClyuFPSjKWw==
 
 "@gar/promisify@^1.0.1":
   version "1.1.3"
@@ -2678,35 +2652,6 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/util/-/util-1.6.22.tgz#219dfd89ae5b97a8801f015323ffa4b62f45718b"
   integrity sha512-H1rQc1ZOHANWBvPcW+JpGwr+juXSxM8Q8YCkm3GhZd8REu1fHR3z99CErO1p9pkcfcxZnMdIZdIsXkOHY0NilA==
 
-"@microsoft/fast-element@1.12.0", "@microsoft/fast-element@^1.12.0":
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-element/-/fast-element-1.12.0.tgz#aabfc75518c3a9000710cce5f66dfc677de8c254"
-  integrity sha512-gQutuDHPKNxUEcQ4pypZT4Wmrbapus+P9s3bR/SEOLsMbNqNoXigGImITygI5zhb+aA5rzflM6O8YWkmRbGkPA==
-
-"@microsoft/fast-foundation@2.49.0":
-  version "2.49.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-foundation/-/fast-foundation-2.49.0.tgz#cfacc35fb48c713d08d1bb493476bafe88d77455"
-  integrity sha512-Wk4e4QXFVtT5hPwhMfHyGY30kixM0td8aDs7bAD6NM2z2SCBNvpTTWp+FCjx0I0lpUMlMenb6wsw7pMWQreRkQ==
-  dependencies:
-    "@microsoft/fast-element" "^1.12.0"
-    "@microsoft/fast-web-utilities" "^5.4.1"
-    tabbable "^5.2.0"
-    tslib "^1.13.0"
-
-"@microsoft/fast-web-utilities@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-web-utilities/-/fast-web-utilities-6.0.0.tgz#7678c2b2cd12aeef785f4e2288da93a4db9e38a6"
-  integrity sha512-ckCA4Xn91ja1Qz+jhGGL1Q3ZeuRpA5VvYcRA7GzA1NP545sl14bwz3tbHCq8jIk+PL7mkSaIveGMYuJB2L4Izg==
-  dependencies:
-    exenv-es6 "^1.1.1"
-
-"@microsoft/fast-web-utilities@^5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@microsoft/fast-web-utilities/-/fast-web-utilities-5.4.1.tgz#8e3082ee2ff2b5467f17e7cb1fb01b0e4906b71f"
-  integrity sha512-ReWYncndjV3c8D8iq9tp7NcFNc1vbVHvcBFPME2nNFKNbS1XCesYZGlIlf3ot5EmuOXPlrzUHOWzQ2vFpIkqDg==
-  dependencies:
-    exenv-es6 "^1.1.1"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -3693,20 +3638,10 @@
     regenerator-runtime "^0.13.7"
     resolve-from "^5.0.0"
 
-"@swc/helpers@^0.2.13":
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.2.14.tgz#20288c3627442339dd3d743c944f7043ee3590f0"
-  integrity sha512-wpCQMhf5p5GhNg2MmGKXzUNwxe7zRiCsmqYsamez2beP7mKPCSiu+BjZcdN95yYSzO857kr0VfQewmGpS77nqA==
-
 "@tootallnate/once@1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-1.1.2.tgz#ccb91445360179a04e7fe6aff78c00ffc1eeaf82"
   integrity sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==
-
-"@trysound/sax@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
-  integrity sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.7":
   version "7.20.1"
@@ -4113,23 +4048,12 @@
   resolved "https://registry.yarnpkg.com/@vonage/vivid-react-wrapper/-/vivid-react-wrapper-1.2.9.tgz#0cf18ac442f92e884cb7efe6eb0a09892f8e1f69"
   integrity sha512-NYIz0/6ZlGmpdJRp8ye50qrc66vRNmj7ntwTiYyUGDjjhtlKnxuSXXVlNQfxbseK5+kpSOC9uYcqM72HnzW91g==
 
-"@vonage/vivid@3.32.0":
-  version "3.32.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.32.0.tgz#fecd6ce1e0ea1d462e11aecf91f540756909bfb4"
-  integrity sha512-whAttDMS/0kV9pCmz3hO+Op3c6QYWU5SdF5GD6rzGWQeqtVcdwGMX+mNC3i9+MjTxWgsNrLdg8tAIg6V1wQgXw==
-  dependencies:
-    "@floating-ui/dom" "1.4.5"
-    "@microsoft/fast-element" "1.12.0"
-    "@microsoft/fast-foundation" "2.49.0"
-    "@microsoft/fast-web-utilities" "6.0.0"
-    date-fns "2.30.0"
-    dialog-polyfill "0.5.6"
-    dropzone "6.0.0-beta.2"
-    promise "7.3.1"
-    ramda "0.28.0"
-    rollup-plugin-postcss "4.0.2"
+"@vonage/vivid@3.37.0":
+  version "3.37.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-3.37.0.tgz#1f9bd75277efb68a0a9d0e6cada4118335c450f7"
+  integrity sha512-HFfzBm8j/RsJsu3W0iIxGVdvEphcoVfL4HaDn5fLFvscttxfVIqu+r0384YXwGCqBl5SotpMtwYuYSYhCNNXBA==
 
-"@vonage/vvd-context@^2.44.0":
+"@vonage/vvd-context@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vvd-context/-/vvd-context-2.44.0.tgz#dea07899bbd5986f78a4cf1bb8472add11de15f9"
   integrity sha512-rOP6R4SPwIUpEXnRan52CxQOO0VdbtzkCvFFemXljmDKeXtwgUR88WKT0iKAPWMVgoSsTCOEYsLsOQvN2LMVIQ==
@@ -4138,16 +4062,7 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-core@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-core/-/vvd-core-2.43.2.tgz#57e126f76407a9e44fe5ba4d6155d109bd11e40c"
-  integrity sha512-bZyXmhBCOPoyq0OlnMWOVcBj6ifp+eDDRZ+kH2LNdNlH4932Ki8DtOlYrqPNsmUx0v9CHhiEK9eb6AwB63a3Cg==
-  dependencies:
-    "@vonage/vvd-fonts" "2.43.2"
-    "@vonage/vvd-scheme" "2.43.2"
-    tslib "^2.3.0"
-
-"@vonage/vvd-core@2.44.0", "@vonage/vvd-core@^2.44.0":
+"@vonage/vvd-core@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vvd-core/-/vvd-core-2.44.0.tgz#7b2624db57a65763c825439857c12b8b98fec5b7"
   integrity sha512-6Jjw5BxVtdCb4YuL23cMgwN2VFgbb8mHd+StPQFZ/4FKRC/hV+9jfwbrjQiakbZGVpdYAXuPE8LgNY78HBHgEg==
@@ -4156,35 +4071,18 @@
     "@vonage/vvd-scheme" "2.44.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-design-tokens@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-design-tokens/-/vvd-design-tokens-2.43.2.tgz#8404969198195024ba3ef9c623dcf883ed9ead37"
-  integrity sha512-m2uK7WqHZM49kY/qnwhCgNQuPdkgrhKP+QYhG19nUuGjDnnnIfPyr8PDH0x0/iMc4zp5NJ7f7uWYRpfPJks5RQ==
+"@vonage/vvd-design-tokens@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-design-tokens/-/vvd-design-tokens-2.44.0.tgz#3a8f57e9b530326087056f5bde1cec05cb0b01c4"
+  integrity sha512-ynPqCO7Uo+A/mLjCu7F9oVrWAbw36hR3We44qK/ad+KE9DfNckzpOlxGVe0X9jlmg/ejhHQqPsICfa9gD0Avhg==
 
-"@vonage/vvd-fonts@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-fonts/-/vvd-fonts-2.43.2.tgz#35d24edd05e0aff5f4a2b62d36aff2127e3ece86"
-  integrity sha512-q2FQEvCbMtbKnzSyPg0F7tZFVKQ+wj4YNQWj+7jjuztTJk9SBDwqLb7pG12ZP6zJmGRRVMMSEVEDJXsZUj5sog==
-  dependencies:
-    lit-element "^2.4.0"
-    ramda "^0.27.1"
-    tslib "^2.3.0"
-
-"@vonage/vvd-fonts@2.44.0", "@vonage/vvd-fonts@^2.44.0":
+"@vonage/vvd-fonts@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vvd-fonts/-/vvd-fonts-2.44.0.tgz#8e78b075c3fac20d2fba1b74ccf4921514ec8d96"
   integrity sha512-IbxV8JkW6tI79KnOuz0ADsX2iHxLHg1AihMvubBLykWtqkvz/yXs/vcwUQUU8hv0e/9Ed7LRSprkGkObSrRnwQ==
   dependencies:
     lit-element "^2.4.0"
     ramda "^0.27.1"
-    tslib "^2.3.0"
-
-"@vonage/vvd-foundation@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-foundation/-/vvd-foundation-2.43.2.tgz#2b79cf73c5a6969f874b684ea9c1e30899877dbc"
-  integrity sha512-lf9sCkLk+VTFtWka3umoz9onuDFtS6aRQXmCITeDB4aIWWIn423egxLAFOVboux1eLWRsJQ7GrRV2EHh6E6wBg==
-  dependencies:
-    lit-element "^2.4.0"
     tslib "^2.3.0"
 
 "@vonage/vvd-foundation@2.44.0":
@@ -4195,27 +4093,12 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vvd-scheme@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-scheme/-/vvd-scheme-2.43.2.tgz#ae270b91b568d35841297b5e187cfd3f8628cc34"
-  integrity sha512-DNwcqzurxt3fcEagaf9lAXSYXPKUb0RDyYDasW91pkoC9tGTWINkRW0A7nUu3op7Z+Wd+IQEXrzlIA8WP7HNCg==
-  dependencies:
-    "@vonage/vvd-foundation" "2.43.2"
-    tslib "^2.3.0"
-
 "@vonage/vvd-scheme@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vvd-scheme/-/vvd-scheme-2.44.0.tgz#85f9ae3e9ffd31f3b25ffbf59d9df199de5c4660"
   integrity sha512-Vbaz8OfY2JXVW6U+UCcP0S54CcM4NNlHaWFlcMs8xDlXliHd7LrXEkKUqIvvs6yiyvmnCsKrtKr5US5BWjdDpg==
   dependencies:
     "@vonage/vvd-foundation" "2.44.0"
-    tslib "^2.3.0"
-
-"@vonage/vvd-style-coupling@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-style-coupling/-/vvd-style-coupling-2.43.2.tgz#651ccbd45997393e2fd4796156d3a737e65b4e20"
-  integrity sha512-g1p+q0P7LIZ2hYdm2h4UF1TZk4kIg4wiAaqepmuFFqhlsyUO3kPRP3uMYGPM0lcRO0eaSjeOQKZJsl2TW3WlEw==
-  dependencies:
     tslib "^2.3.0"
 
 "@vonage/vvd-style-coupling@2.44.0":
@@ -4225,41 +4108,29 @@
   dependencies:
     tslib "^2.3.0"
 
-"@vonage/vvd-typography@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vvd-typography/-/vvd-typography-2.43.2.tgz#76a3f6c5c893fc364834e70e5a48ab7683a6263e"
-  integrity sha512-dMs2G7+DaxHZaBcs5qguyvMPBLqYFr0uh98DjBE1jr35QwdAfdHr1mjvL7DGWVEJQizWhtjcThvsTEjCmE+KFQ==
+"@vonage/vvd-typography@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vvd-typography/-/vvd-typography-2.44.0.tgz#a1065cf138e591abc9fd0c9cd56adc2edac5cc26"
+  integrity sha512-3eNXW1oFKWlfnev4mZl0n/nBYhwtgZR/A9QC7T4VEtR75+E4YDr4vQRgDbOBvmWdQIQsECqfYrCsiuFwwM/GaA==
 
-"@vonage/vwc-accordion@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-accordion/-/vwc-accordion-2.43.2.tgz#7289634f82df2763628f9207da19cd5ae5cc7d42"
-  integrity sha512-0pj9Mcl1lnRsBWO6OHuq2ckrpYE9tsOtE7i8lFFofaNCPwOEhXOkb40T03/JMKaOzlOn2UtQetsuVxvXEXdpfQ==
+"@vonage/vwc-accordion@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-accordion/-/vwc-accordion-2.44.0.tgz#0fa3ea99114bf69ff68ba83d5000e1fba1405c32"
+  integrity sha512-pyxa0ivCPK88v170gV26KAR3Y6ufzTRs/tniGs2KNFoOg0tFHYxyZBhfzHkqgkNCW31Nu27EuNKJPPCzl7nRmg==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-expansion-panel" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-expansion-panel" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-action-group@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-action-group/-/vwc-action-group-2.43.2.tgz#fffc412fb505983a13626937b917a5b18af8872b"
-  integrity sha512-0EGHLYjXqhtHdzPYVL17neLyy2MHr39Hrf052ptiaoG1iA26SIjtUXUCMfnKsVLRsxkj9lukv1bYfcqNzpSZdg==
+"@vonage/vwc-action-group@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-action-group/-/vwc-action-group-2.44.0.tgz#d63f34e10e731619c1533fa12f57af7886ede3ad"
+  integrity sha512-UIYG4pk5XIeyDNfDg3ATZCU/K8BiqbWN1qDmpxQ5AxZ03raa+/IkupIiyl8c3slefzqLvqdDPIQkTEPvdLwXQQ==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
     lit-element "^2.4.0"
-    tslib "^2.3.0"
-
-"@vonage/vwc-badge@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-badge/-/vwc-badge-2.43.2.tgz#fece622bca68925ca6d474f36994be468784ffc4"
-  integrity sha512-wyxOEGPPWNkvcsb/UJVCgoqMpYQcb9kRtvwotlUCUaw1H0l9ubnc5ChHZ+qohbdDRNTliUN7bNqCR1XZWzWnHw==
-  dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
-    lit-element "^2.4.0"
-    lit-html "^1.3.0"
     tslib "^2.3.0"
 
 "@vonage/vwc-badge@2.44.0":
@@ -4274,7 +4145,7 @@
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-banner@^2.44.0":
+"@vonage/vwc-banner@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vwc-banner/-/vwc-banner-2.44.0.tgz#9d07625bdab395ffd6abc596ddf4c619ca0db80f"
   integrity sha512-eWYSqPhQUFtRsJuWMtOSURAXWv1fH/Rc7sv1BdHBZzC5bvVHZ0q7s5uB3fR+/utRnu90f61ccBBihD9ywX5nkA==
@@ -4287,212 +4158,212 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button-toggle-group@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-button-toggle-group/-/vwc-button-toggle-group-2.43.2.tgz#cbb827050a5238d7f69f7d3d10588d51a99fd7e8"
-  integrity sha512-cOKjr0PN1to4KlIQwFWLJOX3I+rKW6Ja2+FP9wNIzGDotf7Pyns+3+0Cg3rw8I+aDUA4pI4QJ+Ulc4Ptp5dR+w==
+"@vonage/vwc-button-toggle-group@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-button-toggle-group/-/vwc-button-toggle-group-2.44.0.tgz#4a5f554d585cbe8777aee1b535d9a6f4abca6015"
+  integrity sha512-f2PK1om1DxVxmx1zfaXCOKUgGsk/uc6Ks2nSGAo2PA5g/IjlDSKLF/5m+alg2WLOEAR7qdRgul275xBJokuFUg==
   dependencies:
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-foundation" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-button@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-button/-/vwc-button-2.43.2.tgz#60f4c09e770dc42cc54a5de523eb4d5dc9f0046a"
-  integrity sha512-iKOpVlPPF3D0e+BtlYv2i50Jw44ng50ZPyyCaaMiD4y/86ZXNogzYyK8I+I5bGi4eTVwz0S69AvH8yTvZjgs/g==
+"@vonage/vwc-button@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-button/-/vwc-button-2.44.0.tgz#8bdaa1c6db6e926beb21e5212bbbbf597b60a3bf"
+  integrity sha512-sTcb9ObcAYhJNvD3JRKDMlpJIUMKA1YxGe/ZnB/sI84DfQ1ssnruIuyRtSjmFDO8XVRjUgqL4dM+BbcvjxqpDw==
   dependencies:
     "@material/mwc-button" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-calendar@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-calendar/-/vwc-calendar-2.43.2.tgz#22c674a777d6d690bbadff9b4c58d7c9e8bf20e0"
-  integrity sha512-upAXGL5YviANUcoAiMhe9kkeesFViakOZzkPg6iC4uYeWdKPb6J9DJ5QXsJFxVeusBi0J2Xc2vD31uB0nPSq/w==
+"@vonage/vwc-calendar@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-calendar/-/vwc-calendar-2.44.0.tgz#42201aabe12d69faf0642882b9e8a476d3c51999"
+  integrity sha512-PWu4IRa5LPGzKjFxMezmlgWz6vT8+yUfodYfgPmxCLa6xjEQlzQLX+8LMQ5QS9n9k5Yw1K70/fbYejDuKzOQGw==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-card@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-card/-/vwc-card-2.43.2.tgz#6e69fc4a99ac6175830466ebb05c1e68167456ba"
-  integrity sha512-9l3NSHmkAlkFUa06TNoQQ0Ytg3IBu2xiztZyFN+MLg5/UThdQsnGRVeDQ+xmuNA1qOsvOkXpy0az+P24LK2Trg==
+"@vonage/vwc-card@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-card/-/vwc-card-2.44.0.tgz#373c189e548b3eba688f6b1b99889fe0bbcfe910"
+  integrity sha512-JA0psUO8ocZTAdnSTQirXLi4lxuUEvp94dJKYZANESFjTJXUy+HfZJ46N8DIpMBJzXzsyhNzGwXfC2Q8sA8rSA==
   dependencies:
-    "@vonage/vwc-button" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vwc-button" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-carousel@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-carousel/-/vwc-carousel-2.43.2.tgz#6e085d5dca4bfc32eb79df02963004effb30a150"
-  integrity sha512-l5JFu+JyEYW2M51nY+yKTd0PT2n+APqaqloDuitQl25XoIN/PsjMDH2vAIRltnbgI1cOpoGk6StOXJEhALOHVw==
+"@vonage/vwc-carousel@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-carousel/-/vwc-carousel-2.44.0.tgz#64729091b21d0b9821e6e9fb35b67b4df0e039e6"
+  integrity sha512-YgltSZFPnwhNZoN73kr/GENlFC6oodq2kMwo160/rLt+PBHTtp7bkXbc/Vu5tJu8CR3bzyFyvbzaMB6q0O9Agw==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     swiper "^6.5.7"
     tslib "^2.3.0"
 
-"@vonage/vwc-checkbox@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-checkbox/-/vwc-checkbox-2.43.2.tgz#b1c12ce8020f3a37a71d69506711d0bdfb5625c1"
-  integrity sha512-QluGDpXepgTT71JiYoKsB5Y9F3rC4Kq928a5yGdmjmceNurnprnzlsG5d3vQGHi4kvwrXendDVth2waUUcmnng==
+"@vonage/vwc-checkbox@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-checkbox/-/vwc-checkbox-2.44.0.tgz#e45a7e791984c51a929810a7f8a206481722204e"
+  integrity sha512-6jokWxi4ivy+7EfIbhhEDCyGhEV94I/gKAiEb/7JRL2eT4k15YfnnHbnH3g0O/SidDu9QcOpHauY5VJpH+izHg==
   dependencies:
     "@material/mwc-checkbox" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-chips@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-chips/-/vwc-chips-2.43.2.tgz#a80fb5925c98464a858d69b14b05857b08da9bad"
-  integrity sha512-9ytFXpNWuViPGHN1XkfeHugrqVwxRGKUz/AoipUUB3wHWVS/T481hA9xBHEyIM80LAIV71OgvgnE/ESD61vhTg==
+"@vonage/vwc-chips@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-chips/-/vwc-chips-2.44.0.tgz#05dfd01b0d1ca07ba1cc8a808a6f1502a1cf4a5c"
+  integrity sha512-HbUT6pCACtrXcYcFhU28PHIULAynTJYZMIJYVfLRzPS1OXMxtZyPZwSKV/DenWze5ExQymEqluT0DylfaeGQ7A==
   dependencies:
     "@material/chips" "9.0.0-canary.1c156d69d.0"
     "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-circular-progress@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-circular-progress/-/vwc-circular-progress-2.43.2.tgz#114747a1dac9c5828755f8d1dda8a6a85097babf"
-  integrity sha512-YbtYV8S3Wtw+ju3ryQJhSX0m5LoHl+V6bL2PiSb3Of8yESMptNVWAnuab5Hqa1XglFD0ccVxss5i2adC712+OQ==
+"@vonage/vwc-circular-progress@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-circular-progress/-/vwc-circular-progress-2.44.0.tgz#52b4daaf9c1dd487933e2ad8fceb5dbb265eddf7"
+  integrity sha512-iK76qunY6e5dwkleG02TrboFhzO9vWR2qyenInw4xpAEm7UXgGb+Qyw3G0HopC4LJH8oEvnqvEB18C18rPWBtQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-circular-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-design-tokens" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-design-tokens" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-data-grid@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-data-grid/-/vwc-data-grid-2.43.2.tgz#873951da4ad6a02da46e27c7dbcace71f9bf42f3"
-  integrity sha512-0h7WhmPGmrT+SC6Y0BYFx1E9Ni9ifOjtpY9F/8WnhpIUH0w0aF6R3eRpytb4QYJx98Xs2Lzu6k5n5/5mtwGGWQ==
+"@vonage/vwc-data-grid@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-data-grid/-/vwc-data-grid-2.44.0.tgz#6fed11c8f228676d1eb63bde65efb9931a5eaaa4"
+  integrity sha512-6y1KpoNzstdpHOzrUU+BJSP5z2yoYXDY0Hn+cyrbyj6oFLcjlCnHnBR2peBih0b2wdvsNlJJTY6C66KnLZqKyw==
   dependencies:
     "@vaadin/vaadin-grid" "6.0.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-checkbox" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-checkbox" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-datepicker@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-datepicker/-/vwc-datepicker-2.43.2.tgz#46989a6e1e52cd8fd5922ff497a109084b675e0b"
-  integrity sha512-3NL5fnjdd/G3se2NjNVWq1Uc45yGmeTR7w4VpmPS7k8oPFOyFGKOyBk34dGpuFp8fyc4qHHkaCnQLc2cf5MBmA==
+"@vonage/vwc-datepicker@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-datepicker/-/vwc-datepicker-2.44.0.tgz#aa68f9a70545a1d7019fceb6a9eaba731e382948"
+  integrity sha512-nSdtp7MIjP0afwhDrXGGhtSyKmxez1cjM1KpB61BRLXOdYizO8wQKErSAQ3avRKV+s6P30kfD83IF1Cx9sRzmA==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-button" "2.43.2"
-    "@vonage/vwc-icon-button" "2.43.2"
-    "@vonage/vwc-menu" "2.43.2"
-    "@vonage/vwc-textfield" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-button" "2.44.0"
+    "@vonage/vwc-icon-button" "2.44.0"
+    "@vonage/vwc-menu" "2.44.0"
+    "@vonage/vwc-textfield" "2.44.0"
     flatpickr "^4.6.9"
     lit-element "^2.4.0"
     lit-flatpickr "0.2.9"
     tslib "^2.3.0"
 
-"@vonage/vwc-dialog@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-dialog/-/vwc-dialog-2.43.2.tgz#36c5af53f8294e271251709f6fdd29ea4374361c"
-  integrity sha512-O7HrNRIAkGHnfvjsmEbB6hEYoRog2/TzmoX1JOUkbH0rqH8q9vKfQhlNw6noMHOBfpmPYdoHpLAW0iQK+9pqFQ==
+"@vonage/vwc-dialog@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-dialog/-/vwc-dialog-2.44.0.tgz#2b12fbe9239893820a41283b661f3a6ee12595af"
+  integrity sha512-yS8/Qws7QLYru4TENHepk3UPqVti1GDXQysxdemrwAIKvd3eKae5kf2ycOmkw+F6aIO+lVvrWKnW5jc416RVuw==
   dependencies:
     "@material/mwc-dialog" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vvd-typography" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vvd-typography" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-drawer@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-drawer/-/vwc-drawer-2.43.2.tgz#6bdfdcbddae7ca892f19ec7cfaf0098792517cc1"
-  integrity sha512-6/ZgXBSjaf7PVtU22cWhbTOTmuhrVyefC0SGvCRpiL9h3RPsqMYmqGh1T5MqkO6UoTIrjLuG8W/XyXr7zQr+3Q==
+"@vonage/vwc-drawer@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-drawer/-/vwc-drawer-2.44.0.tgz#58a8172b3eadc453ad80eae0691745a78c1227f5"
+  integrity sha512-maX/TNwyO8xpnaQiqxeCQf451aAlIVRIUqvNmGV+oDz/VVEyiK4Ove/SivnAUxJquACMAV3FEhEEt3C6JuK0sg==
   dependencies:
     "@material/mwc-drawer" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-dropdown@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-dropdown/-/vwc-dropdown-2.43.2.tgz#3c68d95ee87d9313953ab47566dbb9a93f570f26"
-  integrity sha512-b1Z+hu2FlT5F208bEBn/t8fK3mX2GABCRgIiKfWtZHisZgkzXbiP92vYDLq0aa2jYv50kOFostydBhbpY0Z9kA==
+"@vonage/vwc-dropdown@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-dropdown/-/vwc-dropdown-2.44.0.tgz#758cd25a2e9b60241bdfd39d9aa4000d5bab4d40"
+  integrity sha512-ygy1+Adc1QwbrnK69ccpxvibG2bYuD9wyJBHeKOuREnapqzsZf+M2P1VvcuafKUluOCYeScNHdFy0BJExi82mw==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-menu" "2.43.2"
-    "@vonage/vwc-surface" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-menu" "2.44.0"
+    "@vonage/vwc-surface" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-elevation@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-elevation/-/vwc-elevation-2.43.2.tgz#c5c07c0dd60cdd344e713cca240e3b2797627f3c"
-  integrity sha512-Q3CrLS5M3L+3paD0pwKfUJak8FFBZn4oMSotzlmMkjZc/bmIFuAXtk7btief8PgMTfNn3sXYj3n9IcFgJ2NfyA==
+"@vonage/vwc-elevation@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-elevation/-/vwc-elevation-2.44.0.tgz#f947461facb26ae060c8953b99a8af217490063c"
+  integrity sha512-0aIzKJSdkAt0vAPWnin/+EIwZyLHGdxjt3pMbTWr9CuEx9/NKtMEbAYz4ylbG7JG6zjflCXIpB8XrQKHgU/07w==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-empty-state@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-empty-state/-/vwc-empty-state-2.43.2.tgz#3f6deaf7f8cd48f8fd17ff319164ab91397cd443"
-  integrity sha512-n3NnizqLRk9Ab7TlJeT8oRh5FoPVWM03taM914WrnI3mzlUJXaNgg5UzdNRGG+6/+ooZK9NhSUcdUSay9SqU9g==
+"@vonage/vwc-empty-state@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-empty-state/-/vwc-empty-state-2.44.0.tgz#3738f3b1851980ead615006069721bc29b656a60"
+  integrity sha512-nYEcRh6Wft/27JljEynoID0eHu4fF4YTBUy41/TXr/FuEuOJeQ1PITIw7Bx7ifv0m5ainXD9RC7bcwId+vBaDw==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-expansion-panel@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-expansion-panel/-/vwc-expansion-panel-2.43.2.tgz#8b3e22a76feacd0fd722d3f259ae4aab6b50ba46"
-  integrity sha512-HSLPfQ/7Y2Mhw3N7VhbIgDR6yIIHA3gtQdZjpsYTsGu9vgSlCrNgaOp6MYV/KWLi8Z51bDg/D6cKHaurBoiYbQ==
+"@vonage/vwc-expansion-panel@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-expansion-panel/-/vwc-expansion-panel-2.44.0.tgz#318f8281775d0f3c30a229fe7016dc58a03a0103"
+  integrity sha512-pMPftHXCIly4lXDh0hT4Gan+a9S5Sb2Y/MLn1tuNefg0S2+JYYj9qDNkq8zYofBVmixg8MSMM5Q8Jg7CaJAdag==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-fab@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-fab/-/vwc-fab-2.43.2.tgz#c92ca33c1dbfdaec431a4b880e22f40615f290dd"
-  integrity sha512-CyJQuMFreASJacbhbun1CxhJSlkLS9fdgfP7yKr2R6kqhWxrHznLxnVcwnr2RW7SRMZqFtV9BunMiPykAjtM1g==
+"@vonage/vwc-fab@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-fab/-/vwc-fab-2.44.0.tgz#330b5fc512f356c75e025d2d844d4b4de4cf5703"
+  integrity sha512-prUp1wOTNzJX6BXQKtQcSBlQ1BNDxvkFmFP+kA5NLslnHGuXZbe1AzIfaFAL9g8IjdXNh3ejifJsM8ZILFKyVw==
   dependencies:
     "@material/mwc-fab" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-file-picker@^2.44.0":
+"@vonage/vwc-file-picker@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vwc-file-picker/-/vwc-file-picker-2.44.0.tgz#7369ee83c897be6fbd6b8f1cabcd983102a765b6"
   integrity sha512-4ogrrroM1sjiJFFzWzYXoEgmiE2bWePnTm76qPCOC43YJFtN/a07VZKWjpdndjv1xeO1wt4ICcUoEE4PgWFdqg==
@@ -4504,24 +4375,14 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-formfield@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-formfield/-/vwc-formfield-2.43.2.tgz#bebbd188212ad6503cfcea2c69a5bde232355dd0"
-  integrity sha512-by5Q13s/lmve18JyYpXqbToEr7wPNDkb5AmiDBsKiD+VgWjwYx8Dh8GS1n10Sj0Vz8D6hjynMnho8sMp7azhCQ==
+"@vonage/vwc-formfield@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-formfield/-/vwc-formfield-2.44.0.tgz#0ce37f222c9832c015d8e323bf9dc5e51208fd08"
+  integrity sha512-l4QburCmnQGFuTpp9uzlDGnJD2hSdmTC9rb7dLXIAs2akI44NjfSS7BBozas5xivb/qK/rvpaJ+vmiQLwY5Ljw==
   dependencies:
     "@material/mwc-formfield" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    lit-element "^2.4.0"
-    tslib "^2.3.0"
-
-"@vonage/vwc-helper-message@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-helper-message/-/vwc-helper-message-2.43.2.tgz#e3c92c0f5ecacc6ff28f45559a3dc914d07f3968"
-  integrity sha512-y445n+2rL6tygxvl+TWq25XAQ46nZhfJX1FwL8nl++foajT7TKQVIdIdQefx8EQKXoCqtMfGEj200rfAgzOxHA==
-  dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
@@ -4535,33 +4396,18 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon-button-toggle@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button-toggle/-/vwc-icon-button-toggle-2.43.2.tgz#0fdd5732a2b14f9458464ce3647056d2e6221b19"
-  integrity sha512-uGOR4tFWimRlbGxd+VoC2A9ylK+VppGJlHoes8qilfZ0SSBFHK8oKL++fKg11y4GMPtyPdsrZe7Yfk/kmsJSkA==
+"@vonage/vwc-icon-button-toggle@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button-toggle/-/vwc-icon-button-toggle-2.44.0.tgz#92f0e86fd9b167c0a5cf3ee0b575d4c6f119f28b"
+  integrity sha512-vXxZfO+1hqxqA4tzPJNNTPjc78sk4DrXKlUD8gedxPI2uZuK5vHwXf5MNb21uCsEx72w4iF0sm2thTKiKqZ2OA==
   dependencies:
     "@material/mwc-icon-button" "^0.22.1"
     "@material/mwc-icon-button-toggle" "^0.22.1"
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
-    "@vonage/vwc-icon-button" "2.43.2"
-    lit-element "^2.4.0"
-    lit-html "^1.3.0"
-    tslib "^2.3.0"
-
-"@vonage/vwc-icon-button@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon-button/-/vwc-icon-button-2.43.2.tgz#bc89edc138e8b0c676829918ec76c53c1d0f6f1c"
-  integrity sha512-nhx/88wtFhdiiwy3/+nJRUzZqG61D2E/GlczS0AC6kqUb8a3LokVp0EPEjg+wqQQ56dwgnsKByFQYdexsHfbgQ==
-  dependencies:
-    "@material/mwc-icon-button" "^0.22.1"
-    "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
+    "@vonage/vwc-icon-button" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
@@ -4581,18 +4427,6 @@
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-icon@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-icon/-/vwc-icon-2.43.2.tgz#d00d65e3a9d53ccea82ba3be7477048eab40a8e1"
-  integrity sha512-hz0U7SEndk3s754y6zXhJ645CJzWPaPRVrHeWPXIaVRG/EkPXwgxhzOlyanicHBCL4AYqBlV1zNss4gQvygUYg==
-  dependencies:
-    "@material/mwc-base" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    lit-element "^2.4.0"
-    lit-html "^1.3.0"
-    ramda "^0.27.1"
-
 "@vonage/vwc-icon@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vwc-icon/-/vwc-icon-2.44.0.tgz#4690068685786f469b65fec7e15985e5bc5dd608"
@@ -4605,55 +4439,55 @@
     lit-html "^1.3.0"
     ramda "^0.27.1"
 
-"@vonage/vwc-keypad@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-keypad/-/vwc-keypad-2.43.2.tgz#add899bf2e1b860aaefdc3bae32ddd827aa3be4f"
-  integrity sha512-eQTJTOqXsIUhKuRHVbNlMtqkt7Fif7XJ4WwIlHM6AieKFeielsz4vH+m9egO7Q4o8MYHnKjKMTh0qeOuJBe1FQ==
+"@vonage/vwc-keypad@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-keypad/-/vwc-keypad-2.44.0.tgz#c269fc3425dab20e74faea685aad142b797a3c67"
+  integrity sha512-hx+BNH3k6ZX3w5n8PaOBV/UwxvuZDD/zTxrPAcjOHc/CnhfeTGLaf7B/LZq/FPBhe+ngI3lxJOH7kT7f8Wff4g==
   dependencies:
-    "@vonage/vwc-button" "2.43.2"
-    "@vonage/vwc-textfield" "2.43.2"
+    "@vonage/vwc-button" "2.44.0"
+    "@vonage/vwc-textfield" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-layout@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-layout/-/vwc-layout-2.43.2.tgz#6efc9a4d2dcb11134ffebe71ae4f6bd3cfbff40e"
-  integrity sha512-AFzxSoLbVujVS9nhJCBiZBrwJwTuINRaIeH0fwJSy2v4D8p9Z2HH+tdW312YnZn0u4ixso50F5K68pCKQ2A4KQ==
+"@vonage/vwc-layout@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-layout/-/vwc-layout-2.44.0.tgz#3164d6240abbeb04d85527896ce4ddddfb661080"
+  integrity sha512-FbtH7Auy0ILwBqYhmoJN//hTs9DippV0P8MJh8/ZvPj4af6xGIIGQhtn0wuNMc/e4Ngs/c86DyquPct4L/bB4g==
   dependencies:
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-foundation" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-linear-progress@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-linear-progress/-/vwc-linear-progress-2.43.2.tgz#f9fa9303ae005d1a3f13be3903e46d05c47be71c"
-  integrity sha512-CQr1UGoeYWPBNZnyu95oFeTndHcttDund1xe0Mwes4Kur/RZod7xBKTC4uZ7QdvOSeQqvrt67DrwFtJ8KVX6ng==
+"@vonage/vwc-linear-progress@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-linear-progress/-/vwc-linear-progress-2.44.0.tgz#f2863255973f66cf19f41884f5e815e5e1ada594"
+  integrity sha512-jWzamOtpkY04UP7zGYuWN0OlQLqaHzAad2pIXovKwpVyJMewzpBjpr5DZZOJP5DBuEXsOcsNwLwV6iZsLDzk/w==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-linear-progress" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-design-tokens" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-design-tokens" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-list@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-list/-/vwc-list-2.43.2.tgz#73a436d25cdcdc9470085e35ec07ce78820b7136"
-  integrity sha512-b/8fDOqlZpPe1i9x9siYLgDTwlsh3XHsKJdnoMBjgLf+F5C7Q4oT8kRdh31k9tTemJUsTUL8eEr3zxH9OBxTbQ==
+"@vonage/vwc-list@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-list/-/vwc-list-2.44.0.tgz#2d6b2b837b5e669909c79922fa011adf23d937f7"
+  integrity sha512-qFWt2C1ciNrKzWaiyfY42KkVQLYMb0/cnmrBM+Vhf9qJxtxmhMwsO2RKZdx0W4lxKbdWVP7tlRhhsvlFgJFI3g==
   dependencies:
     "@material/mwc-list" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-expansion-panel" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-expansion-panel" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-media-controller@^2.44.0":
+"@vonage/vwc-media-controller@2.44.0":
   version "2.44.0"
   resolved "https://registry.yarnpkg.com/@vonage/vwc-media-controller/-/vwc-media-controller-2.44.0.tgz#1b32eef0617650d6e7b917207bff3308c558b29f"
   integrity sha512-Vsz5kvqiVmQETA/8ZJyPUaHUx5ogemKN+oQrMw5PYK8kUg1Lx6tPp61h7AdUE5Q5S4+gvejVgupTB4GAO9oCmg==
@@ -4664,278 +4498,278 @@
     lit-element "^2.4.0"
     ramda "^0.27.1"
 
-"@vonage/vwc-menu@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-menu/-/vwc-menu-2.43.2.tgz#aab9683565cf0d2908d5643c05171bdb2e18b091"
-  integrity sha512-KETA6YxG0BXH/HwGwPLOPJfTVoH7iA/nxSBEbZC/lidpT0sTMTqJlThPTWo7xuhXyMgaQ+pc/pX2y5qPlCyOSA==
+"@vonage/vwc-menu@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-menu/-/vwc-menu-2.44.0.tgz#f1b7b6815bbf9d82964cf230938dc75b5b1df666"
+  integrity sha512-uTMa2xbMhlApW9kNgGlL5AhSSEm4HA+3rQpwrK0lhaZRsxsm6okhePFsgt9K8AfvGfPdDy2LnnjkDCZz0u72Fw==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-list" "2.43.2"
-    "@vonage/vwc-surface" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-list" "2.44.0"
+    "@vonage/vwc-surface" "2.44.0"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-notched-outline@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-notched-outline/-/vwc-notched-outline-2.43.2.tgz#1edf590f275f77b237a2d32db8cc8aec26ed65c0"
-  integrity sha512-ZQ1MMhQIEdAzg4rI5LOQfChlzti1NWRlpej1fM7eR/xvE4uGaSOOA8Ejqrgxpa/KRe08hImN3Da+Fudg03e9lQ==
+"@vonage/vwc-notched-outline@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-notched-outline/-/vwc-notched-outline-2.44.0.tgz#ee352c2267f34c4d7e7d97c67c2ef022862edbde"
+  integrity sha512-ppsTIsD8OwajgneZSsIMfUIY1viqOF6Da5ldO0t+h9+tvlZXG0QePMmYh+6ZC3aTH+yy7FJ6HVF9DURkpLyGNQ==
   dependencies:
     "@material/mwc-notched-outline" "^0.22.1"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-note@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-note/-/vwc-note-2.43.2.tgz#225335e51ff8d4c62b113b36429c8707da531ce2"
-  integrity sha512-cT5brSVY3iIvaaLfWXUCCBv4VFAAV1ERTb2D6ESLOsIwOVfrn5JvkPzfVohJxjBNjBF+JBB4slrGmD15IPokIA==
+"@vonage/vwc-note@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-note/-/vwc-note-2.44.0.tgz#c6892526724f16eec019889f01e517c4e5337022"
+  integrity sha512-kUKXpVd0dHcivLJR/cr9i18BRVTF+s8fCJTTogi2rY6xWaccQJOshhdnWiZV57jMMjYrBKtuH6XyUPpH1uM3IQ==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-pagination@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-pagination/-/vwc-pagination-2.43.2.tgz#9f10c3724e8e69e8567703fe9c2e8f5ad640a1c3"
-  integrity sha512-DToAYGCrtq/TAh0X2hOlr8Am6agOyXZEww7HQ+qxafIQ+O0Ke/Qp31CYKoUMs8NrdCQyQ45l2xuEQ//R240+PA==
+"@vonage/vwc-pagination@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-pagination/-/vwc-pagination-2.44.0.tgz#f725f18a7d4a94f35d4516d1dcfa8fc6017c23d2"
+  integrity sha512-EqC/uYw5j1rXh0TbJJeGLKqeQO63MhHXtOtYtThAOfd/xEJBDfzm8BYprjvfRPqMWAMAe9/JsQykIEklLiCpcw==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-popup@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-popup/-/vwc-popup-2.43.2.tgz#72fe8c9aea89b30cae2664017643f9e49d8c3e31"
-  integrity sha512-hfxz4ul57qljrR4vt0tOxudyYJ0gHy5R0lUURbicBYVrSAkTh+0/e4gpLXwuM2+PJNkv+hU9JDKqXxMA5w3+JA==
+"@vonage/vwc-popup@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-popup/-/vwc-popup-2.44.0.tgz#459c0fe6cdbaab02931421c930de1bfa46d0525b"
+  integrity sha512-DSqF0htllGQziLlp/hjdm2jYvmOdXhzrRpae27B3LWvWm3MXmE5S7HW9LWf0QnWjXIvdddUcm4X5+Rudzctv3Q==
   dependencies:
     "@floating-ui/dom" "^0.5.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-elevation" "2.43.2"
-    "@vonage/vwc-icon-button" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-elevation" "2.44.0"
+    "@vonage/vwc-icon-button" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-radio@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-radio/-/vwc-radio-2.43.2.tgz#e5f3ee0a365a37259785d2a2e162cc450dfdec96"
-  integrity sha512-3FZEG5nW8dkvrg8Gfv5ef3VnaqemrzCo6ASj0xM+jIjZM23L3UrEfJqFeMne5xvqjIzXy77+eJBrTYZDB8dK5Q==
+"@vonage/vwc-radio@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-radio/-/vwc-radio-2.44.0.tgz#d0f41e326778aeaca61b2144f633b5fd7a85123b"
+  integrity sha512-M2Bp2vpt+f4PaGeDdcKwuB5i9wrASd0ZzCwZQrNDqxNVSrvJ/+kOFr7OmgEWzjaTa+L/Mxstk9yjUESkgjZLSA==
   dependencies:
     "@material/mwc-radio" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-scheme-select@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-scheme-select/-/vwc-scheme-select-2.43.2.tgz#8d63c5d46defcd9d0d4687250757f8f57df1c0ac"
-  integrity sha512-BkvbypyKFCYpPwPtRXn9AHGBg3FIEXwgH1n1T7Y10CRRqCNOzwSAJaDPKXRSB3t7hmOKUjWuqKhpFCYwkZhKaA==
+"@vonage/vwc-scheme-select@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-scheme-select/-/vwc-scheme-select-2.44.0.tgz#39712be6555f909b098d497622f01518bf8f031e"
+  integrity sha512-lK8uWN+eyQ6GexH3XqIsuT4G5rGfn5p8GzbMSHsnXJt/Xy7LFJMM3V1k69DyuyzFr0GCfT1vHgm9GP6pdCRqSg==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-scheme" "2.43.2"
-    "@vonage/vwc-button" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-scheme" "2.44.0"
+    "@vonage/vwc-button" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-select@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-select/-/vwc-select-2.43.2.tgz#125fc988d5ac6bf5d7d58e9cd7b0e928f5a0775d"
-  integrity sha512-iUighwfbZFp5s0SrGaVp4ONOwctzi787J8gZhaBwulIOfmHD0daZH3HpoNcPitiV7cPcjZi7YIiPJfl86RPreg==
+"@vonage/vwc-select@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-select/-/vwc-select-2.44.0.tgz#70041ba602341fb6f7ec28b75d6e2016641cb5a9"
+  integrity sha512-5+s/+9SxeOfmOmuOYqgzbJOnAQU45YuPpWLhWQqlEYGTbBjjJrWBH6K3ZMfnb2bYjA+9D/Mf0O6GpOpZIo3RgA==
   dependencies:
     "@material/mwc-select" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-helper-message" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
-    "@vonage/vwc-notched-outline" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-helper-message" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
+    "@vonage/vwc-notched-outline" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-side-drawer@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-side-drawer/-/vwc-side-drawer-2.43.2.tgz#d776df9e785e5d2660b45f7a3cfd5ac1f140d007"
-  integrity sha512-j5XjWym4VOjgNWFw5TZ1SeAI6V7WOx10bdfIyx72vXfUOLbMRj7bb8R80a3WqLOG+KGEl3x6BdaGcL+ec9kV4Q==
+"@vonage/vwc-side-drawer@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-side-drawer/-/vwc-side-drawer-2.44.0.tgz#c01805f460180a2dc165253194c2a2c571abe9a4"
+  integrity sha512-OGZ2N+SFDGYF/V2C/GjI/oAmfC9WvcditDGahR2viG7g1AjJnlJffm6gWrDl1QR46spI6dFlEiBoH6SZsAmgKQ==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
     blocking-elements "^0.1.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
     wicg-inert "^3.0.0"
 
-"@vonage/vwc-slider@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-slider/-/vwc-slider-2.43.2.tgz#2d16e9b69b6cfa7d20aa317969b8c6198cca53ec"
-  integrity sha512-BYwmCa6lw19pXX40WeELq6zO3P0UcJSEAQxqqnMG0M+NLD2FbJTpAfa1Yi6e6Mgqf/ZHdkJaRWsLggwyYxz8yg==
+"@vonage/vwc-slider@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-slider/-/vwc-slider-2.44.0.tgz#8d21846084859712233852e996b1b17eaa2ca8e1"
+  integrity sha512-uxqLXK3ZVxA0LeWmqBDhewa+/WyW5zsgv2mPbRUyhnKtKIhK0WDGKn6GeUg03TiGLc1E/PyHt1qZwxOo19/ZOg==
   dependencies:
     "@material/mwc-slider" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-snackbar@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-snackbar/-/vwc-snackbar-2.43.2.tgz#4a6c9b87c1838627bda8d5a742b63ae9cbaee02b"
-  integrity sha512-sczLBFoc+tXyKVbENx2NzleCw9QlJaQLiBA/n8s712biasoXohtxlqN67pvnkyi7D5CIF1RCM3EOwMB5LYAByg==
+"@vonage/vwc-snackbar@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-snackbar/-/vwc-snackbar-2.44.0.tgz#abc8e0308f84ff08d0d5cddfa2b2f9c9ec3f5ff5"
+  integrity sha512-kY9bvBmvTqfR+d95Ze4WoBAhULufpH3zTC0IvWhGbbwUOOlOWj3C+kYrYn04EHAcZN1dUU1nxqGf2TSNlTTGYw==
   dependencies:
     "@material/mwc-snackbar" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
-    "@vonage/vwc-icon-button" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
+    "@vonage/vwc-icon-button" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-surface@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-surface/-/vwc-surface-2.43.2.tgz#c2ab64014026c6f2635d0d4493a456a9bdc1ba99"
-  integrity sha512-g35mCn+rdtW7i+P9zpyeWstDLJBROfltSlKWbdUas9/EzH02lbXkZC6QnU+4NDwys02LdvCGjlrPNUih308CvQ==
+"@vonage/vwc-surface@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-surface/-/vwc-surface-2.44.0.tgz#80ca98a2c94157bbd9c780e07d1b9bd02edbd294"
+  integrity sha512-O1L7Zz78/vrX6USxIWkudtyM9p0Cc4IZjB7k09Vu6PXwN08516zocp+OP+znKHPZZXwmR5D/Lo9xUgkbx9JWuw==
   dependencies:
     "@material/mwc-menu" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
     lit-element "~2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-switch@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-switch/-/vwc-switch-2.43.2.tgz#e1987fff220e1821f225e44a713d1d42d3783354"
-  integrity sha512-fY23cJ8gK4VywutIOrV8Woyaj8Ee6Osw57y3z3xOVO3vWCnWsHkVFCYsIDkX6XUEjDQ6mE4HJ5hXoeH8HkTeDQ==
+"@vonage/vwc-switch@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-switch/-/vwc-switch-2.44.0.tgz#5269fe8998bfd8cfaf96c1063a119d939bb15966"
+  integrity sha512-ugnVU756P4m20H+c7z1Pwk6FcFEH1am8aqQ08PZS7aWLAp4UneU2rplKz+lPY6orAEScHmkDZDymW1zzqA3iGQ==
   dependencies:
     "@material/mwc-switch" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tab-bar@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tab-bar/-/vwc-tab-bar-2.43.2.tgz#a0f7c5d83393e1ece7ea9f1783744088529a5d37"
-  integrity sha512-qtwAtV/SoSTigvw8dXfmRmN9EPPDJj7TbTLR8+nUsn30NWPmJA8jfPaEcSf7KulBWfMyCSrPi8DlFFc23IuaUw==
+"@vonage/vwc-tab-bar@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tab-bar/-/vwc-tab-bar-2.44.0.tgz#88236fb6d8d8088c52bfad46f47e97abab4004a7"
+  integrity sha512-k3JC8uy7QbsqwUGJjN1kNGuiurztj/TpHGSNK3YQm8Sqsx1JkkL9DiuVUakmhk4knk7NzDmonyYfopzu1wlisQ==
   dependencies:
     "@material/mwc-tab" "^0.22.1"
     "@material/mwc-tab-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tags@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tags/-/vwc-tags-2.43.2.tgz#bb3d24494346b14401c2e7fa92b2af090d2e848c"
-  integrity sha512-EmxwvDbUP+AAyzdTidxJLO6DfNmIKsOQkfAfx2cY8zEYk4IDXLjmB/2wBcte28Hv4z+J9EJRmzy/gvvb/SyBmw==
+"@vonage/vwc-tags@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tags/-/vwc-tags-2.44.0.tgz#6388b81500c138719e88f6e0a396d6192f9e7a75"
+  integrity sha512-VRtE8y3fVb3gQsw6t+KWBD2/9CZ8ev7J6byd+dyC93StxGbNTqMsOrLinG7Sul2w6L2Lp1QeeskDAV0gygTmPw==
   dependencies:
     "@material/mwc-ripple" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-typography" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-typography" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-text@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-text/-/vwc-text-2.43.2.tgz#99394b2bf1dcaa107e8b7235667fb93e2721cb09"
-  integrity sha512-jpFJCiYKLoGsC38yQ7WpRb4yiGIITefkWf2eF9W4Jx61p0Nxd4TYxFx1vAv0YBT2TGNAA1aVz9XB3/HjT16h0Q==
+"@vonage/vwc-text@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-text/-/vwc-text-2.44.0.tgz#a48708a5b2d6d1e8c9fbbd92218df130acfbfce7"
+  integrity sha512-O6NQ0Nq9FoO4AVap56BQ1iK14NXF3L0jXpa07Ww3ab4cw0SlRSi/vJofZmraGDIPUWrjHjKY528FXU39Xice9Q==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textarea@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-textarea/-/vwc-textarea-2.43.2.tgz#1a648b5a35c1c40d57c94a0c97ab51bbe7f5b3be"
-  integrity sha512-d3IWu5NErx2zV1r6SUFlxVE82xVSY3SWEUNl7msGWwLy64OGXr4cnenvlA8fsXRc2Z4RHX/zNO5umeBgKPLGcg==
+"@vonage/vwc-textarea@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-textarea/-/vwc-textarea-2.44.0.tgz#dc7b317389621d8d0ab840482e8bfdd2433dac07"
+  integrity sha512-L4i5P+s8n7mSs7CnY/+tG2AwHoKBoL65nT2+D1ZctI7zge8cs2FuP80obbIhDOof9CYMH/+xT3EwizAJzZz6AQ==
   dependencies:
     "@material/mwc-textarea" "^0.22.1"
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-helper-message" "2.43.2"
-    "@vonage/vwc-notched-outline" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-helper-message" "2.44.0"
+    "@vonage/vwc-notched-outline" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-textfield@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-textfield/-/vwc-textfield-2.43.2.tgz#d49a49f11896fa953ce7cbc4fddce2bbc71d1d7e"
-  integrity sha512-oZCrQC+2IC+3gGVhwdLJlY9qwYJhXiHNud/UxaSEi7/CC46JJ/r7DyRe2slAX81yla48CZmxQ43H+Scy0EvL/A==
+"@vonage/vwc-textfield@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-textfield/-/vwc-textfield-2.44.0.tgz#5f61609d8895b8baa11f0ad29894170adca3c722"
+  integrity sha512-Extua5yX2wsg2pDVLqP6gfEvKCu490OXwUlPDiGxvLE+leShjlytLyha7HiE6Vd5XtuFoffkRSfoBvJ3Uww0OA==
   dependencies:
     "@material/mwc-textfield" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vvd-style-coupling" "2.43.2"
-    "@vonage/vwc-helper-message" "2.43.2"
-    "@vonage/vwc-icon" "2.43.2"
-    "@vonage/vwc-notched-outline" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vvd-style-coupling" "2.44.0"
+    "@vonage/vwc-helper-message" "2.44.0"
+    "@vonage/vwc-icon" "2.44.0"
+    "@vonage/vwc-notched-outline" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-theme-switch@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-theme-switch/-/vwc-theme-switch-2.43.2.tgz#ba97ffc0bbe6d395da8f2439801bfd4da62c272b"
-  integrity sha512-LcSdyK7/86C0y4hnFOaaQN6L2qZO0u71xQ16x/jszHMjBqKnAciyJPlcFF7q/cnlLlQxCjJSXBLc/9f0uYSpcw==
+"@vonage/vwc-theme-switch@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-theme-switch/-/vwc-theme-switch-2.44.0.tgz#18fc0bbbb8047ceec203724e9d0fb3b842825fba"
+  integrity sha512-cAP9jTXaSf2Iw+/DdmDFf4FjAhZkzXlMSm8KX33wN6bfHFZQhR63yEIAUBM1u3F/PkoKdeRtNUizRmRCzI117A==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-scheme" "2.43.2"
-    "@vonage/vwc-switch" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-scheme" "2.44.0"
+    "@vonage/vwc-switch" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-tooltip@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-tooltip/-/vwc-tooltip-2.43.2.tgz#582b91fdfa2ee20c2c92a30b4c11be74491bb7bc"
-  integrity sha512-e+b8BAcgNyDaG7ov6MI4m1mSqhzTGfPLB2+qY/QkTKfnVrzzCj0GS+XPWFUbtBIkxbQ5FvORNWPqFSNGeyVr0A==
+"@vonage/vwc-tooltip@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-tooltip/-/vwc-tooltip-2.44.0.tgz#127c39f9c7dec10b39689580bddfe367cf42b60c"
+  integrity sha512-/4sezQlTRjJwdIJIttHHZEK39H/A4C91NiLD4AWGG+GVxw0ORMmkl66fkV2lG1GzcCECiB6ZiCs9KdhemMer9g==
   dependencies:
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vvd-foundation" "2.43.2"
-    "@vonage/vwc-icon-button" "2.43.2"
-    "@vonage/vwc-popup" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vvd-foundation" "2.44.0"
+    "@vonage/vwc-icon-button" "2.44.0"
+    "@vonage/vwc-popup" "2.44.0"
     lit-element "^2.4.0"
     lit-html "^1.3.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar-fixed@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar-fixed/-/vwc-top-app-bar-fixed-2.43.2.tgz#22fe9cf71cd138e44069fb64c0da8d4b7b83bab5"
-  integrity sha512-lT1LzCUget/4NsRbRd7iqwdDi6yU5DvPuySMYcEOYDYjQrcj2cmwIsxCb7dF/oipjkO+ttj13j76dv//APSz/A==
+"@vonage/vwc-top-app-bar-fixed@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar-fixed/-/vwc-top-app-bar-fixed-2.44.0.tgz#9828dc4abb5c8419eec624c6b599b608421b73b6"
+  integrity sha512-74Bg35W+7Jm/YUzPXO9XBCAYSlUIX8GbmHn0CmqkqRODDfaGg6xJwED4WjuWreMReS9xGdnXWsHBaPmehBaiIQ==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
     "@material/mwc-top-app-bar-fixed" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
-    "@vonage/vwc-top-app-bar" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
+    "@vonage/vwc-top-app-bar" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-top-app-bar@2.43.2":
-  version "2.43.2"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar/-/vwc-top-app-bar-2.43.2.tgz#eb093825161354453844faf71942fb085a82d7c0"
-  integrity sha512-ZTQskXC5IssI+P042SKlUMroGY/1wsTZdQJbVSkat48EhNcorIqBc6FyJpJ9BdyqOKOYP6OFvhxbSyxDcOigRA==
+"@vonage/vwc-top-app-bar@2.44.0":
+  version "2.44.0"
+  resolved "https://registry.yarnpkg.com/@vonage/vwc-top-app-bar/-/vwc-top-app-bar-2.44.0.tgz#ff537591bb45cd0752cb4835f6c7fbd7590ee24a"
+  integrity sha512-Jto3NfNglfKOB+2JTbXBxsx5iJYsGY1HCa/L7VzrMULS7kgQVe/Iy93KoLIJT6ZtYuvKTfByjC65fYHha+X27A==
   dependencies:
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-top-app-bar" "^0.22.1"
-    "@vonage/vvd-core" "2.43.2"
+    "@vonage/vvd-core" "2.44.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
@@ -5568,11 +5402,6 @@ arrify@^2.0.1:
   resolved "https://registry.yarnpkg.com/arrify/-/arrify-2.0.1.tgz#c9655e9331e0abcd588d2a7cad7e9956f66701fa"
   integrity sha512-3duEwti880xqi4eAMN8AyR4a0ByT90zoYdLlevfrvU43vb0YZwZVfxOgxWrLXXXpyugL0hNZc9G6BiB5B3nUug==
 
-asap@~2.0.3:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
-  integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
-
 asn1.js@^5.2.0:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/asn1.js/-/asn1.js-5.4.1.tgz#11a980b84ebb91781ce35b0fdc2ee294e3783f07"
@@ -6024,7 +5853,7 @@ browserify-zlib@^0.2.0:
   dependencies:
     pako "~1.0.5"
 
-browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.14.5, browserslist@^4.21.3, browserslist@^4.21.4, browserslist@^4.21.5:
+browserslist@^4.12.0, browserslist@^4.14.5, browserslist@^4.21.3, browserslist@^4.21.5:
   version "4.21.9"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.21.9.tgz#e11bdd3c313d7e2a9e87e8b4b0c7872b13897635"
   integrity sha512-M0MFoZzbUrRU4KNfCrDLnvyE7gub+peetoTid3TBIqtunaDJyXlwhakT+/VkvSXcfIzFfK/nkCs4nmyTmxdNSg==
@@ -6227,17 +6056,7 @@ camelcase@^6.0.0, camelcase@^6.2.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.3.0.tgz#5685b95eb209ac9c0c177467778c9c84df58ba9a"
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
-caniuse-api@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
-  integrity sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==
-  dependencies:
-    browserslist "^4.0.0"
-    caniuse-lite "^1.0.0"
-    lodash.memoize "^4.1.2"
-    lodash.uniq "^4.5.0"
-
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001503:
+caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001503:
   version "1.0.30001504"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001504.tgz#eaf77e5c852dfa5f82c4924468c30602ac53744a"
   integrity sha512-5uo7eoOp2mKbWyfMXnGO9rJWOGU8duvzEiYITW+wivukL7yHH4gX9yuRaobu6El4jPxo6jKZfG+N6fB621GD/Q==
@@ -6500,11 +6319,6 @@ color-support@^1.1.2:
   resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
   integrity sha512-qiBjkpbMLO/HL68y+lh4q0/O1MZFj2RX6X/KmMa3+gJD3z+WwI1ZzDHysvqHGS3mP6mznPckpXmw1nI9cJjyRg==
 
-colord@^2.9.1:
-  version "2.9.3"
-  resolved "https://registry.yarnpkg.com/colord/-/colord-2.9.3.tgz#4f8ce919de456f1d5c1c368c307fe20f3e59fb43"
-  integrity sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==
-
 combined-stream@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz#c3d45a8b34fd730631a110a8a2520682b31d5a7f"
@@ -6531,11 +6345,6 @@ commander@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-6.2.1.tgz#0792eb682dfbc325999bb2b84fddddba110ac73c"
   integrity sha512-U7VdrJFnJgo4xjrHpTzu0yrHPGImdsmD95ZlgYSEajAn2JKzDhDTPG9kBTefmObL2w/ngeZnilk+OV9CG3d7UA==
-
-commander@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-7.2.0.tgz#a36cb57d0b501ce108e4d20559a150a391d97ab7"
-  integrity sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==
 
 common-path-prefix@^3.0.0:
   version "3.0.0"
@@ -6586,13 +6395,6 @@ concat-stream@^1.5.0:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
-
-concat-with-sourcemaps@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/concat-with-sourcemaps/-/concat-with-sourcemaps-1.1.0.tgz#d4ea93f05ae25790951b99e7b3b09e3908a4082e"
-  integrity sha512-4gEjHJFT9e+2W/77h/DS5SGUgwDaOwprX8L/gl5+3ixnzkVJJsZWDSelmN3Oilw3LNDZjZV0yqH1hLG3k6nghg==
-  dependencies:
-    source-map "^0.6.1"
 
 console-browserify@^1.1.0:
   version "1.2.0"
@@ -6790,11 +6592,6 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
-css-declaration-sorter@^6.3.1:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/css-declaration-sorter/-/css-declaration-sorter-6.4.0.tgz#630618adc21724484b3e9505bce812def44000ad"
-  integrity sha512-jDfsatwWMWN0MODAFuHszfjphEXfNw9JUAhmY4pLu3TyTU+ohUpsbVtbU+1MZn4a47D9kqh03i4eyOm+74+zew==
-
 css-loader@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-3.6.0.tgz#2e4b2c7e6e2d27f8c8f28f61bffcd2e6c91ef645"
@@ -6825,14 +6622,6 @@ css-select@^4.1.3:
     domutils "^2.8.0"
     nth-check "^2.0.1"
 
-css-tree@^1.1.2, css-tree@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.1.3.tgz#eb4870fb6fd7707327ec95c2ff2ab09b5e8db91d"
-  integrity sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==
-  dependencies:
-    mdn-data "2.0.14"
-    source-map "^0.6.1"
-
 css-vendor@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/css-vendor/-/css-vendor-2.0.8.tgz#e47f91d3bd3117d49180a3c935e62e3d9f7f449d"
@@ -6850,62 +6639,6 @@ cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
-
-cssnano-preset-default@^5.2.14:
-  version "5.2.14"
-  resolved "https://registry.yarnpkg.com/cssnano-preset-default/-/cssnano-preset-default-5.2.14.tgz#309def4f7b7e16d71ab2438052093330d9ab45d8"
-  integrity sha512-t0SFesj/ZV2OTylqQVOrFgEh5uanxbO6ZAdeCrNsUQ6fVuXwYTxJPNAGvGTxHbD68ldIJNec7PyYZDBrfDQ+6A==
-  dependencies:
-    css-declaration-sorter "^6.3.1"
-    cssnano-utils "^3.1.0"
-    postcss-calc "^8.2.3"
-    postcss-colormin "^5.3.1"
-    postcss-convert-values "^5.1.3"
-    postcss-discard-comments "^5.1.2"
-    postcss-discard-duplicates "^5.1.0"
-    postcss-discard-empty "^5.1.1"
-    postcss-discard-overridden "^5.1.0"
-    postcss-merge-longhand "^5.1.7"
-    postcss-merge-rules "^5.1.4"
-    postcss-minify-font-values "^5.1.0"
-    postcss-minify-gradients "^5.1.1"
-    postcss-minify-params "^5.1.4"
-    postcss-minify-selectors "^5.2.1"
-    postcss-normalize-charset "^5.1.0"
-    postcss-normalize-display-values "^5.1.0"
-    postcss-normalize-positions "^5.1.1"
-    postcss-normalize-repeat-style "^5.1.1"
-    postcss-normalize-string "^5.1.0"
-    postcss-normalize-timing-functions "^5.1.0"
-    postcss-normalize-unicode "^5.1.1"
-    postcss-normalize-url "^5.1.0"
-    postcss-normalize-whitespace "^5.1.1"
-    postcss-ordered-values "^5.1.3"
-    postcss-reduce-initial "^5.1.2"
-    postcss-reduce-transforms "^5.1.0"
-    postcss-svgo "^5.1.0"
-    postcss-unique-selectors "^5.1.1"
-
-cssnano-utils@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/cssnano-utils/-/cssnano-utils-3.1.0.tgz#95684d08c91511edfc70d2636338ca37ef3a6861"
-  integrity sha512-JQNR19/YZhz4psLX/rQ9M83e3z2Wf/HdJbryzte4a3NSuafyp9w/I4U+hx5C2S9g41qlstH7DEWnZaaj83OuEA==
-
-cssnano@^5.0.1:
-  version "5.1.15"
-  resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-5.1.15.tgz#ded66b5480d5127fcb44dac12ea5a983755136bf"
-  integrity sha512-j+BKgDcLDQA+eDifLx0EO4XSA56b7uut3BQFH+wbSaSTuGLuiyTa/wbRYthUXX8LC9mLg+WWKe8h+qJuwTAbHw==
-  dependencies:
-    cssnano-preset-default "^5.2.14"
-    lilconfig "^2.0.3"
-    yaml "^1.10.2"
-
-csso@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/csso/-/csso-4.2.0.tgz#ea3a561346e8dc9f546d6febedd50187cf389529"
-  integrity sha512-wvlcdIbf6pwKEk7vHj8/Bkc0B4ylXZruLvOgs9doS5eOsOpuodOV2zJChSpkp+pRpYQLQMeF04nr3Z68Sta9jA==
-  dependencies:
-    css-tree "^1.1.2"
 
 cssom@^0.4.4:
   version "0.4.4"
@@ -6954,13 +6687,6 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
-
-date-fns@2.30.0:
-  version "2.30.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
-  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
-  dependencies:
-    "@babel/runtime" "^7.21.0"
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   version "2.6.9"
@@ -7119,11 +6845,6 @@ detect-port@^1.3.0:
     address "^1.0.1"
     debug "4"
 
-dialog-polyfill@0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/dialog-polyfill/-/dialog-polyfill-0.5.6.tgz#7507b4c745a82fcee0fa07ce64d835979719599a"
-  integrity sha512-ZbVDJI9uvxPAKze6z146rmfUZjBqNEwcnFTVamQzXH+svluiV7swmVIGr7miwADgfgt1G2JQIytypM9fbyhX4w==
-
 diff-sequences@^26.6.2:
   version "26.6.2"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-26.6.2.tgz#48ba99157de1923412eed41db6b6d4aa9ca7c0b1"
@@ -7252,14 +6973,6 @@ dotenv@^8.0.0:
   version "8.6.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
   integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
-
-dropzone@6.0.0-beta.2:
-  version "6.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.0.0-beta.2.tgz#098be8fa84bdc08674cf0b74f4c889e2679083d6"
-  integrity sha512-k44yLuFFhRk53M8zP71FaaNzJYIzr99SKmpbO/oZKNslDjNXQsBTdfLs+iONd0U0L94zzlFzRnFdqbLcs7h9fQ==
-  dependencies:
-    "@swc/helpers" "^0.2.13"
-    just-extend "^5.0.0"
 
 duplexify@^3.4.2, duplexify@^3.6.0:
   version "3.7.1"
@@ -7726,11 +7439,6 @@ estree-to-babel@^3.1.0:
     "@babel/types" "^7.2.0"
     c8 "^7.6.0"
 
-estree-walker@^0.6.1:
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-0.6.1.tgz#53049143f40c6eb918b23671d1fe3219f3a1b362"
-  integrity sha512-SqmZANLWS0mnatqbSfRP5g8OXZC12Fgg1IwNtLsyHDzJizORW4khDfjPqJZsemPWBB2uqykUah5YpQ6epsqC/w==
-
 estree-walker@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/estree-walker/-/estree-walker-1.0.1.tgz#31bc5d612c96b704106b477e6dd5d8aa138cb700"
@@ -7750,11 +7458,6 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==
-
-eventemitter3@^4.0.4:
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
-  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
 events@^3.0.0, events@^3.2.0:
   version "3.3.0"
@@ -7816,11 +7519,6 @@ execa@^5.1.1:
     onetime "^5.1.2"
     signal-exit "^3.0.3"
     strip-final-newline "^2.0.0"
-
-exenv-es6@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/exenv-es6/-/exenv-es6-1.1.1.tgz#80b7a8c5af24d53331f755bac07e84abb1f6de67"
-  integrity sha512-vlVu3N8d6yEMpMsEm+7sUBAI81aqYYuEvfK0jNqmdb/OPXzzH7QWDDnVjMvDSY47JdHEqx/dfC/q8WkfoTmpGQ==
 
 exit@^0.1.2:
   version "0.1.2"
@@ -8314,13 +8012,6 @@ gauge@^3.0.0:
     string-width "^4.2.3"
     strip-ansi "^6.0.1"
     wide-align "^1.1.2"
-
-generic-names@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/generic-names/-/generic-names-4.0.0.tgz#0bd8a2fd23fe8ea16cbd0a279acd69c06933d9a3"
-  integrity sha512-ySFolZQfw9FoDb3ed9d80Cm9f0+r7qj+HJkWjeD9RBfpxEVTlVhol+gvaQB/78WbwYfbnNh8nWHHBSlg072y6A==
-  dependencies:
-    loader-utils "^3.2.0"
 
 gensync@^1.0.0-beta.1, gensync@^1.0.0-beta.2:
   version "1.0.0-beta.2"
@@ -8832,22 +8523,12 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
-icss-replace-symbols@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/icss-replace-symbols/-/icss-replace-symbols-1.1.0.tgz#06ea6f83679a7749e386cfe1fe812ae5db223ded"
-  integrity sha512-chIaY3Vh2mh2Q3RGXttaDIzeiPvaVXJ+C4DAh/w3c37SKZ/U6PGMmuicR2EQQp9bKG8zLMCl7I+PtIoOOPp8Gg==
-
 icss-utils@^4.0.0, icss-utils@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-4.1.1.tgz#21170b53789ee27447c2f47dd683081403f9a467"
   integrity sha512-4aFq7wvWyMHKgxsH8QQtGpvbASCf+eM3wPRLI6R+MgAnTCZ6STYsRvttLvRWK0Nfif5piF394St3HeJDaljGPA==
   dependencies:
     postcss "^7.0.14"
-
-icss-utils@^5.0.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-5.1.0.tgz#c6be6858abd013d768e98366ae47e25d5887b1ae"
-  integrity sha512-soFhflCVWLfRNOPU3iv5Z9VUdT44xFRbzjLsEzSr5AQmgqPMTHdU3PMT1Cf1ssx8fLNJDA1juftYl+PUcv3MqA==
 
 ieee754@^1.1.13, ieee754@^1.1.4:
   version "1.2.1"
@@ -8869,13 +8550,6 @@ ignore@^5.1.1, ignore@^5.2.0:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
-import-cwd@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-3.0.0.tgz#20845547718015126ea9b3676b7592fb8bd4cf92"
-  integrity sha512-4pnzH16plW+hgvRECbDWpQl3cqtvSofHWh44met7ESfZ8UZOWWddm8hEyDTqREJ9RbYHY8gi8DqmaelApoOGMg==
-  dependencies:
-    import-from "^3.0.0"
-
 import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
@@ -8883,13 +8557,6 @@ import-fresh@^3.0.0, import-fresh@^3.1.0, import-fresh@^3.2.1:
   dependencies:
     parent-module "^1.0.0"
     resolve-from "^4.0.0"
-
-import-from@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/import-from/-/import-from-3.0.0.tgz#055cfec38cd5a27d8057ca51376d7d3bf0891966"
-  integrity sha512-CiuXOFFSzkU5x/CR0+z7T91Iht4CXgfCxVOFRhh2Zyhg5wOpWvvDLQUsWl+gcN+QscYBjez8hDCt85O7RLDttQ==
-  dependencies:
-    resolve-from "^5.0.0"
 
 import-local@^3.0.2:
   version "3.1.0"
@@ -10062,11 +9729,6 @@ junk@^3.1.0:
   resolved "https://registry.yarnpkg.com/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-just-extend@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-5.1.1.tgz#4f33b1fc719964f816df55acc905776694b713ab"
-  integrity sha512-b+z6yF1d4EOyDgylzQo5IminlUmzSeqR1hs/bzjBNjuGras4FXq/6TrzjxfN0j+TmI0ltJzTNlqXUMCniciwKQ==
-
 kefir@^3.8.7:
   version "3.8.8"
   resolved "https://registry.yarnpkg.com/kefir/-/kefir-3.8.8.tgz#235932ddfbed422acebf5d7cba503035e9ea05c5"
@@ -10137,11 +9799,6 @@ levn@~0.3.0:
   dependencies:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
-
-lilconfig@^2.0.3, lilconfig@^2.0.5:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.1.0.tgz#78e23ac89ebb7e1bfbf25b18043de756548e7f52"
-  integrity sha512-utWOt/GHzuUxnLKxB6dk81RoOeoNeHgbrXiuGk4yyF5qlRz+iIVWu56E2fqGHFrXz0QNUhLB/8nKqvRH66JKGQ==
 
 lines-and-columns@^1.1.6:
   version "1.2.4"
@@ -10219,7 +9876,7 @@ loader-runner@^4.2.0:
   resolved "https://registry.yarnpkg.com/loader-runner/-/loader-runner-4.3.0.tgz#c1b4a163b99f614830353b16755e7149ac2314e1"
   integrity sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==
 
-loader-utils@2.0.4, loader-utils@^1.2.3, loader-utils@^2.0.0, loader-utils@^2.0.4, loader-utils@^3.2.0:
+loader-utils@2.0.4, loader-utils@^1.2.3, loader-utils@^2.0.0, loader-utils@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
   integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
@@ -10258,27 +9915,17 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-lodash.camelcase@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
-  integrity sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==
-
 lodash.debounce@^4.0.8:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
-
-lodash.memoize@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
-  integrity sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==
 
 lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha512-jttmRe7bRse52OsWIMDLaXxWqRAmtIUccAQ3garviCqJjafXOfNMO0yMfNpdD6zbGaTU0P5Nz7e7gAT6cKmJRw==
 
-lodash.uniq@4.5.0, lodash.uniq@^4.5.0:
+lodash.uniq@4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==
@@ -10429,11 +10076,6 @@ mdast-util-to-string@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.1.0.tgz#27055500103f51637bd07d01da01eb1967a43527"
   integrity sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==
-
-mdn-data@2.0.14:
-  version "2.0.14"
-  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
-  integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
 mdurl@^1.0.0:
   version "1.0.1"
@@ -10873,11 +10515,6 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
-normalize-url@^6.0.1:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
-  integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
-
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -11209,15 +10846,7 @@ p-map@^4.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-p-queue@^6.6.2:
-  version "6.6.2"
-  resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.6.2.tgz#2068a9dcf8e67dd0ec3e7a2bcb76810faa85e426"
-  integrity sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==
-  dependencies:
-    eventemitter3 "^4.0.4"
-    p-timeout "^3.2.0"
-
-p-timeout@^3.1.0, p-timeout@^3.2.0:
+p-timeout@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-3.2.0.tgz#c7e17abc971d2a7962ef83626b35d635acf23dfe"
   integrity sha512-rhIwUycgwwKcP9yTOOFK/AKsAopjjCakVqLHePO3CC6Mir1Z99xT+R63jZxAT5lFZLa2inS5h+ZS2GvR99/FBg==
@@ -11443,11 +11072,6 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-pify@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/pify/-/pify-5.0.0.tgz#1f5eca3f5e87ebec28cc6d54a0e4aaf00acc127f"
-  integrity sha512-eW/gHNMlxdSP6dmG6uJip6FXN0EQBwm2clYYd8Wul42Cwu/DK8HEftzsapcNdYe2MfLiIwZqsDk2RDEsTE79hA==
-
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -11525,66 +11149,12 @@ posix-character-classes@^0.1.0:
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
   integrity sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg==
 
-postcss-calc@^8.2.3:
-  version "8.2.4"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-8.2.4.tgz#77b9c29bfcbe8a07ff6693dc87050828889739a5"
-  integrity sha512-SmWMSJmB8MRnnULldx0lQIyhSNvuDl9HfrZkaqqE/WHAhToYsAvDq+yAsA/kIyINDszOp3Rh0GFoNuH5Ypsm3Q==
-  dependencies:
-    postcss-selector-parser "^6.0.9"
-    postcss-value-parser "^4.2.0"
-
-postcss-colormin@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-colormin/-/postcss-colormin-5.3.1.tgz#86c27c26ed6ba00d96c79e08f3ffb418d1d1988f"
-  integrity sha512-UsWQG0AqTFQmpBegeLLc1+c3jIqBNB0zlDGRWR+dQ3pRKJL1oeMzyqmH3o2PIfn9MBdNrVPWhDbT769LxCTLJQ==
-  dependencies:
-    browserslist "^4.21.4"
-    caniuse-api "^3.0.0"
-    colord "^2.9.1"
-    postcss-value-parser "^4.2.0"
-
-postcss-convert-values@^5.1.3:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/postcss-convert-values/-/postcss-convert-values-5.1.3.tgz#04998bb9ba6b65aa31035d669a6af342c5f9d393"
-  integrity sha512-82pC1xkJZtcJEfiLw6UXnXVXScgtBrjlO5CBmuDQc+dlb88ZYheFsjTn40+zBVi3DkfF7iezO0nJUPLcJK3pvA==
-  dependencies:
-    browserslist "^4.21.4"
-    postcss-value-parser "^4.2.0"
-
-postcss-discard-comments@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/postcss-discard-comments/-/postcss-discard-comments-5.1.2.tgz#8df5e81d2925af2780075840c1526f0660e53696"
-  integrity sha512-+L8208OVbHVF2UQf1iDmRcbdjJkuBF6IS29yBDSiWUIzpYaAhtNl6JYnYm12FnkeCwQqF5LeklOu6rAqgfBZqQ==
-
-postcss-discard-duplicates@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-discard-duplicates/-/postcss-discard-duplicates-5.1.0.tgz#9eb4fe8456706a4eebd6d3b7b777d07bad03e848"
-  integrity sha512-zmX3IoSI2aoenxHV6C7plngHWWhUOV3sP1T8y2ifzxzbtnuhk1EdPwm0S1bIUNaJ2eNbWeGLEwzw8huPD67aQw==
-
-postcss-discard-empty@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-discard-empty/-/postcss-discard-empty-5.1.1.tgz#e57762343ff7f503fe53fca553d18d7f0c369c6c"
-  integrity sha512-zPz4WljiSuLWsI0ir4Mcnr4qQQ5e1Ukc3i7UfE2XcrwKK2LIPIqE5jxMRxO6GbI3cv//ztXDsXwEWT3BHOGh3A==
-
-postcss-discard-overridden@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-discard-overridden/-/postcss-discard-overridden-5.1.0.tgz#7e8c5b53325747e9d90131bb88635282fb4a276e"
-  integrity sha512-21nOL7RqWR1kasIVdKs8HNqQJhFxLsyRfAnUDm4Fe4t4mCWL9OJiHvlHPjcd8zc5Myu89b/7wZDnOSjFgeWRtw==
-
 postcss-flexbugs-fixes@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/postcss-flexbugs-fixes/-/postcss-flexbugs-fixes-4.2.1.tgz#9218a65249f30897deab1033aced8578562a6690"
   integrity sha512-9SiofaZ9CWpQWxOwRh1b/r85KD5y7GgvsNt1056k6OYLvWUun0czCvogfJgylC22uJTwW1KzY3Gz65NZRlvoiQ==
   dependencies:
     postcss "^7.0.26"
-
-postcss-load-config@^3.0.0:
-  version "3.1.4"
-  resolved "https://registry.yarnpkg.com/postcss-load-config/-/postcss-load-config-3.1.4.tgz#1ab2571faf84bb078877e1d07905eabe9ebda855"
-  integrity sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==
-  dependencies:
-    lilconfig "^2.0.5"
-    yaml "^1.10.2"
 
 postcss-loader@^4.2.0:
   version "4.3.0"
@@ -11597,67 +11167,12 @@ postcss-loader@^4.2.0:
     schema-utils "^3.0.0"
     semver "^7.3.4"
 
-postcss-merge-longhand@^5.1.7:
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/postcss-merge-longhand/-/postcss-merge-longhand-5.1.7.tgz#24a1bdf402d9ef0e70f568f39bdc0344d568fb16"
-  integrity sha512-YCI9gZB+PLNskrK0BB3/2OzPnGhPkBEwmwhfYk1ilBHYVAZB7/tkTHFBAnCrvBBOmeYyMYw3DMjT55SyxMBzjQ==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-    stylehacks "^5.1.1"
-
-postcss-merge-rules@^5.1.4:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/postcss-merge-rules/-/postcss-merge-rules-5.1.4.tgz#2f26fa5cacb75b1402e213789f6766ae5e40313c"
-  integrity sha512-0R2IuYpgU93y9lhVbO/OylTtKMVcHb67zjWIfCiKR9rWL3GUk1677LAqD/BcHizukdZEjT8Ru3oHRoAYoJy44g==
-  dependencies:
-    browserslist "^4.21.4"
-    caniuse-api "^3.0.0"
-    cssnano-utils "^3.1.0"
-    postcss-selector-parser "^6.0.5"
-
-postcss-minify-font-values@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-minify-font-values/-/postcss-minify-font-values-5.1.0.tgz#f1df0014a726083d260d3bd85d7385fb89d1f01b"
-  integrity sha512-el3mYTgx13ZAPPirSVsHqFzl+BBBDrXvbySvPGFnQcTI4iNslrPaFq4muTkLZmKlGk4gyFAYUBMH30+HurREyA==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-minify-gradients@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-minify-gradients/-/postcss-minify-gradients-5.1.1.tgz#f1fe1b4f498134a5068240c2f25d46fcd236ba2c"
-  integrity sha512-VGvXMTpCEo4qHTNSa9A0a3D+dxGFZCYwR6Jokk+/3oB6flu2/PnPXAh2x7x52EkY5xlIHLm+Le8tJxe/7TNhzw==
-  dependencies:
-    colord "^2.9.1"
-    cssnano-utils "^3.1.0"
-    postcss-value-parser "^4.2.0"
-
-postcss-minify-params@^5.1.4:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/postcss-minify-params/-/postcss-minify-params-5.1.4.tgz#c06a6c787128b3208b38c9364cfc40c8aa5d7352"
-  integrity sha512-+mePA3MgdmVmv6g+30rn57USjOGSAyuxUmkfiWpzalZ8aiBkdPYjXWtHuwJGm1v5Ojy0Z0LaSYhHaLJQB0P8Jw==
-  dependencies:
-    browserslist "^4.21.4"
-    cssnano-utils "^3.1.0"
-    postcss-value-parser "^4.2.0"
-
-postcss-minify-selectors@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/postcss-minify-selectors/-/postcss-minify-selectors-5.2.1.tgz#d4e7e6b46147b8117ea9325a915a801d5fe656c6"
-  integrity sha512-nPJu7OjZJTsVUmPdm2TcaiohIwxP+v8ha9NehQ2ye9szv4orirRU3SDdtUmKH+10nzn0bAyOXZ0UEr7OpvLehg==
-  dependencies:
-    postcss-selector-parser "^6.0.5"
-
 postcss-modules-extract-imports@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-2.0.0.tgz#818719a1ae1da325f9832446b01136eeb493cd7e"
   integrity sha512-LaYLDNS4SG8Q5WAWqIJgdHPJrDDr/Lv775rMBFUbgjTz6j34lUznACHcdRWroPvXANP2Vj7yNK57vp9eFqzLWQ==
   dependencies:
     postcss "^7.0.5"
-
-postcss-modules-extract-imports@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz#cda1f047c0ae80c97dbe28c3e76a43b88025741d"
-  integrity sha512-bdHleFnP3kZ4NYDhuGlVK+CMrQ/pqUm8bx/oGL93K6gVwiclvX5x0n76fYMKuIGKzlABOy13zsvqjb0f92TEXw==
 
 postcss-modules-local-by-default@^3.0.2:
   version "3.0.3"
@@ -11669,15 +11184,6 @@ postcss-modules-local-by-default@^3.0.2:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.1.0"
 
-postcss-modules-local-by-default@^4.0.0:
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.0.3.tgz#b08eb4f083050708998ba2c6061b50c2870ca524"
-  integrity sha512-2/u2zraspoACtrbFRnTijMiQtb4GW4BvatjaG/bCjYQo8kLTdevCUlwuBHx2sCnSyrI3x3qj4ZK1j5LQBgzmwA==
-  dependencies:
-    icss-utils "^5.0.0"
-    postcss-selector-parser "^6.0.2"
-    postcss-value-parser "^4.1.0"
-
 postcss-modules-scope@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-2.2.0.tgz#385cae013cc7743f5a7d7602d1073a89eaae62ee"
@@ -11685,13 +11191,6 @@ postcss-modules-scope@^2.2.0:
   dependencies:
     postcss "^7.0.6"
     postcss-selector-parser "^6.0.0"
-
-postcss-modules-scope@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-scope/-/postcss-modules-scope-3.0.0.tgz#9ef3151456d3bbfa120ca44898dfca6f2fa01f06"
-  integrity sha512-hncihwFA2yPath8oZ15PZqvWGkWf+XUfQgUGamS4LqoP1anQLOsOJw0vr7J7IwLpoY9fatA2qiGUGmuZL0Iqlg==
-  dependencies:
-    postcss-selector-parser "^6.0.4"
 
 postcss-modules-values@^3.0.0:
   version "3.0.0"
@@ -11701,114 +11200,7 @@ postcss-modules-values@^3.0.0:
     icss-utils "^4.0.0"
     postcss "^7.0.6"
 
-postcss-modules-values@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-modules-values/-/postcss-modules-values-4.0.0.tgz#d7c5e7e68c3bb3c9b27cbf48ca0bb3ffb4602c9c"
-  integrity sha512-RDxHkAiEGI78gS2ofyvCsu7iycRv7oqw5xMWn9iMoR0N/7mf9D50ecQqUo5BZ9Zh2vH4bCUR/ktCqbB9m8vJjQ==
-  dependencies:
-    icss-utils "^5.0.0"
-
-postcss-modules@^4.0.0:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-modules/-/postcss-modules-4.3.1.tgz#517c06c09eab07d133ae0effca2c510abba18048"
-  integrity sha512-ItUhSUxBBdNamkT3KzIZwYNNRFKmkJrofvC2nWab3CPKhYBQ1f27XXh1PAPE27Psx58jeelPsxWB/+og+KEH0Q==
-  dependencies:
-    generic-names "^4.0.0"
-    icss-replace-symbols "^1.1.0"
-    lodash.camelcase "^4.3.0"
-    postcss-modules-extract-imports "^3.0.0"
-    postcss-modules-local-by-default "^4.0.0"
-    postcss-modules-scope "^3.0.0"
-    postcss-modules-values "^4.0.0"
-    string-hash "^1.1.1"
-
-postcss-normalize-charset@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-charset/-/postcss-normalize-charset-5.1.0.tgz#9302de0b29094b52c259e9b2cf8dc0879879f0ed"
-  integrity sha512-mSgUJ+pd/ldRGVx26p2wz9dNZ7ji6Pn8VWBajMXFf8jk7vUoSrZ2lt/wZR7DtlZYKesmZI680qjr2CeFF2fbUg==
-
-postcss-normalize-display-values@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-display-values/-/postcss-normalize-display-values-5.1.0.tgz#72abbae58081960e9edd7200fcf21ab8325c3da8"
-  integrity sha512-WP4KIM4o2dazQXWmFaqMmcvsKmhdINFblgSeRgn8BJ6vxaMyaJkwAzpPpuvSIoG/rmX3M+IrRZEz2H0glrQNEA==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-positions@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-positions/-/postcss-normalize-positions-5.1.1.tgz#ef97279d894087b59325b45c47f1e863daefbb92"
-  integrity sha512-6UpCb0G4eofTCQLFVuI3EVNZzBNPiIKcA1AKVka+31fTVySphr3VUgAIULBhxZkKgwLImhzMR2Bw1ORK+37INg==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-repeat-style@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-repeat-style/-/postcss-normalize-repeat-style-5.1.1.tgz#e9eb96805204f4766df66fd09ed2e13545420fb2"
-  integrity sha512-mFpLspGWkQtBcWIRFLmewo8aC3ImN2i/J3v8YCFUwDnPu3Xz4rLohDO26lGjwNsQxB3YF0KKRwspGzE2JEuS0g==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-string@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-string/-/postcss-normalize-string-5.1.0.tgz#411961169e07308c82c1f8c55f3e8a337757e228"
-  integrity sha512-oYiIJOf4T9T1N4i+abeIc7Vgm/xPCGih4bZz5Nm0/ARVJ7K6xrDlLwvwqOydvyL3RHNf8qZk6vo3aatiw/go3w==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-timing-functions@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-timing-functions/-/postcss-normalize-timing-functions-5.1.0.tgz#d5614410f8f0b2388e9f240aa6011ba6f52dafbb"
-  integrity sha512-DOEkzJ4SAXv5xkHl0Wa9cZLF3WCBhF3o1SKVxKQAa+0pYKlueTpCgvkFAHfk+Y64ezX9+nITGrDZeVGgITJXjg==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-unicode@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-unicode/-/postcss-normalize-unicode-5.1.1.tgz#f67297fca3fea7f17e0d2caa40769afc487aa030"
-  integrity sha512-qnCL5jzkNUmKVhZoENp1mJiGNPcsJCs1aaRmURmeJGES23Z/ajaln+EPTD+rBeNkSryI+2WTdW+lwcVdOikrpA==
-  dependencies:
-    browserslist "^4.21.4"
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-url@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-url/-/postcss-normalize-url-5.1.0.tgz#ed9d88ca82e21abef99f743457d3729a042adcdc"
-  integrity sha512-5upGeDO+PVthOxSmds43ZeMeZfKH+/DKgGRD7TElkkyS46JXAUhMzIKiCa7BabPeIy3AQcTkXwVVN7DbqsiCew==
-  dependencies:
-    normalize-url "^6.0.1"
-    postcss-value-parser "^4.2.0"
-
-postcss-normalize-whitespace@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-normalize-whitespace/-/postcss-normalize-whitespace-5.1.1.tgz#08a1a0d1ffa17a7cc6efe1e6c9da969cc4493cfa"
-  integrity sha512-83ZJ4t3NUDETIHTa3uEg6asWjSBYL5EdkVB0sDncx9ERzOKBVJIUeDO9RyA9Zwtig8El1d79HBp0JEi8wvGQnA==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-ordered-values@^5.1.3:
-  version "5.1.3"
-  resolved "https://registry.yarnpkg.com/postcss-ordered-values/-/postcss-ordered-values-5.1.3.tgz#b6fd2bd10f937b23d86bc829c69e7732ce76ea38"
-  integrity sha512-9UO79VUhPwEkzbb3RNpqqghc6lcYej1aveQteWY+4POIwlqkYE21HKWaLDF6lWNuqCobEAyTovVhtI32Rbv2RQ==
-  dependencies:
-    cssnano-utils "^3.1.0"
-    postcss-value-parser "^4.2.0"
-
-postcss-reduce-initial@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/postcss-reduce-initial/-/postcss-reduce-initial-5.1.2.tgz#798cd77b3e033eae7105c18c9d371d989e1382d6"
-  integrity sha512-dE/y2XRaqAi6OvjzD22pjTUQ8eOfc6m/natGHgKFBK9DxFmIm69YmaRVQrGgFlEfc1HePIurY0TmDeROK05rIg==
-  dependencies:
-    browserslist "^4.21.4"
-    caniuse-api "^3.0.0"
-
-postcss-reduce-transforms@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-reduce-transforms/-/postcss-reduce-transforms-5.1.0.tgz#333b70e7758b802f3dd0ddfe98bb1ccfef96b6e9"
-  integrity sha512-2fbdbmgir5AvpW9RLtdONx1QoYG2/EtqpNQbFASDlixBbAYuTcJ0dECwlqNqH7VbaUnEnh8SrxOe2sRIn24XyQ==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-
-postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.0.5, postcss-selector-parser@^6.0.9:
+postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2:
   version "6.0.13"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.0.13.tgz#d05d8d76b1e8e173257ef9d60b706a8e5e99bf1b"
   integrity sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==
@@ -11816,22 +11208,7 @@ postcss-selector-parser@^6.0.0, postcss-selector-parser@^6.0.2, postcss-selector
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
 
-postcss-svgo@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/postcss-svgo/-/postcss-svgo-5.1.0.tgz#0a317400ced789f233a28826e77523f15857d80d"
-  integrity sha512-D75KsH1zm5ZrHyxPakAxJWtkyXew5qwS70v56exwvw542d9CRtTo78K0WeFxZB4G7JXKKMbEZtZayTGdIky/eA==
-  dependencies:
-    postcss-value-parser "^4.2.0"
-    svgo "^2.7.0"
-
-postcss-unique-selectors@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/postcss-unique-selectors/-/postcss-unique-selectors-5.1.1.tgz#a9f273d1eacd09e9aa6088f4b0507b18b1b541b6"
-  integrity sha512-5JiODlELrz8L2HwxfPnhOWZYWDxVHWL83ufOv84NrcgipI7TaeRsatAhK4Tr2/ZiYldpK/wBvw5BD3qfaK96GA==
-  dependencies:
-    postcss-selector-parser "^6.0.5"
-
-postcss-value-parser@^4.1.0, postcss-value-parser@^4.2.0:
+postcss-value-parser@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz#723c09920836ba6d3e5af019f92bc0971c02e514"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
@@ -11922,18 +11299,6 @@ promise.prototype.finally@^3.1.0:
     call-bind "^1.0.2"
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
-
-promise.series@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/promise.series/-/promise.series-0.2.0.tgz#2cc7ebe959fc3a6619c04ab4dbdc9e452d864bbd"
-  integrity sha512-VWQJyU2bcDTgZw8kpfBpB/ejZASlCrzwz5f2hjb/zlujOEB4oeiAhHygAWq8ubsX2GVkD4kCU5V2dwOTaCY5EQ==
-
-promise@7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
-  integrity sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
-  dependencies:
-    asap "~2.0.3"
 
 prompts@^2.0.1, prompts@^2.4.0:
   version "2.4.2"
@@ -12053,15 +11418,15 @@ queue-microtask@^1.2.2:
   resolved "https://registry.yarnpkg.com/queue-microtask/-/queue-microtask-1.2.3.tgz#4929228bbc724dfac43e0efb058caf7b6cfb6243"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-ramda@0.28.0, ramda@^0.28.0:
-  version "0.28.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
-  integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
-
 ramda@^0.27.1:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.2.tgz#84463226f7f36dc33592f6f4ed6374c48306c3f1"
   integrity sha512-SbiLPU40JuJniHexQSAgad32hfwd+DRUdwF2PlVuI5RZD0/vahUco7R8vD86J/tcEKKF9vZrUVwgtmGCqlCKyA==
+
+ramda@^0.28.0:
+  version "0.28.0"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.28.0.tgz#acd785690100337e8b063cab3470019be427cc97"
+  integrity sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==
 
 randombytes@^2.0.0, randombytes@^2.0.1, randombytes@^2.0.5, randombytes@^2.1.0:
   version "2.1.0"
@@ -12295,11 +11660,6 @@ regenerator-runtime@^0.13.11, regenerator-runtime@^0.13.7:
   version "0.13.11"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.11.tgz#f6dca3e7ceec20590d07ada785636a90cdca17f9"
   integrity sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==
-
-regenerator-runtime@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.14.0.tgz#5e19d68eb12d486f797e15a3c6a918f7cec5eb45"
-  integrity sha512-srw17NI0TUWHuGa5CFGGmhfNIeja30WMBfbslPNhf6JrqQlLN5gcrvig1oqPxiVaXb0oW0XRKtH6Nngs5lKCIA==
 
 regenerator-transform@^0.15.1:
   version "0.15.1"
@@ -12565,32 +11925,6 @@ rollup-plugin-auto-external@^2.0.0:
     safe-resolve "^1.0.0"
     semver "^5.5.0"
 
-rollup-plugin-postcss@4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-postcss/-/rollup-plugin-postcss-4.0.2.tgz#15e9462f39475059b368ce0e49c800fa4b1f7050"
-  integrity sha512-05EaY6zvZdmvPUDi3uCcAQoESDcYnv8ogJJQRp6V5kZ6J6P7uAVJlrTZcaaA20wTH527YTnKfkAoPxWI/jPp4w==
-  dependencies:
-    chalk "^4.1.0"
-    concat-with-sourcemaps "^1.1.0"
-    cssnano "^5.0.1"
-    import-cwd "^3.0.0"
-    p-queue "^6.6.2"
-    pify "^5.0.0"
-    postcss-load-config "^3.0.0"
-    postcss-modules "^4.0.0"
-    promise.series "^0.2.0"
-    resolve "^1.19.0"
-    rollup-pluginutils "^2.8.2"
-    safe-identifier "^0.4.2"
-    style-inject "^0.3.0"
-
-rollup-pluginutils@^2.8.2:
-  version "2.8.2"
-  resolved "https://registry.yarnpkg.com/rollup-pluginutils/-/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
-  integrity sha512-EEp9NhnUkwY8aif6bxgovPHMoMoNr2FulJziTndpt5H9RdwC47GSGuII9XxpSdzVGM0GWrNPHV6ie1LTNJPaLQ==
-  dependencies:
-    estree-walker "^0.6.1"
-
 rollup@^2.35.0:
   version "2.79.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.1.tgz#bedee8faef7c9f93a2647ac0108748f497f081c7"
@@ -12641,11 +11975,6 @@ safe-buffer@5.2.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, s
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
-
-safe-identifier@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/safe-identifier/-/safe-identifier-0.4.2.tgz#cf6bfca31c2897c588092d1750d30ef501d59fcb"
-  integrity sha512-6pNbSMW6OhAi9j+N8V+U715yBQsaWJ7eyEUaOrawX+isg5ZxhUlV1NipNtgaKHmFGiABwt+ZF04Ii+3Xjkg+8w==
 
 safe-regex-test@^1.0.0:
   version "1.0.0"
@@ -13167,11 +12496,6 @@ stream-shift@^1.0.0:
   resolved "https://registry.yarnpkg.com/stream-shift/-/stream-shift-1.0.1.tgz#d7088281559ab2778424279b0877da3c392d5a3d"
   integrity sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==
 
-string-hash@^1.1.1:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/string-hash/-/string-hash-1.1.3.tgz#e8aafc0ac1855b4666929ed7dd1275df5d6c811b"
-  integrity sha512-kJUvRUFK49aub+a7T1nNE66EJbZBMnBgoC1UbCZ5n6bsZKBRga4KgBRTMn/pFkeCZSYtNeSyMxPDM0AXWELk2A==
-
 string-length@^4.0.1:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-4.0.2.tgz#a8a8dc7bd5c1a82b9b3c8b87e125f66871b6e57a"
@@ -13322,11 +12646,6 @@ strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
 
-style-inject@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/style-inject/-/style-inject-0.3.0.tgz#d21c477affec91811cc82355832a700d22bf8dd3"
-  integrity sha512-IezA2qp+vcdlhJaVm5SOdPPTUu0FCEqfNSli2vRuSIBbu5Nq5UvygTk/VzeCqfLz2Atj3dVII5QBKGZRZ0edzw==
-
 style-loader@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/style-loader/-/style-loader-1.3.0.tgz#828b4a3b3b7e7aa5847ce7bae9e874512114249e"
@@ -13341,14 +12660,6 @@ style-to-object@0.3.0, style-to-object@^0.3.0:
   integrity sha512-CzFnRRXhzWIdItT3OmF8SQfWyahHhjq3HwcMNCNLn+N7klOOqPjMeG/4JSu77D7ypZdGvSzvkrbyeTMizz2VrA==
   dependencies:
     inline-style-parser "0.1.1"
-
-stylehacks@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/stylehacks/-/stylehacks-5.1.1.tgz#7934a34eb59d7152149fa69d6e9e56f2fc34bcc9"
-  integrity sha512-sBpcd5Hx7G6seo7b1LkpttvTz7ikD0LlH5RmdcBNb6fFR0Fl7LQwHDFr300q4cwUqi+IYrFGmsIHieMBfnN/Bw==
-  dependencies:
-    browserslist "^4.21.4"
-    postcss-selector-parser "^6.0.4"
 
 supports-color@^5.3.0:
   version "5.5.0"
@@ -13384,19 +12695,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svgo@^2.7.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/svgo/-/svgo-2.8.0.tgz#4ff80cce6710dc2795f0c7c74101e6764cfccd24"
-  integrity sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==
-  dependencies:
-    "@trysound/sax" "0.2.0"
-    commander "^7.2.0"
-    css-select "^4.1.3"
-    css-tree "^1.1.3"
-    csso "^4.2.0"
-    picocolors "^1.0.0"
-    stable "^0.1.8"
-
 swiper@^6.5.7:
   version "6.8.4"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.8.4.tgz#938fed4144f4d7952fbf9c44e5832d133a4de794"
@@ -13424,11 +12722,6 @@ synchronous-promise@^2.0.15:
   version "2.0.17"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.17.tgz#38901319632f946c982152586f2caf8ddc25c032"
   integrity sha512-AsS729u2RHUfEra9xJrE39peJcc2stq2+poBXX8bcM08Y6g9j/i/PUzwNQqkaJde7Ntg1TO7bSREbR5sdosQ+g==
-
-tabbable@^5.2.0:
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-5.3.3.tgz#aac0ff88c73b22d6c3c5a50b1586310006b47fbf"
-  integrity sha512-QD9qKY3StfbZqWOPLp0++pOrAVb/HbUi5xCc8cUo4XjP19808oaMiDzn0leBY5mCespIBM0CIZePzZjgzR83kA==
 
 table@^6.0.4:
   version "6.8.1"
@@ -13694,7 +12987,7 @@ tsconfig-paths@^3.11.0:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^1.11.0, tslib@^1.13.0, tslib@^1.9.3:
+tslib@^1.11.0, tslib@^1.9.3:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
@@ -14538,7 +13831,7 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yaml@^1.10.0, yaml@^1.10.2, yaml@^1.7.2:
+yaml@^1.10.0, yaml@^1.7.2:
   version "1.10.2"
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==

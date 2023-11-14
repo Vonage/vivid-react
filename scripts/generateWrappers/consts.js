@@ -73,8 +73,16 @@ const ComponentsEventsMap = {
   VwcTextarea: ['input', 'blur', 'focus']
 }
 
+/**
+ * Some Vivid custom elements classes breaks the naming convention, this map is needed to mitigate that fact
+ */
+const ClassNameAlias = {
+  ListboxOption: 'Option'
+}
+
 const ComponentsEventsMapV3 = {
-  VwcButton: ['click']
+  VwcButton: ['click'],
+  VwcSelect: ['change'],
 }
 
 const ComponentsReadOnlyPropertiesMap = {
@@ -228,6 +236,7 @@ module.exports = {
   ComponentsBindablePropertiesMap,
   ComponentsExtraPropertiesMap,
   CompoundComponentsMap,
+  ClassNameAlias,
   FileName,
   Assets,
   OutputLanguage,

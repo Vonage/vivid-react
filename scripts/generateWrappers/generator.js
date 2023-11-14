@@ -6,7 +6,8 @@ const {
   CompoundComponentsMap,
   OutputLanguage,
   FileName,
-  Vivid3ComponentsExtraPropertiesMap
+  Vivid3ComponentsExtraPropertiesMap,
+  ClassNameAlias
 } = require('./consts')
 
 const { pathExists, outputFile, outputJson } = require('fs-extra')
@@ -139,9 +140,11 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
   }
 }
 
+const getClassName = (classDeclaration) => ClassNameAlias[classDeclaration.name] || classDeclaration.name
+
 const renderComponentV3 = prefix => classDeclaration => language => componentClassName => {
   const componentPrefix = prefix
-  const componentName = classDeclaration.name
+  const componentName = getClassName(classDeclaration)
   const componentTagName = `${componentPrefix}-${camel2kebab(componentName)}`
   const events = [...(classDeclaration.events?.map(({ name }) => name) || []), ...(ComponentsEventsMapV3[componentClassName] || [])]
   const properties = (classDeclaration.members?.filter(({ privacy = 'public', kind, readonly }) => kind === 'field' && privacy === 'public' && readonly !== true) || [])
@@ -153,7 +156,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
     ...(properties.map(({ name, type }) => `  ${name}?: ${mapType(type?.text)}`))
   ]
   const renderPropertyJsDoc = ({ type, name, attribute = null, description }) => `* @param ${type?.text ? `{${type?.text}}` : ''} ${name} ${description ? `- ${description}` : ''} ${attribute ? `**attribute** \`${attribute.name || attribute.fieldName}\`` : ''}`
-  const jsDoc = `/** ${classDeclaration.description || componentClassName} \n* For more info on this Vivid element please visit https://vivid.deno.dev/components/${camel2kebab(classDeclaration.name)} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
+  const jsDoc = `/** ${classDeclaration.description || componentClassName} \n* For more info on this Vivid element please visit https://vivid.deno.dev/components/${camel2kebab(getClassName(classDeclaration))} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
 
   return getTemplate('react-component-v3', language)
     .replace(TemplateToken.CLASS_JSDOC, jsDoc)
@@ -190,7 +193,7 @@ const generateWrappersV3 = (outputDir, language = OutputLanguage.JavaScript, cle
     , [])
 
   for (const classDeclaration of classDeclarations) {
-    const componentName = `Vwc${classDeclaration.name}`
+    const componentName = `Vwc${getClassName(classDeclaration)}`
     const componentNameKebab = camel2kebab(classDeclaration.name)
     const componentOutputDir = join(process.cwd(), outDir, componentName)
     const componentContent = renderComponentV3(componentPrefix)(classDeclaration)(language)(componentName)

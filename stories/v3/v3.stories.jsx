@@ -3,6 +3,8 @@ import VwcBadge from '../../dist/v3/VwcBadge'
 import VwcButton from '../../dist/v3/VwcButton'
 import VwcSelect from '../../dist/v3/VwcSelect'
 import VwcOption from '../../dist/v3/VwcOption'
+import VwcRadio from '../../dist/v3/VwcRadio'
+import VwcRadioGroup from '../../dist/v3/VwcRadioGroup'
 import { initVivid } from '../../src/initialization/initVivid'
 
 export const VwcBadge_ = () =>
@@ -18,6 +20,16 @@ export const VwcSelect_ = () =>
       <VwcOption  text={'text2'} label='bbb' />
     </VwcSelect>
   </>
+
+export const VwcRadio_ = () =>
+  <>
+    <VwcRadioGroup onChange={(x) => console.log(x) } >
+      <VwcRadio label='aaa' onChange={(x) => console.log('aaa', x) } />
+      <VwcRadio label='bbb' onChange={(x) => console.log('bbb', x) } />
+    </VwcRadioGroup>
+  </>
+
+
 
 export default {
   title: 'V3',

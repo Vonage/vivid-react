@@ -81,8 +81,21 @@ const ClassNameAlias = {
 }
 
 const ComponentsEventsMapV3 = {
+  VwcAccordion: ['change'],
+  VwcTab: ['click'],
+  VwcTabs: ['change'],
   VwcButton: ['click'],
+  VwcSplitButton: ['click'],
   VwcSelect: ['change'],
+  VwcSwitch: ['change'],
+  VwcRadio: ['change'],
+  VwcRadioGroup: ['change'],
+  VwcMenuItem: ['change'],
+  VwcNumberField: ['change', 'input'],
+  VwcTextArea: ['input'],
+  VwcTextField: ['input'],
+  VwcCheckbox: ['change'],
+  VwcCombobox: ['change'],
 }
 
 const ComponentsReadOnlyPropertiesMap = {

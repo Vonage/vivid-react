@@ -193,6 +193,16 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'onInput',
       type: { text: 'any' }
     }
+  ],
+  Checkbox: [
+    {
+      name: 'checked',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'onClick',
+      type: { text: 'any' }
+    }
   ]
 }
 

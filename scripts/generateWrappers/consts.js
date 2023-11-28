@@ -203,6 +203,12 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'onClick',
       type: { text: 'any' }
     }
+  ],
+  Button: [
+    {
+      name: 'icon',
+      type: { text: 'string | undefined' }
+    }
   ]
 }
 

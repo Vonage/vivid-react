@@ -209,6 +209,12 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'icon',
       type: { text: 'string | undefined' }
     }
+  ],
+  Tooltip: [
+    {
+      name: 'anchor',
+      type: { text: 'string | HTMLElement' }
+    }
   ]
 }
 

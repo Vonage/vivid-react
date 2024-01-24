@@ -215,6 +215,12 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'anchor',
       type: { text: 'string | HTMLElement' }
     }
+  ],
+  Toggletip: [
+    {
+      name: 'anchor',
+      type: { text: 'string | HTMLElement' }
+    }
   ]
 }
 

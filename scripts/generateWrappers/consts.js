@@ -221,6 +221,12 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'anchor',
       type: { text: 'string | HTMLElement' }
     }
+  ],
+  MenuItem: [
+    {
+      name: 'icon',
+      type: { text: 'string | undefined' }
+    }
   ]
 }
 

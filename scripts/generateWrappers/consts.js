@@ -227,6 +227,28 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'icon',
       type: { text: 'string | undefined' }
     }
+  ],
+  Switch: [
+    {
+      name: 'checked',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'readonly',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'disabled',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'value',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'name',
+      type: { text: 'string | undefined' }
+    }
   ]
 }
 

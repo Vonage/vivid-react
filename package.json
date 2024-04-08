@@ -26,7 +26,7 @@
     "CLI"
   ],
   "dependencies": {
-    "@vonage/vivid": "3.50.1",
+    "@vonage/vivid": "3.53.0",
     "@vonage/vivid-react-wrapper": "1.2.9",
     "@vonage/vvd-context": "2.45.0",
     "@vonage/vvd-core": "2.45.0",

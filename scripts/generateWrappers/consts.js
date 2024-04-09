@@ -87,7 +87,7 @@ const ComponentsEventsMapV3 = {
   VwcButton: ['click'],
   VwcSplitButton: ['click'],
   VwcSelect: ['change'],
-  VwcSwitch: ['change'],
+  VwcSwitch: ['click', 'change'],
   VwcRadio: ['change'],
   VwcRadioGroup: ['change'],
   VwcMenuItem: ['change'],

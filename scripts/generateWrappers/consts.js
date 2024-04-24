@@ -208,6 +208,14 @@ const Vivid3ComponentsExtraPropertiesMap = {
     {
       name: 'icon',
       type: { text: 'string | undefined' }
+    },
+    {
+      name: 'disabled',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'icon-trailing',
+      type: { text: 'boolean | undefined' }
     }
   ],
   Tooltip: [

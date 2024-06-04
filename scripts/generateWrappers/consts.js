@@ -96,6 +96,7 @@ const ComponentsEventsMapV3 = {
   VwcTextField: ['input'],
   VwcCheckbox: ['change'],
   VwcCombobox: ['change'],
+  VwcDatePicker: ['change', 'input'],
 }
 
 const ComponentsReadOnlyPropertiesMap = {

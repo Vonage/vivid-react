@@ -261,7 +261,7 @@ const Vivid3ComponentsExtraPropertiesMap = {
   ],
   DatePicker: [
     {
-      name: 'error-text',
+      name: 'errorText',
       type: { text: 'string | undefined' }
     }
   ]

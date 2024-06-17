@@ -187,6 +187,10 @@ const Vivid3ComponentsExtraPropertiesMap = {
       type: { text: 'string | undefined' }
     },
     {
+      name: 'value',
+      type: { text: 'string | undefined' }
+    },
+    {
       name: 'placeholder',
       type: { text: 'string | undefined' }
     },

@@ -183,6 +183,10 @@ const ComponentsExtraPropertiesMap = {
 const Vivid3ComponentsExtraPropertiesMap = {
   TextField: [
     {
+      name: 'icon',
+      type: { text: 'string | undefined' }
+    },
+    {
       name: 'placeholder',
       type: { text: 'string | undefined' }
     },

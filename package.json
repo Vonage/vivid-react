@@ -1,6 +1,6 @@
 {
   "name": "@vonage/vivid-react",
-  "version": "2.10.90",
+  "version": "2.10.91",
   "description": "Vivid wrapped for easy React usage & IDE autocomplete support & typescript typings",
   "main": "index.js",
   "types": "types/index.d.ts",

@@ -18,3 +18,4 @@ export const vwcBadgeShowTextCenterDecorator = () => badgeElement =>
             }
         }
     }, 0)
+     

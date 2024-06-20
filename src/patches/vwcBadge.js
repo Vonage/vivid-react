@@ -1,5 +1,5 @@
 /**
-* Patches provided VwcBadge instance to show text in the center
+* Patches provided vivid-3 VwcBadge instance to show text in the center
 *
 * @param {HTMLElement} badgeElement - target element to apply behavior to
 * @example <VwcBadge ref={vwcBadgeShowTextCenterDecorator()} />
@@ -18,4 +18,4 @@ export const vwcBadgeShowTextCenterDecorator = () => badgeElement =>
             }
         }
     }, 0)
-     
+

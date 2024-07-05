@@ -47,7 +47,6 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcDataGrid | @vonage/vwc-data-grid | 2.45.0 |
 | VwcDatepicker | @vonage/vwc-datepicker | 2.45.0 |
 | VwcDialog | @vonage/vwc-dialog | 2.45.0 |
-| VwcDrawer | @vonage/vwc-drawer | 2.45.0 |
 | VwcDropdown | @vonage/vwc-dropdown | 2.45.0 |
 | VwcElevation | @vonage/vwc-elevation | 2.45.0 |
 | VwcEmptyState | @vonage/vwc-empty-state | 2.45.0 |

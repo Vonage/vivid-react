@@ -1854,24 +1854,6 @@
     "@material/feature-targeting" "9.0.0-canary.1c156d69d.0"
     tslib "^1.9.3"
 
-"@material/drawer@=12.0.0-canary.22d29cbb4.0":
-  version "12.0.0-canary.22d29cbb4.0"
-  resolved "https://registry.yarnpkg.com/@material/drawer/-/drawer-12.0.0-canary.22d29cbb4.0.tgz#c50f99259f7460dc2f07ccf5d73e6c33a46e3a14"
-  integrity sha512-a5tGNXOXJglDpq/5blE3ZxbfTnuYU6pnkswWHliSUc71fC1A6XmK51vLz/PCGPGV3qL8JS2sakOVMdssRuLPxA==
-  dependencies:
-    "@material/animation" "12.0.0-canary.22d29cbb4.0"
-    "@material/base" "12.0.0-canary.22d29cbb4.0"
-    "@material/dom" "12.0.0-canary.22d29cbb4.0"
-    "@material/elevation" "12.0.0-canary.22d29cbb4.0"
-    "@material/feature-targeting" "12.0.0-canary.22d29cbb4.0"
-    "@material/list" "12.0.0-canary.22d29cbb4.0"
-    "@material/ripple" "12.0.0-canary.22d29cbb4.0"
-    "@material/rtl" "12.0.0-canary.22d29cbb4.0"
-    "@material/shape" "12.0.0-canary.22d29cbb4.0"
-    "@material/theme" "12.0.0-canary.22d29cbb4.0"
-    "@material/typography" "12.0.0-canary.22d29cbb4.0"
-    tslib "^2.1.0"
-
 "@material/elevation@12.0.0-canary.22d29cbb4.0":
   version "12.0.0-canary.22d29cbb4.0"
   resolved "https://registry.yarnpkg.com/@material/elevation/-/elevation-12.0.0-canary.22d29cbb4.0.tgz#40c8757e9c40ae2cb8df227786cc877017ee17a0"
@@ -2074,19 +2056,6 @@
     "@material/dom" "=12.0.0-canary.22d29cbb4.0"
     "@material/mwc-base" "^0.22.1"
     "@material/mwc-button" "^0.22.1"
-    blocking-elements "^0.1.0"
-    lit-element "^2.5.1"
-    lit-html "^1.4.1"
-    tslib "^2.0.1"
-    wicg-inert "^3.0.0"
-
-"@material/mwc-drawer@^0.22.1":
-  version "0.22.1"
-  resolved "https://registry.yarnpkg.com/@material/mwc-drawer/-/mwc-drawer-0.22.1.tgz#a9a8018d99feaed9d71f4abc510688ddbbcdebf4"
-  integrity sha512-klwo4VMIIeV4UY+0t4HJ5/2Z8hUjsPHoleEFamRf97yVgPnmCHHaXhe7fjq8srxgkXK81PzwA7PFGBofS248ag==
-  dependencies:
-    "@material/drawer" "=12.0.0-canary.22d29cbb4.0"
-    "@material/mwc-base" "^0.22.1"
     blocking-elements "^0.1.0"
     lit-element "^2.5.1"
     lit-html "^1.4.1"
@@ -4606,17 +4575,6 @@
     "@vonage/vvd-core" "2.45.0"
     "@vonage/vvd-style-coupling" "2.45.0"
     "@vonage/vvd-typography" "2.45.0"
-    lit-element "^2.4.0"
-    tslib "^2.3.0"
-
-"@vonage/vwc-drawer@2.45.0":
-  version "2.45.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-drawer/-/vwc-drawer-2.45.0.tgz#90b0bbfe4ef64481c478315af64db3df3fdd0a59"
-  integrity sha512-ggxvg0pllJ7d6JvMYz1MHJOGQLgBtogcTDldERuR49KQz5v1PLniOfXOBvOGO9JZ6/vhAsvNC3I6TXj2RiuIXw==
-  dependencies:
-    "@material/mwc-drawer" "^0.22.1"
-    "@vonage/vvd-core" "2.45.0"
-    "@vonage/vvd-style-coupling" "2.45.0"
     lit-element "^2.4.0"
     tslib "^2.3.0"
 

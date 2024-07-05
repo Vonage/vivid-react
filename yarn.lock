@@ -4909,19 +4909,6 @@
     lit-element "^2.4.0"
     tslib "^2.3.0"
 
-"@vonage/vwc-side-drawer@2.45.0":
-  version "2.45.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vwc-side-drawer/-/vwc-side-drawer-2.45.0.tgz#4e54198743b15185770092753edb421a87a0e481"
-  integrity sha512-/drAbQQ9eryVMZceZrSseuBEb57M/40o8ZXnzlCpKNYfUu3aZVHmLNoXnfH6FdIyJq5ewdy9KMXQr4+pSYHgMA==
-  dependencies:
-    "@vonage/vvd-core" "2.45.0"
-    "@vonage/vvd-foundation" "2.45.0"
-    blocking-elements "^0.1.0"
-    lit-element "^2.4.0"
-    lit-html "^1.3.0"
-    tslib "^2.3.0"
-    wicg-inert "^3.0.0"
-
 "@vonage/vwc-slider@2.45.0":
   version "2.45.0"
   resolved "https://registry.yarnpkg.com/@vonage/vwc-slider/-/vwc-slider-2.45.0.tgz#1defdd390644bf08e791fb21f6d272550b5a1bf5"

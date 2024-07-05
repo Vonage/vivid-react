@@ -72,7 +72,6 @@ Adding the `resolutions` field when using `yarn` might help get the correct vers
 | VwcRadio | @vonage/vwc-radio | 2.45.0 |
 | VwcSchemeSelect | @vonage/vwc-scheme-select | 2.45.0 |
 | VwcSelect | @vonage/vwc-select | 2.45.0 |
-| VwcSideDrawer | @vonage/vwc-side-drawer | 2.45.0 |
 | VwcSlider | @vonage/vwc-slider | 2.45.0 |
 | VwcSnackbar | @vonage/vwc-snackbar | 2.45.0 |
 | VwcSurface | @vonage/vwc-surface | 2.45.0 |

@@ -49,10 +49,16 @@ declare namespace JSX {
             "pause-button-aria-label": | string
 		| null;
             "slider-aria-label": string | null;
+            "skip-forward-aria-label": | string
+		| null;
+            "skip-backward-aria-label": | string
+		| null;
             "connotation": AudioPlayerConnotation | undefined;
             "src": string | undefined;
             "disabled": boolean;
             "notime": boolean;
+            "skip-by": MediaSkipBy | undefined;
+            "playback-rates": string | null;
         }>;
         "vvd3-avatar": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": AvatarConnotation | undefined;
@@ -75,7 +81,7 @@ declare namespace JSX {
             "action-href": string | undefined;
             "action-text": string | undefined;
             "removable": boolean;
-            "aria-live": any;
+            "aria-live": string | null;
             "text": string | undefined;
             "connotation": BannerConnotation | undefined;
         }>;
@@ -132,7 +138,9 @@ declare namespace JSX {
             "connotation": CheckboxConnotation | undefined;
         }>;
         "vvd3-combobox": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "appearance": ComboboxAppearance | undefined;
             "placement": PopupPlacement | undefined;
+            "fixed-dropdown": boolean;
         }>;
         "vvd3-data-grid-cell": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "aria-selected": string | null;
@@ -166,8 +174,13 @@ declare namespace JSX {
             "value": string;
             "pattern": string;
             "disabled": boolean;
+            "pending": boolean;
             "call-active": boolean;
             "no-call": boolean;
+            "no-input": boolean;
+            "end-call-button-label": | string
+		| null;
+            "call-button-label": string | null;
         }>;
         "vvd3-dialog": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "open": boolean;
@@ -212,7 +225,18 @@ declare namespace JSX {
         }>;
         "vvd3-icon": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": IconConnotation | undefined;
-            "size": -6 | -5 | -4 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | undefined;
+            "size": | -6
+		| -5
+		| -4
+		| -3
+		| -2
+		| -1
+		| 0
+		| 1
+		| 2
+		| 3
+		| 4
+		| 5 | undefined;
             "name": string | undefined;
         }>;
         "vvd3-layout": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
@@ -230,6 +254,7 @@ declare namespace JSX {
         "vvd3-menu": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "aria-label": string | null;
             "placement": Placement | undefined;
+            "trigger": 'auto' | 'legacy' | 'off' | undefined;
             "auto-dismiss": boolean;
             "open": boolean;
         }>;
@@ -245,6 +270,8 @@ declare namespace JSX {
         }>;
         "vvd3-nav-disclosure": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
+            "appearance": NavDisclosureAppearance | undefined;
+            "connotation": NavDisclosureConnotation | undefined;
             "open": boolean;
             "aria-current": string | null;
         }>;
@@ -257,7 +284,20 @@ declare namespace JSX {
             "headline": string | undefined;
             "connotation": NoteConnotation | undefined;
         }>;
+        "vvd3-form-associated-number-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
         "vvd3-number-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "readonly": boolean;
+            "autofocus": boolean;
+            "placeholder": string;
+            "list": string;
+            "maxlength": number;
+            "minlength": number;
+            "size": number;
+            "step": number;
+            "max": number;
+            "min": number;
             "increment-button-aria-label": | string
 		| null;
             "decrement-button-aria-label": | string
@@ -363,7 +403,7 @@ declare namespace JSX {
             "connotation": TabConnotation | undefined;
             "shape": TabShape | undefined;
             "label": string | undefined;
-            "tabIndex": any;
+            "tabIndex": number;
             "aria-selected": string | null;
         }>;
         "vvd3-tab-panel": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{

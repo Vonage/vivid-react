@@ -35,13 +35,14 @@ const appendStyleElement = (document = window.document) => (styleDescriptor) => 
  * @throws {Error} error - if the provided target argument is `null` or not a Node of type `Document` / `DocumentFragment` / `HTMLElement`
  */
 export const initVivid = (target, callback, options = {}) => {
-  if (target instanceof HTMLElement) {
-    target.classList.add('vivid-scope') // vivid 2.x
-    target.setAttribute(`${vividDataAttributePrefix}-v2`, vividVersion.v2)
+  let targetElement = target
+  if (targetElement instanceof HTMLElement) {
+    targetElement.classList.add('vivid-scope') // vivid 2.x
+    targetElement.setAttribute(`${vividDataAttributePrefix}-v2`, vividVersion.v2)
 
-    target.classList.add('vvd-root') // vivid 3.x
-    target.setAttribute(`${vividDataAttributePrefix}-v3`, vividVersion.v3)
-    target = undefined
+    targetElement.classList.add('vvd-root') // vivid 3.x
+    targetElement.setAttribute(`${vividDataAttributePrefix}-v3`, vividVersion.v3)
+    targetElement = undefined
   }
   if (!options.theme) {
     options.theme = 'light'
@@ -54,6 +55,6 @@ export const initVivid = (target, callback, options = {}) => {
   }
   return Promise.all([
     init(),
-    context.mount(target)
+    context.mount(targetElement)
   ]).then(callback)
 }

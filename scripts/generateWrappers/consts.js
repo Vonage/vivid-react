@@ -96,7 +96,7 @@ const ComponentsEventsMapV3 = {
   VwcTextField: ['input'],
   VwcCheckbox: ['change'],
   VwcCombobox: ['change'],
-  VwcDatePicker: ['change', 'input'],
+  VwcDatePicker: ['change', 'input']
 }
 
 const ComponentsReadOnlyPropertiesMap = {
@@ -174,8 +174,8 @@ const ComponentsBindablePropertiesMap = {
 const ComponentsExtraPropertiesMap = {
   VwcIconButton: [
     {
-      'name': 'value',
-      'type': 'string'
+      name: 'value',
+      type: 'string'
     }
   ]
 }
@@ -205,12 +205,32 @@ const Vivid3ComponentsExtraPropertiesMap = {
   ],
   Checkbox: [
     {
-      name: 'checked',
-      type: { text: 'boolean' }
-    },
-    {
       name: 'onClick',
       type: { text: 'any' }
+    },
+    {
+      name: 'label',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'value',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'checked',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'indeterminate',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'disabled',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'readonly',
+      type: { text: 'boolean | undefined' }
     }
   ],
   Button: [

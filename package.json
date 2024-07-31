@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "@vonage/vivid": "4.1.0",
-    "@vonage/vivid-react-wrapper": "1.2.9",
+    "@vonage/vivid-react-wrapper": "1.3.0",
     "@vonage/vvd-context": "2.45.0",
     "@vonage/vvd-core": "2.45.0",
     "@vonage/vvd-fonts": "2.45.0",

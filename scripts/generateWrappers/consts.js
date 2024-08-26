@@ -90,6 +90,7 @@ const ComponentsEventsMapV3 = {
   VwcSwitch: ['click', 'change'],
   VwcRadio: ['change'],
   VwcRadioGroup: ['change'],
+  VwcSlider: ['change'],
   VwcMenuItem: ['change'],
   VwcNumberField: ['change', 'input'],
   VwcTextArea: ['input'],
@@ -295,6 +296,44 @@ const Vivid3ComponentsExtraPropertiesMap = {
     {
       name: 'errorText',
       type: { text: 'string | undefined' }
+    }
+  ],
+  Slider: [
+    {
+      name: 'min',
+      type: { text: 'number' }
+    },
+    {
+      name: 'max',
+      type: { text: 'number' }
+    },
+    {
+      name: 'step',
+      type: { text: 'number' }
+    },
+    {
+      name: 'orientation',
+      type: { text: 'string' }
+    },
+    {
+      name: 'markers',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'connotation',
+      type: { text: 'string' }
+    },
+    {
+      name: 'pin',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'disabled',
+      type: { text: 'boolean' }
+    },
+    {
+      name: 'value',
+      type: { text: 'string' }
     }
   ]
 }

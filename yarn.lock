@@ -4346,10 +4346,10 @@
   resolved "https://registry.yarnpkg.com/@vonage/vivid-react-wrapper/-/vivid-react-wrapper-1.3.0.tgz#982cd412a54e82710599ed61f46cc7db59ebeade"
   integrity sha512-q01bl/StKsva4DGXOvZ3FjQNdvVWixalUb3BsMyLZNL/TQxvOVEESDBEvO9Hz65Ns8tBvaADo5yiruClga3QDA==
 
-"@vonage/vivid@4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-4.4.0.tgz#4f772e0d933ea1c71b51f6bfe2c4d857de45be03"
-  integrity sha512-kfTt8ubi4QEyHh1UUdooauykXQkx9jpdEIuWl0yH5sluSawbRBMuQJ0+x4HKhFaKGqc7Fa51ejFQCJHax/w/JA==
+"@vonage/vivid@4.14.4":
+  version "4.14.4"
+  resolved "https://registry.yarnpkg.com/@vonage/vivid/-/vivid-4.14.4.tgz#cb6d4252ce2b3d29aaeb4360315adf806335ed6a"
+  integrity sha512-TwwuDg+yzJAC06jbuSIB+YXpqliWiPjAerUSM/fI9sb0F7bvye5Z4q/geeFhWZGgBziY9W7eODVZpUOhDCohSQ==
 
 "@vonage/vvd-context@2.45.0":
   version "2.45.0"

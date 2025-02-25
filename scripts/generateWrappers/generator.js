@@ -70,6 +70,17 @@ const renderComponent = tag => language => componentName => {
     .replace(new RegExp(TemplateToken.TAG, 'g'), tag.name)
 }
 
+const removeDuplicates = (arr) => {
+  const seen = new Set();
+  return arr.filter(item => {
+    if (seen.has(item.name)) {
+      return false;
+    } else {
+      seen.add(item.name);
+      return true;
+    }
+  });
+};
 /**
  * Generates Vivid 2.x wrappers
  */
@@ -153,7 +164,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
   const propertyNames = properties.map(({ name }) => `'${name}'`)
   const props = [
     ...(events.map(x => x.propName || event2PropName(x.name || x)).map(x => `  ${x}?: (event: SyntheticEvent) => void`)),
-    ...(properties.map(({ name, type }) => `  ${name}?: ${mapType(type?.text)}`))
+    ...(removeDuplicates(properties).map(({ name, type }) => `  "${name}"?: ${mapType(type?.text)}`))
   ]
   const renderPropertyJsDoc = ({ type, name, attribute = null, description }) => `* @param ${type?.text ? `{${type?.text}}` : ''} ${name} ${description ? `- ${description}` : ''} ${attribute ? `**attribute** \`${attribute.name || attribute.fieldName}\`` : ''}`
   const jsDoc = `/** ${classDeclaration.description || componentClassName} \n* For more info on this Vivid element please visit https://vivid.deno.dev/components/${camel2kebab(getClassName(classDeclaration))} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`

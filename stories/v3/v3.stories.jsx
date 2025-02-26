@@ -6,6 +6,9 @@ import VwcOption from '../../dist/v3/VwcOption'
 import VwcRadio from '../../dist/v3/VwcRadio'
 import VwcTooltip from '../../dist/v3/VwcTooltip'
 import VwcRadioGroup from '../../dist/v3/VwcRadioGroup'
+import VwcDataGrid from '../../dist/v3/VwcDataGrid'
+import VwcDataGridRow from '../../dist/v3/VwcDataGridRow'
+import VwcDataGridCell from '../../dist/v3/VwcDataGridCell'
 import { initVivid } from '../../src/initialization/initVivid'
 
 export const VwcBadge_ = () =>
@@ -46,6 +49,19 @@ export const VwcTooltip_ = () =>
     />
   </>
 
+export const VwcDataGrid_ = () =>
+  <>
+    <VwcDataGrid >
+      <VwcDataGridRow type="rowheader">
+        <VwcDataGridCell>Header 1</VwcDataGridCell>
+        <VwcDataGridCell>Header 2</VwcDataGridCell>  
+      </VwcDataGridRow>
+      <VwcDataGridRow>
+        <VwcDataGridCell>Row 1 Cell 1</VwcDataGridCell>
+        <VwcDataGridCell>Row 1 Cell 2</VwcDataGridCell>
+      </VwcDataGridRow>
+    </VwcDataGrid>
+  </>
 export default {
   title: 'V3',
   decorators: [

@@ -21,7 +21,8 @@ const TemplateToken = {
   CLASS_JSDOC: '<% jsdoc.class %>',
   TAG_DESCRIPTOR_JSON: '<% descriptor-json %>',
   COMPOUND_COMPONENTS: '<% compound-components %>',
-  REACT_IMPORT: '<% react-import %>'
+  REACT_IMPORT: '<% react-import %>',
+  REGISTRATION: /import { register<% component-name %> } from '@vonage\/vivid'\s+register<% component-name %>\('<% tag-prefix %>'\)/,
 }
 
 const GENERATED_CODE_BANNER = `/*

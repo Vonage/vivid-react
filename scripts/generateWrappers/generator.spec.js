@@ -327,5 +327,35 @@ describe("generator", () => {
           \\"activeItemIndex\\"?: number"
       `);
     });
+
+    it("should replace component registration for DataGridRow with empty string", async () => {
+      setTokenTemplateMock(`
+            import { register<% component-name %> } from '@vonage/vivid'
+
+            register<% component-name %>('<% tag-prefix %>')
+            `);
+
+      MOCK_DATA.modules[0].declarations.find((x) => x.kind === "class").name =
+        "DataGridRow";
+      await generateWrappersV3InstanceTS({ elements: MOCK_DATA });
+
+      const content = fs.outputFile.mock.calls[0][1];
+      expect(content.trim()).toBe("");
+    });
+
+    it("should replace component registration for DataGridCell with empty string", async () => {
+      setTokenTemplateMock(`
+            import { register<% component-name %> } from '@vonage/vivid'
+
+            register<% component-name %>('<% tag-prefix %>')
+            `);
+
+      MOCK_DATA.modules[0].declarations.find((x) => x.kind === "class").name =
+        "DataGridCell";
+      await generateWrappersV3InstanceTS({ elements: MOCK_DATA });
+
+      const content = fs.outputFile.mock.calls[0][1];
+      expect(content.trim()).toBe("");
+    });
   });
 });

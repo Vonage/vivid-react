@@ -153,6 +153,8 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
 
 const getClassName = (classDeclaration) => ClassNameAlias[classDeclaration.name] || classDeclaration.name
 
+const REGISTRATION_EXCLUDED_COMPONENTS = ['DataGridRow', 'DataGridCell'];
+
 const renderComponentV3 = prefix => classDeclaration => language => componentClassName => {
   const componentPrefix = prefix
   const componentName = getClassName(classDeclaration)
@@ -170,6 +172,7 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
   const jsDoc = `/** ${classDeclaration.description || componentClassName} \n* For more info on this Vivid element please visit https://vivid.deno.dev/components/${camel2kebab(getClassName(classDeclaration))} \n${properties.map((p) => ({ ...p, attribute: attributes.find(({ fieldName }) => fieldName === p.name) })).map(renderPropertyJsDoc).join('\n')}\n*/`
 
   return getTemplate('react-component-v3', language)
+    .replace(REGISTRATION_EXCLUDED_COMPONENTS.includes(componentName) ? TemplateToken.REGISTRATION : '', '')
     .replace(TemplateToken.CLASS_JSDOC, jsDoc)
     .replace(TemplateToken.ATTRIBUTES, '')
     .replace(TemplateToken.PROP_TYPES, '')

@@ -332,16 +332,12 @@ describe("generator", () => {
       function replaceComponentWithOverridable() {
         const newData = JSON.parse(JSON.stringify(MOCK_DATA));
         newData.modules[0].declarations[1].name = 'DataGridCell'
-        newData.modules[0].declarations[1].attributes[0].name = 'ariaSelected'
         return newData;
       }
       setTokenTemplateMock(TemplateToken.PROPS);
       const newData = replaceComponentWithOverridable();
 
-
       await generateWrappersV3InstanceTS({ elements: newData });
-
-      console.log(...fs.outputFile.mock.calls)
 
       const content = fs.outputFile.mock.calls[0][1];
       expect(content).toMatchInlineSnapshot(`
@@ -364,10 +360,7 @@ describe("generator", () => {
       setTokenTemplateMock(TemplateToken.PROPS);
       const newData = replaceComponentWithOverridable();
 
-
       await generateWrappersV3InstanceTS({ elements: newData });
-
-      console.log(...fs.outputFile.mock.calls)
 
       const content = fs.outputFile.mock.calls[0][1];
       expect(content).toMatchInlineSnapshot(`

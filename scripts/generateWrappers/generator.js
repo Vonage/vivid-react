@@ -160,8 +160,8 @@ const renderComponentV3 = prefix => classDeclaration => language => componentCla
   const componentName = getClassName(classDeclaration)
   const componentTagName = `${componentPrefix}-${camel2kebab(componentName)}`
   const events = [...(classDeclaration.events?.map(({ name }) => name) || []), ...(ComponentsEventsMapV3[componentClassName] || [])]
-  const properties = (classDeclaration.members?.filter(({ privacy = 'public', kind, readonly }) => kind === 'field' && privacy === 'public' && readonly !== true) || [])
-    .concat(Vivid3ComponentsExtraPropertiesMap[componentName] || [])
+  const properties = (Vivid3ComponentsExtraPropertiesMap[componentName] || [])
+    .concat(classDeclaration.members?.filter(({ privacy = 'public', kind, readonly }) => kind === 'field' && privacy === 'public' && readonly !== true) || [])
   const attributes = classDeclaration.attributes?.filter(({ fieldName }) => properties.find(({ name }) => fieldName === name)) || []
   const propertyNames = properties.map(({ name }) => `'${name}'`)
   const props = [

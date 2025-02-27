@@ -328,6 +328,49 @@ describe("generator", () => {
       `);
     });
 
+    it("should add extra props from Vivid3ComponentsExtraPropertiesMap", async () => {
+      function replaceComponentWithOverridable() {
+        const newData = JSON.parse(JSON.stringify(MOCK_DATA));
+        newData.modules[0].declarations[1].name = 'DataGridCell'
+        return newData;
+      }
+      setTokenTemplateMock(TemplateToken.PROPS);
+      const newData = replaceComponentWithOverridable();
+
+      await generateWrappersV3InstanceTS({ elements: newData });
+
+      const content = fs.outputFile.mock.calls[0][1];
+      expect(content).toMatchInlineSnapshot(`
+        "  onChange?: (event: SyntheticEvent) => void,
+          \\"ariaSelected\\"?: any /* boolean | undefined */,
+          \\"field1\\"?: any /* AccordionExpandMode */,
+          \\"field2\\"?: string | null,
+          \\"activeItemIndex\\"?: number"
+      `);
+    });
+ 
+    it("should override default props with extra props from Vivid3ComponentsExtraPropertiesMap", async () => {
+      function replaceComponentWithOverridable() {
+        const newData = JSON.parse(JSON.stringify(MOCK_DATA));
+        newData.modules[0].declarations[1].name = 'DataGridCell'
+        newData.modules[0].declarations[1].members[0].name = 'ariaSelected'
+        newData.modules[0].declarations[1].attributes[0].name = 'ariaSelected'
+        return newData;
+      }
+      setTokenTemplateMock(TemplateToken.PROPS);
+      const newData = replaceComponentWithOverridable();
+
+      await generateWrappersV3InstanceTS({ elements: newData });
+
+      const content = fs.outputFile.mock.calls[0][1];
+      expect(content).toMatchInlineSnapshot(`
+        "  onChange?: (event: SyntheticEvent) => void,
+          \\"ariaSelected\\"?: any /* boolean | undefined */,
+          \\"field2\\"?: string | null,
+          \\"activeItemIndex\\"?: number"
+      `);
+    });
+
     it("should replace component registration for DataGridRow with empty string", async () => {
       setTokenTemplateMock(`
             import { register<% component-name %> } from '@vonage/vivid'

@@ -72,7 +72,7 @@ const renderComponent = tag => language => componentName => {
 
 const removeDuplicates = (arr) => {
   const seen = new Set();
-  return arr.filter(item => {
+  return arr.toReversed().filter(item => {
     if (seen.has(item.name)) {
       return false;
     } else {

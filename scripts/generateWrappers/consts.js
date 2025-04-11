@@ -335,7 +335,53 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'value',
       type: { text: 'string' }
     }
-  ]
+  ],
+  Select: [
+    {
+      name: 'disabled',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'errorText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'helperText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'icon',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'iconTrailing',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'initialValue',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'label',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'name',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'required',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'successText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'value',
+      type: { text: 'string | undefined' }
+    },
+  ],
 }
 
 const CompoundComponentsMap = {

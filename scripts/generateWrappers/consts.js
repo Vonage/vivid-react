@@ -182,6 +182,16 @@ const ComponentsExtraPropertiesMap = {
 }
 
 const Vivid3ComponentsExtraPropertiesMap = {
+  EmptyState: [
+    {
+      name: 'iconDecoration',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'connotation',
+      type: { text: 'string | undefined' }
+    },
+  ],
   TextField: [
     {
       name: 'icon',

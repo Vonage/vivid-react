@@ -94,7 +94,7 @@ const ComponentsEventsMapV3 = {
   VwcMenuItem: ['change'],
   VwcNumberField: ['change', 'input'],
   VwcTextArea: ['input'],
-  VwcTextField: ['input'],
+  VwcTextField: ['blur', 'change', 'focus', 'input'],
   VwcCheckbox: ['change'],
   VwcCombobox: ['change'],
   VwcDatePicker: ['change', 'input']
@@ -212,6 +212,30 @@ const Vivid3ComponentsExtraPropertiesMap = {
     {
       name: 'onInput',
       type: { text: 'any' }
+    },
+    {
+      name: 'charCount',
+      type: { text: 'number | undefined' }
+    },
+    {
+      name: 'disabled',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'errorText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'helperText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'required',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'successText',
+      type: { text: 'string | undefined' }
     }
   ],
   Checkbox: [

@@ -182,6 +182,16 @@ const ComponentsExtraPropertiesMap = {
 }
 
 const Vivid3ComponentsExtraPropertiesMap = {
+  EmptyState: [
+    {
+      name: 'iconDecoration',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'connotation',
+      type: { text: 'string | undefined' }
+    },
+  ],
   TextField: [
     {
       name: 'icon',
@@ -341,7 +351,53 @@ const Vivid3ComponentsExtraPropertiesMap = {
       name: 'ariaSelected',
       type: { text: 'boolean | undefined' }
     }
-  ]
+  ],
+  Select: [
+    {
+      name: 'disabled',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'errorText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'helperText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'icon',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'iconTrailing',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'initialValue',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'label',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'name',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'required',
+      type: { text: 'boolean | undefined' }
+    },
+    {
+      name: 'successText',
+      type: { text: 'string | undefined' }
+    },
+    {
+      name: 'value',
+      type: { text: 'string | undefined' }
+    },
+  ],
 }
 
 const CompoundComponentsMap = {

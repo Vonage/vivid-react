@@ -370,6 +370,12 @@ const Vivid3ComponentsExtraPropertiesMap = {
       type: { text: 'string' }
     }
   ],
+  DataGridCell: [
+    {
+      name: 'ariaSelected',
+      type: { text: 'boolean | undefined' }
+    }
+  ],
   Select: [
     {
       name: 'disabled',

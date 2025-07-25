@@ -153,7 +153,7 @@ const generateWrappers = (outputDir, language = OutputLanguage.JavaScript, clean
 
 const getClassName = (classDeclaration) => ClassNameAlias[classDeclaration.name] || classDeclaration.name
 
-const REGISTRATION_EXCLUDED_COMPONENTS = ['DataGridRow', 'DataGridCell'];
+const REGISTRATION_EXCLUDED_COMPONENTS = ['DataGridRow', 'DataGridCell', 'Menubar'];
 
 const renderComponentV3 = prefix => classDeclaration => language => componentClassName => {
   const componentPrefix = prefix

@@ -6,20 +6,24 @@ declare module '@vonage/vivid-react';
 declare namespace JSX {
     interface IntrinsicElements {
         "vvd3-accordion": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "expand-mode": AccordionExpandMode;
         }>;
         "vvd3-accordion-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "heading-level": 1 | 2 | 3 | 4 | 5 | 6;
+            "appearance": AccordionItemAppearance | undefined;
+            "expanded": boolean;
+            "id": string;
             "heading": string | undefined;
             "no-indicator": boolean;
             "meta": string | undefined;
             "size": AccordionItemSize | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-action-group": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "shape": ActionGroupShape | undefined;
             "appearance": ActionGroupAppearance | undefined;
             "tight": boolean;
-            "role": string | null;
-            "aria-label": string | null;
         }>;
         "vvd3-alert": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "dismiss-button-aria-label": | string
@@ -28,20 +32,11 @@ declare namespace JSX {
             "placement": AlertPlacement | undefined;
             "headline": string | undefined;
             "text": string | undefined;
-            "icon": string | undefined;
             "timeoutms": number;
             "connotation": AlertConnotation | undefined;
             "strategy": AlertStrategy | undefined;
             "open": boolean;
-        }>;
-        "vvd3-appearance-ui": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "appearance": AppearanceUIAppearance | undefined;
-            "hovered": boolean;
-            "active": boolean;
-            "selected": boolean;
-            "disabled": boolean;
-            "readonly": boolean;
-            "text": string | undefined;
+            "icon": string | undefined;
         }>;
         "vvd3-audio-player": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "play-button-aria-label": | string
@@ -57,8 +52,9 @@ declare namespace JSX {
             "src": string | undefined;
             "disabled": boolean;
             "notime": boolean;
-            "skip-by": MediaSkipBy | undefined;
+            "skip-by": AudioPlayerMediaSkipBy | undefined;
             "playback-rates": string | null;
+            "duration-fallback": boolean;
         }>;
         "vvd3-avatar": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": AvatarConnotation | undefined;
@@ -67,29 +63,48 @@ declare namespace JSX {
             "size": AvatarSize | undefined;
             "icon": string | undefined;
             "initials": string | undefined;
+            "clickable": boolean;
+            "download": string | undefined;
+            "href": string | undefined;
+            "hreflang": string | undefined;
+            "ping": string | undefined;
+            "referrerpolicy": string | undefined;
+            "rel": string | undefined;
+            "target": '_self' | '_blank' | '_parent' | '_top' | undefined;
+            "type": string | undefined;
         }>;
         "vvd3-badge": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": BadgeConnotation | undefined;
             "shape": BadgeShape | undefined;
+            "size": BadgeSize | undefined;
             "appearance": BadgeAppearance | undefined;
             "text": string | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-banner": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "dismiss-aria-label": | string
 		| null;
-            "role": string | null;
             "action-href": string | undefined;
             "action-text": string | undefined;
             "removable": boolean;
-            "aria-live": string | null;
             "text": string | undefined;
             "connotation": BannerConnotation | undefined;
+            "icon": string | undefined;
         }>;
         "vvd3-breadcrumb": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
         "vvd3-breadcrumb-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
+            "download": string | undefined;
+            "href": string | undefined;
+            "hreflang": string | undefined;
+            "ping": string | undefined;
+            "referrerpolicy": string | undefined;
+            "rel": string | undefined;
+            "target": '_self' | '_blank' | '_parent' | '_top' | undefined;
+            "type": string | undefined;
         }>;
         "vvd3-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "title": string;
@@ -99,21 +114,38 @@ declare namespace JSX {
             "size": ButtonSize | undefined;
             "stacked": boolean;
             "pending": boolean;
+            "dropdown-indicator": boolean;
             "active": boolean;
             "label": string | undefined;
-            "href": string | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
             "download": string | undefined;
+            "href": string | undefined;
             "hreflang": string | undefined;
             "ping": string | undefined;
             "referrerpolicy": string | undefined;
             "rel": string | undefined;
             "target": '_self' | '_blank' | '_parent' | '_top' | undefined;
+            "type": 'submit' | 'reset' | 'button';
+            "autofocus": boolean;
+            "form": string;
+            "formaction": string;
+            "formenctype": string;
+            "formmethod": string;
+            "formnovalidate": boolean;
+            "formtarget": '_self' | '_blank' | '_parent' | '_top';
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-calendar": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "datetime": Date | string | undefined;
             "start-day": 'sunday' | 'monday' | undefined;
             "locales": string | string[] | undefined | undefined;
             "hour12": boolean;
+            "sticky-mode": CalendarSticky;
         }>;
         "vvd3-calendar-event": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "heading": string | undefined;
@@ -131,32 +163,108 @@ declare namespace JSX {
             "text": string | undefined;
             "icon": string | undefined;
             "elevation": 0 | 2 | 4 | 8 | 12 | 16 | 24 | undefined;
+            "clickable-card": boolean;
+            "download": string | undefined;
+            "href": string | undefined;
+            "hreflang": string | undefined;
+            "ping": string | undefined;
+            "referrerpolicy": string | undefined;
+            "rel": string | undefined;
+            "target": '_self' | '_blank' | '_parent' | '_top' | undefined;
+            "type": string | undefined;
         }>;
         "vvd3-checkbox": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
             "tabindex": string | null;
             "connotation": CheckboxConnotation | undefined;
+            "readonly": boolean;
+            "indeterminate": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "checked": boolean;
+            "current-checked": boolean;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-vvd-hex-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-vvd-hex-input": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-color-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "placeholder": string;
+            "saved-colors-key": string | undefined;
+            "disable-saved-colors": boolean;
+            "max-swatches": number;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "open": boolean;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-combobox": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "autocomplete": ComboboxAutocomplete | undefined;
             "appearance": ComboboxAppearance | undefined;
+            "shape": ComboboxShape | undefined;
+            "scale": ComboboxSize | undefined;
             "placement": PopupPlacement | undefined;
             "fixed-dropdown": boolean;
+            "open": boolean;
+            "placeholder": string;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "icon": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-contextual-help": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "placement": Placement | undefined;
         }>;
         "vvd3-data-grid-cell": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-selected": string | null;
-            "aria-sort": string | null;
+            "cell-type": DataGridCellTypes;
+            "grid-column": string;
+            "selected": boolean;
+            "sort-direction": DataGridCellSortStates | undefined;
         }>;
         "vvd3-data-grid-row": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-selected": string | null;
+            "grid-template-columns": string;
+            "row-type": DataGridRowTypes;
+            "selected": boolean | undefined;
         }>;
         "vvd3-data-grid": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "no-tabbing": boolean;
+            "generate-header": GenerateHeaderOptions;
+            "grid-template-columns": string;
+            "fixed-columns": number | undefined;
             "selection-mode": DataGridSelectionMode | undefined;
         }>;
         "vvd3-date-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "min": string;
-            "value": string;
-            "current-value": string;
+            "max": string;
             "readonly": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-date-range-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "start": string;
@@ -164,9 +272,36 @@ declare namespace JSX {
             "current-start": string;
             "current-end": string;
             "min": string;
-            "value": string;
-            "current-value": string;
+            "max": string;
             "readonly": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-date-time-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "min": string;
+            "min-time": string;
+            "min-date": string;
+            "max": string;
+            "max-time": string;
+            "max-date": string;
+            "minutes-step": number | null;
+            "seconds-step": number | null;
+            "clock": '12h' | '24h' | undefined;
+            "readonly": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-dial-pad": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "helper-text": string | null;
@@ -181,6 +316,8 @@ declare namespace JSX {
             "end-call-button-label": | string
 		| null;
             "call-button-label": string | null;
+            "delete-aria-label": string | null;
+            "autofocus": boolean;
         }>;
         "vvd3-dialog": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "open": boolean;
@@ -189,35 +326,67 @@ declare namespace JSX {
             "subtitle": string | undefined;
             "headline": string | undefined;
             "full-width-body": boolean;
-            "aria-label": string | null;
             "dismiss-button-aria-label": | string
 		| null;
             "no-light-dismiss": boolean;
+            "no-dismiss-on-esc": boolean;
+            "no-dismiss-button": boolean;
+            "non-dismissible": boolean;
+            "modal": boolean;
+            "scrollable-body": boolean;
         }>;
         "vvd3-divider": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "orientation": Orientation;
+            "appearance": DividerAppearance | undefined;
         }>;
         "vvd3-elevation": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "dp": 0 | 2 | 4 | 8 | 12 | 16 | 24 | undefined;
             "no-shadow": boolean | undefined;
+            "not-relative": boolean | undefined;
         }>;
         "vvd3-empty-state": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "connotation": EmptyStateConnotation | undefined;
             "headline": string | undefined;
             "icon": string | undefined;
+            "icon-decoration": EmptyStateIconDecoration | undefined;
         }>;
         "vvd3-fab": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": FabConnotation | undefined;
             "size": FABSize | undefined;
             "label": string | undefined;
-        }>;
-        "vvd3-form-associated-file-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "icon-trailing": boolean;
+            "icon": string | undefined;
+            "autofocus": boolean;
+            "form": string;
+            "formaction": string;
+            "formenctype": string;
+            "formmethod": string;
+            "formnovalidate": boolean;
+            "formtarget": '_self' | '_blank' | '_parent' | '_top';
+            "type": 'submit' | 'reset' | 'button';
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-file-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "single-file": boolean;
             "max-files": number | undefined;
             "max-file-size": number;
             "accept": string | undefined;
             "size": FilePickerSize | undefined;
+            "invalid-file-type-error": string | undefined;
+            "max-files-exceeded-error": string | undefined;
+            "file-too-big-error": string | undefined;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-header": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "elevation-shadow": boolean;
@@ -237,6 +406,7 @@ declare namespace JSX {
 		| 3
 		| 4
 		| 5 | undefined;
+            "label": string | undefined;
             "name": string | undefined;
         }>;
         "vvd3-layout": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
@@ -244,26 +414,29 @@ declare namespace JSX {
             "column-basis": ColumnBasis | undefined;
             "column-spacing": ColumnSpacing | undefined;
             "row-spacing": RowSpacing | undefined;
-            "auto-sizing": AUTO_SIZING | undefined;
-        }>;
-        "vvd3-listbox": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "appearance": LisboxAppearance | undefined;
-            "orientation": 'horizontal' | 'vertical' | undefined;
-            "shape": ListboxShape | undefined;
+            "auto-sizing": 'fit' | 'fill' | undefined;
         }>;
         "vvd3-menu": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
+            "offset": number | null;
             "placement": Placement | undefined;
             "trigger": 'auto' | 'legacy' | 'off' | undefined;
             "auto-dismiss": boolean;
+            "position-strategy": Strategy | undefined;
             "open": boolean;
+            "anchor": AnchorType | undefined;
         }>;
         "vvd3-menu-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "disabled": boolean;
+            "expanded": boolean;
+            "control-type": ControlType | undefined;
+            "checked": boolean;
             "text": string | undefined;
             "text-secondary": string | undefined;
             "connotation": MenuItemConnotation | undefined;
             "check-trailing": boolean;
-            "check-appearance": CheckAppearance | undefined;
+            "check-appearance": | 'normal'
+		| 'tick-only' | undefined;
+            "icon": string | undefined;
         }>;
         "vvd3-nav": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
@@ -273,19 +446,28 @@ declare namespace JSX {
             "appearance": NavDisclosureAppearance | undefined;
             "connotation": NavDisclosureConnotation | undefined;
             "open": boolean;
-            "aria-current": string | null;
+            "current": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-nav-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
-            "connotation": TextAnchorConnotation | undefined;
-            "appearance": TextAnchorAppearance | undefined;
+            "connotation": NavItemConnotation | undefined;
+            "appearance": NavItemAppearance | undefined;
+            "current": boolean;
+            "icon": string | undefined;
+            "download": string | undefined;
+            "href": string | undefined;
+            "hreflang": string | undefined;
+            "ping": string | undefined;
+            "referrerpolicy": string | undefined;
+            "rel": string | undefined;
+            "target": '_self' | '_blank' | '_parent' | '_top' | undefined;
+            "type": string | undefined;
         }>;
         "vvd3-note": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "headline": string | undefined;
             "connotation": NoteConnotation | undefined;
-        }>;
-        "vvd3-form-associated-number-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "icon": string | undefined;
         }>;
         "vvd3-number-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "readonly": boolean;
@@ -295,6 +477,7 @@ declare namespace JSX {
             "maxlength": number;
             "minlength": number;
             "size": number;
+            "scale": NumberFieldSize | undefined;
             "step": number;
             "max": number;
             "min": number;
@@ -305,10 +488,30 @@ declare namespace JSX {
             "appearance": NumberFieldAppearance | undefined;
             "shape": NumberFieldShape | undefined;
             "autoComplete": string | undefined;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "icon": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-listbox-option": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "text": string | undefined;
+            "checked": boolean | undefined;
+            "selected": boolean;
+            "disabled": boolean;
+            "current-selected": boolean;
+            "value": string;
             "label": string | undefined;
+            "text": string | undefined;
+            "text-secondary": string | undefined;
+            "matched-text": string | undefined;
+            "tag-connotation": OptionTagConnotation | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-pagination": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "size": PaginationSize | undefined;
@@ -317,27 +520,56 @@ declare namespace JSX {
             "total": number;
             "selected-index": number | undefined;
         }>;
+        "vvd3-popup": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "open": boolean;
+            "dismissible": boolean;
+            "arrow": boolean;
+            "alternate": boolean;
+            "placement": Placement | undefined;
+            "animation-frame": boolean;
+            "strategy": Strategy | undefined;
+            "offset": number | null;
+        }>;
         "vvd3-progress": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
             "shape": ProgressShape | undefined;
             "connotation": ProgressConnotation | undefined;
             "reverse": boolean;
+            "value": number | null;
+            "min": number;
+            "max": number;
+            "paused": boolean;
         }>;
         "vvd3-progress-ring": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
             "connotation": ProgressRingConnotation | undefined;
             "size": -6 | -5 | -4 | -3 | -2 | -1 | 0 | 1 | 2 | 3 | 4 | 5 | undefined;
+            "value": number | null;
+            "min": number;
+            "max": number;
+            "paused": boolean;
         }>;
         "vvd3-radio": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
-            "label": string | undefined;
             "connotation": RadioConnotation | undefined;
+            "readonly": boolean;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "checked": boolean;
+            "current-checked": boolean;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-radio-group": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "label": string | undefined;
-        }>;
-        "vvd3-form-associated-range-slider": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "label": string;
+            "required": boolean;
+            "readonly": boolean;
+            "disabled": boolean;
+            "name": string;
+            "value": string;
+            "error-text": string;
+            "orientation": Orientation | 'horizontal' | 'vertical';
+            "helper-text": string | undefined;
         }>;
         "vvd3-range-slider": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "start": | string
@@ -353,20 +585,78 @@ declare namespace JSX {
             "aria-end-label": string | null;
             "markers": boolean;
             "connotation": RangeSliderConnotation | undefined;
+            "pin": boolean;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-rich-text-editor": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "selection-start": number | null;
+            "selection-end": number | null;
+            "placeholder": string | undefined;
+        }>;
+        "vvd3-option-tag": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "shape": OptionTagShape | undefined;
+            "label": string | undefined;
+            "removable": boolean;
+            "disabled": boolean;
+        }>;
+        "vvd3-searchable-select": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "appearance": SearchableSelectAppearance | undefined;
+            "shape": SearchableSelectShape | undefined;
+            "fixed-dropdown": boolean;
+            "placeholder": string | undefined;
+            "open": boolean;
+            "multiple": boolean;
+            "external-tags": boolean;
+            "max-lines": number | null;
+            "loading": boolean;
+            "clearable": boolean;
+            "max-selected": number | null;
+            "enable-select-all": boolean;
+            "select-all-text": string | undefined;
+            "deselect-all-text": string | undefined;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-select": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "multiple": boolean;
+            "open": boolean;
+            "scale": SelectSize | undefined;
             "appearance": SelectAppearance | undefined;
             "shape": SelectShape | undefined;
             "fixed-dropdown": boolean;
             "placeholder": string | undefined;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-selectable-box": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
             "checked": boolean;
-            "clickable": boolean;
             "clickable-box": boolean;
             "connotation": SelectableBoxConnotation | undefined;
             "control-type": SelectableBoxControlType | undefined;
+            "control-placement": SelectableBoxControlPlacement;
             "tight": boolean;
         }>;
         "vvd3-side-drawer": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
@@ -375,11 +665,33 @@ declare namespace JSX {
             "open": boolean;
             "trailing": boolean;
         }>;
+        "vvd3-simple-color-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "placement": Placement | undefined;
+            "swatches-per-row": number;
+            "anchor": AnchorType | undefined;
+            "open": boolean;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
         "vvd3-slider": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
-            "aria-valuetext": string | null;
+            "readonly": boolean;
+            "min": number;
+            "max": number;
+            "step": number;
+            "orientation": Orientation;
+            "mode": SliderMode;
             "markers": boolean;
+            "pin": boolean;
             "connotation": SliderConnotation | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-split-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": SplitButtonConnotation | undefined;
@@ -387,32 +699,45 @@ declare namespace JSX {
             "appearance": SplitButtonAppearance | undefined;
             "size": SplitButtonSize | undefined;
             "label": string | undefined;
-            "icon": string | undefined;
             "split-indicator": string;
             "disabled": boolean;
-            "aria-label": string | null;
-            "aria-expanded": string | null;
             "indicator-aria-label": | string
 		| null;
+            "icon": string | undefined;
         }>;
         "vvd3-switch": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "label": string | undefined;
             "connotation": SwitchConnotation | undefined;
+            "readonly": boolean;
+            "checked": boolean;
+            "current-checked": boolean;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-tab": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "disabled": boolean;
             "connotation": TabConnotation | undefined;
             "shape": TabShape | undefined;
             "label": string | undefined;
+            "removable": boolean;
             "tabIndex": number;
-            "aria-selected": string | null;
+            "icon-trailing": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-tab-panel": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
         "vvd3-tabs": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "orientation": TabsOrientation;
+            "activeid": string;
             "connotation": TabsConnotation | undefined;
-            "gutters": Gutters | undefined;
+            "gutters": TabsGutters | undefined;
             "scrollable-panel": boolean;
+            "tabs-layout": 'align-start' | 'stretch' | undefined;
+            "activeindicator": boolean;
         }>;
         "vvd3-tag": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "connotation": TagConnotation | undefined;
@@ -423,50 +748,101 @@ declare namespace JSX {
             "disabled": boolean;
             "selectable": boolean;
             "selected": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-tag-group": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "aria-label": string | null;
-        }>;
-        "vvd3-text-anchor": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "text": string | undefined;
-            "connotation": TextAnchorConnotation | undefined;
-            "appearance": TextAnchorAppearance | undefined;
+
         }>;
         "vvd3-text-area": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "readOnly": boolean;
+            "resize": TextAreaResize;
+            "autofocus": boolean;
+            "form": string;
+            "list": string;
+            "maxlength": number;
+            "minlength": number;
+            "placeholder": string;
+            "cols": number;
+            "rows": number;
+            "spellcheck": boolean;
             "wrap": TextAreaWrap | undefined;
+            "helper-text": string | undefined;
+            "char-count": boolean;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-text-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "readonly": boolean;
+            "autofocus": boolean;
+            "placeholder": string;
+            "type": TextFieldType;
+            "list": string;
+            "maxlength": number;
+            "minlength": number;
+            "pattern": string;
+            "size": number;
+            "spellcheck": boolean;
             "appearance": TextFieldAppearance | undefined;
             "shape": TextFieldShape | undefined;
             "autoComplete": string | undefined;
-        }>;
-        "vvd3-form-associated-time-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "scale": TextFieldSize | undefined;
+            "inputmode": string;
+            "helper-text": string | undefined;
+            "char-count": boolean;
+            "error-text": string | undefined;
+            "success-text": string | undefined;
+            "label": string | undefined;
+            "icon": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-time-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "readonly": boolean;
+            "min": string;
+            "max": string;
             "minutes-step": number | null;
             "seconds-step": number | null;
             "clock": '12h' | '24h' | undefined;
-            "min": string;
-            "max": string;
+            "readonly": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
         }>;
         "vvd3-toggletip": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "headline": string | undefined;
             "alternate": boolean;
             "placement": Placement | undefined;
             "open": boolean;
+            "anchor": AnchorType | undefined;
         }>;
         "vvd3-tooltip": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
             "placement": Placement | undefined;
             "open": boolean;
+            "anchor": AnchorType | undefined;
         }>;
         "vvd3-tree-item": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "text": string | undefined;
+            "expanded": boolean;
+            "selected": boolean;
+            "disabled": boolean;
+            "icon": string | undefined;
         }>;
         "vvd3-tree-view": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
+            "render-collapsed-nodes": boolean;
         }>;
         "vvd3-video-player": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "poster": string | undefined;
@@ -474,14 +850,72 @@ declare namespace JSX {
             "autoplay": boolean;
             "loop": boolean;
             "playback-rates": string;
-            "skip-by": MediaSkipBy;
+            "skip-by": VideoPlayerMediaSkipBy;
         }>;
-        "vvd3-date-picker-base": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-            "min": string;
-            "max": string;
-            "value": string;
+        "vvd3-visually-hidden": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-prose-mirror-facade": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-image-placeholder": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "file-name": string | undefined;
+            "size": string | undefined;
+            "error-message": string | undefined;
+            "icon": string | undefined;
+        }>;
+        "vvd3-menubar": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "menu-items": string | undefined;
+        }>;
+        "vvd3-vivid-foundation-button": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "autofocus": boolean;
+            "form": string;
+            "formaction": string;
+            "formenctype": string;
+            "formmethod": string;
+            "formnovalidate": boolean;
+            "formtarget": '_self' | '_blank' | '_parent' | '_top';
+            "type": 'submit' | 'reset' | 'button';
             "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-listbox": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "disabled": boolean;
+        }>;
+        "vvd3-base-progress": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "value": number | null;
+            "min": number;
+            "max": number;
+            "paused": boolean;
+        }>;
+        "vvd3-vivid-element": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-delegate-aria-behavior": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-host-semantics-behavior": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-feedback-message": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "type": FeedbackType;
+        }>;
+        "vvd3-picker-field": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "readonly": boolean;
+            "helper-text": string | undefined;
+            "error-text": string | undefined;
+            "label": string | undefined;
+            "current-value": string;
+            "value": string;
+            "disabled": boolean;
+            "name": string;
+            "required": boolean;
+        }>;
+        "vvd3-inline-time-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
         }>;
     }
 }

@@ -253,6 +253,24 @@ declare namespace JSX {
             "fixed-columns": number | undefined;
             "selection-mode": DataGridSelectionMode | undefined;
         }>;
+        "vvd3-table-body": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-table-cell": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-table-head": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-table-header-cell": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-table-row": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-table": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
         "vvd3-date-picker": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "min": string;
             "max": string;
@@ -520,6 +538,17 @@ declare namespace JSX {
             "total": number;
             "selected-index": number | undefined;
         }>;
+        "vvd3-popover": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+            "placement": Placement;
+            "manual": boolean;
+            "layout": PopoverLayout;
+            "offset": number | null;
+            "alternate": boolean;
+            "dismiss-button-aria-label": | string
+		| null;
+            "arrow": boolean;
+            "open": boolean;
+        }>;
         "vvd3-popup": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
             "open": boolean;
             "dismissible": boolean;
@@ -597,6 +626,9 @@ declare namespace JSX {
 
         }>;
         "vvd3-rich-text-editor": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-rich-text-view": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
         "vvd3-option-tag": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
@@ -883,6 +915,15 @@ declare namespace JSX {
         "vvd3-rte-instance-impl": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
+        "vvd3-textblock-attrs": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-textblock-marks": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
+        "vvd3-ui-ctx": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
+
+        }>;
         "vvd3-rte-alignment-feature-impl": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
@@ -935,15 +976,6 @@ declare namespace JSX {
 
         }>;
         "vvd3-rte-underline-feature-impl": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
-        }>;
-        "vvd3-textblock-attrs": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
-        }>;
-        "vvd3-textblock-marks": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
-
-        }>;
-        "vvd3-ui-ctx": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
 
         }>;
         "vvd3-rte-basic-text-blocks-impl": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & Partial<{
